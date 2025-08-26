@@ -1,0 +1,94 @@
+.bannercontent{
+position: relative;
+width: 100%;
+height: 100vh;
+}
+
+.bannertitle {
+ position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* التوسيط الكامل */
+  text-align: center;
+  z-index: 10;
+}
+.bannertitle h2 {
+    font-family: var(--font-alex);
+    font-weight: 400;
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+
+}
+.bannertitle p {
+    font-family: var(--font-alex);
+    font-weight: 400;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+
+}
+.bannerbutton {
+    padding: 0.5rem 1.5rem;
+    background-color: white;
+    border-radius: 3rem;
+}
+.bannerbutton a {
+    font-family:var(--font-alex);
+    font-weight: 400;
+    color: #035034;
+
+}
+.bannerbutton a:hover {
+    color: #035034;
+
+}
+.bannerlogos {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -25%); /* التوسيط الكامل */
+    text-align: center;
+    z-index: 10;
+    width: 100%;
+}
+
+.bannerlogos ul{
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.bannercontent .mySwiper {
+    height: 100% !important;
+}
+.slideImage {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* درجة شفافية خفيفة */
+  z-index: 1;
+}
+
+@media (max-width:768px) {
+    .bannercontent{ 
+    height: 85vh;
+    }
+    .bannertitle  {
+        width: 90%;
+    }
+    .bannerlogos ul{
+    gap: 1rem;
+    padding: 0 1rem;
+    }
+}

@@ -1,0 +1,59 @@
+.ourCustomers {
+  background-color: #fff;
+  margin: 5rem 3rem;
+}
+
+.viewAll {
+  color: #C78E50;
+  text-decoration: none;
+  font-weight: 500;
+}
+.viewAll:hover {
+      color: #C78E50 !important;
+      opacity: 0.6;
+}
+
+.logosWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.logoBox {
+  width: 150px;
+  aspect-ratio: 2 / 1; /* ✅ يحافظ على نسبة 2:1 مهما كانت الصورة */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoImg {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* ✅ يضمن أن الصورة تظل داخل البوكس بنسبة سليمة */
+  transition: transform 0.3s ease;
+}
+@media (min-width: 768px) {
+  .logoBox {
+    flex: 0 0 auto; /* Remove fixed width on larger screens */
+  }
+  
+}
+
+@media (max-width:768px) {
+  .logosWrapper {
+    gap: 2rem;
+  }
+}
+.logoImg {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logoImg:hover {
+  transform: scale(1.05);
+}

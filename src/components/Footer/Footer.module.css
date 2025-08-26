@@ -1,0 +1,142 @@
+.topfooter {
+    background-color: #FAFAFA;
+}
+
+/* .footer {
+    padding: 5rem 3rem;
+} */
+.topIcons {
+    padding: 3rem 3rem 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #858585;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+.item span {
+    width: 50px;
+    background: white; 
+    border-radius: 50%; 
+    height: 50px; 
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.item  svg {
+        position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+    color: #858585;
+    width: 30px;
+    height: 25px;
+    transition: transform 0.3s ease, color 0.3s ease;
+
+}
+
+.item:hover {
+  color: #000; /* نص الكتابة يبقى أسود */
+}
+
+.item:hover svg {
+  color: #035034; /* لون الأيقونة يتغير */
+  transform: translate(50%, -50%) scale(1.2); /* زووم خفيف */
+}
+
+
+
+.mainFooter {
+    padding: 5rem 2rem 1rem;
+    border-top: 1px solid #d1d1d1;
+    background-color: #f3f3f3;
+    position: relative;
+}
+.bottomlogo {
+position: absolute;
+right: 0;
+bottom: 0;
+}
+.bottomtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+.mainFooter ul li{
+    color:#575757;
+    font-size: 1rem;
+        margin-bottom: 0.5rem;
+}
+.bottomtitle a:hover {
+    color: black;
+}
+.mainFooter ul li a:hover {
+    color: #575757;
+}
+.desc {
+        text-align: center;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    FONT-WEIGHT: 600;
+
+}
+.social {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+
+}
+.social a {
+        background: #B98B5A;
+    padding: 0.5rem;
+    color: white;
+}
+.social a svg{
+    width: 25px;
+    height: 25px;
+}
+
+@media (max-width: 1200px) {
+    .colSpacing {
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 1024px) {
+      .topIcons {
+            flex-wrap: wrap;
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+
+
+  .item {
+    /* width: 45%; كل عنصر ياخد حوالي نص الصف */
+    justify-content: flex-start;
+  }
+}
+
+.bottomFooter{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    z-index: 5;
+    position: relative;
+    flex-wrap: wrap;
+}
+.bottomFooter p {
+    color: #2B2A29;
+    font-size: 0.7rem;
+}
+.bottomFooter p a {
+    cursor: pointer;
+}

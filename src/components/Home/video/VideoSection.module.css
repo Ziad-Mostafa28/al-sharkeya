@@ -1,0 +1,112 @@
+.dev_video {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.dev_video video {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 2;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+  pointer-events: none;
+}
+
+.overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Text Container */
+.textbox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  pointer-events: none;
+  transition: all 0.6s ease;
+}
+
+/* SVG circle */
+.textbox svg {
+  width: 12rem;
+  height: 12rem;
+  position: absolute;
+  top: -6rem;
+  left: -6rem;
+  transform-origin: center;
+  transition: all 0.6s ease;
+}
+.dev_video textPath {
+  font-family: 'Alexandria';
+  font-weight: 300;
+}
+/* Animation Class */
+.textbox.animateText svg {
+  animation: rotateZoom 2s forwards;
+  opacity: 0;
+  transform: scale(1.4) rotate(360deg);
+}
+
+.textbox.animateText .playButton {
+  opacity: 0;
+  transform: scale(1.3);
+}
+
+.textbox .playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: all 0.6s ease;
+}
+
+/* Animation keyframes */
+@keyframes rotateZoom {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Responsive SVG size */
+@media (max-width: 768px) {
+  .textbox svg {
+    width: 8rem;
+    height: 8rem;
+    top: -4rem;
+    left: -4rem;
+  }
+
+  .textbox .playButton {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+  }
+}

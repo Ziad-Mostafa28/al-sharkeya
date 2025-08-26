@@ -1,0 +1,240 @@
+/* ProductsSection.module.css */
+
+.container {
+  position: relative;
+  min-height: 500px;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 0;
+}
+
+.backgroundImage.transitioning {
+  opacity: 0.3;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 100%);
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  padding: 40px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 13%;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: white;
+  position: absolute;
+  padding: 40px;
+}
+
+.navButtons {
+  display: flex;
+  gap: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  padding: 4px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: fit-content;
+}
+
+.navButton {
+  padding: 12px 24px;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+
+.navButton.active {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  /* transform: scale(1.05); */
+}
+
+.navButton:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.productContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+
+.productContent.transitioning {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.productTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.productDescription {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 400px;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    color: #E0E0E0;
+    font-family: 'Alexandria';
+    font-weight: 300;;
+
+}
+
+.readMore {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+}
+
+.readMore:hover {
+  color: white;
+  transform: translateX(5px);
+}
+
+/* .readMore::after {
+  content: '→';
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+} */
+
+.readMore:hover::after {
+  transform: translateX(3px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .content {
+    margin-top: 20%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    margin-top: 25%;
+  }
+
+  .title {
+    font-size: 1.7rem;
+  }
+
+  /* .navButtons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  } */
+
+  .navButton {
+    text-align: center;
+    padding: 15px;
+  }
+
+  .productTitle {
+    font-size: 1.5rem;
+  }
+
+  .productDescription {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .navButtons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+
+  }
+
+  .navButton {
+    padding: 10px;
+    /* margin-bottom: 0.4rem; */
+  }
+}
+
+/* Animation classes */
+.fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.fadeOut {
+  animation: fadeOut 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}

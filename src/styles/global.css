@@ -1,0 +1,51 @@
+/* 1. Reset أساسي */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. إعدادات الـ HTML */
+html {
+  /* font-family: 'Arial', 'Helvetica', sans-serif; */
+  scroll-behavior: smooth;
+}
+
+/* 3. Body */
+body {
+  background-color: #fff;
+  color: #222;
+  line-height: 1.6;
+  font-size: 16px;
+  direction: ltr; /* هيتغير في runtime حسب اللغة */
+}
+
+/* 4. روابط */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #007bff;
+}
+
+/* 5. صور */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
