@@ -1,0 +1,25 @@
+.activities {
+    margin: 5rem 0;
+}
+
+.activities h2 {
+    font-family: "Alexandria";
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 1.9rem;
+    text-align: center;
+}
+
+.activities p {
+    font-family: "Alexandria";
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    color: #606060;
+}
+
+.activities img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
