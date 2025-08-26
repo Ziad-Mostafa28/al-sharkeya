@@ -1,4 +1,4 @@
-import { FaSearch, FaBars ,FaChevronDown } from "react-icons/fa";
+import { FaSearch, FaBars, FaChevronDown } from "react-icons/fa";
 import styles from "./Header.module.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -25,10 +25,10 @@ export default function Header() {
           <div className="d-flex align-items-center">
             <a href="/">
               <img
-              src="/img/homepage/logo.png"
-              alt="Al Sharkeya Sugar"
-              style={{ height: "5rem" }}
-            />
+                src="/img/homepage/logo.png"
+                alt="Al Sharkeya Sugar"
+                style={{ height: "5rem" }}
+              />
             </a>
           </div>
 
@@ -44,14 +44,14 @@ export default function Header() {
                   </a>
                   <ul className={`dropdown-menu ${styles.linkmenudesktop}`} >
                     <li className={`${styles.limenu}`}>
-                      <a className="dropdown-item" href="#">
+                      <Link className="dropdown-item" to="about-us/Who-We-Are">
                         Who we are
-                      </a>
+                      </Link>
                     </li>
                     <li className={`${styles.limenu}`}>
-                      <a className="dropdown-item" href="#">
+                      <Link className="dropdown-item" to="about-us/Our-Strategy">
                         Our strategy
-                      </a>
+                      </Link>
                     </li>
                     <li className={`${styles.limenu}`}>
                       <a className="dropdown-item" href="#">
@@ -237,15 +237,15 @@ export default function Header() {
                     className={`${styles.chevronIcon} ${dropdownOpen.aboutus ? styles.rotated : ''}`}
                   />
                 </button>
-                
+
                 {dropdownOpen.aboutus && (
                   <ul className="list-unstyled">
-                    <li><a className= {`nav-link text-white ${styles.nav_link2}`} href="#">Who we are</a></li>
-                    <li><a className= {`nav-link text-white ${styles.nav_link2}`} href="#">Our strategy</a></li>
-                    <li><a className= {`nav-link text-white ${styles.nav_link2}`} href="#">Company history</a></li>
-                    <li><a className= {`nav-link text-white ${styles.nav_link2}`} href="#">Our shareholders</a></li>
-                    <li><a className= {`nav-link text-white ${styles.nav_link2}`} href="#">Board members</a></li>
-                    <li><a className= {`nav-link text-white ${styles.nav_link2}`} href="#">Management team</a></li>
+                    <li><a className={`nav-link text-white ${styles.nav_link2}`} href="#">Who we are</a></li>
+                    <li><a className={`nav-link text-white ${styles.nav_link2}`} href="#">Our strategy</a></li>
+                    <li><a className={`nav-link text-white ${styles.nav_link2}`} href="#">Company history</a></li>
+                    <li><a className={`nav-link text-white ${styles.nav_link2}`} href="#">Our shareholders</a></li>
+                    <li><a className={`nav-link text-white ${styles.nav_link2}`} href="#">Board members</a></li>
+                    <li><a className={`nav-link text-white ${styles.nav_link2}`} href="#">Management team</a></li>
                   </ul>
                 )}
               </li>
@@ -261,13 +261,13 @@ export default function Header() {
                     className={`${styles.chevronIcon} ${dropdownOpen.products ? styles.rotated : ''}`}
                   />
                 </button>
-                
+
                 {dropdownOpen.products && (
                   <ul className="list-unstyled">
-                    <li><a className= {`nav-link text-white ${styles.nav_link2}`} href="#">Overview</a></li>
-                    <li><a className= {`nav-link text-white ${styles.nav_link2}`} href="#">White Sugar</a></li>
-                    <li><a className= {`nav-link text-white ${styles.nav_link2}`} href="#">Molasses</a></li>
-                    <li><a className= {`nav-link text-white ${styles.nav_link2}`} href="#">Pellets</a></li>
+                    <li><a className={`nav-link text-white ${styles.nav_link2}`} href="#">Overview</a></li>
+                    <li><a className={`nav-link text-white ${styles.nav_link2}`} href="#">White Sugar</a></li>
+                    <li><a className={`nav-link text-white ${styles.nav_link2}`} href="#">Molasses</a></li>
+                    <li><a className={`nav-link text-white ${styles.nav_link2}`} href="#">Pellets</a></li>
                   </ul>
                 )}
               </li>
@@ -298,9 +298,9 @@ export default function Header() {
 
                 {dropdownOpen.resources && (
                   <ul className="list-unstyled">
-                    <li><a className= {`nav-link text-white ${styles.nav_link2}`} href="#">Sugar history</a></li>
-                    <li><a className= {`nav-link text-white ${styles.nav_link2}`} href="#">Recipes</a></li>
-                    <li><a className= {`nav-link text-white ${styles.nav_link2}`} href="#">Facts about sugar</a></li>
+                    <li><a className={`nav-link text-white ${styles.nav_link2}`} href="#">Sugar history</a></li>
+                    <li><a className={`nav-link text-white ${styles.nav_link2}`} href="#">Recipes</a></li>
+                    <li><a className={`nav-link text-white ${styles.nav_link2}`} href="#">Facts about sugar</a></li>
                   </ul>
                 )}
               </li>
