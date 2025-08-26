@@ -1,0 +1,24 @@
+.sugarProcess {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #F8F8F8;
+}
+
+.sugarProcess h2 {
+  font-size: 1.875rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  color: #262626;
+  font-family: var(--font-alex);
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.processImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
