@@ -1,0 +1,90 @@
+.WhiteSugar {
+  margin: 5rem 3.125rem;
+}
+
+.customContainer {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.WhiteSugar .textBlock h2 {
+  font-weight: 500;
+  font-size: 1.875rem;
+  color: #262626;
+  margin-bottom: 1rem;
+  font-family: var(--font-alex);
+}
+
+.WhiteSugar .textBlock p {
+  color: #606060;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-alex);
+
+}
+
+.WhiteSugar .readMoreBtn {
+  background-color: #C78E50;
+  color: #F6E6D7;
+  padding: 0.6rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.WhiteSugar .readMoreBtn:hover {
+  background-color: #a6713d;
+}
+
+.WhiteSugar .imageBlock img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+@media (max-width: 576px) {
+  .WhiteSugar {
+    margin: 3rem 1.25rem; 
+  }
+
+  .WhiteSugar .textBlock h2 {
+    font-size: 1.5rem; /* 24px */
+  }
+
+  .WhiteSugar .textBlock p {
+    font-size: 0.9rem; /* 14px */
+  }
+
+  .WhiteSugar .readMoreBtn {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .WhiteSugar .imageBlock {
+    margin-top: 1.5rem; 
+  }
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+  .WhiteSugar {
+    margin: 3rem 1.25rem; 
+  }
+
+  .WhiteSugar .textBlock h2 {
+    font-size: 1.5rem;
+  }
+
+  .WhiteSugar .textBlock p {
+    font-size: 0.9rem;
+  }
+  
+}
+

@@ -1,0 +1,112 @@
+.molassesSection {
+  position: relative;
+}
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 26.75rem;
+  overflow: hidden;
+}
+.bgImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.textCard {
+  position: absolute;
+  top: 50%;
+  right: 3.125rem;
+  transform: translateY(-50%);
+  background: #fff;
+  padding: 3.125rem;
+  border-radius: 10px;
+  max-width: 36.063rem;
+  z-index: 2;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+.textCard h2 {
+  font-weight: 500;
+  font-size: 1.875rem;
+  margin-bottom: 1rem;
+  color: #262626;
+font-family: var(--font-alex);
+}
+.textCard p {
+  font-size: 1rem;
+  color: #606060;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+font-family: var(--font-alex);
+
+}
+.readMoreBtn {
+  background-color: #C78E50;
+  color: #F6E6D7;
+  padding: 0.6rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  font-family: var(--font-alex);
+
+}
+.readMoreBtn:hover {
+  background-color: #a6713d;
+}
+
+@media (max-width: 992px) {
+  .imageWrapper {
+    height: 22rem;
+  }
+
+  .textCard {
+    right: 1.5rem;
+    padding: 2rem;
+    max-width: 28rem;
+  }
+
+  .textCard h2 {
+    font-size: 1.5rem;
+  }
+
+  .textCard p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .imageWrapper {
+    height: auto;
+  }
+
+  .bgImage {
+    height: 300px;
+  }
+
+  .textCard {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    margin: -50px auto 0 auto; 
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+
+  .textCard h2 {
+    font-size: 1.3rem;
+  }
+
+  .textCard p {
+    font-size: 0.9rem;
+  }
+
+  .readMoreBtn {
+    width: 100%;
+    text-align: center;
+  }
+}
