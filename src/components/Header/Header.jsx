@@ -1,6 +1,7 @@
 import { FaSearch, FaBars ,FaChevronDown } from "react-icons/fa";
 import styles from "./Header.module.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [dropdownOpen, setDropdownOpen] = useState({
@@ -86,9 +87,9 @@ export default function Header() {
                   </a>
                   <ul className={`dropdown-menu ${styles.linkmenudesktop}`} >
                     <li className={`${styles.limenu}`}>
-                      <a className="dropdown-item" href="#">
+                      <Link className="dropdown-item" to="our-products/overview">
                         Overview
-                      </a>
+                      </Link>
                     </li>
                     <li className={`${styles.limenu}`}>
                       <a className="dropdown-item" href="#">
