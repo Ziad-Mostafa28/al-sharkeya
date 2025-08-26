@@ -1,0 +1,45 @@
+.cardbox2 {
+    margin: 4rem 0 0;
+    background: #F8F8F8;
+    padding: 2rem 0;
+
+}
+
+.cardbox2 .container {
+    max-width: -webkit-fill-available;
+    margin: 0 3.125rem;
+    padding: 0;
+
+}
+
+.cardbox2 p {
+    font-family: "Alexandria";
+    font-weight: 400;
+    font-size: 1rem;
+    color: #606060;
+}
+
+.cardbox2 img {
+    height: 270px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+
+
+@media (max-width:767px) {
+    .cardbox2 img {
+        height: 100%;
+        margin: 2rem 0;
+    }
+
+}
+
+@media (max-width:1024px) {
+    .cardbox2 .container {
+        margin: 0 1.25rem;
+
+    }
+
+}
