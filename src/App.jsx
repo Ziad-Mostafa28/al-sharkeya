@@ -7,6 +7,7 @@ import WhoWeAre from './pages/Whoweare/WhoWeAre';
 import OurStrategy from './pages/OurStrategy/OurStrategy';
 
 import OurProducts from './pages/OurProducts/OurProducts';
+import CompanyHistory from './pages/CompanyHistory/CompanyHistory';
 
 
 const router = createBrowserRouter([
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
       {path: 'about-us', element:<About />},
       {path: 'about-us/Who-We-Are', element: <WhoWeAre />},
       {path: 'about-us/Our-Strategy', element: <OurStrategy />},
+      {path: 'about-us/Company-History', element: <CompanyHistory />},
 
       { path: 'our-products/overview', element:  <OurProducts/>},
 

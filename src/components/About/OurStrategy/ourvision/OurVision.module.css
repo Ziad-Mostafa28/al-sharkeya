@@ -36,10 +36,17 @@
 
 }
 
-@media (max-width:1024px) {
+@media (max-width:1023px) {
     .cardbox2 .container {
         margin: 0 1.25rem;
 
     }
 
+    .cardbox2 p {
+        font-size: 0.9rem;
+    }
+
+    .cardbox2 h2 {
+        font-size: 1.5rem;
+    }
 }
