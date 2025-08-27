@@ -9,7 +9,6 @@ import OurStrategy from './pages/OurStrategy/OurStrategy';
 import Overview from './pages/Overview/Overview';
 import WhiteSugar from './pages/WhiteSugar/WhiteSugar';
 import Molasses from './pages/Molasses/Molasses';
-import OurProducts from './pages/OurProducts/OurProducts';
 import CompanyHistory from './pages/CompanyHistory/CompanyHistory';
 
 
