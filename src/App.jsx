@@ -6,7 +6,9 @@ import About from './pages/About/About';
 import WhoWeAre from './pages/Whoweare/WhoWeAre';
 import OurStrategy from './pages/OurStrategy/OurStrategy';
 
-import OurProducts from './pages/OurProducts/OurProducts';
+import Overview from './pages/Overview/Overview';
+import WhiteSugar from './pages/WhiteSugar/WhiteSugar';
+import Molasses from './pages/Molasses/Molasses';
 
 
 const router = createBrowserRouter([
@@ -19,7 +21,9 @@ const router = createBrowserRouter([
       {path: 'about-us/Who-We-Are', element: <WhoWeAre />},
       {path: 'about-us/Our-Strategy', element: <OurStrategy />},
 
-      { path: 'our-products/overview', element:  <OurProducts/>},
+      { path: 'our-products/overview', element:  <Overview/>},
+      { path: 'our-products/white-sugar', element:  <WhiteSugar/>},
+      { path: 'our-products/molasses', element:  <Molasses/>},
 
     ],
   },

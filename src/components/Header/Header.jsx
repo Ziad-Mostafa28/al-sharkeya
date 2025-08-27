@@ -92,14 +92,14 @@ export default function Header() {
                       </Link>
                     </li>
                     <li className={`${styles.limenu}`}>
-                      <a className="dropdown-item" href="#">
+                      <Link className="dropdown-item" to={'our-products/white-sugar'}>
                         White Sugar
-                      </a>
+                      </Link>
                     </li>
                     <li className={`${styles.limenu}`}>
-                      <a className="dropdown-item" href="#">
+                      <Link className="dropdown-item" to={'our-products/molasses'}>
                         Molasses
-                      </a>
+                      </Link>
                     </li>
                     <li className={`${styles.limenu}`}>
                       <a className="dropdown-item" href="#">
@@ -264,10 +264,10 @@ export default function Header() {
 
                 {dropdownOpen.products && (
                   <ul className="list-unstyled">
-                    <li><a className={`nav-link text-white ${styles.nav_link2}`} href="#">Overview</a></li>
-                    <li><a className={`nav-link text-white ${styles.nav_link2}`} href="#">White Sugar</a></li>
-                    <li><a className={`nav-link text-white ${styles.nav_link2}`} href="#">Molasses</a></li>
-                    <li><a className={`nav-link text-white ${styles.nav_link2}`} href="#">Pellets</a></li>
+                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} to="our-products/overview">Overview</Link></li>
+                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} to="our-products/white-sugar">White Sugar</Link></li>
+                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} to="our-products/molasses">Molasses</Link></li>
+                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} to="#">Pellets</Link></li>
                   </ul>
                 )}
               </li>
