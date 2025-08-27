@@ -34,10 +34,12 @@
 
 }
 
-@media (max-width:1024px) {
+@media (max-width:1023px) {
     .cardbox .container {
         margin: 0 1.25rem;
 
     }
-
+    .cardbox p {
+        font-size: 0.9rem;
+    }
 }
