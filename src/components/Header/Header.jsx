@@ -54,9 +54,9 @@ export default function Header() {
                       </Link>
                     </li>
                     <li className={`${styles.limenu}`}>
-                      <a className="dropdown-item" href="#">
+                      <Link className="dropdown-item" to="about-us/Company-History">
                         Company history
-                      </a>
+                      </Link>
                     </li>
                     <li className={`${styles.limenu}`}>
                       <a className="dropdown-item" href="#">
@@ -183,11 +183,12 @@ export default function Header() {
         <div className="container-fluid d-flex align-items-center justify-content-between position-relative">
           {/* Logo */}
           <div className="d-flex align-items-center">
-            <img
-              src="/img/homepage/logo.png"
-              alt="Al Sharkeya Sugar"
-              style={{ height: "5rem" }}
-            />
+            <a href="/">
+              <img
+                src="/img/homepage/logo.png"
+                alt="Al Sharkeya Sugar"
+                style={{ height: "5rem" }}
+              /></a>
           </div>
 
           {/* Mobile Center Controls - AR and Search (hidden when menu is open) */}
@@ -240,9 +241,21 @@ export default function Header() {
 
                 {dropdownOpen.aboutus && (
                   <ul className="list-unstyled">
-                    <li><a className={`nav-link text-white ${styles.nav_link2}`} href="#">Who we are</a></li>
-                    <li><a className={`nav-link text-white ${styles.nav_link2}`} href="#">Our strategy</a></li>
-                    <li><a className={`nav-link text-white ${styles.nav_link2}`} href="#">Company history</a></li>
+                    <li>
+                      <Link className={`nav-link text-white ${styles.nav_link2}`} to="about-us/Who-We-Are">
+                        Who we are
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className={`nav-link text-white ${styles.nav_link2}`} to="about-us/Our-Strategy">
+                        Our strategy
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className={`nav-link text-white ${styles.nav_link2}`} to="about-us/Company-History">
+                        Company history
+                      </Link>
+                    </li>
                     <li><a className={`nav-link text-white ${styles.nav_link2}`} href="#">Our shareholders</a></li>
                     <li><a className={`nav-link text-white ${styles.nav_link2}`} href="#">Board members</a></li>
                     <li><a className={`nav-link text-white ${styles.nav_link2}`} href="#">Management team</a></li>

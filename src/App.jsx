@@ -9,6 +9,8 @@ import OurStrategy from './pages/OurStrategy/OurStrategy';
 import Overview from './pages/Overview/Overview';
 import WhiteSugar from './pages/WhiteSugar/WhiteSugar';
 import Molasses from './pages/Molasses/Molasses';
+import OurProducts from './pages/OurProducts/OurProducts';
+import CompanyHistory from './pages/CompanyHistory/CompanyHistory';
 
 
 const router = createBrowserRouter([
@@ -20,6 +22,7 @@ const router = createBrowserRouter([
       {path: 'about-us', element:<About />},
       {path: 'about-us/Who-We-Are', element: <WhoWeAre />},
       {path: 'about-us/Our-Strategy', element: <OurStrategy />},
+      {path: 'about-us/Company-History', element: <CompanyHistory />},
 
       { path: 'our-products/overview', element:  <Overview/>},
       { path: 'our-products/white-sugar', element:  <WhiteSugar/>},
