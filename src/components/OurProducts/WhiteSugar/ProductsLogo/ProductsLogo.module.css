@@ -1,0 +1,74 @@
+.ourCustomers {
+    background-color: #fff;
+    margin: 5rem 3rem;
+}
+
+.logosWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.logoBox {
+    width: 266px;
+    aspect-ratio: 2 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoImg {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+
+.ourCustomers .h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #606060;
+    text-align: center;
+    padding-bottom: 4rem;
+    width: 70%;
+    margin: auto;
+}
+
+@media (min-width: 768px) {
+    .logoBox {
+        flex: 0 0 auto;
+    }
+
+    .ourCustomers .h3 {
+
+        width: 100%;
+        text-align: start;
+    }
+
+}
+
+@media (max-width:768px) {
+    .logosWrapper {
+        gap: 2rem;
+    }
+
+    .ourCustomers .h3 {
+
+        width: 100%;
+        text-align: start;
+    }
+}
+
+.logoImg {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logoImg:hover {
+    transform: scale(1.05);
+}
