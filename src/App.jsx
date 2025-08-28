@@ -24,12 +24,12 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       {path: 'about-us', element:<About />},
-      {path: 'about-us/Who-We-Are', element: <WhoWeAre />},
-      {path: 'about-us/Our-Strategy', element: <OurStrategy />},
-      {path: 'about-us/Company-History', element: <CompanyHistory />},
-      {path: 'about-us/Our-Shareholders', element: <OurShareholders />},
-      {path: 'about-us/Board-Members', element: <BoardMembers />},
-      {path: 'about-us/Management-Team', element: <ManagementTeam />},
+      {path: 'about-us/who-we-are', element: <WhoWeAre />},
+      {path: 'about-us/our-strategy', element: <OurStrategy />},
+      {path: 'about-us/company-history', element: <CompanyHistory />},
+      {path: 'about-us/our-shareholders', element: <OurShareholders />},
+      {path: 'about-us/board-members', element: <BoardMembers />},
+      {path: 'about-us/management-team', element: <ManagementTeam />},
 
       { path: 'our-products/overview', element:  <Overview/>},
       { path: 'our-products/white-sugar', element:  <WhiteSugar/>},
