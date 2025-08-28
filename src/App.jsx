@@ -10,6 +10,7 @@ import Overview from './pages/Overview/Overview';
 import WhiteSugar from './pages/WhiteSugar/WhiteSugar';
 import Molasses from './pages/Molasses/Molasses';
 import CompanyHistory from './pages/CompanyHistory/CompanyHistory';
+import Pellets from './pages/Pellets/Pellets';
 
 
 const router = createBrowserRouter([
@@ -26,6 +27,8 @@ const router = createBrowserRouter([
       { path: 'our-products/overview', element:  <Overview/>},
       { path: 'our-products/white-sugar', element:  <WhiteSugar/>},
       { path: 'our-products/molasses', element:  <Molasses/>},
+      { path: 'our-products/pellets', element:  <Pellets/>},
+
 
     ],
   },
