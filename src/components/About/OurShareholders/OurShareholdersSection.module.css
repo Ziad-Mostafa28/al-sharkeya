@@ -1,0 +1,44 @@
+.OurShareholdersSection .container {
+    max-width: -webkit-fill-available;
+    margin: 0 3.125rem;
+    padding: 0;
+}
+
+.OurShareholdersSection img {
+    height: 200px;
+    object-fit: contain;
+}
+
+.OurShareholdersSection .box h2 {
+    font-weight: 500;
+    font-size: 1.875rem;
+    color: #262626;
+    margin-bottom: 1.5rem;
+}
+
+.OurShareholdersSection .box p {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #606060;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width:1023px) {
+    .OurShareholdersSection .container {
+        margin: 0 1.25rem;
+    }
+
+    .OurShareholdersSection .box p {
+        font-size: 0.9rem;
+    }
+
+    .OurShareholdersSection .box h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:767px) {
+    .OurShareholdersSection img {
+        margin: 0 auto 2rem;
+    }
+}

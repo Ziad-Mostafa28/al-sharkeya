@@ -1,0 +1,114 @@
+.BoardMembersSections .container {
+    max-width: -webkit-fill-available;
+    margin: 0 3.125rem;
+    padding: 0;
+}
+
+.BoardMembersSections .bigcard {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.BoardMembersSections .image_box {
+    height: 270px;
+    width: 20%;
+}
+
+.BoardMembersSections .image_box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.BoardMembersSections .data_box {
+    width: 80%;
+
+}
+
+.BoardMembersSections .data_box .title {
+    font-weight: 500;
+    font-size: 1.875rem;
+    color: #262626;
+    margin: 0;
+
+}
+
+.BoardMembersSections .data_box .Subtitle {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #C78E50;
+
+}
+
+.BoardMembersSections .data_box .desc {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #606060;
+    line-height: 120%;
+    margin-top: 1rem;
+    text-align: justify;
+}
+
+.BoardMembersSections .data_box a {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #262626;
+}
+
+.BoardMembersSections .data_box .readmore {
+    margin-top: 0;
+    background: none;
+    border: none;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #262626;
+    cursor: pointer;
+    padding: 0;
+}
+
+.BoardMembersSections .extra {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+}
+
+.BoardMembersSections .extra.open {
+    max-height: 1000px;
+    opacity: 1;
+}
+
+
+@media (max-width:1023px) {
+    .BoardMembersSections .container {
+        margin: 0 1.25rem;
+    }
+
+    .BoardMembersSections .bigcard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .BoardMembersSections .data_box {
+        width: 100%;
+    }
+
+    .BoardMembersSections .image_box {
+        width: auto;
+    }
+
+    .BoardMembersSections .box p {
+        font-size: 0.9rem;
+    }
+
+    .BoardMembersSections .data_box .title {
+        font-size: 1.5rem;
+    }
+
+    .BoardMembersSections .data_box .Subtitle {
+        font-size: 1rem;
+    }
+}
