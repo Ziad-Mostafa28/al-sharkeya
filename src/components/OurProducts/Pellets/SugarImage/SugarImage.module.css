@@ -1,0 +1,70 @@
+.molassesSection {
+  position: relative;
+}
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 21.875rem;
+  overflow: hidden;
+}
+.bgImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.textCard {
+  position: absolute;
+  top: 50%;
+  left: 3.125rem;
+  transform: translateY(-50%);
+
+  max-width: 54.063rem;
+  z-index: 2;
+}
+.textCard p {
+  font-size: 1rem;
+  color: #FFFFFF;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+font-family: var(--font-alex);
+
+}
+
+.textCard h2 {
+  font-size: 1.875rem;
+  color: #FFFFFF;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+font-family: var(--font-alex);
+
+}
+
+
+@media (max-width: 992px) {
+    .imageWrapper {
+        height: 22rem;
+    }
+
+    .textCard {
+        left: 1.125rem;
+    }
+
+    .textCard p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .imageWrapper {
+        height: auto;
+    }
+
+    .bgImage {
+        height: 300px;
+    }
+
+    .textCard p {
+        font-size: 0.9rem;
+    }
+}

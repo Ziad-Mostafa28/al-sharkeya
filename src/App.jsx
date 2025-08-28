@@ -10,6 +10,8 @@ import Overview from './pages/Overview/Overview';
 import WhiteSugar from './pages/WhiteSugar/WhiteSugar';
 import Molasses from './pages/Molasses/Molasses';
 import CompanyHistory from './pages/CompanyHistory/CompanyHistory';
+import Pellets from './pages/Pellets/Pellets';
+
 import OurShareholders from './pages/OurShareholders/OurShareholders';
 import BoardMembers from './pages/BoardMembersPage/BoardMembers';
 import ManagementTeam from './pages/ManagementTeam/ManagementTeam';
@@ -32,6 +34,8 @@ const router = createBrowserRouter([
       { path: 'our-products/overview', element:  <Overview/>},
       { path: 'our-products/white-sugar', element:  <WhiteSugar/>},
       { path: 'our-products/molasses', element:  <Molasses/>},
+      { path: 'our-products/pellets', element:  <Pellets/>},
+
 
     ],
   },
