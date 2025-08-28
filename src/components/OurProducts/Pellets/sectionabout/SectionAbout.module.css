@@ -1,3 +1,7 @@
+body{
+    overflow: hidden;
+}
+
 .about {
     padding: 0rem 11.875rem 5rem 11.875rem;
 }
