@@ -17,7 +17,7 @@
   font-family: var(--font-alex);
 }
 
-.WhiteSugar .textBlock  {
+.WhiteSugar .textBlock {
   padding: 0rem 1.5rem;
 }
 
@@ -44,12 +44,13 @@
 
 @media (max-width: 576px) {
   .WhiteSugar {
-    margin: 3rem 1.25rem; 
+    margin: 3rem 1.25rem;
   }
 
 
   .WhiteSugar .textBlock p {
-    font-size: 0.9rem; /* 14px */
+    font-size: 0.9rem;
+    /* 14px */
     margin-top: 15px;
   }
 
@@ -59,18 +60,24 @@
   }
 
   .WhiteSugar .imageBlock {
-    margin-top: 1.5rem; 
+    margin-top: 1.5rem;
   }
 
-    .downloadLink {
-      padding-bottom: 1rem;
-  
-    }
+  .downloadLink {
+    padding-bottom: 1rem;
+
+  }
+
+  .WhiteSugar .imageBlock img {
+    border-radius: 0px 0 0 0px;
+
+  }
+
 }
 
 @media (min-width: 577px) and (max-width: 991px) {
   .WhiteSugar {
-    margin: 3rem 1.25rem; 
+    margin: 3rem 1.25rem;
   }
 
   .WhiteSugar .textBlock h2 {
@@ -80,27 +87,35 @@
   .WhiteSugar .textBlock p {
     font-size: 0.9rem;
   }
-  
+
+  .WhiteSugar .imageBlock img {
+    border-radius: 0px 0 0 0px;
+
+  }
+
 }
 
 /*  */
 .downloadLink {
   display: inline-flex;
   align-items: center;
-  gap: 8px; 
+  gap: 8px;
   text-decoration: none;
   font-weight: 500;
   margin-top: 1rem;
 
 }
+
 .downloadLink:hover {
   text-decoration: none;
 }
+
 .icon {
   width: 20px;
   height: 20px;
 }
-.downloadBrochure{
+
+.downloadBrochure {
   font-family: var(--font-alex);
   font-size: 1rem;
   font-weight: 700;
