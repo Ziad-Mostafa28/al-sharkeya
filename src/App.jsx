@@ -15,8 +15,13 @@ import Pellets from './pages/Pellets/Pellets';
 import OurShareholders from './pages/OurShareholders/OurShareholders';
 import BoardMembers from './pages/BoardMembersPage/BoardMembers';
 import ManagementTeam from './pages/ManagementTeam/ManagementTeam';
+
 import Certifications from './pages/Certifications/Certifications';
 import SustainabilityPage from './pages/SustainabilityPage/Sustainability';
+
+import Careers from './pages/Careers/Careers';
+import JopDetails from './pages/JopDetails/JopDetails';
+
 
 
 const router = createBrowserRouter([
@@ -40,6 +45,10 @@ const router = createBrowserRouter([
       { path: 'our-products/white-sugar', element:  <WhiteSugar/>},
       { path: 'our-products/molasses', element:  <Molasses/>},
       { path: 'our-products/pellets', element:  <Pellets/>},
+      { path: 'careers', element:  <Careers/>},
+      { path: 'careers/job-details', element:  <JopDetails/>},
+
+
 
 
     ],

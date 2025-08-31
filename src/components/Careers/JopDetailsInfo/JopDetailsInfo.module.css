@@ -1,0 +1,121 @@
+.jobDetails {
+  background: #fff;
+  margin: 5rem 3.125rem;
+}
+.customContainer {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.jobTitle {
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #262626;
+}
+
+/* Job Info (Date, Area, Location, Experience) */
+.jobInfoBox {
+  margin-bottom: 30px;
+}
+
+.jobItem {
+  display: flex;
+  font-size: 1rem;
+  color: #a4a2a1;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 8px 0;
+}
+
+.jobItem span {
+  display: inline-block;
+  min-width: 9.375rem; 
+  color: #A4A2A1;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.jobItem strong {
+  color: #606060;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+
+/* Description */
+.jobDescription {
+  line-height: 1.6;
+}
+
+.jobDescription p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #606060;
+}
+.jobDescription h5 {
+  margin-top: 20px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333333;
+}
+
+.jobDescription ul {
+  margin: 10px 0 20px 20px;
+  padding-left: 20px;      
+  list-style: disc;        
+}
+
+.jobDescription li {
+  margin-bottom: 6px;
+  font-size: 1rem;
+  color: #606060;
+  font-weight: 400;
+}
+
+
+/* Apply Button */
+.applyBtn {
+  background: #C78E50;
+  color: #F6E6D7;
+  border: none;
+  padding: 12px 35px;
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.applyBtn:hover {
+  background: #a6733e;
+}
+
+/* =========================
+   Responsive
+   ========================= */
+@media (max-width: 767px) {
+
+
+  .jobDetails {
+    margin: 3rem 1.25rem; 
+}
+  .jobTitle {
+    font-size: 1.5rem;
+  }
+
+  .jobItem {
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .jobDescription p {
+  font-size: 0.9rem;
+
+}
+.jobDescription h5 {
+    font-size: 1.4rem;
+}
+
+  .applyBtn {
+    width: 100%;
+    padding: 12px;
+  }
+}
