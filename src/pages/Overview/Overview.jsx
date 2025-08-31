@@ -3,6 +3,7 @@ import WhiteSugar from '../../components/OurProducts/Overview/WhiteSugar/WhiteSu
 import SecBanner from '../../components/SharedComponents/SecBanner/SecBanner'
 import Molasses from '../../components/OurProducts/Overview/Molasses/Molasses'
 import SugarProcessing from '../../components/OurProducts/Overview/SugarProcessing/SugarProcessing'
+import Pelletts from '../../components/OurProducts/Overview/Pelletts/Pelletts'
 
 export default function OurProducts() {
   return (
@@ -17,7 +18,7 @@ export default function OurProducts() {
 
       <Molasses/>
 
-      <WhiteSugar/>
+      <Pelletts/>
       <SugarProcessing/>
 
     </>

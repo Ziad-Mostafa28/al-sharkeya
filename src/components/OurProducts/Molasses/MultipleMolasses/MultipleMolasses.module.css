@@ -72,11 +72,23 @@
     font-size: 1.25rem;
     color: #606060;
 }
+
+.subtitle{
+      font-weight: 700;
+    font-size: 1.25rem;
+    color: #606060;
+    margin-bottom: 1rem;
+}
 .textup {
   position: relative;
   display: flex;        
   align-items: center;  
-  gap: 8px;             
+  gap: 8px; 
+             
+    font-weight: 800;
+    font-size: 1rem;
+    color: #606060;
+    margin-bottom: 0;
 }
 
 .textup::before {
@@ -85,3 +97,5 @@
   font-size: 18px;
   line-height: 1;
 }
+
+
