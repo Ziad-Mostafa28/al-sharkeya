@@ -1,0 +1,79 @@
+.QualitySection {
+    margin: 4rem 0;
+}
+
+.QualitySection .container {
+    max-width: -webkit-fill-available;
+    margin: 0 3.125rem;
+    padding: 0;
+
+}
+
+.QualitySection .tob_desc {
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: #606060;
+}
+
+.QualitySection h2 {
+    font-weight: 500;
+    font-size: 1.9rem;
+}
+
+.QualitySection .desc {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #606060;
+}
+
+.QualitySection .List ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.QualitySection .List li p {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #606060;
+}
+
+.QualitySection .List li {
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.QualitySection .List li::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    background-color: #00000033;
+    width: 100%;
+    height: 1px;
+}
+
+.QualitySection .List li:last-child:after {
+    display: none;
+}
+
+@media (max-width:1023px) {
+    .QualitySection .container {
+        margin: 0 1.25rem;
+    }
+
+    .QualitySection .desc,
+    .QualitySection .List li p {
+        font-size: 0.9rem;
+    }
+
+    .QualitySection h2 {
+        font-size: 1.5rem;
+    }
+
+    .QualitySection .tob_desc {
+        font-weight: 500;
+        font-size: 1rem;
+        color: #606060;
+    }
+}

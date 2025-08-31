@@ -15,6 +15,8 @@ import Pellets from './pages/Pellets/Pellets';
 import OurShareholders from './pages/OurShareholders/OurShareholders';
 import BoardMembers from './pages/BoardMembersPage/BoardMembers';
 import ManagementTeam from './pages/ManagementTeam/ManagementTeam';
+import Certifications from './pages/Certifications/Certifications';
+import SustainabilityPage from './pages/SustainabilityPage/Sustainability';
 
 
 const router = createBrowserRouter([
@@ -30,6 +32,9 @@ const router = createBrowserRouter([
       {path: 'about-us/our-shareholders', element: <OurShareholders />},
       {path: 'about-us/board-members', element: <BoardMembers />},
       {path: 'about-us/management-team', element: <ManagementTeam />},
+
+      {path: 'our-responsibilities/certifications', element: <Certifications />},
+      {path: 'our-responsibilities/sustainability', element: <SustainabilityPage />},
 
       { path: 'our-products/overview', element:  <Overview/>},
       { path: 'our-products/white-sugar', element:  <WhiteSugar/>},

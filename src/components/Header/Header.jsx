@@ -8,6 +8,7 @@ export default function Header() {
     aboutus: false,
     products: false,
     resources: false,
+    sustainability: false,
   });
 
   const toggleDropdown = (key) => {
@@ -108,11 +109,49 @@ export default function Header() {
                     </li>
                   </ul>
                 </li>
-                <li className="nav-item">
-                  <a className={`nav-link ${styles.linkmenu}`} href="#">
-                    Sustainability & CSR
+                <li className="nav-item dropdown">
+                  <a
+                    className={`nav-link dropdown-toggle ${styles.linkmenu}`}
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                  >
+                    Our responsibilities
+                    <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 448 512"
+                      className="_chevronIcon_4vcs0_385 ms-2" height="1em" width="1em"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 
+      0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 
+      33.901-.04L224 284.505l154.745-154.021c9.379-9.335 
+      24.544-9.317 33.901.04l22.667 22.667c9.373 
+      9.373 9.373 24.569 0 33.941L240.971 
+      381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
+                    </svg>
                   </a>
+                  <ul className={`dropdown-menu ${styles.linkmenudesktop}`}>
+                    <li className={`${styles.limenu}`}>
+                      <Link className="dropdown-item" to="our-responsibilities/certifications">
+                        Certifications
+                      </Link>
+                    </li>
+                    <li className={`${styles.limenu}`}>
+                      <Link className="dropdown-item" to="our-responsibilities/sustainability">
+                        Sustainability
+                      </Link>
+                    </li>
+                    <li className={`${styles.limenu}`}>
+                      <Link className="dropdown-item" to="sustainability/csr">
+                        CSR
+                      </Link>
+                    </li>
+                    <li className={`${styles.limenu}`}>
+                      <Link className="dropdown-item" to="sustainability/codeconduct">
+                        Code of conduct
+                      </Link>
+                    </li>
+                  </ul>
                 </li>
+
                 <li className="nav-item">
                   <a className={`nav-link ${styles.linkmenu}`} href="#">
                     Careers
@@ -298,10 +337,43 @@ export default function Header() {
               </li>
 
               <li className="nav-item">
-                <a className={`nav-link ${styles.linkmenu}`} href="#">
-                  Sustainability & CSR
-                </a>
+                <button
+                  className={`nav-link ${styles.linkmenu} w-100 d-flex justify-content-center align-items-center gap-2`}
+                  onClick={() => toggleDropdown('sustainability')}
+                >
+                  Our responsibilities
+                  <FaChevronDown
+                    className={`${styles.chevronIcon} ${dropdownOpen.sustainability ? styles.rotated : ''}`}
+                  />
+                </button>
+
+                {dropdownOpen.sustainability && (
+                  <ul className="list-unstyled">
+                    <li className={`${styles.limenu}`}>
+                      <Link className={`nav-link text-white ${styles.nav_link2}`} to="our-responsibilities/certifications">
+                        Certifications
+                      </Link>
+                    </li>
+                    <li className={`${styles.limenu}`}>
+                      <Link className={`nav-link text-white ${styles.nav_link2}`} to="our-responsibilities/sustainability">
+                        Sustainability
+                      </Link>
+                    </li>
+                    <li className={`${styles.limenu}`}>
+                      <Link className={`nav-link text-white ${styles.nav_link2}`} to="sustainability/csr">
+                        CSR
+                      </Link>
+                    </li>
+                    <li className={`${styles.limenu}`}>
+                      <Link className={`nav-link text-white ${styles.nav_link2}`} to="sustainability/codeconduct">
+                        Code of conduct
+                      </Link>
+                    </li>
+                    
+                  </ul>
+                )}
               </li>
+
 
               <li className="nav-item">
                 <a className={`nav-link ${styles.linkmenu}`} href="#">

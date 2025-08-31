@@ -1,0 +1,66 @@
+.cardbox {
+    margin: 4rem 0;
+
+}
+
+.cardbox .container {
+    max-width: -webkit-fill-available;
+    margin: 0 3.125rem;
+    padding: 0;
+
+}
+
+.cardbox a {
+    display: flex;
+    color: #606060;
+    gap: 1rem;
+}
+
+.cardbox a:hover {
+    color: #606060;
+}
+
+.cardbox .topdesc {
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: #606060;
+}
+
+.cardbox p {
+    font-family: "Alexandria";
+    font-weight: 400;
+    font-size: 1rem;
+    color: #606060;
+}
+
+.cardbox p span {
+    color: #C78E50;
+}
+
+.cardbox .bannerImage {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+
+
+@media (max-width:767px) {
+    .cardbox .bannerImage {
+        height: 100%;
+        margin: 2rem 0;
+    }
+
+}
+
+@media (max-width:1023px) {
+    .cardbox .container {
+        margin: 0 1.25rem;
+
+    }
+
+    .cardbox p {
+        font-size: 0.9rem;
+    }
+}
