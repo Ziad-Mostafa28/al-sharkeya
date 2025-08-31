@@ -75,7 +75,6 @@ export default function MultipleMolasses() {
                                                 <p className={styles.subtitle}>{item.subtitle}</p>
 
 
-                                                {/* لو فيه اكتر من تكست */}
                                                 {item.texts?.map((line, i) => (
                                                     <p key={i} className={styles.textup}>{line}</p>
                                                 ))}
