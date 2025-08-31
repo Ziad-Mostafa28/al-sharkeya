@@ -376,9 +376,9 @@ export default function Header() {
 
 
               <li className="nav-item">
-                <a className={`nav-link ${styles.linkmenu}`} href="#">
+                <Link className={`nav-link ${styles.linkmenu}`} to={"careers"}>
                   Careers
-                </a>
+                </Link>
               </li>
 
               {/* Resources dropdown */}
