@@ -18,10 +18,14 @@ import ManagementTeam from './pages/ManagementTeam/ManagementTeam';
 
 import Certifications from './pages/Certifications/Certifications';
 import SustainabilityPage from './pages/SustainabilityPage/Sustainability';
+import CSR from './pages/CSR/CSR';
 
 import Careers from './pages/Careers/Careers';
 import JopDetails from './pages/JopDetails/JopDetails';
+ 
 import ContactUs from './pages/ContactUs/ContactUs';
+import CodeConductPage from './pages/CodeConductPage/CodeConductPage';
+import News from './pages/NewPage/News';
 
 
 
@@ -41,6 +45,9 @@ const router = createBrowserRouter([
 
       {path: 'our-responsibilities/certifications', element: <Certifications />},
       {path: 'our-responsibilities/sustainability', element: <SustainabilityPage />},
+      {path: 'our-responsibilities/csr', element: <CSR />},
+      {path: 'our-responsibilities/codeconduct', element: <CodeConductPage />},
+      {path: 'news', element: <News />},
 
       { path: 'our-products/overview', element:  <Overview/>},
       { path: 'our-products/white-sugar', element:  <WhiteSugar/>},
