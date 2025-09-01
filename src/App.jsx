@@ -21,6 +21,7 @@ import SustainabilityPage from './pages/SustainabilityPage/Sustainability';
 
 import Careers from './pages/Careers/Careers';
 import JopDetails from './pages/JopDetails/JopDetails';
+import ContactUs from './pages/ContactUs/ContactUs';
 
 
 
@@ -47,6 +48,7 @@ const router = createBrowserRouter([
       { path: 'our-products/pellets', element:  <Pellets/>},
       { path: 'careers', element:  <Careers/>},
       { path: 'careers/job-details', element:  <JopDetails/>},
+      { path: 'contact-us', element:  <ContactUs/>},
 
 
 

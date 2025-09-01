@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './JopDetailsInfo.module.css'
+import ApplyModal from './ApplyModal'
 
 export default function JopDetailsInfo() {
+
+   const [showModal, setShowModal] = useState(false)
+
+  const handleOpen = () => setShowModal(true)
+  const handleClose = () => setShowModal(false)
+
   return (
     <section className={`${styles.jobDetails}`}>
       <div className={`container-fluid ${styles.customContainer}`}>
@@ -61,8 +68,11 @@ export default function JopDetailsInfo() {
 
         {/* Apply Button */}
         <div className="mt-4">
-          <button className={styles.applyBtn}>Apply Now</button>
+          <button className={styles.applyBtn}  onClick={handleOpen}>Apply Now</button>
         </div>
+
+        {showModal && <ApplyModal onClose={handleClose} />}
+
 
       </div>
     </section>
