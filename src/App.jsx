@@ -22,6 +22,8 @@ import CSR from './pages/CSR/CSR';
 
 import Careers from './pages/Careers/Careers';
 import JopDetails from './pages/JopDetails/JopDetails';
+ 
+import ContactUs from './pages/ContactUs/ContactUs';
 import CodeConductPage from './pages/CodeConductPage/CodeConductPage';
 import News from './pages/NewPage/News';
 
@@ -53,6 +55,7 @@ const router = createBrowserRouter([
       { path: 'our-products/pellets', element:  <Pellets/>},
       { path: 'careers', element:  <Careers/>},
       { path: 'careers/job-details', element:  <JopDetails/>},
+      { path: 'contact-us', element:  <ContactUs/>},
 
 
 

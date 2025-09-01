@@ -1,0 +1,82 @@
+.supplierSection {
+  background: #f9f9f9;
+  padding: 40px 40px;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #262626;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #606060;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.form input,
+.form select,
+.form textarea {
+  border: none;
+  border-bottom: 1px solid #8F8F8F;
+  padding: 10px 0;
+  font-size: 1rem;
+  outline: none;
+  background: transparent;
+
+
+   color: #606060;
+  font-weight: 400;
+}
+
+.form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.sendBtn {
+  align-self: flex-end;
+  background: #C78E50;
+  color: #FFFFFF;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.sendBtn:hover {
+  background: #a96f34;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+  }
+
+  .sendBtn {
+    width: 100%;
+  }
+}
