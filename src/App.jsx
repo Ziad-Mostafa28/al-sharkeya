@@ -26,8 +26,12 @@ import JopDetails from './pages/JopDetails/JopDetails';
 import ContactUs from './pages/ContactUs/ContactUs';
 import CodeConductPage from './pages/CodeConductPage/CodeConductPage';
 import News from './pages/NewPage/News';
+import NewsDetailsPage from './pages/NewsDetailsPage/NewsDetailsPage';
+import FaqsPage from './pages/FaqsPage/FaqsPage';
+
 import Recipes from './pages/Recipes/Recipes';
 import RecipesDetails from './pages/RecipesDetails/RecipesDetails';
+
 
 
 
@@ -50,6 +54,8 @@ const router = createBrowserRouter([
       {path: 'our-responsibilities/csr', element: <CSR />},
       {path: 'our-responsibilities/codeconduct', element: <CodeConductPage />},
       {path: 'news', element: <News />},
+      {path: 'news-details', element: <NewsDetailsPage />},
+      {path: 'faqs', element: <FaqsPage />},
 
       { path: 'our-products/overview', element:  <Overview/>},
       { path: 'our-products/white-sugar', element:  <WhiteSugar/>},
