@@ -192,9 +192,9 @@ export default function Header() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <a className={`nav-link ${styles.linkmenu}`} href="#">
+                  <Link className={`nav-link ${styles.linkmenu}`} to={"faqs"}>
                     FAQs
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -409,9 +409,9 @@ export default function Header() {
                 </Link>
               </li>
               <li className="nav-item">
-                <a className={`nav-link ${styles.linkmenu}`} href="#">
+                <Link className={`nav-link ${styles.linkmenu}`} to={"faqs"}>
                   FAQs
-                </a>
+                </Link>
               </li>
               <li className="nav-item mt-3">
                 <a

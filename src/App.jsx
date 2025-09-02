@@ -27,6 +27,7 @@ import ContactUs from './pages/ContactUs/ContactUs';
 import CodeConductPage from './pages/CodeConductPage/CodeConductPage';
 import News from './pages/NewPage/News';
 import NewsDetailsPage from './pages/NewsDetailsPage/NewsDetailsPage';
+import FaqsPage from './pages/FaqsPage/FaqsPage';
 
 
 
@@ -50,6 +51,7 @@ const router = createBrowserRouter([
       {path: 'our-responsibilities/codeconduct', element: <CodeConductPage />},
       {path: 'news', element: <News />},
       {path: 'news-details', element: <NewsDetailsPage />},
+      {path: 'faqs', element: <FaqsPage />},
 
       { path: 'our-products/overview', element:  <Overview/>},
       { path: 'our-products/white-sugar', element:  <WhiteSugar/>},
