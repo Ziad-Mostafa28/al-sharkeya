@@ -179,10 +179,9 @@ export default function Header() {
                       </Link>
                     </li>
                     <li className={`${styles.limenu}`}>
-                      <a className="dropdown-item" href="#">
+                      <Link className="dropdown-item" to="/facts-about-sugar">
                         Facts about sugar
-                      </a>
-
+                      </Link>
                     </li>
                   </ul>
                 </li>
@@ -209,7 +208,7 @@ export default function Header() {
               <FaSearch />
             </button>
             <Link to={"contact-us"}
-             
+
               className="btn rounded-pill px-3 bg-light text-success border-0"
             >
               Contact us
@@ -393,16 +392,14 @@ export default function Header() {
                     className={`${styles.chevronIcon} ${dropdownOpen.resources ? styles.rotated : ''}`}
                   />
                 </button>
-
                 {dropdownOpen.resources && (
                   <ul className="list-unstyled">
                     <li><a className={`nav-link text-white ${styles.nav_link2}`} href="#">Sugar history</a></li>
-                    <li><Link className={`nav-link text-white ${styles.nav_link2}`}to="recipes">Recipes</Link></li>
-                    <li><a className={`nav-link text-white ${styles.nav_link2}`} href="#">Facts about sugar</a></li>
+                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} to="recipes">Recipes</Link></li>
+                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} to="/facts-about-sugar">Facts about sugar</Link></li>
                   </ul>
                 )}
               </li>
-
               <li className="nav-item">
                 <Link className={`nav-link ${styles.linkmenu}`} to={"news"}>
                   News
@@ -415,7 +412,6 @@ export default function Header() {
               </li>
               <li className="nav-item mt-3">
                 <Link to={"contact-us"}
-                 
                   className="btn rounded-pill px-3 bg-light text-success border-0"
                 >
                   Contact us

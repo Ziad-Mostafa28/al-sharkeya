@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from "./NewsData.module.css";
+import { Link } from 'react-router-dom';
 
 export default function NewsData() {
 
@@ -105,7 +106,7 @@ export default function NewsData() {
                                 className={styles.readmore}
 
                             >
-                                Read more
+                                <Link to={"/news-details"}>Read more</Link>
                             </button>
                         </div>
                     </div>
