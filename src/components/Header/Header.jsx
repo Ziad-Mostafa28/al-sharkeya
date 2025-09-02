@@ -140,12 +140,12 @@ export default function Header() {
                       </Link>
                     </li>
                     <li className={`${styles.limenu}`}>
-                      <Link className="dropdown-item" to="sustainability/csr">
+                      <Link className="dropdown-item" to="our-responsibilities/csr">
                         CSR
                       </Link>
                     </li>
                     <li className={`${styles.limenu}`}>
-                      <Link className="dropdown-item" to="sustainability/codeconduct">
+                      <Link className="dropdown-item" to="our-responsibilities/codeconduct">
                         Code of conduct
                       </Link>
                     </li>
@@ -182,13 +182,14 @@ export default function Header() {
                       <a className="dropdown-item" href="#">
                         Facts about sugar
                       </a>
+
                     </li>
                   </ul>
                 </li>
                 <li className="nav-item">
-                  <a className={`nav-link ${styles.linkmenu}`} href="#">
+                  <Link className={`nav-link ${styles.linkmenu}`} to={"news"}>
                     News
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
                   <a className={`nav-link ${styles.linkmenu}`} href="#">
@@ -360,16 +361,16 @@ export default function Header() {
                       </Link>
                     </li>
                     <li className={`${styles.limenu}`}>
-                      <Link className={`nav-link text-white ${styles.nav_link2}`} to="sustainability/csr">
+                      <Link className={`nav-link text-white ${styles.nav_link2}`} to="our-responsibilities/csr">
                         CSR
                       </Link>
                     </li>
                     <li className={`${styles.limenu}`}>
-                      <Link className={`nav-link text-white ${styles.nav_link2}`} to="sustainability/codeconduct">
+                      <Link className={`nav-link text-white ${styles.nav_link2}`} to="our-responsibilities/codeconduct">
                         Code of conduct
                       </Link>
                     </li>
-                    
+
                   </ul>
                 )}
               </li>
@@ -402,11 +403,10 @@ export default function Header() {
                 )}
               </li>
 
-
               <li className="nav-item">
-                <a className={`nav-link ${styles.linkmenu}`} href="#">
+                <Link className={`nav-link ${styles.linkmenu}`} to={"news"}>
                   News
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
                 <a className={`nav-link ${styles.linkmenu}`} href="#">
