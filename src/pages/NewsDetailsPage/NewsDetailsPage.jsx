@@ -10,7 +10,6 @@ export default function NewsDetailsPage() {
                 subtitle=""
                 image="/img/news/Newsbanner.png"
             />
-
             <NewsDetailsSection />
         </>
     )
