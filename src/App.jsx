@@ -57,7 +57,7 @@ const router = createBrowserRouter([
       {path: 'news', element: <News />},
       {path: 'news-details', element: <NewsDetailsPage />},
       {path: 'faqs', element: <FaqsPage />},
-      {path: 'facts', element: <FactsPage />},
+      {path: 'facts-about-sugar', element: <FactsPage />},
 
       { path: 'our-products/overview', element:  <Overview/>},
       { path: 'our-products/white-sugar', element:  <WhiteSugar/>},
