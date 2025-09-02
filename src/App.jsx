@@ -26,6 +26,8 @@ import JopDetails from './pages/JopDetails/JopDetails';
 import ContactUs from './pages/ContactUs/ContactUs';
 import CodeConductPage from './pages/CodeConductPage/CodeConductPage';
 import News from './pages/NewPage/News';
+import Recipes from './pages/Recipes/Recipes';
+import RecipesDetails from './pages/RecipesDetails/RecipesDetails';
 
 
 
@@ -56,6 +58,8 @@ const router = createBrowserRouter([
       { path: 'careers', element:  <Careers/>},
       { path: 'careers/job-details', element:  <JopDetails/>},
       { path: 'contact-us', element:  <ContactUs/>},
+      { path: 'recipes', element:  <Recipes/>},
+      { path: 'recipe-details', element:  <RecipesDetails/>},
 
 
 
