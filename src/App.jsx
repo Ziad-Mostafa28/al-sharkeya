@@ -31,6 +31,7 @@ import FaqsPage from './pages/FaqsPage/FaqsPage';
 
 import Recipes from './pages/Recipes/Recipes';
 import RecipesDetails from './pages/RecipesDetails/RecipesDetails';
+import FactsPage from './pages/FactsPage/FactsPage';
 
 
 
@@ -56,6 +57,7 @@ const router = createBrowserRouter([
       {path: 'news', element: <News />},
       {path: 'news-details', element: <NewsDetailsPage />},
       {path: 'faqs', element: <FaqsPage />},
+      {path: 'facts', element: <FactsPage />},
 
       { path: 'our-products/overview', element:  <Overview/>},
       { path: 'our-products/white-sugar', element:  <WhiteSugar/>},

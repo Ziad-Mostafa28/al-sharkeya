@@ -1,13 +1,13 @@
 import React from 'react'
 import styles from "./NewsDetailsSection.module.css";
+import { Link } from 'react-router-dom';
 
 export default function NewsDetailsSection() {
     return (
         <section className={styles.NewsDetailsSection}>
             <div className={`${styles.container}`}>
                 <div className={`${styles.top_link}`}>
-                    <a href="#">
-                        <img src="/img/news/Vector.png" alt="" />Back to news</a>
+                    <Link to={"/news"}><img src="/img/news/Vector.png" alt="" />Back to news</Link>
                 </div>
 
                 <h2 className={`${styles.top_title}`}>President Abdel Fattah El-Sisi Visits Sharkeya Sugar Factory to Support
