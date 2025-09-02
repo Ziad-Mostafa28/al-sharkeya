@@ -432,14 +432,14 @@ export default function VisitUs() {
   };
 
   const handleSubmit = () => {
-    if (!selectedDate) {
-      alert('من فضلك اختر تاريخ الزيارة');
-      return;
-    }
-    if (!formData.name || !formData.company || !formData.phone || !formData.email) {
-      alert('من فضلك املأ جميع الحقول');
-      return;
-    }
+    // if (!selectedDate) {
+    //   alert('من فضلك اختر تاريخ الزيارة');
+    //   return;
+    // }
+    // if (!formData.name || !formData.company || !formData.phone || !formData.email) {
+    //   alert('من فضلك املأ جميع الحقول');
+    //   return;
+    // }
 
     const visitData = {
       ...formData,
@@ -447,8 +447,8 @@ export default function VisitUs() {
       visitDateFormatted: new Date(currentYear, currentMonth, selectedDate).toLocaleDateString('ar-EG')
     };
 
-    console.log('بيانات الزيارة:', visitData);
-    alert('تم إرسال طلب الزيارة بنجاح! (للتجربة فقط)');
+    // console.log('بيانات الزيارة:', visitData);
+    // alert('تم إرسال طلب الزيارة بنجاح! (للتجربة فقط)');
     // reset (اختياري)
     // setFormData({ name: '', company: '', phone: '', email: '' });
     // setSelectedDate(null);
@@ -567,7 +567,6 @@ export default function VisitUs() {
                 })}
               </div>
 
-              {/* تم حذف OK / Cancel — زر Send هو المتحكم */}
             </div>
           </div>
         </div>
