@@ -1,6 +1,6 @@
 import React from 'react'
 import SecBanner from '../../components/SharedComponents/SecBanner/SecBanner'
-import RecipesDetailsComm from '../../components/Recipes/RecipesDetailsComm/RecipesDetailsComm'
+import RecipesDetailsComm from '../../components/Resources/Recipes/RecipesDetailsComm/RecipesDetailsComm'
 
 export default function RecipesDetails() {
   return (
