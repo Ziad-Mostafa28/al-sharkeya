@@ -174,9 +174,9 @@ export default function Header() {
                       </a>
                     </li>
                     <li className={`${styles.limenu}`}>
-                      <a className="dropdown-item" href="#">
+                      <Link className="dropdown-item" to="recipes">
                         Recipes
-                      </a>
+                      </Link>
                     </li>
                     <li className={`${styles.limenu}`}>
                       <a className="dropdown-item" href="#">
@@ -208,12 +208,12 @@ export default function Header() {
             <button className="btn btn-link p-0 text-white" onClick={() => setSearchOpen(true)}>
               <FaSearch />
             </button>
-            <a
-              href="#"
+            <Link to={"contact-us"}
+             
               className="btn rounded-pill px-3 bg-light text-success border-0"
             >
               Contact us
-            </a>
+            </Link>
           </div>
         </div>
       </header>
@@ -397,7 +397,7 @@ export default function Header() {
                 {dropdownOpen.resources && (
                   <ul className="list-unstyled">
                     <li><a className={`nav-link text-white ${styles.nav_link2}`} href="#">Sugar history</a></li>
-                    <li><a className={`nav-link text-white ${styles.nav_link2}`} href="#">Recipes</a></li>
+                    <li><Link className={`nav-link text-white ${styles.nav_link2}`}to="recipes">Recipes</Link></li>
                     <li><a className={`nav-link text-white ${styles.nav_link2}`} href="#">Facts about sugar</a></li>
                   </ul>
                 )}
@@ -414,12 +414,12 @@ export default function Header() {
                 </Link>
               </li>
               <li className="nav-item mt-3">
-                <a
-                  href="#"
+                <Link to={"contact-us"}
+                 
                   className="btn rounded-pill px-3 bg-light text-success border-0"
                 >
                   Contact us
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

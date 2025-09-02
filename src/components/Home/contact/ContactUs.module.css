@@ -1,32 +1,32 @@
 .contactSection {
-  padding: 40px 20px;
-  max-width: 1200px;
+  padding: 2.5rem 1.25rem;
+  max-width: 75rem;
   margin: auto;
 }
 
 .title {
   text-align: center;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 2.5rem;
   justify-content: space-between;
 }
 
 .formSection {
   flex: 1;
-  min-width: 300px;
+  min-width: 18.75rem;
 }
 
 .tabs {
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 0.625rem;
+  margin-bottom: 1.25rem;
 }
 
 .tab {
@@ -44,20 +44,20 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 0.938rem;
   transition: all 0.3s ease-in-out;
 }
 
 .input, .textarea {
-  padding: 12px;
+  padding: 0.75rem;
     border: 0;
     border-bottom: 1px solid #ccc;
-  font-size: 14px;
+  font-size: 0.875rem;
   border-radius: 0;
 }
 
 .textarea {
-  min-height: 100px;
+  min-height: 6.25rem;
 }
 
 .sendButton {
@@ -65,7 +65,7 @@
       color: white;
       border: none;
       padding: 0.5rem 4rem;
-      border-radius: 25px;
+      border-radius: 1.563rem;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -76,29 +76,29 @@
 
 .infoSection {
   flex: 1;
-  min-width: 300px;
+  min-width: 18.75rem;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.25rem;
   align-items: flex-end;
 }
 
 .card {
   border: 1px solid #eee;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   padding: 2.5rem;
   box-shadow: 0 1px 5px rgba(0,0,0,0.05);
-  width: 450px;
+  width: 28.125rem;
 }
 
 .cardTitle {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .cardText {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.6;
   padding: 0.5rem 2rem;
   color: #606060;
@@ -109,11 +109,11 @@
   background-color: #c3884b;
   color: white;
   border: none;
-  padding: 10px 0;
+  padding: 0.625rem 0;
   width: 100%;
-  border-radius: 25px;
+  border-radius: 21.563rem;
   font-weight: bold;
-  margin-top: 15px;
+  margin-top: 0.938rem;
   cursor: pointer;
   transition: 0.3s;
 }

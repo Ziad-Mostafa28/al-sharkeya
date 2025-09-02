@@ -1,80 +1,217 @@
+/* Section */
 .visitSection {
-  background: #fff;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.title {
-  font-weight: 600;
-  font-size: 24px;
+.sectionTitle {
+  font-weight: 500;
+  font-size: 1.875rem;
+  color: #262626;
+  text-align: center;
 }
 
-.subtitle {
-  color: #555;
+.sectionSubtitle {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #606060;
+  text-align: center;
 }
 
+/* Form */
 .formTitle {
-  font-weight: 600;
-  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 1.875rem;
+  text-align: center;
+  padding-top: 40px;
 }
 
-.input {
+.inputGroup {
+  margin-bottom: 20px;
+}
+
+.inputField {
+  width: 100%;
   border: none;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #8F8F8F;
   border-radius: 0;
   padding: 8px 0;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #606060;
+  background: transparent;
+  
 }
 
-.input:focus {
-  box-shadow: none;
-  border-color: #999;
+.inputField:focus {
+  border-bottom-color: #C78E50;
 }
 
 .sendBtn {
-  background: #b07d4f;
+  background: #C78E50;
   color: #fff;
   border: none;
-  padding: 6px 30px;
-  border-radius: 20px;
+  padding: 10px 35px;
+  border-radius: 25px;
   font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
   transition: 0.3s;
 }
 
 .sendBtn:hover {
-  background: #8c613a;
+  background: #B8956A;
 }
 
-.calendarCard {
-  width: 100%;
-  max-width: 340px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  padding: 15px;
-  background: #fff;
+/* Calendar */
+.calendarWrapper {
+  width: 320px;
+  border-radius: 12px;
+  background: #E8E8E8;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .calendarHeader {
-  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.calendarHint {
+  font-size: 12px;
+  color: #888;
+  font-weight: 500;
+}
+
+.calendarNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.calendarMonth {
+  font-size: 18px;
   font-weight: 600;
+  color: #333;
+}
+
+.navBtns {
+  display: flex;
+  gap: 10px;
+}
+
+.navBtn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #666;
+  cursor: pointer;
+  padding: 5px;
+  line-height: 1;
+  border-radius: 8px;
+}
+
+.navBtn:hover {
+  background: #dadada;
+}
+
+/* Days of week */
+.daysOfWeek {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
   margin-bottom: 10px;
 }
 
-/* تخصيص مكتبة react-calendar */
-.react-calendar {
+.dayOfWeek {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  color: #888;
+  padding: 8px 0;
+}
+
+/* Calendar grid */
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+/* Use button instead of div to avoid focus issues */
+.calendarDayBtn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 2px auto;
+  transition: all 0.2s ease;
   border: none;
-  width: 100%;
+  background: transparent;
+  color: #bbb;
+  cursor: default;
 }
 
-.react-calendar__tile--active {
-  background: #b07d4f !important;
-  color: white !important;
-  border-radius: 50%;
+.calendarDayBtn:focus {
+  outline: 2px solid #b8956a;
+  outline-offset: 2px;
 }
 
-.react-calendar__tile--now {
-  background: #eee !important;
-  border-radius: 50%;
+/* empty placeholder cells (before day 1) */
+.invisibleCell {
+  visibility: hidden;
+  cursor: default;
 }
 
-.react-calendar__tile:disabled {
-  background-color: #f5f5f5;
-  color: #ccc !important;
+/* Availability states */
+.available {
+  color: #333;
+  cursor: pointer;
+}
+
+.available:hover {
+  background: #DADADA;
+}
+
+.unavailable {
+  color: #bbb;
+}
+
+/* Selected / today */
+.selected {
+  background: #D4A574 !important;
+  color: #fff !important;
+}
+.today {
+  color: #A4A2A1;
+  border: 1px solid #A4A2A1;
+}
+
+/* Responsive للموبايل */
+@media (max-width: 768px) {
+  .form-calendar-container {
+    flex-direction: column;
+  }
+
+  .form-section,
+  .calendar-section {
+    width: 100%;
+  }
+  .calendarWrapper {
+    margin-top: 50px;
+}
+
+.visitSection {
+  padding: 40px 9.8px;
+}
 }

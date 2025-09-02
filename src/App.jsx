@@ -29,6 +29,10 @@ import News from './pages/NewPage/News';
 import NewsDetailsPage from './pages/NewsDetailsPage/NewsDetailsPage';
 import FaqsPage from './pages/FaqsPage/FaqsPage';
 
+import Recipes from './pages/Recipes/Recipes';
+import RecipesDetails from './pages/RecipesDetails/RecipesDetails';
+
+
 
 
 const router = createBrowserRouter([
@@ -60,6 +64,8 @@ const router = createBrowserRouter([
       { path: 'careers', element:  <Careers/>},
       { path: 'careers/job-details', element:  <JopDetails/>},
       { path: 'contact-us', element:  <ContactUs/>},
+      { path: 'recipes', element:  <Recipes/>},
+      { path: 'recipe-details', element:  <RecipesDetails/>},
 
 
 
