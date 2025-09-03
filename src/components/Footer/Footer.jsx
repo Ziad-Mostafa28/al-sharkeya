@@ -49,40 +49,46 @@ function Footer() {
             <div className={`col-sm-6 col-md-4 col-lg-4 col-xl-2 ${styles.colSpacing}`}>
               <h2 className={styles.bottomtitle}>About Us</h2>
               <ul>
-                <li><Link to='/'>Who we are</Link></li>
-                <li><Link to='/'>Our strategy</Link></li>
-                <li><Link to='/'>Company history</Link></li>
-                <li><Link to='/'>Our shareholders</Link></li>
-                <li><Link to='/'>Board members</Link></li>
-                <li><Link to='/'>Management team</Link></li>
+                <li><Link to='/about-us/who-we-are'>Who we are</Link></li>
+                <li><Link to='/about-us/our-strategy'>Our strategy</Link></li>
+                <li><Link to='/about-us/company-history'>Company history</Link></li>
+                <li><Link to='/about-us/our-shareholders'>Our shareholders</Link></li>
+                <li><Link to='/about-us/board-members'>Board members</Link></li>
+                <li><Link to='/about-us/management-team'>Management team</Link></li>
               </ul>
             </div>
             <div className={`col-sm-6 col-md-4 col-lg-4 col-xl-2 ${styles.colSpacing}`}>
               <h2 className={styles.bottomtitle}>Our products</h2>
               <ul>
-                <li><Link to='/'>Overview</Link></li>
-                <li><Link to='/'>White sugar</Link></li>
-                <li><Link to='/'>Molasses</Link></li>
-                <li><Link to='/'>Pellets</Link></li>
+                <li><Link to='/our-products/overview'>Overview</Link></li>
+                <li><Link to='/our-products/white-sugar'>White sugar</Link></li>
+                <li><Link to='/our-products/molasses'>Molasses</Link></li>
+                <li><Link to='/our-products/pellets'>Pellets</Link></li>
               </ul>
             </div>
             <div className={`col-sm-6 col-md-4 col-lg-4 col-xl-2 ${styles.colSpacing}`}>
               <h2 className={styles.bottomtitle}>Resources</h2>
               <ul>
                 <li><Link to='/'>Sugar history</Link></li>
-                <li><Link to='/'>Recipes</Link></li>
-                <li><Link to='/'>Facts about sugar</Link></li>
+                <li><Link to='/recipes'>Recipes</Link></li>
+                <li><Link to='/facts-about-sugar'>Facts about sugar</Link></li>
               </ul>
             </div>
             <div className={`col-sm-6 col-md-4 col-lg-4 col-xl-2 ${styles.colSpacing}`}>
-              <h2 className={styles.bottomtitle}><Link>Sustainability & CSR</Link></h2>
-              <h2 className={styles.bottomtitle}><Link>Careers</Link></h2>
-              <h2 className={styles.bottomtitle}><Link to='/our-customer'>Our Customers </Link></h2>
+              <h2 className={styles.bottomtitle}>Our responsibilities</h2>
+              <ul>
+                <li><Link to='/our-responsibilities/certifications'>Certifications</Link></li>
+                <li><Link to='/our-responsibilities/sustainability'>Sustainability</Link></li>
+                <li><Link to='/our-responsibilities/csr'>CSR</Link></li>
+                <li><Link to='/our-responsibilities/codeconduct'>Code of conduct</Link></li>
+              </ul>
             </div>
             <div className={`col-sm-6 col-md-4 col-lg-4 col-xl-2 ${styles.colSpacing}`}>
-              <h2 className={styles.bottomtitle}><Link>Contact Us</Link></h2>
-              <h2 className={styles.bottomtitle}><Link>News</Link></h2>
-              <h2 className={styles.bottomtitle}><Link>FAQs</Link></h2>
+              <h2 className={styles.bottomtitle}><Link to='/contact-us'>Contact Us</Link></h2>
+              <h2 className={styles.bottomtitle}><Link to={'/news'}>News</Link></h2>
+              <h2 className={styles.bottomtitle}><Link to={'/faqs'}>FAQs</Link></h2>
+              <h2 className={styles.bottomtitle}><Link to={'/careers'}>Careers</Link></h2>
+              <h2 className={styles.bottomtitle}><Link to='/our-customer'>Our Customers </Link></h2>
             </div>
 
           </div>

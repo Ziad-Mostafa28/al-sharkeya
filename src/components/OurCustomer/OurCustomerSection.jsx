@@ -75,6 +75,17 @@ export default function OurCustomerSection() {
                             className="mySwiper"
                             spaceBetween={20}
                             slidesPerView={3}
+                            breakpoints={{
+                                768: { 
+                                    slidesPerView: 3,
+                                },
+                                576: { 
+                                    slidesPerView: 2,
+                                },
+                                0: {
+                                    slidesPerView: 1,
+                                },
+                            }}
                         >
                             {filters.map((filter) => (
                                 <SwiperSlide key={filter.name}>
