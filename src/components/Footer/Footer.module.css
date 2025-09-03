@@ -22,6 +22,10 @@
     cursor: pointer;
 }
 
+.item a:hover {
+    color: #000;
+}
+
 .item span {
     width: 50px;
     background: white;
@@ -110,10 +114,19 @@
     padding: 0.5rem;
     color: white;
 }
+.social a:hover {
+    background: #B98B5A;
+    padding: 0.5rem;
+    color: white;
+}
 
 .social a svg {
     width: 25px;
     height: 25px;
+}
+
+.colSpacing {
+    z-index: 20;
 }
 
 @media (max-width: 1200px) {
@@ -146,6 +159,10 @@
 .bottomFooter p {
     color: #2B2A29;
     font-size: 0.7rem;
+}
+
+.bottomFooter p a:hover {
+    color: #2B2A29;
 }
 
 .bottomFooter p a {
