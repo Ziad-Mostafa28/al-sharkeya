@@ -22,7 +22,7 @@ import CSR from './pages/CSR/CSR';
 
 import Careers from './pages/Careers/Careers';
 import JopDetails from './pages/JopDetails/JopDetails';
- 
+
 import ContactUs from './pages/ContactUs/ContactUs';
 import CodeConductPage from './pages/CodeConductPage/CodeConductPage';
 import News from './pages/NewPage/News';
@@ -32,6 +32,7 @@ import FaqsPage from './pages/FaqsPage/FaqsPage';
 import Recipes from './pages/Recipes/Recipes';
 import RecipesDetails from './pages/RecipesDetails/RecipesDetails';
 import FactsPage from './pages/FactsPage/FactsPage';
+import OurCustomerPage from './pages/OurCustomerPage/OurCustomerPage';
 
 
 
@@ -42,32 +43,33 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { index: true, element: <Home /> },
-      {path: 'about-us', element:<About />},
-      {path: 'about-us/who-we-are', element: <WhoWeAre />},
-      {path: 'about-us/our-strategy', element: <OurStrategy />},
-      {path: 'about-us/company-history', element: <CompanyHistory />},
-      {path: 'about-us/our-shareholders', element: <OurShareholders />},
-      {path: 'about-us/board-members', element: <BoardMembers />},
-      {path: 'about-us/management-team', element: <ManagementTeam />},
+      { path: 'about-us', element: <About /> },
+      { path: 'about-us/who-we-are', element: <WhoWeAre /> },
+      { path: 'about-us/our-strategy', element: <OurStrategy /> },
+      { path: 'about-us/company-history', element: <CompanyHistory /> },
+      { path: 'about-us/our-shareholders', element: <OurShareholders /> },
+      { path: 'about-us/board-members', element: <BoardMembers /> },
+      { path: 'about-us/management-team', element: <ManagementTeam /> },
 
-      {path: 'our-responsibilities/certifications', element: <Certifications />},
-      {path: 'our-responsibilities/sustainability', element: <SustainabilityPage />},
-      {path: 'our-responsibilities/csr', element: <CSR />},
-      {path: 'our-responsibilities/codeconduct', element: <CodeConductPage />},
-      {path: 'news', element: <News />},
-      {path: 'news-details', element: <NewsDetailsPage />},
-      {path: 'faqs', element: <FaqsPage />},
-      {path: 'facts-about-sugar', element: <FactsPage />},
+      { path: 'our-responsibilities/certifications', element: <Certifications /> },
+      { path: 'our-responsibilities/sustainability', element: <SustainabilityPage /> },
+      { path: 'our-responsibilities/csr', element: <CSR /> },
+      { path: 'our-responsibilities/codeconduct', element: <CodeConductPage /> },
+      { path: 'news', element: <News /> },
+      { path: 'news-details', element: <NewsDetailsPage /> },
+      { path: 'faqs', element: <FaqsPage /> },
+      { path: 'facts-about-sugar', element: <FactsPage /> },
+      { path: 'our-customer', element: <OurCustomerPage /> },
 
-      { path: 'our-products/overview', element:  <Overview/>},
-      { path: 'our-products/white-sugar', element:  <WhiteSugar/>},
-      { path: 'our-products/molasses', element:  <Molasses/>},
-      { path: 'our-products/pellets', element:  <Pellets/>},
-      { path: 'careers', element:  <Careers/>},
-      { path: 'careers/job-details', element:  <JopDetails/>},
-      { path: 'contact-us', element:  <ContactUs/>},
-      { path: 'recipes', element:  <Recipes/>},
-      { path: 'recipe-details', element:  <RecipesDetails/>},
+      { path: 'our-products/overview', element: <Overview /> },
+      { path: 'our-products/white-sugar', element: <WhiteSugar /> },
+      { path: 'our-products/molasses', element: <Molasses /> },
+      { path: 'our-products/pellets', element: <Pellets /> },
+      { path: 'careers', element: <Careers /> },
+      { path: 'careers/job-details', element: <JopDetails /> },
+      { path: 'contact-us', element: <ContactUs /> },
+      { path: 'recipes', element: <Recipes /> },
+      { path: 'recipe-details', element: <RecipesDetails /> },
 
 
 
