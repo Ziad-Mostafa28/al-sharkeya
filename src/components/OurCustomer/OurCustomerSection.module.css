@@ -1,0 +1,69 @@
+.OurCustomerSection {
+    background-color: #F8F8F8;
+}
+
+.OurCustomerSection .container {
+    max-width: -webkit-fill-available;
+    margin: 0 3.125rem;
+    padding: 0;
+}
+
+.box h2 {
+    font-weight: 500;
+    font-size: 1.875rem;
+    text-align: center;
+    color: #262626;
+    margin-bottom: 4rem;
+}
+
+.slide_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.slide_box .slide_box_image {
+    height: 160px;
+}
+
+.slide_box .slide_box_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide_box h2 {
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #262626;
+}
+
+.customer_box {
+    background-color: white;
+}
+.customer_box .title {
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #262626;
+    padding: 2rem 0;
+}
+
+.image_customer {
+    height: 80px;
+}
+
+.image_customer img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.Subtitle {
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    color: #262626;
+}
