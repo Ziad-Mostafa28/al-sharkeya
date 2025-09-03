@@ -1,0 +1,92 @@
+.privacySection {
+    margin: 05rem 3.125rem;
+}
+
+.privacySection .customContainer {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.privacySection .sectionTitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #262626;
+}
+
+.privacySection h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #262626;
+}
+
+.privacySection p {
+    margin-bottom: 0rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #606060;
+
+}
+
+.privacySection .customList {
+    list-style: none;
+    padding-left: 0;
+}
+
+.privacySection .customList li {
+    font-size: 1rem;
+    color: #606060;
+    font-weight: 400;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.privacySection .customList li::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+    color: #000;
+    font-weight: bold;
+}
+
+
+@media (max-width: 575.98px) {
+    .privacySection {
+        margin: 2rem 1.25rem;
+    }
+
+    .privacySection .sectionTitle {
+        font-size: 1.5rem;
+    }
+
+    .privacySection h3 {
+        font-size: 1.4rem;
+    }
+
+    .privacySection p,
+    .privacySection .customList li {
+        font-size: 0.9rem;
+    }
+}
+
+/* 📱 تابلت (576px - 768px) */
+@media (min-width: 576px) and (max-width: 768px) {
+    .privacySection {
+        margin: 3rem 1.25rem;
+    }
+
+    .privacySection .sectionTitle {
+        font-size: 1.5rem;
+    }
+
+    .privacySection h3 {
+        font-size: 1.4rem;
+    }
+
+    .privacySection p,
+    .privacySection .customList li {
+        font-size: 0.95rem;
+    }
+}

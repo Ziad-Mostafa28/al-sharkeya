@@ -32,6 +32,9 @@ import FaqsPage from './pages/FaqsPage/FaqsPage';
 import Recipes from './pages/Recipes/Recipes';
 import RecipesDetails from './pages/RecipesDetails/RecipesDetails';
 import FactsPage from './pages/FactsPage/FactsPage';
+import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService/TermsOfService';
+import DownloadBrochure from './pages/DownloadBrochure/DownloadBrochure';
 
 
 
@@ -68,10 +71,9 @@ const router = createBrowserRouter([
       { path: 'contact-us', element:  <ContactUs/>},
       { path: 'recipes', element:  <Recipes/>},
       { path: 'recipe-details', element:  <RecipesDetails/>},
-
-
-
-
+      { path: 'privacy-policy', element:  <PrivacyPolicy/>},
+      { path: 'terms-of-service', element:  <TermsOfService/>},
+      { path: 'download-brochure', element:  <DownloadBrochure/>},
     ],
   },
 ]);
