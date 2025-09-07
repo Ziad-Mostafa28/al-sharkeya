@@ -38,6 +38,7 @@ import TermsOfService from './pages/TermsOfService/TermsOfService';
 import DownloadBrochure from './pages/DownloadBrochure/DownloadBrochure';
 
 import OurCustomerPage from './pages/OurCustomerPage/OurCustomerPage';
+import SugarHistory from './pages/SugarHistory/SugarHistory';
 
 
 
@@ -106,6 +107,7 @@ const router = createBrowserRouter([
       { path: 'contact-us', element: <ContactUs /> },
       { path: 'recipes', element: <Recipes /> },
       { path: 'recipe-details', element: <RecipesDetails /> },
+      { path: 'sugar-history', element: <SugarHistory /> },
 
 
 

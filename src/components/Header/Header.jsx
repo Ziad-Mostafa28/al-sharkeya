@@ -169,9 +169,9 @@ export default function Header() {
                   </a>
                   <ul className={`dropdown-menu ${styles.linkmenudesktop}`}>
                     <li className={`${styles.limenu}`} >
-                      <a className="dropdown-item" href="#">
+                      <Link className="dropdown-item" to={'sugar-history'}>
                         Sugar history
-                      </a>
+                      </Link>
                     </li>
                     <li className={`${styles.limenu}`}>
                       <Link className="dropdown-item" to="recipes">
@@ -394,7 +394,7 @@ export default function Header() {
                 </button>
                 {dropdownOpen.resources && (
                   <ul className="list-unstyled">
-                    <li><a className={`nav-link text-white ${styles.nav_link2}`} href="#">Sugar history</a></li>
+                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} to={'sugar-history'}>Sugar history</Link></li>
                     <li><Link className={`nav-link text-white ${styles.nav_link2}`} to="recipes">Recipes</Link></li>
                     <li><Link className={`nav-link text-white ${styles.nav_link2}`} to="/facts-about-sugar">Facts about sugar</Link></li>
                   </ul>
