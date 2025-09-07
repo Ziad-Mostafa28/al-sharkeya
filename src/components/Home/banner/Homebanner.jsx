@@ -84,6 +84,7 @@ export default function HomeBanner() {
           </div>
 
           <Swiper 
+            dir={document.dir === "rtl" ? "rtl" : "ltr"}
             effect="fade"
             fadeEffect={{ crossFade: true }}
             modules={[EffectFade, Autoplay]}

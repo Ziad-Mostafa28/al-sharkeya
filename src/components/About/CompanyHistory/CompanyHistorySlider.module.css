@@ -2,17 +2,35 @@
     position: relative;
 }
 
-.historySection .timeline {
+.timelineContainer {
+    height: 522px;
+    overflow-y: auto;
+    position: relative;
+    padding-left: 0;
+}
+
+.timeline {
     list-style: none;
     padding: 0;
     margin: 0;
+    position: relative;
+    padding-left: 2.5rem;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 24px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: transparent;
     border-left: 2px dashed #ccc;
 }
 
-.historySection .timelineItem {
+.timelineItem {
     position: relative;
     margin: 2rem 0;
-    padding-left: 2.5rem;
     font-size: 2rem;
     font-weight: 500;
     color: #999;
@@ -20,12 +38,13 @@
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
+    padding: 0 0 0 1rem;
 }
 
-.historySection .timelineItem::before {
+.timelineItem::before {
     content: "";
     position: absolute;
-    left: -12px;
+    left: -27px;
     top: 50%;
     transform: translateY(-50%);
     width: 1.5rem;
@@ -33,27 +52,44 @@
     background: #ccc;
     border-radius: 50%;
     transition: 0.3s ease;
+    z-index: 2;
+    border: 3px solid white;
 }
 
-.historySection .timelineItem.active {
+.timelineItem.active {
     color: #000;
     font-weight: 700;
 }
 
-.historySection .timelineItem.active span {
+.timelineItem.active span {
     border-bottom: 2px solid #C78E50;
 }
 
-.historySection .timelineItem.active::before {
+.timelineItem.active::before {
     background: #C78E50;
     width: 2rem;
     height: 2rem;
-    left: -1rem;
+    left: -33px;
+}
 
+.swiperContainer {
+    height: 700px;
 }
 
 .swiper {
-    height: 700px;
+    height: 100%;
+}
+
+.contentBox {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contentBox img {
+    width: 100%;
+    height: 522px;
+    object-fit: cover;
 }
 
 /* Mobile Timeline Items */
@@ -81,7 +117,6 @@
     color: #C78E50 !important;
     font-weight: 700 !important;
     background-color: white;
-
 }
 
 .mobileTimelineItem:hover {
@@ -97,6 +132,9 @@
     color: #262626;
     font-size: 3rem;
     z-index: 50;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 .mobileNavBtn:hover {
@@ -115,12 +153,32 @@
     margin-right: -5px;
 }
 
+/* Custom scrollbar */
+.timelineContainer::-webkit-scrollbar {
+    width: 6px;
+}
+
+.timelineContainer::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.timelineContainer::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+.timelineContainer::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+/* Mobile responsive */
 @media (max-width: 767px) {
     .timelineItem::before {
         display: none;
     }
 
-    .historySection .mobilee .timelineItem {
+    .mobilee .timelineItem {
         position: relative;
         margin: 10px 5px;
         padding-left: 0;
@@ -138,6 +196,9 @@
         height: auto;
     }
 
+    .contentBox img {
+        height: 200px;
+    }
 }
 
 .mobilee .swiper-slide {
@@ -150,31 +211,31 @@
     padding: 0 15px;
 }
 
-
-
-[lang="ar"] .historySection .timeline {
+/* RTL Support */
+[lang="ar"] .timeline::before {
     border-left: none;
     border-right: 2px dashed #ccc;
+    left: auto;
+    right: 24px;
 }
 
-[lang="ar"] .historySection .timelineItem {
+[lang="ar"] .timeline {
     padding-left: 0;
     padding-right: 2.5rem;
 }
 
-[lang="ar"] .historySection .timelineItem::before {
+[lang="ar"] .timelineItem::before {
     left: auto;
-    right: -12px;
+    right: -37px;
 }
 
-[lang="ar"] .historySection .timelineItem.active::before {
-    right: -1rem;
+[lang="ar"] .timelineItem.active::before {
+    right: -43px;
 }
 
 [lang="ar"] .nextBtn {
     right: auto !important;
     left: 0 !important;
-
 }
 
 [lang="ar"] .prevBtn {

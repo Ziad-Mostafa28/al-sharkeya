@@ -1,45 +1,24 @@
-.cardbox {
+.SecondCardBox {
     margin: 4rem 0;
 
 }
 
-.cardbox .container {
+.SecondCardBox .container {
     max-width: -webkit-fill-available;
     margin: 0 3.125rem;
     padding: 0;
 
 }
 
-.cardbox a {
-    display: flex;
-    color: #000000;
-    gap: 1rem;
-    font-weight: 600;
-}
-
-.cardbox a:hover {
-    color: #606060;
-}
-
-.cardbox .topdesc {
-    font-weight: 500;
-    font-size: 1.25rem;
-    color: #606060;
-}
-
-.cardbox p {
+.SecondCardBox p {
     font-family: "Alexandria";
     font-weight: 400;
     font-size: 1rem;
     color: #606060;
 }
 
-.cardbox p span {
-    color: #C78E50;
-}
-
-.cardbox .bannerImage {
-    height: 300px;
+.SecondCardBox img {
+    height: 270px;
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
@@ -48,7 +27,7 @@
 
 
 @media (max-width:767px) {
-    .cardbox .bannerImage {
+    .SecondCardBox img {
         height: 100%;
         margin: 2rem 0;
     }
@@ -56,12 +35,11 @@
 }
 
 @media (max-width:1023px) {
-    .cardbox .container {
+    .SecondCardBox .container {
         margin: 0 1.25rem;
 
     }
-
-    .cardbox p {
+    .SecondCardBox p {
         font-size: 0.9rem;
     }
 }

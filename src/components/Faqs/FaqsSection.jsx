@@ -128,7 +128,7 @@ export default function FaqsSection() {
                             <img src="/img/faqs/small.png" alt="faq" />
                         </div>
                     </div>
-                    <div className="col-12 col-md-8">
+                    <div className="col-12 mt-4 mt-md-0 col-md-8">
                         {faqs.map((item, index) => (
                             <div key={index} className={styles.accor}>
                                 <div
