@@ -2,19 +2,16 @@ import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import { Outlet } from 'react-router-dom';
 import SecBanner from '../components/SharedComponents/SecBanner/SecBanner';
+import ScrollToTop from '../components/ScrollToTop/ScrollToTop';
 
 export default function MainLayout() {
   return (
     <>
       <Header />
-      {/* <SecBanner
-        title="Who we are"
-        subtitle="About us"
-        image="/img/homepage/banner.png"
-      /> */}
+      <ScrollToTop />
 
-        <Outlet />
-        
+      <Outlet />
+
       <Footer />
     </>
   );
