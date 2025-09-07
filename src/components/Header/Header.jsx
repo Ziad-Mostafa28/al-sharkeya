@@ -11,11 +11,32 @@ export default function Header() {
     sustainability: false,
   });
 
-  const toggleDropdown = (key) => {
-    setDropdownOpen((prev) => ({ ...prev, [key]: !prev[key] }));
-  };
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
 
+  const toggleDropdown = (key) => {
+    setDropdownOpen((prev) => {
+      const newState = {
+        aboutus: false,
+        products: false,
+        resources: false,
+        sustainability: false,
+      };
+      newState[key] = !prev[key];
+      return newState;
+    });
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    setDropdownOpen({
+      aboutus: false,
+      products: false,
+      resources: false,
+      sustainability: false,
+    });
+  };
 
   return (
     <>
@@ -41,7 +62,7 @@ export default function Header() {
                   <a className={`nav-link dropdown-toggle ${styles.linkmenu}`} role="button"
                     data-bs-toggle="dropdown" href="#">
                     About us
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="_chevronIcon_4vcs0_385 ms-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="_chevronIcon_4vcs0_385 mx-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
                   </a>
                   <ul className={`dropdown-menu ${styles.linkmenudesktop}`} >
                     <li className={`${styles.limenu}`}>
@@ -84,7 +105,7 @@ export default function Header() {
                     data-bs-toggle="dropdown"
                   >
                     Our products
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="_chevronIcon_4vcs0_385 ms-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="_chevronIcon_4vcs0_385 mx-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
                   </a>
                   <ul className={`dropdown-menu ${styles.linkmenudesktop}`} >
                     <li className={`${styles.limenu}`}>
@@ -118,7 +139,7 @@ export default function Header() {
                   >
                     Our responsibilities
                     <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 448 512"
-                      className="_chevronIcon_4vcs0_385 ms-2" height="1em" width="1em"
+                      className="_chevronIcon_4vcs0_385 mx-2" height="1em" width="1em"
                       xmlns="http://www.w3.org/2000/svg">
                       <path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 
       0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 
@@ -165,7 +186,7 @@ export default function Header() {
                     data-bs-toggle="dropdown"
                   >
                     Resources
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="_chevronIcon_4vcs0_385 ms-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="_chevronIcon_4vcs0_385 mx-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
                   </a>
                   <ul className={`dropdown-menu ${styles.linkmenudesktop}`}>
                     <li className={`${styles.limenu}`} >
@@ -252,6 +273,7 @@ export default function Header() {
             aria-controls="mobileNavbar"
             aria-expanded="false"
             aria-label="Toggle navigation"
+            onClick={() => setIsMenuOpen((prev) => !prev)}
           >
             <FaBars className="text-white" />
           </button>
@@ -259,7 +281,7 @@ export default function Header() {
 
         {/* Mobile Navigation Menu */}
         <div
-          className={`collapse navbar-collapse ${styles.mobileNav}`}
+          className={`collapse navbar-collapse ${styles.mobileNav}  ${isMenuOpen ? "show" : ""}`}
           id="mobileNavbar"
         >
           <div className="container-fluid">
@@ -281,32 +303,32 @@ export default function Header() {
                 {dropdownOpen.aboutus && (
                   <ul className="list-unstyled">
                     <li>
-                      <Link className={`nav-link text-white ${styles.nav_link2}`} to="about-us/who-we-are">
+                      <Link className={`nav-link text-white ${styles.nav_link2}`} to="about-us/who-we-are" onClick={closeMenu}>
                         Who we are
                       </Link>
                     </li>
                     <li>
-                      <Link className={`nav-link text-white ${styles.nav_link2}`} to="about-us/our-strategy">
+                      <Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="about-us/our-strategy">
                         Our strategy
                       </Link>
                     </li>
                     <li>
-                      <Link className={`nav-link text-white ${styles.nav_link2}`} to="about-us/company-history">
+                      <Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="about-us/company-history">
                         Company history
                       </Link>
                     </li>
                     <li>
-                      <Link className={`nav-link text-white ${styles.nav_link2}`} to="about-us/our-shareholders">
+                      <Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="about-us/our-shareholders">
                         Our Shareholders
                       </Link>
                     </li>
                     <li>
-                      <Link className={`nav-link text-white ${styles.nav_link2}`} to="about-us/board-members">
+                      <Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="about-us/board-members">
                         Board members
                       </Link>
                     </li>
                     <li>
-                      <Link className={`nav-link text-white ${styles.nav_link2}`} to="about-us/management-team">
+                      <Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="about-us/management-team">
                         Management team
                       </Link>
                     </li>
@@ -328,10 +350,10 @@ export default function Header() {
 
                 {dropdownOpen.products && (
                   <ul className="list-unstyled">
-                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} to="our-products/overview">Overview</Link></li>
-                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} to="our-products/white-sugar">White Sugar</Link></li>
-                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} to="our-products/molasses">Molasses</Link></li>
-                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} to={'our-products/pellets'}>Pellets</Link></li>
+                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="our-products/overview">Overview</Link></li>
+                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="our-products/white-sugar">White Sugar</Link></li>
+                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="our-products/molasses">Molasses</Link></li>
+                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to={'our-products/pellets'}>Pellets</Link></li>
                   </ul>
                 )}
               </li>
@@ -350,22 +372,22 @@ export default function Header() {
                 {dropdownOpen.sustainability && (
                   <ul className="list-unstyled">
                     <li className={`${styles.limenu}`}>
-                      <Link className={`nav-link text-white ${styles.nav_link2}`} to="our-responsibilities/certifications">
+                      <Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="our-responsibilities/certifications">
                         Certifications
                       </Link>
                     </li>
                     <li className={`${styles.limenu}`}>
-                      <Link className={`nav-link text-white ${styles.nav_link2}`} to="our-responsibilities/sustainability">
+                      <Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="our-responsibilities/sustainability">
                         Sustainability
                       </Link>
                     </li>
                     <li className={`${styles.limenu}`}>
-                      <Link className={`nav-link text-white ${styles.nav_link2}`} to="our-responsibilities/csr">
+                      <Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="our-responsibilities/csr">
                         CSR
                       </Link>
                     </li>
                     <li className={`${styles.limenu}`}>
-                      <Link className={`nav-link text-white ${styles.nav_link2}`} to="our-responsibilities/codeconduct">
+                      <Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="our-responsibilities/codeconduct">
                         Code of conduct
                       </Link>
                     </li>
@@ -376,7 +398,7 @@ export default function Header() {
 
 
               <li className="nav-item">
-                <Link className={`nav-link ${styles.linkmenu}`} to={"careers"}>
+                <Link className={`nav-link ${styles.linkmenu}`} onClick={closeMenu} to={"careers"}>
                   Careers
                 </Link>
               </li>
@@ -395,23 +417,23 @@ export default function Header() {
                 {dropdownOpen.resources && (
                   <ul className="list-unstyled">
                     <li><a className={`nav-link text-white ${styles.nav_link2}`} href="#">Sugar history</a></li>
-                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} to="recipes">Recipes</Link></li>
-                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} to="/facts-about-sugar">Facts about sugar</Link></li>
+                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="recipes">Recipes</Link></li>
+                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="/facts-about-sugar">Facts about sugar</Link></li>
                   </ul>
                 )}
               </li>
               <li className="nav-item">
-                <Link className={`nav-link ${styles.linkmenu}`} to={"news"}>
+                <Link className={`nav-link ${styles.linkmenu}`} onClick={closeMenu} to={"news"}>
                   News
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className={`nav-link ${styles.linkmenu}`} to={"faqs"}>
+                <Link className={`nav-link ${styles.linkmenu}`} onClick={closeMenu} to={"faqs"}>
                   FAQs
                 </Link>
               </li>
               <li className="nav-item mt-3">
-                <Link to={"contact-us"}
+                <Link to={"contact-us"} onClick={closeMenu}
                   className="btn rounded-pill px-3 bg-light text-success border-0"
                 >
                   Contact us

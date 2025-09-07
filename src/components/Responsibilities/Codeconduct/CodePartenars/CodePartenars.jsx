@@ -88,7 +88,7 @@ export default function CodePartenars() {
     <section className={`${styles.CodePartenarsDetailsSection} py-5`}>
       <div className={`${styles.container}`}>
         {data.map((item) => (
-          <div className="row mb-5" key={item.id}>
+          <div className="row mb-4" key={item.id}>
             <div className="col-12 col-md-1">
               <div className={styles.image}>
                 <img src={item.image} alt={item.title} />

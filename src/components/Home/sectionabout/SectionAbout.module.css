@@ -113,3 +113,19 @@ color: #858585;
     
 }
 
+
+
+[lang="ar"] .image_box .second_image{
+    position: absolute;
+    top: 50%;
+    right: auto;
+    left: 0;
+    transform: translate(-70%, -50%);
+    width: 58%;
+    border-radius: 20px;
+}
+
+[lang="ar"] .descc::after {
+    left: auto;
+    right: -20px;
+}

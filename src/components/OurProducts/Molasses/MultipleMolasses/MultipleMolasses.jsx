@@ -6,7 +6,7 @@ export default function MultipleMolasses() {
 
     const missionData = {
         title: "Multiple Uses of Molasses",
-        description: "Beet pulp is used in the diets of many animals",
+        description: "",
         items: [
             {
                 icon: "/img/aboutus/icon.png",

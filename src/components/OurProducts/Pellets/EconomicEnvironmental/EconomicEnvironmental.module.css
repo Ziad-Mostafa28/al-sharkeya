@@ -102,3 +102,9 @@
 .textBlock li {
   margin-bottom: 8px;     
 }
+
+
+[lang="ar"] .textBlock ul {
+  padding-left: auto !important;      
+  padding-right: 20px !important;      
+}

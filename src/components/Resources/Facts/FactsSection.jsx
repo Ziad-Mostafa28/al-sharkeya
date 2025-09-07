@@ -72,7 +72,7 @@ export default function FactsSection() {
                             <img src="/img/recipes/image.png" alt="FACTS" />
                         </div>
                     </div>
-                    <div className="col-12 col-md-8">
+                    <div className="col-12 mt-4 mt-md-0 col-md-8">
                         {Facts.map((item, index) => (
                             <div key={index} className={styles.accor}>
                                 <div

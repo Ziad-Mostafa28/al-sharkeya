@@ -56,40 +56,44 @@ export default function CompanyHistorySlider() {
             {/* ===== Desktop Layout ===== */}
             <div className="d-none d-md-flex row align-items-start">
                 <div className="col-12 col-md-3">
-                    <ul className={styles.timeline}>
-                        {years.map((item, index) => (
-                            <li
-                                key={item.year}
-                                className={`${styles.timelineItem} ${activeIndex === index ? styles.active : ""}`}
-                                onClick={() => handleYearClick(index)}
-                            >
-                                <span>{item.year}</span>
-                            </li>
-                        ))}
-                    </ul>
+                    <div className={styles.timelineContainer}>
+                        <ul className={styles.timeline}>
+                            {years.map((item, index) => (
+                                <li
+                                    key={item.year}
+                                    className={`${styles.timelineItem} ${activeIndex === index ? styles.active : ""}`}
+                                    onClick={() => handleYearClick(index)}
+                                >
+                                    <span>{item.year}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
 
                 <div className="col-12 col-md-9">
-                    <Swiper
-                        direction="vertical"
-                        slidesPerView={1}
-                        spaceBetween={30}
-                        speed={600}
-                        onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-                        onSwiper={(swiper) => (desktopSwiperRef.current = swiper)}
-                        className={styles.swiper}
-                    >
-                        {years.map((item) => (
-                            <SwiperSlide key={item.year}>
-                                <div className={styles.contentBox}>
-                                    <img src={item.image} alt={`Year ${item.year}`} className="img-fluid rounded mb-3" />
-                                    <p className="text-muted">
-                                        <strong>{item.year}:</strong> {item.description}
-                                    </p>
-                                </div>
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
+                    <div className={styles.swiperContainer}>
+                        <Swiper
+                            direction="vertical"
+                            slidesPerView={1}
+                            spaceBetween={30}
+                            speed={600}
+                            onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+                            onSwiper={(swiper) => (desktopSwiperRef.current = swiper)}
+                            className={styles.swiper}
+                        >
+                            {years.map((item) => (
+                                <SwiperSlide key={item.year}>
+                                    <div className={styles.contentBox}>
+                                        <img src={item.image} alt={`Year ${item.year}`} className="img-fluid rounded mb-3" />
+                                        <p className="text-muted">
+                                            <strong>{item.year}:</strong> {item.description}
+                                        </p>
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </div>
                 </div>
             </div>
 
