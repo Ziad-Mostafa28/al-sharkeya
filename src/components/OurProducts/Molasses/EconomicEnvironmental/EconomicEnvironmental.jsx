@@ -7,7 +7,7 @@ export default function EconomicEnvironmental() {
         <section className={`${styles.WhiteSugar}`}>
                <div className={`container-fluid ${styles.customContainer}`}>
                  <div className="row align-items-start">
-                   <div className={`col-md-7 ${styles.textBlock}`}>
+                   <div className={`col-md-8 ${styles.textBlock}`}>
                      <h2>Economic and Environmental Benefits</h2>
                      <p>
                        The use of molasses supports sustainability and circular economy principles:
@@ -19,7 +19,7 @@ export default function EconomicEnvironmental() {
                        </ul>
                    </div>
        
-                   <div className={`col-md-5  ${styles.imageBlock}`}>
+                   <div className={`col-md-4  ${styles.imageBlock}`}>
                      <img
                        src="../img/our-products/molasses/wood-pellets.png"
                        alt="White sugar"

@@ -20,7 +20,7 @@
 .textCard {
     position: absolute;
     top: 50%;
-    right: 3.125rem;
+    right: 9.125rem;
     transform: translateY(-50%);
     background: #fff;
     padding: 3.125rem;
@@ -122,3 +122,4 @@
         text-align: center;
     }
 }
+

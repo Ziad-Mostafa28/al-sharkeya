@@ -21,8 +21,8 @@ export default function SectionAbout() {
                         <div className={`${styles.numbox}`}>
                             <div className={styles.smallbox}>
                             <div className={styles.numberBox}>
-                                <CountUp end={15} duration={2} enableScrollSpy scrollSpyOnce/>
                                 <span className={styles.plus}>+</span>
+                                <CountUp end={15} duration={2} enableScrollSpy scrollSpyOnce/>
                             </div>
                             <div className={styles.descc}>
                                 Years of
