@@ -37,8 +37,8 @@ export default function OurProducts() {
   };
 
   return (
-    <section className="my-5 mx-5">
-      <div className={styles.container}>
+    <section className={`${styles.topSec}`}>
+      <div className={`${styles.container}`}>
         {/* Background Image */}
         <img
           src={products[activeProduct].image}
@@ -48,10 +48,6 @@ export default function OurProducts() {
           }`}
         />
         <h1 className={styles.title}>Our Products</h1>
-
-        {/* Overlay */}
-        {/* <div className={styles.overlay}></div> */}
-
         {/* Content */}
         <div className={styles.content}>
           <div className={styles.header}>

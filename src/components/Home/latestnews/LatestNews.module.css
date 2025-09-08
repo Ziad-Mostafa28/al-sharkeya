@@ -26,8 +26,6 @@
 
 .newsItem {
   align-items: center;
-  /* padding: 1rem;
-  border-bottom: 1px solid #eee; */
   transition: background-color 0.3s ease;
 }
 
@@ -65,7 +63,6 @@
 }
 .month {
   font-size: 0.8rem;
-  /* margin-top: -4px; */
 }
 
 .readMore {
@@ -76,9 +73,9 @@
     padding-right: 0.5rem;
 }
 
-@media (max-width:768px) {
+@media (max-width:1023px) {
     .latestNews{
-    margin: 5rem 2rem;
+    margin: 3rem 1.25rem 1rem;
 } 
 } 
 
