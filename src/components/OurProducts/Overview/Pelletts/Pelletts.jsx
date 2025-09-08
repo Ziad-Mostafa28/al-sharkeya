@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './Pelletts.module.css'
+import { Link } from 'react-router-dom'
 
 export default function Pelletts() {
   return (
@@ -12,7 +13,10 @@ export default function Pelletts() {
                  <p>
                    The cossettes from which the sugar juice is derived in the extraction tower are mechanically pressed and dried in a drying tunnel before being pelleted and sold as animal feed.
                  </p>
-                 <button className={styles.readMoreBtn}>Read more</button>
+                  <Link to={"/our-products/pellets"}>
+                    <button className={styles.readMoreBtn}>Read more</button>
+
+                  </Link>
                </div>
    
                <div className={`col-md-4  ${styles.imageBlock}`}>

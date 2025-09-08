@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './WhiteSugar.module.css'
+import { Link } from 'react-router-dom'
 
 export default function WhiteSugar() {
   return (
@@ -13,7 +14,10 @@ export default function WhiteSugar() {
               <p>
                 White sugar, also known as refined sugar or granulated sugar, is a common sweetener made by extracting and purifying sucrose from sugar beet plants or sugarcane. It is typically white in color, fine in texture, and consists of nearly pure sucrose. White sugar is a versatile and essential ingredient found in kitchens and food production around the world
               </p>
-              <button className={styles.readMoreBtn}>Read more</button>
+
+              <Link to={"/our-products/white-sugar"}>
+                <button className={styles.readMoreBtn}>Read more</button>
+              </Link>
             </div>
 
             <div className={`col-md-4  ${styles.imageBlock}`}>

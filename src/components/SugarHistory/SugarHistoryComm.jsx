@@ -1,12 +1,12 @@
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import styles from "./SugarHistoryComm.module.css";
 
 function formatPeriodText(text) {
-  const specialWords = ["BCE", "CE","S"]; 
+  const specialWords = ["BCE", "CE", "S"];
   return text.split(" ").map((word, index) => {
     if (specialWords.includes(word)) {
       return (
@@ -77,7 +77,7 @@ export default function SugarHistoryComm() {
       background: "/img/sugarhistory/5.png",
       image: "/img/sugarhistory/Rectangle5.png",
     },
-      {
+    {
       period: "1800 S",
       title: "Discovery of Sugar Beet",
       text: [
@@ -87,7 +87,7 @@ export default function SugarHistoryComm() {
       background: "/img/sugarhistory/6.png",
       image: "/img/sugarhistory/Rectangle6.png",
     },
-      {
+    {
       period: "Mid-1800 S",
       title: "Sugar Industry Begins in Egypt (Modern Era)",
       text: [
@@ -97,7 +97,7 @@ export default function SugarHistoryComm() {
       background: "/img/sugarhistory/7.png",
       image: "/img/sugarhistory/Rectangle7.png",
     },
-      {
+    {
       period: "1900 S",
       title: "Industrialization and Expansion",
       text: [
@@ -111,7 +111,7 @@ export default function SugarHistoryComm() {
       background: "/img/sugarhistory/8.png",
       image: "/img/sugarhistory/Rectangle8.png",
     },
-      {
+    {
       period: "2000 S",
       title: "Market Growth and Imports",
       text: [
@@ -123,7 +123,7 @@ export default function SugarHistoryComm() {
       background: "/img/sugarhistory/9.png",
       image: "/img/sugarhistory/Rectangle9.png",
     },
-      {
+    {
       period: "2010 S",
       title: "Digitalization and Sustainability",
       text: [
@@ -133,7 +133,7 @@ export default function SugarHistoryComm() {
       background: "/img/sugarhistory/10.png",
       image: "/img/sugarhistory/Rectangle10.png",
     },
-      {
+    {
       period: "2020 S",
       title: "Egypt’s Sugar Sector Today",
       text: [
@@ -164,38 +164,49 @@ export default function SugarHistoryComm() {
           </p>
         </div>
 
-        {isEnd && (
-          <button
-            onClick={() => {
-              swiperRef.current?.slideTo(0);
-              setActiveIndex(0);
-              setIsEnd(false);
-            }}
-            className={styles.restartBtn}
-          >
-            ⟳ Back to beginning
-          </button>
-        )}
+
 
         <div className={styles.navButtons}>
-          <button ref={prevRef} className={styles.prevBtn}>
-            ‹ Previously
-          </button>
-          <button
-            ref={nextRef}
-            className={`${styles.nextBtn} ${isEnd ? styles.disabled : ""}`}
-            disabled={isEnd}
-          >
-            Next ›
-          </button>
+
+          <div className=" w-100 mb-3">
+            {isEnd && (
+              <button
+                onClick={() => {
+                  swiperRef.current?.slideTo(0);
+                  setActiveIndex(0);
+                  setIsEnd(false);
+                }}
+                className={styles.restartBtn}
+              >
+                ⟳ Back to beginning
+              </button>
+            )}
+          </div>
+          <div className=" d-flex align-items-center justify-content-between w-100">
+
+
+            <button ref={prevRef} className={styles.prevBtn}>
+              ‹ Previously
+            </button>
+            <button
+              ref={nextRef}
+              className={`${styles.nextBtn} ${isEnd ? styles.disabled : ""}`}
+              disabled={isEnd}
+            >
+              Next ›
+            </button>
+
+          </div>
+
         </div>
       </div>
 
       <div className={styles.sliderWrapper}>
         <Swiper
-          modules={[Navigation]}
+          modules={[Navigation, Autoplay]}
+
           spaceBetween={0}
-          slidesPerView={1.99} 
+          slidesPerView={1.99}
           slidesPerGroup={1}
           centeredSlides={true}
           initialSlide={0}
@@ -206,17 +217,21 @@ export default function SugarHistoryComm() {
           touchRatio={1}
           slidesOffsetBefore={0}
           centeredSlidesBounds={true}
+          autoplay={{
+            delay: 4000,
+            disableOnInteraction: false,
+          }}
           breakpoints={{
             0: {
-              slidesPerView: 1, 
+              slidesPerView: 1,
               centeredSlides: true,
             },
             768: {
-              slidesPerView: 2, 
+              slidesPerView: 2,
               centeredSlides: false,
             },
             1024: {
-              slidesPerView: 1.99, 
+              slidesPerView: 1.99,
               centeredSlides: true,
             },
           }}
@@ -226,10 +241,20 @@ export default function SugarHistoryComm() {
             swiper.params.navigation.nextEl = nextRef.current;
             swiper.navigation.init();
             swiper.navigation.update();
+            prevRef.current?.setAttribute("disabled", "true");
+            prevRef.current?.classList.add(styles.disabled);
           }}
           onSlideChange={(swiper) => {
             setActiveIndex(swiper.realIndex);
             setIsEnd(swiper.realIndex === slides.length - 1);
+            if (swiper.realIndex === 0) {
+              prevRef.current?.setAttribute("disabled", "true");
+              prevRef.current?.classList.add(styles.disabled);
+            } else {
+              prevRef.current?.removeAttribute("disabled");
+              prevRef.current?.classList.remove(styles.disabled);
+            }
+
           }}
           onReachEnd={() => {
             setIsEnd(true);
@@ -238,9 +263,8 @@ export default function SugarHistoryComm() {
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
               <div
-                className={`${styles.slideCard} ${
-                  index === activeIndex ? styles.activeSlide : ""
-                }`}
+                className={`${styles.slideCard} ${index === activeIndex ? styles.activeSlide : ""
+                  }`}
                 style={{ "--bg-image": `url(${slide.background})` }}
               >
                 <h3 className={styles.period}>
