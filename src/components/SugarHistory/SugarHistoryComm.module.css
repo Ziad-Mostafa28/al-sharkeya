@@ -7,7 +7,7 @@
 .historyContainer {
   display: grid;
   grid-template-columns: 28% minmax(0, 1fr);
-  height: 80dvh;
+  height: 120vh;
   width: 100%;
   overflow: hidden;
 }
@@ -15,7 +15,7 @@
 /* الشمال (ثابت) */
 .sidebar {
   height: 100%;
-  padding: 32px 24px;
+  padding: 80px 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -37,12 +37,13 @@
   color: #606060;
   font-weight: 400;
   margin-top: 1rem;
+  
 }
 
 .navButtons {
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
   gap: 12px;
   padding-top: 1.5rem;
   font-size: 1rem;
@@ -65,6 +66,7 @@ padding-top: 1.5rem;
   opacity: 0.4;
   cursor: not-allowed;
 }
+
 
 .prevBtn,
 .nextBtn {
@@ -97,7 +99,7 @@ padding-top: 1.5rem;
   display: flex;
 }
 
-.slideCard {
+/* .slideCard {
   position: relative;
   height: 100%;
   width: 100%;
@@ -110,8 +112,23 @@ padding-top: 1.5rem;
   background: #fff;
   overflow: hidden;
   transition: all 0.4s ease-in-out;
-}
+} */
 
+.slideCard {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start; 
+  align-items: center;
+  padding: 80px 60px;
+  color: #222;
+  background: #fff;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+}
 .slideCard::before {
   content: "";
   position: absolute;
@@ -151,6 +168,8 @@ padding-top: 1.5rem;
   font-weight: 600;
   color: #C78E50;
   margin-bottom: 2rem;
+  text-align: start;
+  width: 100%;
 }
 
 .textList {
@@ -161,12 +180,19 @@ padding-top: 1.5rem;
   list-style: disc;
   padding-left: 20px; 
 }
-.bottomImageWrapper {
+/* .bottomImageWrapper {
   margin-top: 20px;
   position: relative;
   z-index: 2;
-}
+} */
 
+.bottomImageWrapper {
+  position: absolute;
+  bottom: 20px;       
+  left: 60px;           
+  right: 60px;
+  z-index: 2;
+}
 .bottomImage {
   width: 100%;
   height: auto;
@@ -182,53 +208,140 @@ padding-top: 1.5rem;
   font-weight: 600;
 }
 
-@media (max-width: 768px) {
-  .historyContainer {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto; 
-    height: auto; 
-  }
 
-  .sidebar {
-    border-right: none;   
-    border-bottom: 1px solid #F0F0F0; 
-    padding: 20px;
-  }
+ @media (max-width: 1440px) {
 
-  .sliderWrapper {
-    height: auto;
-    min-height: 60vh; 
-  }
+   .historyContainer {
 
-  .sidebarTitle {
-  font-size: 1.5rem;
-}
+     height: 140vh;
 
-.sidebarText {
-  margin-top: 0.9rem;
-}
+   }
+ }
 
-.period {
-  font-size: 1.5rem;
-}
+ @media (max-width: 768px) {
+   .historyContainer {
+     grid-template-columns: 1fr;
+     grid-template-rows: auto auto;
+     height: auto;
+   }
 
-.title {
-  font-size: 0.9rem;
+   .sidebar {
+     border-right: none;
+     border-bottom: 1px solid #F0F0F0;
+     padding: 20px;
+   }
 
-}
+   .sliderWrapper {
+     height: auto;
+     min-height: 60vh;
+   }
 
-.textList {
-  font-size: 0.9rem;
+   .sidebarTitle {
+     font-size: 1.5rem;
+   }
 
-}
+   .sidebarText {
+     margin-top: 0.9rem;
+   }
 
-.subText {
-  font-size: 0.5rem;
+   .period {
+     font-size: 1.5rem;
+   }
 
-}
+   .title {
+     font-size: 0.9rem;
 
-}
+   }
 
 
+
+   .textList {
+     font-size: 0.9rem;
+     height: 450px;
+     max-height: 450px;
+     overflow-y: auto;
+     padding-right: 10px;
+   }
+
+   .subText {
+     font-size: 0.5rem;
+
+   }
+
+ }
+
+ @media (max-width: 567px) {
+   .historyContainer {
+     grid-template-columns: 1fr;
+     grid-template-rows: auto auto;
+     height: auto !important;
+   }
+
+   .slideCard {
+
+     padding: 32px 20px;
+
+   }
+
+   .bottomImageWrapper {
+     position: absolute;
+     bottom: 20px;
+     left: 20px;
+     right: 20px;
+     z-index: 2;
+   }
+
+   .sidebar {
+     border-right: none;
+     border-bottom: 1px solid #F0F0F0;
+     padding: 20px;
+   }
+
+   .sliderWrapper {
+     height: auto;
+     min-height: 60vh;
+   }
+
+   .sidebarTitle {
+     font-size: 1.5rem;
+   }
+
+   .sidebarText {
+     margin-top: 0.9rem;
+   }
+
+   .period {
+     font-size: 1.5rem;
+   }
+
+   .title {
+     font-size: 0.9rem;
+
+   }
+
+   .textList {
+     font-size: 0.9rem;
+     height: 450px;
+     max-height: 450px;
+     overflow-y: auto;
+     padding-right: 10px;
+   }
+
+   /* تحسين شكل السكرول (اختياري) */
+   .textList::-webkit-scrollbar {
+     width: 6px;
+   }
+
+   .textList::-webkit-scrollbar-thumb {
+     background: #C78E50;
+     border-radius: 3px;
+   }
+
+   .subText {
+     font-size: 0.5rem;
+
+   }
+
+ }
 
 

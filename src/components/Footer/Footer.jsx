@@ -40,7 +40,9 @@ function Footer() {
           <img className={styles.bottomlogo} src="/img/homepage/bottom.png" alt="" />
           <div className="row">
             <div className={`col-sm-6 col-md-4 col-lg-4 col-xl-2 ${styles.colSpacing}`}>
-              <img className="m-auto" src="/img/homepage/biglogo.png" alt="" />
+              <Link to={'/'}>
+                <img className="m-auto" src="/img/homepage/biglogo.png" alt="" />
+              </Link>
               <p className={styles.desc}>Follow Us on</p>
               <div className={styles.social}>
                 <a href="#"><FaLinkedinIn /></a>
@@ -70,7 +72,7 @@ function Footer() {
             <div className={`col-sm-6 col-md-4 col-lg-4 col-xl-2 ${styles.colSpacing}`}>
               <h2 className={styles.bottomtitle}>Resources</h2>
               <ul>
-                <li><Link to='/'>Sugar history</Link></li>
+                <li><Link to={'/sugar-history'}>Sugar history</Link></li>
                 <li><Link to='/recipes'>Recipes</Link></li>
                 <li><Link to='/facts-about-sugar'>Facts about sugar</Link></li>
               </ul>

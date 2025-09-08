@@ -417,11 +417,7 @@ export default function Header() {
                 {dropdownOpen.resources && (
                   <ul className="list-unstyled">
 
-                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} to={'sugar-history'}>Sugar history</Link></li>
-                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} to="recipes">Recipes</Link></li>
-                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} to="/facts-about-sugar">Facts about sugar</Link></li>
-
-                    <li><a className={`nav-link text-white ${styles.nav_link2}`} href="#">Sugar history</a></li>
+                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to={'sugar-history'}>Sugar history</Link></li>
                     <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="recipes">Recipes</Link></li>
                     <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="/facts-about-sugar">Facts about sugar</Link></li>
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './Molasses.module.css'
+import { Link } from 'react-router-dom'
 
 export default function Molasses() {
   return (
@@ -23,7 +24,10 @@ export default function Molasses() {
             Molasses is a valuable ingredient for the baking yeast and animal
             feed industry as well as for the production of alcohol.
           </p>
-          <button className={styles.readMoreBtn}>Read more</button>
+          <Link to={"/our-products/molasses"}>
+            <button className={styles.readMoreBtn}>Read more</button>
+
+          </Link>
         </div>
       </div>
     </section>
