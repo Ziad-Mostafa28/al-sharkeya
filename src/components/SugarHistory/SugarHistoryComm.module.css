@@ -15,7 +15,7 @@
 /* الشمال (ثابت) */
 .sidebar {
   height: 100%;
-  padding: 80px 24px;
+  padding: 5rem 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -72,7 +72,7 @@ padding-top: 1.5rem;
 .nextBtn {
   background: none;
   border: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
   cursor: pointer;
   color: #333;
@@ -123,7 +123,7 @@ padding-top: 1.5rem;
   justify-content: flex-start;
   align-items: flex-start; 
   align-items: center;
-  padding: 80px 60px;
+  padding: 5rem 3.75rem;
   color: #222;
   background: #fff;
   overflow: hidden;
@@ -178,7 +178,7 @@ padding-top: 1.5rem;
   line-height: 1.6;
   font-weight: 600;
   list-style: disc;
-  padding-left: 20px; 
+  padding-left: 1.25rem; 
 }
 /* .bottomImageWrapper {
   margin-top: 20px;
@@ -188,15 +188,15 @@ padding-top: 1.5rem;
 
 .bottomImageWrapper {
   position: absolute;
-  bottom: 20px;       
-  left: 60px;           
-  right: 60px;
+  bottom: 1.25rem;       
+  left: 3.75rem;           
+  right: 3.75rem;
   z-index: 2;
 }
 .bottomImage {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   display: block;
 }
 
@@ -228,7 +228,7 @@ padding-top: 1.5rem;
    .sidebar {
      border-right: none;
      border-bottom: 1px solid #F0F0F0;
-     padding: 20px;
+     padding: 1.25rem;
    }
 
    .sliderWrapper {
@@ -279,22 +279,22 @@ padding-top: 1.5rem;
 
    .slideCard {
 
-     padding: 32px 20px;
+     padding: 2rem 1.25rem;
 
    }
 
    .bottomImageWrapper {
      position: absolute;
-     bottom: 20px;
-     left: 20px;
-     right: 20px;
+     bottom: 1.25rem;
+     left: 1.25rem;
+     right: 1.25rem;
      z-index: 2;
    }
 
    .sidebar {
      border-right: none;
      border-bottom: 1px solid #F0F0F0;
-     padding: 20px;
+     padding: 1.25rem;
    }
 
    .sliderWrapper {
@@ -321,20 +321,20 @@ padding-top: 1.5rem;
 
    .textList {
      font-size: 0.9rem;
-     height: 450px;
-     max-height: 450px;
+     height: 28.125rem;
+     max-height: 28.125rem;
      overflow-y: auto;
-     padding-right: 10px;
+     padding-right: 0.625rem;
    }
 
    /* تحسين شكل السكرول (اختياري) */
    .textList::-webkit-scrollbar {
-     width: 6px;
+     width: 0.375rem;
    }
 
    .textList::-webkit-scrollbar-thumb {
      background: #C78E50;
-     border-radius: 3px;
+     border-radius: 0.188rem;
    }
 
    .subText {
