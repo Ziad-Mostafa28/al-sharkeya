@@ -11,7 +11,11 @@
 .FaqsSectionSection .image {
   width: 100%;
   border-radius: 10px;
+  position: sticky; 
+  top: 100px;
+  align-self: flex-start; 
 }
+
 
 .FaqsSectionSection .image img {
   width: 100%;
