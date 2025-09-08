@@ -1,20 +1,21 @@
 .about {
     margin: 3rem;
 }
+
 .image_box {
     position: relative;
     height: 100%;
     object-fit: cover;
 }
 
-.first_image{
+.first_image {
     height: 450px;
     border-radius: 20px;
     object-fit: cover;
     width: 100%;
 }
 
-.image_box .second_image{
+.image_box .second_image {
     position: absolute;
     top: 50%;
     right: 0;
@@ -22,31 +23,37 @@
     width: 58%;
     border-radius: 20px;
 }
+
 .title {
     font-weight: 700;
 }
+
 .desc {
-font-size: 1rem;
-color: #858585;
+    font-size: 1rem;
+    color: #858585;
 
 }
+
 .numbox {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
-.smallbox{
+
+.smallbox {
     display: flex;
     align-items: center;
     gap: 2rem;
     font-weight: bold;
 }
+
 .numbox span {
     font-size: 3rem;
     font-weight: 400;
     position: relative;
     font-family: 'Alexandria';
 }
+
 .numbox .plus::after {
     /* position: absolute;
     content: '';
@@ -55,31 +62,35 @@ color: #858585;
     height: 70px;
     background-color: #C78E50; */
 }
-.about button{
+
+.about button {
     padding: 0.8rem 2rem;
     background: #C78E50;
     border-radius: 31px;
     color: white;
     margin-top: 2rem;
 }
+
 .numberBox {
-  display: flex;
-  align-items: center;
-  font-size: 3rem;
-  font-weight: 400;
-  position: relative;
-  gap: 0.2rem;
-  font-family: 'Alexandria';
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 400;
+    position: relative;
+    gap: 0.2rem;
+    font-family: 'Alexandria';
 }
 
 .plus {
-  font-size: 2.2rem;
-  color: black;
-  margin-left: 0.25rem;
+    font-size: 2.2rem;
+    color: black;
+    margin-left: 0.25rem;
 }
+
 .descc {
     position: relative;
 }
+
 .descc::after {
     position: absolute;
     content: '';
@@ -89,33 +100,36 @@ color: #858585;
     background-color: #C78E50;
     top: 0;
 }
+
 @media (max-width: 1200px) {
     .image_box .second_image {
         display: none;
     }
 }
-@media (max-width: 768px) {
+
+@media (max-width: 1023px) {
     .about {
-        margin: 5rem 3rem 0;
+        margin: 3rem 1.25rem 1rem;
     }
+
     .title {
-    margin-top: 2rem;
+        margin-top: 2rem;
+    }
+
+    .first_image {
+        height: 300px;
+    }
+
+    .numbox {
+        gap: 2rem;
+    }
 }
-.first_image{
-    height: 300px;
-    /* border-radius: 10px; */
-}
-.numbox {
-    gap: 2rem;
-}
-}
-@media (max-width: 1200px) and (min-width:992px){
-    
-}
+
+@media (max-width: 1200px) and (min-width:992px) {}
 
 
 
-[lang="ar"] .image_box .second_image{
+[lang="ar"] .image_box .second_image {
     position: absolute;
     top: 50%;
     right: auto;
