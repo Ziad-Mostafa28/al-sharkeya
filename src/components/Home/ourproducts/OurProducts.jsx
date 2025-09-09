@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./OurProducts.module.css";
+import { Link } from "react-router-dom";
 export default function OurProducts() {
   const [activeProduct, setActiveProduct] = useState("white-sugar");
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -10,17 +11,20 @@ export default function OurProducts() {
       description:
         "White sugar, also called table sugar, granulated sugar, or regular sugar, is a commonly used type of sugar, made either of beet sugar or cane sugar, which has undergone a refining process. It is nearly pure sucrose.",
       image: "/img/homepage/8.png",
+      link: "our-products/white-sugar",
     },
     molasses: {
       title: "Molasses",
       description: `The syrup separated off during the final crystallization step is known as molasses Molasses is a valuable ingredient for the baking yeast and animal feed industry as well as for the production of alcohol.`,
       image: "/img/homepage/9.png",
+      link: "our-products/molasses",
     },
     pellets: {
       title: "Pellets",
       description:
         "It is the remaining cells of the sugar beet roots after extracting the sugar liquid from them. It has a high nutritional value and a palatable taste. It can replace half of the grain requirement in the daily feed of animals.",
       image: "/img/homepage/10.png",
+      link: "our-products/pellets",
     },
   };
 
@@ -29,7 +33,6 @@ export default function OurProducts() {
 
     setIsTransitioning(true);
 
-    // تأخير لتطبيق التأثير
     setTimeout(() => {
       setActiveProduct(productKey);
       setIsTransitioning(false);
@@ -77,9 +80,9 @@ export default function OurProducts() {
             <p className={styles.productDescription}>
               {products[activeProduct].description}
             </p>
-            <a href="#" className={styles.readMore}>
+            <Link to={products[activeProduct].link} className={styles.readMore}>
               Read more
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -8,79 +8,79 @@ export default function ManagementTeamSections() {
             img: "/img/aboutus/pe1.png",
             name: "Dr. Shehab Marzban",
             role: "Chairman",
-            linkedin: "https://www.linkedin.com/in/example"
+            linkedin: "#"
         },
         {
             img: "/img/aboutus/pe2.png",
             name: "Eng. Wael Azmy",
             role: "Manufacturing Director",
-            linkedin: "https://www.linkedin.com/in/example2"
+            linkedin: "#"
         },
         {
             img: "/img/aboutus/pe3.png",
             name: "Ahmed Fouad Hussein",
             role: "Manufacturing DirecChief Financial Officer",
-            linkedin: "https://www.linkedin.com/in/example2"
+            linkedin: "#"
         },
         {
             img: "/img/aboutus/pe4.png",
             name: "Eng. Mamdouh Baioumy",
             role: "Agriculture Director",
-            linkedin: "https://www.linkedin.com/in/example2"
+            linkedin: "#"
         },
         {
             img: "/img/aboutus/pe5.png",
             name: "Ghada Anwar",
             role: "Chief Human Capital Officer",
-            linkedin: "https://www.linkedin.com/in/example2"
+            linkedin: "#"
         },
         {
             img: "/img/aboutus/pe6.png",
             name: "Doaa Taha",
             role: "Sales Director",
-            linkedin: "https://www.linkedin.com/in/example2"
+            linkedin: "#"
         },
         {
             img: "/img/aboutus/pe7.png",
             name: " Eng. Malek Fawaz",
             role: "Digital Transformation Director",
-            linkedin: "https://www.linkedin.com/in/example2"
+            linkedin: "#"
         },
         {
             img: "/img/aboutus/pe8.png",
             name: "Eng. Maher Abou Youssef",
             role: "QHSE Director",
-            linkedin: "https://www.linkedin.com/in/example2"
+            linkedin: "#"
         },
         {
             img: "/img/aboutus/pe9.png",
             name: "Ahmed Saeid",
             role: "Internal Audit Director ",
-            linkedin: "https://www.linkedin.com/in/example2"
+            linkedin: "#"
         },
         {
             img: "/img/aboutus/pe10.png",
             name: "Waleed Abdel aziz ",
             role: "Acting as Supply Chain Director",
-            linkedin: "https://www.linkedin.com/in/example2"
+            linkedin: "#"
         },
         {
             img: "/img/aboutus/pe11.png",
             name: "Hesham Elgebaly",
             role: "Security Dept. Manager",
-            linkedin: "https://www.linkedin.com/in/example2"
+            linkedin: "#"
         },
         {
             img: "/img/aboutus/pe12.png",
             name: "Ahmed Reda",
             role: "Sustainability & Business Development Manager",
-            linkedin: "https://www.linkedin.com/in/example2"
+            linkedin: "#"
         },
         {
             img: "/img/aboutus/pe13.png",
             name: "Ahmed Fathy",
             role: "Commercial Manager",
-            linkedin: "https://www.linkedin.com/in/example2"
+            linkedin: "#"
         },
     ];
 

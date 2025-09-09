@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './OurCustomers.module.css';
+import { Link } from 'react-router-dom';
 
 const customers = [
   { id: 1, img: '/img/homepage/coca.png', alt: 'Coca Cola' },
@@ -14,7 +15,7 @@ export default function OurCustomers() {
       <div className="">
         <div className="d-flex justify-content-between align-items-center mb-4">
           <h3 className="fw-bold m-0">Our Customers</h3>
-          <a href="#" className={styles.viewAll}>View all</a>
+          <Link to={'our-customer'} className={styles.viewAll}>View all</Link>
         </div>
 
         <div className={`d-flex flex-wrap ${styles.logosWrapper}`}>

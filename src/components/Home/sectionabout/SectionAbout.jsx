@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from "./SectionAbout.module.css";
 import CountUp from 'react-countup';
+import { Link } from 'react-router-dom';
 
 export default function SectionAbout() {
   return (
@@ -44,7 +45,10 @@ export default function SectionAbout() {
                             </div>
                         </div>
                         <div className={`w-100 d-flex justify-content-center justify-content-lg-end`}>
-                            <button> Read More</button>
+                            <Link to={'about-us/who-we-are'}>
+                                <button> Read More</button>
+
+                            </Link>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './LatestNews.module.css';
+import { Link } from 'react-router-dom';
 
 const newsItems = [
   {
@@ -64,7 +65,7 @@ export default function LatestNews() {
     <section className={` ${styles.latestNews}`}>
       <div className="d-flex justify-content-between align-items-center mb-3">
         <h3 className="fw-bold">Latest News</h3>
-        <a href="#" className={styles.viewAll}>View all</a>
+        <Link to={'news'} className={styles.viewAll}>View all</Link>
       </div>
 
       <div className="row">

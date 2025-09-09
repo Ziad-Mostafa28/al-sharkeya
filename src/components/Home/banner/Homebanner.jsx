@@ -70,7 +70,7 @@ export default function HomeBanner() {
             <h2>Al Sharkeya Sugar</h2>
             <p>Al Sharkeya Sugar Manufacturing (AL Nouran) S.A.E. has distinguished expertise in the field of breeding, harvesting of sugar beet and manufactures and produces a high-quality white sugar by latest technology methodology applying good manufacture practice.</p>
             <button className={styles.bannerbutton}>
-              <Link to="">Who we are</Link>
+              <Link to="about-us/who-we-are">Who we are</Link>
             </button>
           </div>
           <div className={styles.bannerlogos}>
