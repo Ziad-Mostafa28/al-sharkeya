@@ -55,7 +55,9 @@
   color: #444;
   line-height: 1.6;
 }
-
+.FactsSectionSection .answer ul {
+  list-style: inside;
+}
 .FactsSectionSection .answer.open {
   max-height: 500px; 
   padding-top: 1rem;

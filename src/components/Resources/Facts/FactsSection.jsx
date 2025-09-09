@@ -9,51 +9,98 @@ export default function FactsSection() {
         },
         {
             q: "Historical Facts",
-            a: "Sugar is a simple carbohydrate that provides energy. It can be natural (from fruits, vegetables, and dairy) or added during food processing."
+            a: [
+                "Sugar was first extracted from sugarcane in India around 500 BC.",
+                "It was considered a luxury and was used in medicine during the Middle Ages",
+                "Sugar trade influenced global exploration and colonization",
+            ]
         },
         {
             q: "Chemical and Nutritional Composition",
-            a: "Sugar is a simple carbohydrate that provides energy. It can be natural (from fruits, vegetables, and dairy) or added during food processing."
+            a: [
+                "Chemically, sugar is made of carbon, hydrogen, and oxygen (C₆H₁₂O₆).",
+                "It contains no essential nutrients, only calories",
+                "Excessive consumption may lead to insulin resistance and fatty liver",
+            ]
         },
         {
             q: "Global Sugar Consumption",
-            a: "Sugar is a simple carbohydrate that provides energy. It can be natural (from fruits, vegetables, and dairy) or added during food processing."
+            a: [
+                "The average global sugar consumption is over 50 kg per person per year",
+                "The United States, Brazil, and India are top consumers and producers.",
+            ]
         },
         {
             q: "Sugar and the Food Industry",
-            a: "Sugar is a simple carbohydrate that provides energy. It can be natural (from fruits, vegetables, and dairy) or added during food processing."
+            a: [
+                "Sugar is used in soft drinks, desserts, sauces, and baked goods",
+                "It adds sweetness, texture, and acts as a preservative",
+                "High-Fructose Corn Syrup (HFCS) is a common industrial sweetener",
+            ]
         },
         {
             q: "Sugar and Performance",
-            a: "Sugar is a simple carbohydrate that provides energy. It can be natural (from fruits, vegetables, and dairy) or added during food processing."
+            a: [
+                "Short bursts of sugar can help in endurance sports like marathons",
+                "Sports drinks often contain glucose and electrolytes",
+            ]
         },
         {
             q: "Sugar and the Brain",
-            a: "Sugar is a simple carbohydrate that provides energy. It can be natural (from fruits, vegetables, and dairy) or added during food processing."
+            a: [
+                "Sugar activates the brain’s reward center, releasing dopamine",
+                "Over time, this can create patterns similar to addiction",
+            ]
         },
         {
             q: "Sugar Alternatives",
-            a: "Sugar is a simple carbohydrate that provides energy. It can be natural (from fruits, vegetables, and dairy) or added during food processing."
+            a: [
+                "Stevia ",
+                "Erythritol ",
+                "Xylitol",
+                "These are low-calorie or zero-calorie options used in health-focused products",
+            ]
         },
         {
             q: "Tips for Reducing Sugar Intake",
-            a: "Sugar is a simple carbohydrate that provides energy. It can be natural (from fruits, vegetables, and dairy) or added during food processing."
+            a: [
+                "Read food labels for hidden sugars.",
+                "Choose water over sugary drinks.",
+                "Eat whole fruits instead of fruit juices",
+                "Cook at home to control ingredients.",
+            ]
         },
         {
             q: "Biological Facts",
-            a: "Sugar is a simple carbohydrate that provides energy. It can be natural (from fruits, vegetables, and dairy) or added during food processing."
+            a: [
+                "The brain uses glucose as its main energy source.",
+                "Sugar is absorbed in the small intestine and processed by the liver.",
+                "Insulin regulates blood sugar levels.",
+            ]
         },
         {
             q: "Energy Facts",
-            a: "Sugar is a simple carbohydrate that provides energy. It can be natural (from fruits, vegetables, and dairy) or added during food processing."
+            a: [
+                "1 gram of sugar provides 4 calories.",
+                "Sugar gives quick energy but may lead to crashes.",
+                "Athletes use sugar for a fast energy boost.",
+            ]
         },
         {
             q: "Did You Know?",
-            a: "Sugar is a simple carbohydrate that provides energy. It can be natural (from fruits, vegetables, and dairy) or added during food processing."
+            a: [
+                "Sugar can act as a preservative in jams and jellies.",
+                "The average adult consumes over 17 teaspoons of added sugar daily.",
+                "Sugar was once called “white gold.",
+                "Sugar affects dopamine levels in the brain.",
+                "Not all sugars are the same—natural sugars differ from processed ones.",
+            ]
         },
         {
             q: "Conclusion",
-            a: "Sugar is a simple carbohydrate that provides energy. It can be natural (from fruits, vegetables, and dairy) or added during food processing."
+            a: [
+                "Sugar is deeply embedded in global culture, economy, and diet. By learning its facts, we can use it wisely and maintain a healthier life.",
+            ]
         }
     ];
 
@@ -90,11 +137,19 @@ export default function FactsSection() {
                                     />
                                 </div>
                                 <div
-                                    className={`${styles.answer} ${openIndex === index ? styles.open : ""
-                                        }`}
+                                    className={`${styles.answer} ${openIndex === index ? styles.open : ""}`}
                                 >
-                                    <p>{item.a}</p>
+                                    {Array.isArray(item.a) ? (
+                                        <ul>
+                                            {item.a.map((fact, i) => (
+                                                <li key={i}>{fact}</li>
+                                            ))}
+                                        </ul>
+                                    ) : (
+                                        <p>{item.a}</p>
+                                    )}
                                 </div>
+
                             </div>
                         ))}
                     </div>
