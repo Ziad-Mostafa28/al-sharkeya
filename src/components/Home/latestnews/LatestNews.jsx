@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './LatestNews.module.css';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const newsItems = [
   {
@@ -60,6 +61,13 @@ export default function LatestNews() {
   const handleHover = (index) => {
     setActiveIndex(index);
   };
+  ///////////
+  const { data, loading } = useSelector((state) => state.home);
+  console.log(data?.data.news);
+
+  const lang = useSelector((state) => state.lang.lang);
+  const isArabic = lang === 'ar';
+  if (loading || !data?.data.news) return null;
 
   return (
     <section className={` ${styles.latestNews}`}>

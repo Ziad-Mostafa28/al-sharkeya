@@ -3,8 +3,10 @@ import styles from "./Footer.module.css";
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 import { PiBuildingsDuotone } from "react-icons/pi";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function Footer() {
+   const lang = useSelector((state) => state.lang.lang);
   return (
     <footer className={styles.topfooter}>
       <div className={styles.footer}>
@@ -40,7 +42,7 @@ function Footer() {
           <img className={styles.bottomlogo} src="/img/homepage/bottom.png" alt="" />
           <div className="row">
             <div className={`col-sm-6 col-md-4 col-lg-4 col-xl-2 ${styles.colSpacing}`}>
-              <Link to={'/'}>
+              <Link to={`/${lang}`}>
                 <img className="m-auto" src="/img/homepage/biglogo.png" alt="" />
               </Link>
               <p className={styles.desc}>Follow Us on</p>
