@@ -7,11 +7,16 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './styles/global.css';
 
 import './index.css';
+import { Provider } from 'react-redux';
+import store from '../store';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
       <HelmetProvider>
+        <Provider store={store}>
         <App />
+
+        </Provider>
       </HelmetProvider>
   </React.StrictMode>
 );

@@ -1,9 +1,41 @@
 import { FaSearch, FaBars, FaChevronDown } from "react-icons/fa";
 import styles from "./Header.module.css";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setLanguage } from "../../../store/slices/langSlice";
+
 
 export default function Header() {
+
+    const dispatch = useDispatch();
+  const lang = useSelector((state) => state.lang.lang);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+// const toggleLang = (e) => {
+//     // لو استدعيت من عنصر a/button ما نحتاج preventDefault لأن نحن نستخدم button
+//     const newLang = lang === "en" ? "ar" : "en";
+//     localStorage.setItem("lang", newLang);
+
+//     // suffix = كل الباقي بعد /en أو /ar أو كامل الباث لو مفيهوش prefix
+//     const suffix = location.pathname.replace(/^\/(en|ar)/, "");
+//     const newPath = `/${newLang}${suffix}${location.search || ""}${location.hash || ""}`;
+
+//     console.log("[toggleLang] from:", location.pathname, "to:", newPath);
+
+//     dispatch(setLanguage(newLang));
+//     navigate(newPath, { replace: true });
+//   };
+
+  const toggleLang = () => {
+    const newLang = lang === "en" ? "ar" : "en";
+    const newPath = location.pathname.replace(/^\/(ar|en)/, `/${newLang}`);
+    dispatch(setLanguage(newLang));
+    navigate(newPath);
+  };
+
+
   const [dropdownOpen, setDropdownOpen] = useState({
     aboutus: false,
     products: false,
@@ -45,13 +77,13 @@ export default function Header() {
         <div className="container-fluid d-flex align-items-center justify-content-between">
           {/* Logo */}
           <div className="d-flex align-items-center">
-            <a href="/">
+            <Link to={`/${lang}`}>
               <img
                 src="/img/homepage/logo.png"
                 alt="Al Sharkeya Sugar"
                 style={{ height: "5rem" }}
               />
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -222,9 +254,9 @@ export default function Header() {
 
           {/* Desktop Right Controls */}
           <div className="d-flex align-items-center gap-3">
-            <a href="#" className="text-white">
-              AR
-            </a>
+            <button  onClick={toggleLang} className="text-white">
+              {lang === 'en' ? 'AR' : 'EN'}
+            </button>
             <button className="btn btn-link p-0 text-white" onClick={() => setSearchOpen(true)}>
               <FaSearch />
             </button>
@@ -255,9 +287,9 @@ export default function Header() {
           <div
             className={`d-flex align-items-center gap-3 ${styles.mobileCenter}`}
           >
-            <a href="#" className="text-white">
-              AR
-            </a>
+           <button  onClick={toggleLang} className="text-white">
+              {lang === 'en' ? 'AR' : 'EN'}
+            </button>
             <button className="btn btn-link p-0 text-white" onClick={() => setSearchOpen(true)}>
               <FaSearch />
             </button>

@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Layout from './layouts/MainLayout';
 import About from './pages/About/About';
@@ -44,8 +44,13 @@ import SugarHistory from './pages/SugarHistory/SugarHistory';
 
 
 const router = createBrowserRouter([
-  {
+
+   {
     path: '/',
+    element: <Navigate to={`/${localStorage.getItem('lang') || 'en'}`} replace />,
+  },
+  {
+   path: '/:lang',
     element: <Layout />,
     children: [
       { index: true, element: <Home /> },
