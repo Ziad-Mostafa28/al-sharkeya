@@ -86,7 +86,7 @@ export default function LatestNews() {
                   </div>
 
                   <div className={styles.readMore}>
-                    <Link to={`/news/${item.id}`}>
+                    <Link to={`/${lang}/news-details/${item.id}`}>
                       Read
                       <br />
                       more
