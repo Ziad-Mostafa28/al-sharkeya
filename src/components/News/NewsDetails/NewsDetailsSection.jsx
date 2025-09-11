@@ -10,27 +10,30 @@ export default function NewsDetailsSection() {
 
     const { id, lang } = useParams();
     const dispatch = useDispatch();
-    const { data, loading, error } = useSelector((state) => state.newsDetails);
+    const { data, loading } = useSelector((state) => state.newsDetails);
+    const isArabic = lang === 'ar';
 
-      useEffect(() => {
+    useEffect(() => {
         dispatch(fetchNewsDetails({ id, lang }));
         return () => {
-          dispatch( clearNewsDetails());
+            dispatch(clearNewsDetails());
         };
-      }, [dispatch, id, lang]);
+    }, [dispatch, id, lang]);
 
-    if (loading) return <p><LoadingOverlay/></p>;
+    if (loading) return <p><LoadingOverlay /></p>;
     if (!data?.data) return null;
-      
+
     const newsDetails = data.data;
 
-    
+
 
     return (
         <section className={styles.NewsDetailsSection}>
             <div className={`${styles.container}`}>
                 <div className={`${styles.top_link}`}>
-                    <Link to={`/${lang}/news`}><img src="/img/news/Vector.png" alt="" />Back to news</Link>
+                    <Link to={`/${lang}/news`}><img src="/img/news/Vector.png" alt="" />
+                        {isArabic ? 'الرجوع الي الاخبار' : 'Back to news'}
+                    </Link>
                 </div>
 
                 <h2 className={`${styles.top_title}`}>{newsDetails.title}</h2>
@@ -38,7 +41,7 @@ export default function NewsDetailsSection() {
                 <p className={`${styles.yellow_desc}`}>{newsDetails.date}</p>
 
                 <p className={`${styles.general_desc}`}
-                 dangerouslySetInnerHTML={{ __html: newsDetails.desc }}
+                    dangerouslySetInnerHTML={{ __html: newsDetails.desc }}
                 ></p>
 
                 <img className={`${styles.image_news}`} src={newsDetails.banner} alt="" />
@@ -73,7 +76,7 @@ export default function NewsDetailsSection() {
                     stands as a model of public-private cooperation aiming at food self-sufficiency and
                     sustainable economic development.
                 </p> */}
-                <div  className={` mt-4`}
+                <div className={` mt-4`}
 
                     dangerouslySetInnerHTML={{ __html: newsDetails.details }}
                 ></div>

@@ -9,7 +9,8 @@ export default function RecipesDetailsComm() {
 
   const { id, lang } = useParams();
   const dispatch = useDispatch();
-  const { data, loading, error } = useSelector((state) => state.recipeDetails);
+  const { data, loading } = useSelector((state) => state.recipeDetails);
+  const isArabic = lang === 'ar';
 
 
   useEffect(() => {
@@ -20,7 +21,7 @@ export default function RecipesDetailsComm() {
   }, [dispatch, id, lang]);
 
 
-  if (loading) return <p><LoadingOverlay/></p>;
+  if (loading) return <p><LoadingOverlay /></p>;
   if (!data?.data) return null;
 
   const recipe = data.data;
@@ -30,7 +31,8 @@ export default function RecipesDetailsComm() {
       <section className={`${styles.recipeSection}`}>
         <div className={`container-fluid ${styles.customContainer}`}>
           <Link to={`/${lang}/recipes`} className={styles.backLink}>
-            <img src='/img/recipes/arrow-down.png' alt='img-icon' /> Back to recipes
+            <img src='/img/recipes/arrow-down.png' alt='img-icon' />
+            {isArabic ? 'الرجوع الي الوصفات' : 'Back to recipes'}
           </Link>
 
           <h2 className={`${styles.recipetitle}`} >{recipe.name}</h2>
