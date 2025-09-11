@@ -45,7 +45,7 @@ export default function NewsData() {
                             ></p>
 
                             <button className={styles.readmore}>
-                                <Link to={`/news-details/${item.id}`}>{isArabic ? 'اقرأ أكثر ' : 'Read More'}</Link>
+                                <Link to={`/${lang}/news-details/${item.id}`}>{isArabic ? 'اقرأ أكثر ' : 'Read More'}</Link>
                             </button>
                         </div>
                     </div>

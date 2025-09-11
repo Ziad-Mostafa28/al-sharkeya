@@ -38,6 +38,7 @@ export default function MainLayout() {
 
     useEffect(() => {
     dispatch(fetchRecipesData(lang));
+    }, [lang, dispatch]);
 
   useEffect(() => {
     dispatch(fetchNewsData(lang));

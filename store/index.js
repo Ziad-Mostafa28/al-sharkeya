@@ -5,6 +5,7 @@ import homeReducer from "./slices/homeSlice";
 
 import recipeReducer from "./slices/recipeSlice";
 import recipeDetailsReducer from "./slices/recipeDetails";
+import newsDetailsReducer from "./slices/newDetails";
 
 
 import newsReducer from "./slices/newsSlice";
@@ -16,6 +17,7 @@ const store = configureStore({
     recipe: recipeReducer,
     recipeDetails: recipeDetailsReducer,
     news: newsReducer,
+    newsDetails: newsDetailsReducer,
   },
 });
 

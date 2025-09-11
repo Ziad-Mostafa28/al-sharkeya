@@ -10,7 +10,6 @@ export default function RecipesDetailsComm() {
   const { id, lang } = useParams();
   const dispatch = useDispatch();
   const { data, loading, error } = useSelector((state) => state.recipeDetails);
-  console.log(data?.data);
 
 
   useEffect(() => {
@@ -22,7 +21,6 @@ export default function RecipesDetailsComm() {
 
 
   if (loading) return <p><LoadingOverlay/></p>;
-  if (error) return <p className="text-danger">{error}</p>;
   if (!data?.data) return null;
 
   const recipe = data.data;

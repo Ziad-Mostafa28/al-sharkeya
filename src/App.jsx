@@ -98,7 +98,7 @@ const router = createBrowserRouter([
       { path: 'our-responsibilities/csr', element: <CSR /> },
       { path: 'our-responsibilities/codeconduct', element: <CodeConductPage /> },
       { path: 'news', element: <News /> },
-      { path: 'news-details', element: <NewsDetailsPage /> },
+      { path: 'news-details/:id', element: <NewsDetailsPage /> },
       { path: 'faqs', element: <FaqsPage /> },
       { path: 'facts-about-sugar', element: <FactsPage /> },
       { path: 'our-customer', element: <OurCustomerPage /> },

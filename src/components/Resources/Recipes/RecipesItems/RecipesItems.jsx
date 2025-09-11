@@ -50,7 +50,7 @@ export default function RecipesItems() {
 
                             >
                                 <Link to={`/${lang}/recipe-details/${member.id}`} className={styles.readmoreLink}>
-                                   Read more
+                                  {isArabic ? 'اقرأ أكثر ' : 'Read More'}
 
                                 </Link>
                             </button>
