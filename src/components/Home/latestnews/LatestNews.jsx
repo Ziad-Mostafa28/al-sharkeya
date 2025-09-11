@@ -21,8 +21,8 @@ export default function LatestNews() {
   const width = useWindowWidth();
 
   const { data, loading } = useSelector((state) => state.home);
-  // const lang = useSelector((state) => state.lang.lang);
-  // const isArabic = lang === 'ar';
+  const lang = useSelector((state) => state.lang.lang);
+  const isArabic = lang === 'ar';
 
   if (loading || !data?.data.news) return null;
 
@@ -44,8 +44,8 @@ export default function LatestNews() {
     <section className={`${styles.latestNews}`}>
       <div className="d-flex justify-content-between align-items-center mb-3">
         <h3 className="fw-bold">Latest News</h3>
-        <Link to={'/news'} className={styles.viewAll}>
-          View all
+        <Link to={'news'} className={styles.viewAll}>
+          {isArabic ? 'عرض الكل' : 'View all'}
         </Link>
       </div>
 
