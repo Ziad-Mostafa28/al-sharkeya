@@ -8,6 +8,7 @@ import { useEffect } from 'react';
 import { setLanguage } from '../../store/slices/langSlice';
 import { fetchHomeData } from '../../store/slices/homeSlice';
 import LoadingOverlay from './LoadingOverlay/LoadingOverlay';
+import { fetchRecipesData } from '../../store/slices/recipeSlice';
 
 export default function MainLayout() {
     const dispatch = useDispatch();
@@ -32,6 +33,10 @@ export default function MainLayout() {
 
   useEffect(() => {
     dispatch(fetchHomeData(lang));
+  }, [lang, dispatch]);
+
+    useEffect(() => {
+    dispatch(fetchRecipesData(lang));
   }, [lang, dispatch]);
 
   return (

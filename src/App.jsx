@@ -111,7 +111,7 @@ const router = createBrowserRouter([
       { path: 'careers/job-details', element: <JopDetails /> },
       { path: 'contact-us', element: <ContactUs /> },
       { path: 'recipes', element: <Recipes /> },
-      { path: 'recipe-details', element: <RecipesDetails /> },
+      { path: 'recipe-details/:id', element: <RecipesDetails /> },
       { path: 'sugar-history', element: <SugarHistory /> },
 
 

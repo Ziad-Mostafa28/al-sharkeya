@@ -1,88 +1,31 @@
 import React, { useState } from 'react'
 import styles from './RecipesItems.module.css'
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 export default function RecipesItems() {
 
-    const NewsData = [
-        {
-            id: 1,
-            img: "/img/recipes/recipes1.png",
-            name: "Kunafa with Cream",
-            role: "30 min",
-            shortDesc: `Kunafa with Cream is a luscious Middle Eastern dessert made of fine, crispy shredded phyllo dough (kataifi) layered with a smooth, velvety cream filling. Baked to golden perfection and soaked in fragrant sugar syrup, it’s a heavenly blend of crunchy and creamy textures, often topped with pistachios for an extra touch of indulgence.`,
-        },
-        {
-            id: 2,
-            img: "/img/recipes/recipes2.png",
-            name: "Om Ali",
-            role: "30 min",
-            shortDesc: `Om Ali is a classic Egyptian dessert made from layers of flaky pastry or puff pastry, soaked in sweetened milk and baked with a rich mix of nuts, raisins, and coconut. Served warm and golden, it’s creamy, crunchy, and comforting—like a Middle Eastern bread pudding with a royal twist.`,
-        },
-        {
-            id: 3,
-            img: "/img/recipes/recipes3.png",
-            name: "Qatayef",
-            role: "30 min",
-            shortDesc: `Qatayef is a traditional Middle Eastern dessert, especially popular during Ramadan. These stuffed pancakes are filled with sweet cream or nuts, folded and fried or baked to golden perfection, then drizzled with sugar syrup. Crispy on the outside and soft on the inside, Qatayef offers a delightful bite-sized indulgence in every piece.`,
-        },
-        {
-            id: 4,
-            img: "/img/recipes/recipes4.png",
-            name: "Rice Pudding (Roz Bel Laban)",
-            role: "30 min",
-            shortDesc: `Roz Bel Laban is a creamy Egyptian rice pudding made with slow-cooked rice, milk, and sugar, delicately flavored with vanilla or rose water. Often topped with cinnamon or nuts, it’s a comforting, smooth dessert that brings nostalgic warmth in every spoonful.`,
-        },
-        {
-            id: 5,
-            img: "/img/recipes/recipes1.png",
-            name: "Rice Pudding (Roz Bel Laban)",
-            role: "30 min",
-            shortDesc: `Roz Bel Laban is a creamy Egyptian rice pudding made with slow-cooked rice, milk, and sugar, delicately flavored with vanilla or rose water. Often topped with cinnamon or nuts, it’s a comforting, smooth dessert that brings nostalgic warmth in every spoonful.`,
-        },
-        {
-            id: 6,
-            img: "/img/recipes/recipes2.png",
-            name: "Rice Pudding (Roz Bel Laban)",
-            role: "30 min",
-            shortDesc: `Roz Bel Laban is a creamy Egyptian rice pudding made with slow-cooked rice, milk, and sugar, delicately flavored with vanilla or rose water. Often topped with cinnamon or nuts, it’s a comforting, smooth dessert that brings nostalgic warmth in every spoonful.`,
-        },
-        {
-            id: 7,
-            img: "/img/recipes/recipes3.png",
-            name: "Rice Pudding (Roz Bel Laban)",
-            role: "30 min",
-            shortDesc: `Roz Bel Laban is a creamy Egyptian rice pudding made with slow-cooked rice, milk, and sugar, delicately flavored with vanilla or rose water. Often topped with cinnamon or nuts, it’s a comforting, smooth dessert that brings nostalgic warmth in every spoonful.`,
-        },
-        {
-            id: 8,
-            img: "/img/recipes/recipes4.png",
-            name: "Rice Pudding (Roz Bel Laban)",
-            role: "30 min",
-            shortDesc: `Roz Bel Laban is a creamy Egyptian rice pudding made with slow-cooked rice, milk, and sugar, delicately flavored with vanilla or rose water. Often topped with cinnamon or nuts, it’s a comforting, smooth dessert that brings nostalgic warmth in every spoonful.`,
-        },
-        {
-            id: 9,
-            img: "/img/recipes/recipes4.png",
-            name: "Rice Pudding (Roz Bel Laban)",
-            role: "30 min",
-            shortDesc: `Roz Bel Laban is a creamy Egyptian rice pudding made with slow-cooked rice, milk, and sugar, delicately flavored with vanilla or rose water. Often topped with cinnamon or nuts, it’s a comforting, smooth dessert that brings nostalgic warmth in every spoonful.`,
-        },
-
-    ];
+    const {data , loading} = useSelector((state) => state.recipe);
+    console.log(data?.data.recipes);
 
 
-    // === Pagination Logic ===
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 4;
 
-    const totalPages = Math.ceil(NewsData.length / itemsPerPage);
+    const totalPages = Math.ceil(data?.data.recipes.length / itemsPerPage);
     const startIndex = (currentPage - 1) * itemsPerPage;
-    const currentItems = NewsData.slice(startIndex, startIndex + itemsPerPage);
+    const currentItems = data?.data.recipes.slice(startIndex, startIndex + itemsPerPage);
 
     const handlePageChange = (page) => {
         setCurrentPage(page);
     };
+
+ 
+    const lang = useSelector((state) => state.lang.lang);
+    const isArabic = lang === 'ar';
+    if (loading || !data?.data.recipes) return null;
+
+
     return (
         <section className={`${styles.NewsDataSections}`}>
             <div className={`${styles.container}`}>
@@ -91,20 +34,22 @@ export default function RecipesItems() {
                 {currentItems.map((member) => (
                     <div className={`${styles.bigcard}`} key={member.id}>
                         <div className={`${styles.image_box}`}>
-                            <img src={member.img} alt={member.name} />
+                            <img src={member.image} alt={member.name} />
                         </div>
 
                         <div className={`${styles.data_box}`}>
                             <h3 className={`${styles.title}`}>{member.name}</h3>
-                            <span className={`${styles.Subtitle}`}>{member.role}</span>
+                            <span className={`${styles.Subtitle}`}>{member.time}</span>
 
-                            <p className={`${styles.desc}`}>{member.shortDesc}</p>
+                            <p className={`${styles.desc}`}
+                              dangerouslySetInnerHTML={{ __html: member.desc }}
+                            ></p>
 
                             <button
                                 className={styles.readmore}
 
                             >
-                                <Link to={'/recipe-details'} className={styles.readmoreLink}>
+                                <Link to={`/${lang}/recipe-details/${member.id}`} className={styles.readmoreLink}>
                                    Read more
 
                                 </Link>
