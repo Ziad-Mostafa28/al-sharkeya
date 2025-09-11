@@ -1,112 +1,51 @@
 import React, { useState } from 'react';
 import styles from "./NewsData.module.css";
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 export default function NewsData() {
+    const { data, loading } = useSelector((state) => state.news);
+    const news = data?.data?.news || [];
+    const lang = useSelector((state) => state.lang.lang);
+    const isArabic = lang === 'ar';
 
-    const NewsData = [
-        {
-            id: 1,
-            img: "/img/news/news1.png",
-            name: "President Abdel Fattah El-Sisi Visits Sharkeya Sugar Factory to Support National Industry and Agricultural Development",
-            role: "1 May 2023",
-            shortDesc: `In a significant step toward enhancing Egypt’s agricultural and industrial sectors, President
-                        Abdel Fattah El-Sisi paid an official visit to the Sharkeya Sugar Factory — one of the
-                        country’s key agricultural manufacturing projects.`,
-        },
-        {
-            id: 2,
-            img: "/img/news/news2.png",
-            name: "Visit of Dr.Hala El-Said Minister of Planning and Economic Develo-pment, and Dr. Ali El-Moselhi, Minister of Supply and Internal Trade.",
-            role: "24 May 2024",
-            shortDesc: ` Dr. Hala El-Said, Minister of Planning and Economic Development and Egypt Governor at the Islamic Development Bank; Dr. Ali Moselhi, Minister of Supply and Internal Trade; and Eng. Hani Salem Sonbol, Acting CEO of the Islamic Corporation for the Development of the Private Sector and CEO of the International Islamic Trade Finance Corporation, conducted an inspection tour of the Sharkeya Sugar Company’s  Al-Nouran factory in El-Salheya city, Sharkeya Governorate, Egypt. The visit included the presence of Dr. Mamdouh Ghorab, Gov.....`,
-        },
-        {
-            id: 3,
-            img: "/img/news/news3.png",
-            name: "Launch of Beet Harvest Season and Commencement of Sugar Factory Operations.",
-            role: "19 February 2025",
-            shortDesc: `The Sharkeya Sugar Company has officially launched the beet harvest season and commenced factory operations at its production lines in New Salheya City, Sharkeya Governorate. This milestone reflects the company’s strong preparation for the new agricultural season and its commitment to boosting local sugar production.`,
-        },
-        {
-            id: 4,
-            img: "/img/news/news4.png",
-            name: "Sharkeya Governor Witnesses Start of Beet Supply Season at Sharkeya Sugar Company",
-            role: "23 February 2025",
-            shortDesc: `Engineer Hazem El-Ashmouny, Governor of Sharkeya, witnessed the launch of the sugar beet supply season at the Sharkeya Sugar Company in New Salheya City, in the presence of executive officials and sector heads.`,
-        },
-        {
-            id: 5,
-            img: "/img/news/news1.png",
-            name: "New Project Launched for Agricultural Support",
-            role: "25 February 2025",
-            shortDesc: `The company launched a new initiative to support farmers and expand sugar production across Egypt.`,
-        },
-        {
-            id: 6,
-            img: "/img/news/news2.png",
-            name: "New Project Launched for Agricultural Support",
-            role: "25 February 2025",
-            shortDesc: `The company launched a new initiative to support farmers and expand sugar production across Egypt.`,
-        },
-        {
-            id: 7,
-            img: "/img/news/news3.png",
-            name: "New Project Launched for Agricultural Support",
-            role: "25 February 2025",
-            shortDesc: `The company launched a new initiative to support farmers and expand sugar production across Egypt.`,
-        },
-        {
-            id: 8,
-            img: "/img/news/news3.png",
-            name: "New Project Launched for Agricultural Support",
-            role: "25 February 2025",
-            shortDesc: `The company launched a new initiative to support farmers and expand sugar production across Egypt.`,
-        },
-        {
-            id: 9,
-            img: "/img/news/news3.png",
-            name: "New Project Launched for Agricultural Support",
-            role: "25 February 2025",
-            shortDesc: `The company launched a new initiative to support farmers and expand sugar production across Egypt.`,
-        },
-    ];
 
-    // === Pagination Logic ===
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 4;
 
-    const totalPages = Math.ceil(NewsData.length / itemsPerPage);
+    const totalPages = Math.ceil(news.length / itemsPerPage);
     const startIndex = (currentPage - 1) * itemsPerPage;
-    const currentItems = NewsData.slice(startIndex, startIndex + itemsPerPage);
+    const currentItems = news.slice(startIndex, startIndex + itemsPerPage);
 
     const handlePageChange = (page) => {
         setCurrentPage(page);
     };
 
+    // console.log(news,'news')
+    if (loading || !news.length) return null;
 
     return (
         <section className={`${styles.NewsDataSections} py-5`}>
-            <div className={`${styles.container}`}>
+            <div className={styles.container}>
                 <h3 className={`${styles.title} mt-5 mb-3`}>Latest news</h3>
 
-                {currentItems.map((member) => (
-                    <div className={`${styles.bigcard}`} key={member.id}>
-                        <div className={`${styles.image_box}`}>
-                            <img src={member.img} alt={member.name} />
+                {currentItems.map((item) => (
+                    <div className={styles.bigcard} key={item.id}>
+                        <div className={styles.image_box}>
+                            <img src={item.image} alt={item.title} />
                         </div>
 
-                        <div className={`${styles.data_box}`}>
-                            <h3 className={`${styles.title}`}>{member.name}</h3>
-                            <span className={`${styles.Subtitle}`}>{member.role}</span>
+                        <div className={styles.data_box}>
+                            <h3 className={styles.title}>{item.title}</h3>
+                            <span className={styles.Subtitle}>{item.date}</span>
 
-                            <p className={`${styles.desc}`}>{member.shortDesc}</p>
+                            <p
+                                className={styles.desc}
+                                dangerouslySetInnerHTML={{ __html: item.desc }}
+                            ></p>
 
-                            <button
-                                className={styles.readmore}
-
-                            >
-                                <Link to={"/news-details"}>Read more</Link>
+                            <button className={styles.readmore}>
+                                <Link to={`/news-details/${item.id}`}>{isArabic ? 'اقرأ أكثر ' : 'Read More'}</Link>
                             </button>
                         </div>
                     </div>
@@ -141,7 +80,6 @@ export default function NewsData() {
                             ›
                         </button>
                     </div>
-
                 )}
             </div>
         </section>

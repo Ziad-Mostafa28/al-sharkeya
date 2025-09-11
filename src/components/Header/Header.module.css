@@ -31,7 +31,7 @@
   .desktopHeader {
     display: block;
   }
-  
+
   .mobileHeader {
     display: none;
   }
@@ -59,8 +59,8 @@
 }
 
 /* Hide mobile center controls when menu is open */
-.navbar-collapse.show ~ .container-fluid .mobileCenter,
-.navbar-collapse.collapsing ~ .container-fluid .mobileCenter {
+.navbar-collapse.show~.container-fluid .mobileCenter,
+.navbar-collapse.collapsing~.container-fluid .mobileCenter {
   display: none;
 }
 
@@ -129,15 +129,15 @@
   .mobileHeader {
     padding: 0.75rem 1rem;
   }
-  
+
   .mobileHeader img {
     height: 4rem !important;
   }
-  
+
   .mobileNav .nav-link {
     font-size: 0.9rem;
   }
-  
+
   .mobileNav .btn {
     font-size: 0.85rem;
     padding: 0.4rem 0.8rem;
@@ -148,25 +148,25 @@
   .mobileHeader {
     padding: 0.5rem 0.75rem;
   }
-  
+
   .mobileHeader img {
     height: 3.5rem !important;
   }
-  
+
   .mobileCenter {
     gap: 1rem;
   }
-  
+
   .mobileCenter a,
   .mobileCenter button {
     font-size: 14px;
   }
-  
+
   .mobileNav .nav-link {
     font-size: 0.85rem;
     padding: 0.6rem 0.8rem;
   }
-  
+
   .mobileNav .btn {
     font-size: 0.8rem;
     padding: 0.3rem 0.6rem;
@@ -245,42 +245,52 @@
 }
 
 .linkmenudesktop {
-    background: #FFFFFF33 !important;
-    backdrop-filter: blur(21px) !important;
-    border: 0 !important;
-    width: 200px;
-    padding: 0 !important;
+  background: #FFFFFF33 !important;
+  backdrop-filter: blur(21px) !important;
+  border: 0 !important;
+  width: 200px;
+  padding: 0 !important;
 }
 
-.linkmenudesktop .limenu{
-    color: white !important;
-    position: relative !important;
-    text-align: start;
-    padding: 1rem 1rem;
+.linkmenudesktop .limenu {
+  color: white !important;
+  position: relative !important;
+  text-align: start;
+  padding: 1rem 1rem;
 
 }
-.linkmenudesktop .limenu::after{
-    content: '';
-    position: absolute !important;
-    bottom: 0 !important;
-    width: 80% !important;
-    height: 1px !important;
-    background-color: #FFFFFF33 !important;
-    left: 7%;
+
+.linkmenudesktop .limenu::after {
+  content: '';
+  position: absolute !important;
+  bottom: 0 !important;
+  width: 80% !important;
+  height: 1px !important;
+  background-color: #FFFFFF33 !important;
+  left: 7%;
 
 }
-.linkmenudesktop .limenu:last-child::after{
-    display: none !important;
+
+.linkmenudesktop .limenu:last-child::after {
+  display: none !important;
 }
-.linkmenudesktop .limenu a{
-    color: white !important;
-    padding: 0 !important;
-        font-size: 0.8rem;
+
+.linkmenudesktop .limenu a {
+  color: white !important;
+  padding: 0 !important;
+  font-size: 0.8rem;
 }
-.linkmenudesktop .limenu a:hover{
-    background: none !important;
+
+.linkmenudesktop .limenu a:hover {
+  background: none !important;
 }
-.nav_link2{
+
+[lang="ar"] .linkmenudesktop {
+  left: auto;
+  right: 0;
+}
+
+.nav_link2 {
   font-weight: 300 !important;
   font-size: 0.8rem !important;
   color: rgb(255 255 255 / 70%) !important;
