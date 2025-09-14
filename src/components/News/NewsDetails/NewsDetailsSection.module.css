@@ -33,7 +33,7 @@
     color: #C78E50;
 }
 
-.NewsDetailsSection .container .general_desc {
+.NewsDetailsSection .container .new_dev p {
     font-weight: 400;
     font-size: 1rem;
     color: #606060;
@@ -49,7 +49,7 @@
     border-radius: 15px;
 }
 
-.NewsDetailsSection .container .second_title {
+.NewsDetailsSection .container .new_dev h3 {
     font-weight: 600;
     font-size: 1.25rem;
     color: #606060;
@@ -72,7 +72,7 @@
         font-size: 1rem;
     }
 
-    .NewsDetailsSection .container .general_desc {
+    .NewsDetailsSection .container .new_dev p {
         font-size: 0.9rem;
     }
 }

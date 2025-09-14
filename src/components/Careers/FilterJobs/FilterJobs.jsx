@@ -96,8 +96,8 @@ export default function FilterJobs() {
                                 </div>
 
                                 <div className="mt-4">
-                                    <Link to="/careers/job-details">
-                                      <button className={styles.viewBtn}>View more</button>
+                                    <Link to="#">
+                                        <button className={styles.viewBtn}>View more</button>
 
                                     </Link>
                                 </div>

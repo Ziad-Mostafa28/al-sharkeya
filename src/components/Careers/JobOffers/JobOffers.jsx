@@ -16,7 +16,7 @@ export default function JobOffers() {
     
                 <div className={`col-md-4  ${styles.imageBlock}`}>
                   <img
-                    src="../img/careers/image1.png"
+                    src="/img/careers/image1.png"
                     alt="White sugar"
                   />
                 </div>

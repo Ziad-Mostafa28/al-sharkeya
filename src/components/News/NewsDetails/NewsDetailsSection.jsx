@@ -76,7 +76,7 @@ export default function NewsDetailsSection() {
                     stands as a model of public-private cooperation aiming at food self-sufficiency and
                     sustainable economic development.
                 </p> */}
-                <div className={` mt-4`}
+                <div className={`${styles.new_dev} mt-4`}
 
                     dangerouslySetInnerHTML={{ __html: newsDetails.details }}
                 ></div>
