@@ -1,16 +1,53 @@
-import React, { useState } from 'react'
-import styles from './ContactUsForm.module.css'
+import React, { useState, useEffect } from "react";
+import styles from "./ContactUsForm.module.css";
+import { useForm } from "react-hook-form";
+import { useDispatch, useSelector } from "react-redux";
+import { submitContactForm, resetContactState } from "../../../../store/slices/contactSlice";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function ContactUsForm() {
-    const [activeTab, setActiveTab] = useState("touch");
-  
+  const [activeTab, setActiveTab] = useState("touch");
+  const dispatch = useDispatch();
+  const { loading, successMessage, errorMessage } = useSelector((state) => state.contact);
+  const currentLang = useSelector((state) => state.lang.lang);
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    const payload = {
+      ...data,
+      type: activeTab === "sales" ? "sales" : "get_in_touch",
+    };
+
+    console.log("📦 البيانات المرسلة:", payload);
+
+    dispatch(submitContactForm({ formData: payload, lang: currentLang }));
+  };
+
+  useEffect(() => {
+    if (successMessage) {
+      toast.success(successMessage);
+      reset();
+      dispatch(resetContactState());
+    }
+
+    if (errorMessage) {
+      toast.error(errorMessage);
+      dispatch(resetContactState());
+    }
+  }, [successMessage, errorMessage, dispatch, reset]);
+
   return (
-   <>
     <section className={styles.contactSection}>
       <h2 className={styles.title}>Contact us</h2>
 
       <div className={styles.container}>
-        {/* Left Form Section */}
         <div className={styles.formSection}>
           <div className={styles.tabs}>
             <button
@@ -20,7 +57,7 @@ export default function ContactUsForm() {
             >
               Get in touch
             </button>
-            
+
             <button
               className={`${styles.tab} ${activeTab === "sales" ? styles.active : ""}`}
               onClick={() => setActiveTab("sales")}
@@ -30,20 +67,65 @@ export default function ContactUsForm() {
             </button>
           </div>
 
-          <form className={styles.form}>
-            <input type="text" placeholder="Your name" className={styles.input} />
-            <input type="text" placeholder="Your company name" className={styles.input} required />
-            <input type="text" placeholder="Your phone number" className={styles.input} />
-            <input type="email" placeholder="Your email" className={styles.input} />
-            <textarea placeholder="Your message" className={styles.textarea} />
+          <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+            <input
+              type="text"
+              placeholder="Your name"
+              className={styles.input}
+              {...register("name", { required: "Name is required" })}
+            />
+            {errors.name && <p className={styles.errorMsg}>{errors.name.message}</p>}
+
+            <input
+              type="text"
+              placeholder="Your company name"
+              className={styles.input}
+              {...register("company", { required: "Company name is required" })}
+            />
+            {errors.company && <p className={styles.errorMsg}>{errors.company.message}</p>}
+
+            <input
+              type="tel"
+              placeholder="Your phone number"
+              className={styles.input}
+              {...register("phone", {
+                required: "Phone is required",
+                pattern: {
+                  value: /^\+?\d{10,15}$/,
+                  message: "Please enter a valid phone number",
+                },
+              })}
+            />
+            {errors.phone && <p className={styles.errorMsg}>{errors.phone.message}</p>}
+
+            <input
+              type="email"
+              placeholder="Your email"
+              className={styles.input}
+              {...register("email", { required: "Email is required" })}
+            />
+            {errors.email && <p className={styles.errorMsg}>{errors.email.message}</p>}
+
+            <textarea
+              placeholder="Your message"
+              className={styles.textarea}
+              {...register("message", { required: "Message is required" })}
+            />
+            {errors.message && <p className={styles.errorMsg}>{errors.message.message}</p>}
+
             <div className="w-100 d-flex justify-content-center justify-content-lg-end">
-              <button type="submit" className={styles.sendButton}>
-              Send {activeTab === "sales" ? "to Sales" : ""}
-            </button>
+              <button type="submit" className={styles.sendButton} disabled={loading}>
+                {loading ? (
+                  <div className={styles.spinner}></div>
+                ) : (
+                  `Send ${activeTab === "sales" ? "to Sales" : ""}`
+                )}
+              </button>
+
             </div>
-            
           </form>
         </div>
+
 
         {/* Right Info Section */}
         <div className={styles.infoSection}>
@@ -55,7 +137,7 @@ export default function ContactUsForm() {
               info@sharkeyasugar.com <br />
               Sales@sharkeyasugar.com
             </p>
-            <div  className={styles.divbutton}>
+            <div className={styles.divbutton}>
               <button className={styles.visitButton}>Visit</button>
             </div>
           </div>
@@ -67,15 +149,15 @@ export default function ContactUsForm() {
               (+20) 55 3201392 &nbsp; (+20) 55 3201492 <br />
               (+20) 10 26666148 &nbsp; (+20) 55 3201592
             </p>
-            <div  className={styles.divbutton}>
+            <div className={styles.divbutton}>
               <button className={styles.visitButton}>Visit</button>
             </div>
           </div>
         </div>
       </div>
-    </section>
 
-   
-   </>
-  )
+      {/* مكان ظهور التوستات */}
+      <ToastContainer position="top-right" />
+    </section>
+  );
 }
