@@ -39,6 +39,7 @@ import DownloadBrochure from './pages/DownloadBrochure/DownloadBrochure';
 
 import OurCustomerPage from './pages/OurCustomerPage/OurCustomerPage';
 import SugarHistory from './pages/SugarHistory/SugarHistory';
+import { ToastContainer } from 'react-toastify';
 
 
 
@@ -122,5 +123,16 @@ const router = createBrowserRouter([
 ]);
 
 export default function App() {
-  return <RouterProvider router={router} />;
+  return(
+    <>
+
+      <RouterProvider router={router} />
+  <ToastContainer position="top-right" autoClose={3000} />
+    
+    </>
+  )
+
+
+  
+  
 }
