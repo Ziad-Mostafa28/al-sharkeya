@@ -22,7 +22,7 @@ export default function WhiteSugar() {
 
             <div className={`col-md-4  ${styles.imageBlock}`}>
               <img
-                src="../img/our-products/Whitesugar.png"
+                src="/img/our-products/Whitesugar.png"
                 alt="White sugar"
               />
             </div>

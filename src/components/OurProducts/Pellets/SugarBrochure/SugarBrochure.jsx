@@ -9,7 +9,7 @@ export default function BrochureSugar() {
 
                     <div className={`col-md-6  ${styles.imageBlock}`}>
                         <img
-                            src="../img/our-products/pellets/image1.png"
+                            src="/img/our-products/pellets/image1.png"
                             alt="White sugar"
                         />
                     </div>
@@ -19,7 +19,7 @@ export default function BrochureSugar() {
                         </p>
                         <a href="#" download className={styles.downloadLink}>
                             <img
-                                src="../img/our-products/white-sugar/download.svg"
+                                src="/img/our-products/white-sugar/download.svg"
                                 alt="Download Icon"
                                 className={styles.icon}
                             />

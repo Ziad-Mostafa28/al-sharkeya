@@ -14,7 +14,7 @@ export default function ChemicalComposition() {
    
                <div className={`col-md-4  ${styles.imageBlock}`}>
                  <img
-                   src="../img/our-products/pellets/wood-pellets-shutterstock.png"
+                   src="/img/our-products/pellets/wood-pellets-shutterstock.png"
                    alt="White sugar"
                  />
                </div>

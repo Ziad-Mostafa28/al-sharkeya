@@ -21,7 +21,7 @@ export default function EconomicEnvironmental() {
        
                    <div className={`col-md-4  ${styles.imageBlock}`}>
                      <img
-                       src="../img/our-products/molasses/wood-pellets.png"
+                       src="/img/our-products/molasses/wood-pellets.png"
                        alt="White sugar"
                      />
                    </div>

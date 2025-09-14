@@ -232,7 +232,7 @@ export default function Header() {
                       </Link>
                     </li>
                     <li className={`${styles.limenu}`}>
-                      <Link className="dropdown-item" to="/facts-about-sugar">
+                      <Link className="dropdown-item" to="facts-about-sugar">
                         Facts about sugar
                       </Link>
                     </li>
@@ -451,7 +451,7 @@ export default function Header() {
 
                     <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to={'sugar-history'}>Sugar history</Link></li>
                     <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="recipes">Recipes</Link></li>
-                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="/facts-about-sugar">Facts about sugar</Link></li>
+                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="facts-about-sugar">Facts about sugar</Link></li>
 
                   </ul>
                 )}

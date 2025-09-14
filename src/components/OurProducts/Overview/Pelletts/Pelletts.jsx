@@ -21,7 +21,7 @@ export default function Pelletts() {
    
                <div className={`col-md-4  ${styles.imageBlock}`}>
                  <img
-                   src="../img/our-products/wood-pellets-shutterstock.png"
+                   src="/img/our-products/wood-pellets-shutterstock.png"
                    alt="White sugar"
                  />
                </div>
