@@ -158,7 +158,8 @@
   transition: all 0.2s ease;
   border: none;
   background: transparent;
-  color: #bbb;
+  color: #000000;
+  /* color: #bbb; */
   cursor: default;
 }
 
@@ -195,6 +196,27 @@
 .today {
   color: #A4A2A1;
   border: 1px solid #A4A2A1;
+}
+.errorMsg {
+  color: red;
+  font-size: 14px;
+  margin: 0;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #fff;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Responsive للموبايل */

@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 export default function RecipesItems() {
 
     const {data , loading} = useSelector((state) => state.recipe);
-    console.log(data?.data.recipes);
+    // console.log(data?.data.recipes);
 
 
     const [currentPage, setCurrentPage] = useState(1);
