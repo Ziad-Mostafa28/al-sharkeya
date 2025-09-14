@@ -25,8 +25,6 @@ export default function ContactUsForm() {
       type: activeTab === "sales" ? "sales" : "get_in_touch",
     };
 
-    console.log("📦 البيانات المرسلة:", payload);
-
     dispatch(submitContactForm({ formData: payload, lang: currentLang }));
   };
 
@@ -85,7 +83,7 @@ export default function ContactUsForm() {
             {errors.company && <p className={styles.errorMsg}>{errors.company.message}</p>}
 
             <input
-              type="tel"
+              type="number"
               placeholder="Your phone number"
               className={styles.input}
               {...register("phone", {
