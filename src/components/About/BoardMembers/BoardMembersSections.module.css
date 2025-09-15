@@ -116,3 +116,16 @@
         object-fit: cover;
     }
 }
+
+/* حالت العرض المقصوصة */
+.BoardMembersSections .data_box .desc.clamped {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7; /* عدد السطور اللي تظهر */
+    overflow: hidden;
+}
+
+/* حالة العرض الكاملة */
+.BoardMembersSections .data_box .desc.expanded {
+    display: block;
+}

@@ -254,9 +254,9 @@ export default function Header() {
 
           {/* Desktop Right Controls */}
           <div className="d-flex align-items-center gap-3">
-            <button  onClick={toggleLang} className="text-white">
+            {/* <button  onClick={toggleLang} className="text-white">
               {lang === 'en' ? 'AR' : 'EN'}
-            </button>
+            </button> */}
             <button className="btn btn-link p-0 text-white" onClick={() => setSearchOpen(true)}>
               <FaSearch />
             </button>
@@ -287,9 +287,9 @@ export default function Header() {
           <div
             className={`d-flex align-items-center gap-3 ${styles.mobileCenter}`}
           >
-           <button  onClick={toggleLang} className="text-white">
+            {/* <button  onClick={toggleLang} className="text-white">
               {lang === 'en' ? 'AR' : 'EN'}
-            </button>
+            </button> */}
             <button className="btn btn-link p-0 text-white" onClick={() => setSearchOpen(true)}>
               <FaSearch />
             </button>
