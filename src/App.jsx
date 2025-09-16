@@ -18,7 +18,7 @@ import ManagementTeam from './pages/ManagementTeam/ManagementTeam';
 
 import Certifications from './pages/Certifications/Certifications';
 import SustainabilityPage from './pages/SustainabilityPage/Sustainability';
-import CSR from './pages/CSR/CSR';
+// import CSR from './pages/CSR/CSR';
 
 import Careers from './pages/Careers/Careers';
 import JopDetails from './pages/JopDetails/JopDetails';
@@ -46,45 +46,15 @@ import { ToastContainer } from 'react-toastify';
 
 const router = createBrowserRouter([
 
-   {
+  {
     path: '/',
     element: <Navigate to={`/${localStorage.getItem('lang') || 'en'}`} replace />,
   },
   {
-   path: '/:lang',
+    path: '/:lang',
     element: <Layout />,
     children: [
       { index: true, element: <Home /> },
-
-      {path: 'about-us', element:<About />},
-      {path: 'about-us/who-we-are', element: <WhoWeAre />},
-      {path: 'about-us/our-strategy', element: <OurStrategy />},
-      {path: 'about-us/company-history', element: <CompanyHistory />},
-      {path: 'about-us/our-shareholders', element: <OurShareholders />},
-      {path: 'about-us/board-members', element: <BoardMembers />},
-      {path: 'about-us/management-team', element: <ManagementTeam />},
-
-      {path: 'our-responsibilities/certifications', element: <Certifications />},
-      {path: 'our-responsibilities/sustainability', element: <SustainabilityPage />},
-      {path: 'our-responsibilities/csr', element: <CSR />},
-      {path: 'our-responsibilities/codeconduct', element: <CodeConductPage />},
-      {path: 'news', element: <News />},
-      {path: 'news-details', element: <NewsDetailsPage />},
-      {path: 'faqs', element: <FaqsPage />},
-      {path: 'facts-about-sugar', element: <FactsPage />},
-
-      { path: 'our-products/overview', element:  <Overview/>},
-      { path: 'our-products/white-sugar', element:  <WhiteSugar/>},
-      { path: 'our-products/molasses', element:  <Molasses/>},
-      { path: 'our-products/pellets', element:  <Pellets/>},
-      { path: 'careers', element:  <Careers/>},
-      { path: 'careers/job-details', element:  <JopDetails/>},
-      { path: 'contact-us', element:  <ContactUs/>},
-      { path: 'recipes', element:  <Recipes/>},
-      { path: 'recipe-details', element:  <RecipesDetails/>},
-      { path: 'privacy-policy', element:  <PrivacyPolicy/>},
-      { path: 'terms-of-service', element:  <TermsOfService/>},
-      { path: 'download-brochure', element:  <DownloadBrochure/>},
 
       { path: 'about-us', element: <About /> },
       { path: 'about-us/who-we-are', element: <WhoWeAre /> },
@@ -96,13 +66,12 @@ const router = createBrowserRouter([
 
       { path: 'our-responsibilities/certifications', element: <Certifications /> },
       { path: 'our-responsibilities/sustainability', element: <SustainabilityPage /> },
-      { path: 'our-responsibilities/csr', element: <CSR /> },
+      // {path: 'our-responsibilities/csr', element: <CSR />},
       { path: 'our-responsibilities/codeconduct', element: <CodeConductPage /> },
       { path: 'news', element: <News /> },
       { path: 'news-details/:id', element: <NewsDetailsPage /> },
       { path: 'faqs', element: <FaqsPage /> },
       { path: 'facts-about-sugar', element: <FactsPage /> },
-      { path: 'our-customer', element: <OurCustomerPage /> },
 
       { path: 'our-products/overview', element: <Overview /> },
       { path: 'our-products/white-sugar', element: <WhiteSugar /> },
@@ -113,6 +82,13 @@ const router = createBrowserRouter([
       { path: 'contact-us', element: <ContactUs /> },
       { path: 'recipes', element: <Recipes /> },
       { path: 'recipe-details/:id', element: <RecipesDetails /> },
+
+      { path: 'privacy-policy', element: <PrivacyPolicy /> },
+      { path: 'terms-of-service', element: <TermsOfService /> },
+      { path: 'download-brochure', element: <DownloadBrochure /> },
+
+      { path: 'our-customer', element: <OurCustomerPage /> },
+
       { path: 'sugar-history', element: <SugarHistory /> },
 
 
@@ -123,16 +99,16 @@ const router = createBrowserRouter([
 ]);
 
 export default function App() {
-  return(
+  return (
     <>
 
       <RouterProvider router={router} />
-  <ToastContainer position="top-right" autoClose={3000} />
-    
+      <ToastContainer position="top-right" autoClose={3000} />
+
     </>
   )
 
 
-  
-  
+
+
 }

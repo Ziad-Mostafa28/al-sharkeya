@@ -9,12 +9,12 @@ import "swiper/css/navigation";
 export default function CompanyHistorySlider() {
     const years = [
         { year: 2012, image: "/img/aboutus/slide1.png", description: "Al Sharkeya Sugar Manufacturing (ALNouran) S.A.E was founded, building Egypt's first state of the art sugar manufacturing facility in the governorate of Al Sharkeya." },
-        { year: 2014, image: "/img/aboutus/slide2.png", description: "Expansion of operations and introduction of new technologies." },
-        { year: 2017, image: "/img/aboutus/slide3.png", description: "Increased production capacity and regional exports started." },
-        { year: 2018, image: "/img/aboutus/slide4.png", description: "Partnerships with local farmers to improve supply chain." },
-        { year: 2019, image: "/img/aboutus/slide5.png", description: "Recognition as one of the leading sugar manufacturers in Egypt." },
-        { year: 2020, image: "/img/aboutus/slide6.png", description: "Sustainability initiatives and renewable energy integration." },
-        { year: 2021, image: "/img/aboutus/slide2.png", description: "Future growth plans and continued innovation." },
+        { year: 2014, image: "/img/aboutus/slide2.png", description: "Al Sharkeya Sugar Manufacturing (AL Nouran) S.A.E secures an EGP 1.5 billion Senior Islamic Facility, an important milestone to achieving a target investment of EGP 2.5 billion." },
+        { year: 2017, image: "/img/aboutus/slide3.png", description: "Sadek El Sewedy and Bank Misr signed on as shareholders, further enhancing the project's investments to EGP 3.5 billion." },
+        { year: 2018, image: "/img/aboutus/slide4.png", description: "Al Sharkeya Sugar Manufacturing (AL Nouran) S.A.E secured an EGP 360M senior facility top up & a capital increase of 800M, further enhancing the project investment to EGP 4.7 billion." },
+        { year: 2019, image: "/img/aboutus/slide5.png", description: "Al Sharkeya Sugar Manufacturing (ALNouran) S.A.E launched its first production line, operating for 85 days and processing 639,000 tons of sugar beet to produce 90,000 tons of sugar, 36,000 tons of molasses, and 5,000 tons of pellets." },
+        { year: 2020, image: "/img/aboutus/slide6.png", description: "Over 112 days of operation, the factory processed 995,000 tons of sugar beet, producing 137,000 tons of sugar, 54,000 tons of animal feed, and 54,000 tons of molasses." },
+        { year: 2021, image: "/img/aboutus/slide7.png", description: "Starting on February 20, 2021, the factory reached its maximum operational capacity, processing 1.923 million tons of sugar beet and producing 245,763 tons of sugar, 103,100 tons of pellets, and 100,001 tons of molasses." },
     ];
 
     const [activeIndex, setActiveIndex] = useState(0);

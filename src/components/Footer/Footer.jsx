@@ -84,7 +84,7 @@ function Footer() {
               <ul>
                 <li><Link to='our-responsibilities/certifications'>Certifications</Link></li>
                 <li><Link to='our-responsibilities/sustainability'>Sustainability</Link></li>
-                <li><Link to='our-responsibilities/csr'>CSR</Link></li>
+                {/* <li><Link to='our-responsibilities/csr'>CSR</Link></li> */}
                 <li><Link to='our-responsibilities/codeconduct'>Code of conduct</Link></li>
               </ul>
             </div>

@@ -19,7 +19,7 @@ export default function ManagementTeamSections() {
         {
             img: "/img/aboutus/pe3.png",
             name: "Ahmed Fouad Hussein",
-            role: "Manufacturing DirecChief Financial Officer",
+            role: "Chief Financial Officer",
             linkedin: "#"
         },
         {

@@ -4,20 +4,20 @@ import styles from "./OurShareholdersSection.module.css";
 export default function OurShareholdersSection() {
     const shareholders = [
         {
+            img: "/img/aboutus/logo2.png",
+            title: "Arab Fund for Economic and Social Development",
+            paragraphs: [
+                "The Arab Fund for Economic and Social Development (the Arab Fund, or AFESD). based in Kuwait, is a regional Arab financial institution focused on funding economic and social development by financing public sector and private Investment projects, providing grants and lending Its expertise.",
+                "The Arab Fund's activities are characterized by a number of important aspects that make it a model of cooperation and Arab economic Integration, and a reflection of outstanding joint Arab action.",
+            ],
+        },
+        {
             img: "/img/aboutus/logo1.png",
             title: "Islamic Corporation for the Development of the Private Sector",
             paragraphs: [
                 "The Islamic Corporation for the Development of the Private Sector (ICD) is a multilateral organization affiliated with the Islamic Development Bank Group (IDB).",
                 "Its shareholders consist of the IDB itself in addition to 51 member countries and five public financial institutions.",
                 "The ICD's headquarters are based in Jeddah, Saudi Arabia, and were established by the IDB Board of Governors during its 24th annual meeting in Jeddah in November 1999.",
-            ],
-        },
-        {
-            img: "/img/aboutus/logo2.png",
-            title: "Arab Fund for Economic and Social Development",
-            paragraphs: [
-                "The Arab Fund for Economic and Social Development (the Arab Fund, or AFESD). based in Kuwait, is a regional Arab financial institution focused on funding economic and social development by financing public sector and private Investment projects, providing grants and lending Its expertise.",
-                "The Arab Fund's activities are characterized by a number of important aspects that make it a model of cooperation and Arab economic Integration, and a reflection of outstanding joint Arab action.",
             ],
         },
         {

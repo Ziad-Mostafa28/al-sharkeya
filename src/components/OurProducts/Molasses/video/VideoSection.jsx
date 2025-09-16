@@ -12,10 +12,10 @@ export default function VideoSection() {
     <section >
       <div className='container'>
         <div className='text-center mb-4'>
-           <h3 className={styles.titleVideo}>Molasses a sweet byproduct of sugar refining</h3>
-           <p className={styles.subtitleVideo}>Is  a viscous byproduct, principally obtained from the refining of sugarcane or sugar beet juice into sugar. Molasses varies in the amount of sugar, the method of extraction. Sugarcane molasses is usually used to sweeten and flavor foods. Molasses is a major constituent of fine commercial brown sugar.</p>
+          <h3 className={styles.titleVideo}>Molasses a sweet byproduct of sugar refining</h3>
+          <p className={styles.subtitleVideo}>Is  a viscous byproduct, principally obtained from the refining of sugarcane or sugar beet juice into sugar. Molasses varies in the amount of sugar, the method of extraction. Sugarcane molasses is usually used to sweeten and flavor foods. Molasses is a major constituent of fine commercial brown sugar.</p>
         </div>
-       
+
         <div className={styles.dev_video}>
           <div className={`${styles.overlay} ${isPlaying ? styles.hidden : ''}`}></div>
 
@@ -37,14 +37,14 @@ export default function VideoSection() {
             <div className={styles.playButton}>▶</div>
           </div>
 
-          <video
+          {/* <video
             controls
             ref={videoRef}
             onPlay={handlePlay}
             onPause={handlePause}
           >
             <source src="/img/homepage/video.mp4" type="video/mp4" />
-          </video>
+          </video> */}
         </div>
       </div>
     </section>

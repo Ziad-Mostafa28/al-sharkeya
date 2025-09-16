@@ -192,11 +192,11 @@ export default function Header() {
                         Sustainability
                       </Link>
                     </li>
-                    <li className={`${styles.limenu}`}>
+                    {/* <li className={`${styles.limenu}`}>
                       <Link className="dropdown-item" to="our-responsibilities/csr">
                         CSR
                       </Link>
-                    </li>
+                    </li> */}
                     <li className={`${styles.limenu}`}>
                       <Link className="dropdown-item" to="our-responsibilities/codeconduct">
                         Code of conduct
@@ -413,11 +413,11 @@ export default function Header() {
                         Sustainability
                       </Link>
                     </li>
-                    <li className={`${styles.limenu}`}>
+                    {/* <li className={`${styles.limenu}`}>
                       <Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="our-responsibilities/csr">
                         CSR
                       </Link>
-                    </li>
+                    </li> */}
                     <li className={`${styles.limenu}`}>
                       <Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="our-responsibilities/codeconduct">
                         Code of conduct
