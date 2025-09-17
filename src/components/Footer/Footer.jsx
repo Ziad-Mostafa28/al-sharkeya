@@ -49,8 +49,8 @@ function Footer() {
               </Link>
               <p className={styles.desc}>Follow Us on</p>
               <div className={styles.social}>
-                <a href="#"><FaLinkedinIn /></a>
-                <a href="#"><FaFacebookF /></a>
+                <a href="https://www.linkedin.com/company/alsharkeya-sugar/" target="_blank"><FaLinkedinIn /></a>
+                <a href="https://www.facebook.com/www.sharkeyasugar.com.eg/?_rdc=1&_rdr#"  target="_blank"><FaFacebookF /></a>
               </div>
             </div>
             <div className={`col-sm-6 col-md-4 col-lg-4 col-xl-2 ${styles.colSpacing}`}>
