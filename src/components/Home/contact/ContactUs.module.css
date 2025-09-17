@@ -32,9 +32,10 @@
 .tab {
   background: none;
   border: none;
-  font-weight: 400;
+  font-weight: 500 !important;
   color: #ccc;
   cursor: pointer;
+  font-size: 1.875rem !important;
 }
 
 .active {

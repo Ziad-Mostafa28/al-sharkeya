@@ -23,7 +23,7 @@ export default function Activities() {
                 <div className="col-12 col-sm-4">
                     <div className='d-flex flex-column align-items-center gap-4 mt-4'>
                         <img src="/img/aboutus/5.png" alt="" />
-                        <p>Production and export of By-products (molasses and fodder) to the global market</p>
+                        <p>Production and export of By-products (molasses and pellets) to the global market</p>
                     </div>
                 </div>
             </div>

@@ -1,44 +1,3 @@
-// import React from 'react'
-// import styles from './BecomeSupplier.module.css'
-
-// export default function BecomeSupplier() {
-//   return (
-//     <>
-//     <section className={styles.supplierSection}>
-//       <div className={styles.container}>
-//         <h2 className={styles.title}>Become a Supplier</h2>
-//         <p className={styles.subtitle}>Join us and become a supplier.</p>
-
-//         <form className={styles.form}>
-//           <input type="text" placeholder="Your name*" required />
-//           <input type="text" placeholder="Your company name" />
-//           <input type="tel" placeholder="Your phone number*" required />
-//           <input type="email" placeholder="Your email" />
-
-//           <select required>
-//             <option value="">Your governorate*</option>
-//             <option value="cairo">Cairo</option>
-//             <option value="giza">Giza</option>
-//             <option value="alexandria">Alexandria</option>
-//           </select>
-
-//           <input type="text" placeholder="Land area*" required />
-//           <textarea placeholder="Your message"></textarea>
-
-//           <button type="submit" className={styles.sendBtn}>Send</button>
-//         </form>
-//       </div>
-//     </section>
-
-
-//     </>
-//   )
-// }
-
-
-
-
-
 import React, { useEffect, useState } from "react";
 import styles from "./BecomeSupplier.module.css";
 import { useForm, Controller } from "react-hook-form";
@@ -48,7 +7,6 @@ import {
   resetSupplierFormState,
 } from "../../../../store/slices/supplierForm";
 import { toast } from "react-toastify";
-import { getNames } from "country-list";
 import Select from "react-select";
 
 export default function BecomeSupplier() {
@@ -65,12 +23,43 @@ export default function BecomeSupplier() {
     formState: { errors },
   } = useForm();
 
-  const countryOptions = getNames().map((country) => ({
-    label: country,
-    value: country,
+  // 🟢 محافظات مصر
+  const egyptGovernorates = [
+    "Cairo",
+    "Giza",
+    "Alexandria",
+    "Dakahlia",
+    "Red Sea",
+    "Beheira",
+    "Fayoum",
+    "Gharbia",
+    "Ismailia",
+    "Monufia",
+    "Minya",
+    "Qaliubiya",
+    "New Valley",
+    "Suez",
+    "Aswan",
+    "Assiut",
+    "Beni Suef",
+    "Port Said",
+    "Damietta",
+    "Sharkia",
+    "South Sinai",
+    "Kafr El Sheikh",
+    "Matruh",
+    "Luxor",
+    "Qena",
+    "North Sinai",
+    "Sohag",
+  ];
+
+  const governorateOptions = egyptGovernorates.map((gov) => ({
+    label: gov,
+    value: gov,
   }));
 
-  const [selectedCountry, setSelectedCountry] = useState(null);
+  const [selectedGovernorate, setSelectedGovernorate] = useState(null);
 
   const onSubmit = (data) => {
     const formData = new FormData();
@@ -96,7 +85,7 @@ export default function BecomeSupplier() {
     if (successMessage) {
       toast.success(successMessage);
       reset();
-      setSelectedCountry(null); 
+      setSelectedGovernorate(null);
       dispatch(resetSupplierFormState());
     }
   }, [successMessage, reset, dispatch]);
@@ -130,12 +119,12 @@ export default function BecomeSupplier() {
             type="number"
             placeholder="Your phone number*"
             {...register("phone", {
-                required: "Phone is required",
-                pattern: {
-                  value: /^\+?\d{10,15}$/,
-                  message: "Please enter a valid phone number",
-                },
-              })}
+              required: "Phone is required",
+              pattern: {
+                value: /^\+?\d{10,15}$/,
+                message: "Please enter a valid phone number",
+              },
+            })}
           />
           {errors.phone && (
             <span className={styles.error}>{errors.phone.message}</span>
@@ -150,6 +139,7 @@ export default function BecomeSupplier() {
             <span className={styles.error}>{errors.email.message}</span>
           )}
 
+          {/* 🟢 Dropdown للمحافظات بدل الدول */}
           <Controller
             name="governorate"
             control={control}
@@ -157,10 +147,12 @@ export default function BecomeSupplier() {
             render={({ field }) => (
               <Select
                 {...field}
-                options={countryOptions}
+                options={governorateOptions}
                 placeholder="Your governorate*"
                 isSearchable
-                menuPortalTarget={typeof document !== "undefined" ? document.body : null}
+                menuPortalTarget={
+                  typeof document !== "undefined" ? document.body : null
+                }
                 menuPosition="fixed"
                 className={styles.input}
                 classNamePrefix="select"
@@ -207,9 +199,9 @@ export default function BecomeSupplier() {
                   input: (base) => ({ ...base, margin: 0, padding: 0 }),
                   indicatorsContainer: (base) => ({ ...base, padding: "0 6px" }),
                 }}
-                value={selectedCountry}
+                value={selectedGovernorate}
                 onChange={(option) => {
-                  setSelectedCountry(option); 
+                  setSelectedGovernorate(option);
                   field.onChange(option ? option.label : "");
                 }}
               />

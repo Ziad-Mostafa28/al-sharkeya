@@ -52,7 +52,7 @@ export default function OurCustomerSection() {
             { id: 32, name: "Angel Yeast Egypt", img: "/img/ourcustomer/35.png" },
             { id: 33, name: "ED&F Man", img: "/img/ourcustomer/36.png" },
             { id: 34, name: "KMT for Integrated Industries", img: "/img/ourcustomer/37.png" },
-            { id: 35, name: "Juhayna", img: "/img/ourcustomer/38.png" },
+            { id: 35, name: "Lesaffre Egypt", img: "/img/ourcustomer/38.png" },
             { id: 36, name: "Phaga industries", img: "/img/ourcustomer/39.png" },
         ],
         "Pellets": [

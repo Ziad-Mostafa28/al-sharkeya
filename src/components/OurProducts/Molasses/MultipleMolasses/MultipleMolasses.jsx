@@ -21,19 +21,18 @@ export default function MultipleMolasses() {
             },
             {
                 icon: "/img/aboutus/icon.png",
-                title: "Fattening Animals",
+                title: "Yeast Production",
                 subtitle: "Molasses is a perfect medium for the growth of yeast and bacteria due to its sugar and nutrient content. It is widely used in the production of:",
 
                 texts: [
                     "Baker's yeast",
                     "Nutritional yeast",
-                    "Binding Agent: Used in pelleted feeds to reduce dust and enhance pellet integrity.",
                     "Ethanol",
                 ]
             },
             {
                 icon: "/img/aboutus/icon.png",
-                title: "Sheep and Goats",
+                title: "Food Industries",
                 subtitle: "Molasses serves as:",
 
                 texts: [
@@ -43,7 +42,7 @@ export default function MultipleMolasses() {
             },
             {
                 icon: "/img/aboutus/icon.png",
-                title: "Horses",
+                title: "Agriculture",
 
                 texts: [
                     "Used as an organic soil amendment, enhancing soil fertility and microbial activity.",

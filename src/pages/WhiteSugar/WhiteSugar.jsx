@@ -3,6 +3,7 @@ import SugarBrochure from '../../components/OurProducts/WhiteSugar/SugarBrochure
 import SecBanner from '../../components/SharedComponents/SecBanner/SecBanner'
 import SugarImage from '../../components/OurProducts/WhiteSugar/SugarImage/SugarImage'
 import ProductsLogo from '../../components/OurProducts/WhiteSugar/ProductsLogo/ProductsLogo'
+import PremiumWhite from '../../components/OurProducts/WhiteSugar/PremiumWhite/PremiumWhite'
 
 export default function WhiteSugar() {
   return (
@@ -14,6 +15,7 @@ export default function WhiteSugar() {
       />  
       <SugarBrochure/>
       <SugarImage/>
+      <PremiumWhite/>
       <ProductsLogo/>
     
     </>

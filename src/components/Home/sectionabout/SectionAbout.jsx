@@ -32,7 +32,7 @@ export default function SectionAbout() {
                             </div>
                             </div>
 
-                            <div className={styles.smallbox}>
+                            {/* <div className={styles.smallbox}>
                             <div className={styles.numberBox}>
                                 <span className={styles.plus}>+</span>
                                 <CountUp end={15} duration={2} enableScrollSpy scrollSpyOnce/>
@@ -42,7 +42,7 @@ export default function SectionAbout() {
                                 <br />
                                 Production
                             </div>
-                            </div>
+                            </div> */}
                         </div>
                         <div className={`w-100 d-flex justify-content-center justify-content-lg-end`}>
                             <Link to={'about-us/who-we-are'}>
