@@ -12,7 +12,7 @@ export default function Pelletts() {
         <div className={`container-fluid ${styles.customContainer}`}>
           <div className="row align-items-center">
             <div className={`col-md-8 ${styles.textBlock}`}>
-              <h2>Pelletts</h2>
+              <h2>Pellets</h2>
               <p>
                 The cossettes from which the sugar juice is derived in the extraction tower are mechanically pressed and dried in a drying tunnel before being pelleted and sold as animal feed.
               </p>

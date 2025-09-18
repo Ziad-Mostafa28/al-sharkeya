@@ -4,7 +4,7 @@ import styles from "./Activities.module.css";
 export default function Activities() {
   return (
     <section className={styles.activities}>
-        <h2>Its main activities are</h2>
+        <h2>Our Activities</h2>
 
         <div className="container">
             <div className="row">
