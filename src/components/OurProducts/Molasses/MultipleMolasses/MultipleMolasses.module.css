@@ -75,7 +75,7 @@
 
 .subtitle{
       font-weight: 700;
-    font-size: 1.25rem;
+    font-size: 1.25rem !important;
     color: #606060;
     margin-bottom: 1rem;
 }
@@ -84,12 +84,12 @@
   display: flex;        
   align-items: center;  
   gap: 8px; 
-             
-    font-weight: 800;
-    font-size: 1rem;
+  font-weight: 800;
+    font-size: 1.25rem !important;
     color: #606060;
     margin-bottom: 0;
 }
+
 
 .textup::before {
   content: "•";

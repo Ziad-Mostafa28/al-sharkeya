@@ -135,9 +135,19 @@ export default function ContactUsForm() {
               info@sharkeyasugar.com <br />
               Sales@sharkeyasugar.com
             </p>
-            <div className={styles.divbutton}>
-              <button className={styles.visitButton}>Visit</button>
-            </div>
+<div className={styles.divbutton}>
+  <button className={styles.visitButton}>
+    <a
+      href="https://www.google.com/maps/place/Ankara,+Sheraton+Al+Matar,+El+Nozha,+Cairo+Governorate/@30.109231,31.3809821,762m/data=!3m2!1e3!4b1!4m6!3m5!1s0x1458164321912b37:0x224ab57d0f84ae12!8m2!3d30.109231!4d31.3809821!16s%2Fg%2F1tly6487!5m1!1e1?entry=ttu&g_ep=EgoyMDI1MDkxNS4wIKXMDSoASAFQAw%3D%3D"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ color: "inherit", textDecoration: "none", display: "block" }}
+    >
+      Visit
+    </a>
+  </button>
+</div>
+
           </div>
 
           <div className={styles.card}>
@@ -147,9 +157,20 @@ export default function ContactUsForm() {
               (+20) 55 3201392 &nbsp; (+20) 55 3201492 <br />
               (+20) 10 26666148 &nbsp; (+20) 55 3201592
             </p>
-            <div className={styles.divbutton}>
-              <button className={styles.visitButton}>Visit</button>
-            </div>
+    <div className={styles.divbutton}>
+  <button
+    className={styles.visitButton}
+    onClick={() =>
+      window.open(
+        "https://www.google.com.eg/maps/place/%D8%A7%D9%84%D8%B4%D8%B1%D9%82%D9%8A%D8%A9+%D9%84%D8%B5%D9%86%D8%A7%D8%B9%D8%A9+%D8%A7%D9%84%D8%B3%D9%83%D8%B1+-+%D8%A7%D9%84%D8%A8%D9%88%D8%A7%D8%A8%D8%A9+%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9%E2%80%AD/@30.6467728,31.9266189,16z/data=!4m6!3m5!1s0x14f83fce2203131f:0x5eee3924db1d82b9!8m2!3d30.6447946!4d31.9305288!16s%2Fg%2F11k0vh9xd2?coh=164777&shorturl=1&entry=tts&g_ep=EgoyMDI1MDExNS4wIPu8ASoASAFQAw%3D%3D",
+        "_blank"
+      )
+    }
+  >
+    Visit
+  </button>
+</div>
+
           </div>
         </div>
       </div>

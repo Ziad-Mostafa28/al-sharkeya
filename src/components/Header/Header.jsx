@@ -8,25 +8,25 @@ import { setLanguage } from "../../../store/slices/langSlice";
 
 export default function Header() {
 
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const lang = useSelector((state) => state.lang.lang);
   const navigate = useNavigate();
   const location = useLocation();
 
-// const toggleLang = (e) => {
-//     // لو استدعيت من عنصر a/button ما نحتاج preventDefault لأن نحن نستخدم button
-//     const newLang = lang === "en" ? "ar" : "en";
-//     localStorage.setItem("lang", newLang);
+  // const toggleLang = (e) => {
+  //     // لو استدعيت من عنصر a/button ما نحتاج preventDefault لأن نحن نستخدم button
+  //     const newLang = lang === "en" ? "ar" : "en";
+  //     localStorage.setItem("lang", newLang);
 
-//     // suffix = كل الباقي بعد /en أو /ar أو كامل الباث لو مفيهوش prefix
-//     const suffix = location.pathname.replace(/^\/(en|ar)/, "");
-//     const newPath = `/${newLang}${suffix}${location.search || ""}${location.hash || ""}`;
+  //     // suffix = كل الباقي بعد /en أو /ar أو كامل الباث لو مفيهوش prefix
+  //     const suffix = location.pathname.replace(/^\/(en|ar)/, "");
+  //     const newPath = `/${newLang}${suffix}${location.search || ""}${location.hash || ""}`;
 
-//     console.log("[toggleLang] from:", location.pathname, "to:", newPath);
+  //     console.log("[toggleLang] from:", location.pathname, "to:", newPath);
 
-//     dispatch(setLanguage(newLang));
-//     navigate(newPath, { replace: true });
-//   };
+  //     dispatch(setLanguage(newLang));
+  //     navigate(newPath, { replace: true });
+  //   };
 
   const toggleLang = () => {
     const newLang = lang === "en" ? "ar" : "en";
@@ -94,8 +94,10 @@ export default function Header() {
                   <a className={`nav-link dropdown-toggle ${styles.linkmenu}`} role="button"
                     data-bs-toggle="dropdown" href="#">
                     About us
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="_chevronIcon_4vcs0_385 mx-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
-                  </a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
+                      <path d="M7.25816 10.809C6.84848 10.809 6.43881 10.651 6.12863 10.3408L2.31284 6.52499C2.14312 6.35527 2.14312 6.07436 2.31284 5.90463C2.48256 5.73491 2.76348 5.73491 2.9332 5.90463L6.74899 9.72043C7.02991 10.0013 7.4864 10.0013 7.76732 9.72043L11.5831 5.90463C11.7528 5.73491 12.0338 5.73491 12.2035 5.90463C12.3732 6.07436 12.3732 6.35527 12.2035 6.52499L8.38768 10.3408C8.0775 10.651 7.66783 10.809 7.25816 10.809Z" fill="white" stroke="white" stroke-width="0.501638" />
+                    </svg>            
+                          </a>
                   <ul className={`dropdown-menu ${styles.linkmenudesktop}`} >
                     <li className={`${styles.limenu}`}>
                       <Link className="dropdown-item" to="about-us/who-we-are">
@@ -137,7 +139,11 @@ export default function Header() {
                     data-bs-toggle="dropdown"
                   >
                     Our products
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="_chevronIcon_4vcs0_385 mx-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
+                    {/* <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="_chevronIcon_4vcs0_385 mx-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg> */}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
+                      <path d="M7.25816 10.809C6.84848 10.809 6.43881 10.651 6.12863 10.3408L2.31284 6.52499C2.14312 6.35527 2.14312 6.07436 2.31284 5.90463C2.48256 5.73491 2.76348 5.73491 2.9332 5.90463L6.74899 9.72043C7.02991 10.0013 7.4864 10.0013 7.76732 9.72043L11.5831 5.90463C11.7528 5.73491 12.0338 5.73491 12.2035 5.90463C12.3732 6.07436 12.3732 6.35527 12.2035 6.52499L8.38768 10.3408C8.0775 10.651 7.66783 10.809 7.25816 10.809Z" fill="white" stroke="white" stroke-width="0.501638" />
+                    </svg>
+
                   </a>
                   <ul className={`dropdown-menu ${styles.linkmenudesktop}`} >
                     <li className={`${styles.limenu}`}>
@@ -170,16 +176,10 @@ export default function Header() {
                     data-bs-toggle="dropdown"
                   >
                     Our responsibilities
-                    <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 448 512"
-                      className="_chevronIcon_4vcs0_385 mx-2" height="1em" width="1em"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 
-      0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 
-      33.901-.04L224 284.505l154.745-154.021c9.379-9.335 
-      24.544-9.317 33.901.04l22.667 22.667c9.373 
-      9.373 9.373 24.569 0 33.941L240.971 
-      381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
+                      <path d="M7.25816 10.809C6.84848 10.809 6.43881 10.651 6.12863 10.3408L2.31284 6.52499C2.14312 6.35527 2.14312 6.07436 2.31284 5.90463C2.48256 5.73491 2.76348 5.73491 2.9332 5.90463L6.74899 9.72043C7.02991 10.0013 7.4864 10.0013 7.76732 9.72043L11.5831 5.90463C11.7528 5.73491 12.0338 5.73491 12.2035 5.90463C12.3732 6.07436 12.3732 6.35527 12.2035 6.52499L8.38768 10.3408C8.0775 10.651 7.66783 10.809 7.25816 10.809Z" fill="white" stroke="white" stroke-width="0.501638" />
                     </svg>
+
                   </a>
                   <ul className={`dropdown-menu ${styles.linkmenudesktop}`}>
                     <li className={`${styles.limenu}`}>
@@ -218,8 +218,9 @@ export default function Header() {
                     data-bs-toggle="dropdown"
                   >
                     Resources
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="_chevronIcon_4vcs0_385 mx-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
-                  </a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
+                      <path d="M7.25816 10.809C6.84848 10.809 6.43881 10.651 6.12863 10.3408L2.31284 6.52499C2.14312 6.35527 2.14312 6.07436 2.31284 5.90463C2.48256 5.73491 2.76348 5.73491 2.9332 5.90463L6.74899 9.72043C7.02991 10.0013 7.4864 10.0013 7.76732 9.72043L11.5831 5.90463C11.7528 5.73491 12.0338 5.73491 12.2035 5.90463C12.3732 6.07436 12.3732 6.35527 12.2035 6.52499L8.38768 10.3408C8.0775 10.651 7.66783 10.809 7.25816 10.809Z" fill="white" stroke="white" stroke-width="0.501638" />
+                    </svg>                  </a>
                   <ul className={`dropdown-menu ${styles.linkmenudesktop}`}>
                     <li className={`${styles.limenu}`} >
                       <Link className="dropdown-item" to={'sugar-history'}>

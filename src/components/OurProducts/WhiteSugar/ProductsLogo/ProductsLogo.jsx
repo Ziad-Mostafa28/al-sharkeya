@@ -5,10 +5,10 @@ export default function ProductsLogo() {
 
 
     const customers = [
-  { id: 1, img: '/img/homepage/coca.png', alt: 'Coca Cola' },
-  { id: 2, img: '/img/homepage/pepsi.png', alt: 'Pepsi' },
-  { id: 3, img: '/img/homepage/edita.png', alt: 'Edita' },
-{ id: 4, img: '/img/homepage/juhayna.png', alt: 'Juhayna' },
+  { id: 1, img: '/img/homepage/coca2.png', alt: 'Coca Cola' },
+  { id: 2, img: '/img/homepage/pepsi2.png', alt: 'Pepsi' },
+  { id: 3, img: '/img/homepage/edita2.png', alt: 'Edita' },
+{ id: 4, img: '/img/homepage/juhayna2.png', alt: 'Juhayna' },
 
 ];
   return (

@@ -12,11 +12,11 @@ export default function MultipleMolasses() {
                 icon: "/img/aboutus/icon.png",
                 title: "Animal Feed",
                 texts: [
-                    "Energy Source: Molasses provides readily available energy for both ruminant and non-ruminant animals.",
-                    "Palatability Enhancer: Its sweet taste makes feed more attractive.",
-                    "Binding Agent: Used in pelleted feeds to reduce dust and enhance pellet integrity.",
-                    "Pasture Additive: Sprayed on pastures or crop residues to improve nutritional value.",
-                    "Mineral and Vitamin Carrier: Helps deliver minerals and vitamins to animal diets."
+                    "<strong>Energy Source:</strong> Molasses provides readily available energy for both ruminant and non-ruminant animals.",
+                    "<strong>Palatability Enhancer:</strong> Its sweet taste makes feed more attractive.",
+                    "<strong>Binding Agent:</strong> Used in pelleted feeds to reduce dust and enhance pellet integrity.",
+                    "<strong>Pasture Additive:</strong> Sprayed on pastures or crop residues to improve nutritional value.",
+                    "<strong>Mineral and Vitamin Carrier:</strong> Helps deliver minerals and vitamins to animal diets."
                 ]
             },
             {
@@ -75,7 +75,13 @@ export default function MultipleMolasses() {
 
 
                                                 {item.texts?.map((line, i) => (
-                                                    <p key={i} className={styles.textup}>{line}</p>
+                                             <p
+  key={i}
+  className={styles.textup}
+  dangerouslySetInnerHTML={{ __html: `<span>${line}</span>` }}
+></p>
+
+
                                                 ))}
                                             </div>
                                         </li>

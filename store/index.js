@@ -11,10 +11,9 @@ import contactReducer from "./slices/contactSlice";
 import visitReducer from "./slices/visitSlice";
 
 import suppliersReducer from "./slices/supplierForm";
-
-
-
 import newsReducer from "./slices/newsSlice";
+import certificationsReducer from "./slices/certificationsSlice";
+
 
 const store = configureStore({
   reducer: {
@@ -27,6 +26,7 @@ const store = configureStore({
     contact: contactReducer,
     visit: visitReducer,
     suppliers: suppliersReducer,
+    certifications:certificationsReducer,
 
   },
 });

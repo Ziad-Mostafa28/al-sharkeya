@@ -38,6 +38,7 @@
     font-size: 1rem;
     color: #606060;
     margin-bottom: 0.5rem;
+    margin-top: 0 !important;
 }
 
 .NewsDetailsSection .container .image_news {

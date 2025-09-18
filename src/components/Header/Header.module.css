@@ -10,6 +10,10 @@
 
 .linkmenu {
   color: white !important;
+  display: flex !important;
+  gap: 5px !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .linkmenu:hover,
@@ -192,7 +196,8 @@
 
 .chevronIcon {
   transition: transform 0.3s ease;
-  font-size: 0.9rem;
+  width: 12px;
+  height: 10px;
 }
 
 .rotated {

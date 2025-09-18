@@ -9,13 +9,13 @@ export default function EconomicEnvironmental() {
                  <div className="row align-items-start">
                    <div className={`col-md-8 ${styles.textBlock}`}>
                      <h2>Economic and Environmental Benefits</h2>
-                     <p>
+                     <strong>
                        The use of molasses supports sustainability and circular economy principles:
-                       </p>
+                       </strong>
                        <ul className={`${styles.textBlockul}`}>
-                        <li>Increased Added Value: Converts a by product into a valuable commodity, maximizing the use of the sugar beet crop.</li>
-                        <li>Waste Reduction: Minimizes industrial waste and supports eco-friendly production.</li>
-                        <li>Resource Efficiency: Offers a local energy source for animal feed, decreasing dependency on imported components.</li>
+                        <li><strong>Increased Added Value:</strong> Converts a by product into a valuable commodity, maximizing the use of the sugar beet crop.</li>
+                        <li><strong>Waste Reduction:</strong>  Minimizes industrial waste and supports eco-friendly production.</li>
+                        <li><strong>Resource Efficiency:</strong>  Offers a local energy source for animal feed, decreasing dependency on imported components.</li>
                        </ul>
                    </div>
        

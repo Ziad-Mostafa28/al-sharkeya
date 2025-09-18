@@ -8,13 +8,13 @@ import "swiper/css/navigation";
 
 export default function CompanyHistorySlider() {
     const years = [
-        { year: 2012, image: "/img/aboutus/slide1.png", description: "Al Sharkeya Sugar Manufacturing (ALNouran) S.A.E was founded, building Egypt's first state of the art sugar manufacturing facility in the governorate of Al Sharkeya." },
-        { year: 2014, image: "/img/aboutus/slide2.png", description: "Al Sharkeya Sugar Manufacturing (AL Nouran) S.A.E secures an EGP 1.5 billion Senior Islamic Facility, an important milestone to achieving a target investment of EGP 2.5 billion." },
+        { year: 2012, image: "/img/aboutus/slide1.png", description: "<strong>Al Sharkeya Sugar Manufacturing (ALNouran) S.A.E</strong> was founded, building Egypt's first state of the art sugar manufacturing facility in the governorate of Al Sharkeya." },
+        { year: 2014, image: "/img/aboutus/slide2.png", description: "<strong>Al Sharkeya Sugar Manufacturing (AL Nouran) S.A.E</strong> secures an EGP <strong>1.5</strong> billion Senior Islamic Facility, an important milestone to achieving a target investment of EGP <strong>2.5</strong> billion." },
         { year: 2017, image: "/img/aboutus/slide3.png", description: "Sadek El Sewedy and Bank Misr signed on as shareholders, further enhancing the project's investments to EGP 3.5 billion." },
-        { year: 2018, image: "/img/aboutus/slide4.png", description: "Al Sharkeya Sugar Manufacturing (AL Nouran) S.A.E secured an EGP 360M senior facility top up & a capital increase of 800M, further enhancing the project investment to EGP 4.7 billion." },
-        { year: 2019, image: "/img/aboutus/slide5.png", description: "Al Sharkeya Sugar Manufacturing (ALNouran) S.A.E launched its first production line, operating for 85 days and processing 639,000 tons of sugar beet to produce 90,000 tons of sugar, 36,000 tons of molasses, and 5,000 tons of pellets." },
-        { year: 2020, image: "/img/aboutus/slide6.png", description: "Over 112 days of operation, the factory processed 995,000 tons of sugar beet, producing 137,000 tons of sugar, 54,000 tons of animal feed, and 54,000 tons of molasses." },
-        { year: 2021, image: "/img/aboutus/slide7.png", description: "Starting on February 20, 2021, the factory reached its maximum operational capacity, processing 1.923 million tons of sugar beet and producing 245,763 tons of sugar, 103,100 tons of pellets, and 100,001 tons of molasses." },
+        { year: 2018, image: "/img/aboutus/slide4.png", description: "<strong>Al Sharkeya Sugar Manufacturing (AL Nouran) S.A.E</strong> secured an EGP <strong>360M</strong> senior facility top up & a capital increase of <strong>800M</strong>, further enhancing the project investment to EGP <strong>4.7</strong> billion." },
+        { year: 2019, image: "/img/aboutus/slide5.png", description: "<strong>Al Sharkeya Sugar Manufacturing (ALNouran) S.A.E</strong> launched its first production line, operating for <strong>85</strong> days and processing <strong>639,000</strong> tons of sugar beet to produce <strong>90,000</strong> tons of sugar, <strong>36,000</strong> tons of molasses, and <strong>5,000</strong> tons of pellets." },
+        { year: 2020, image: "/img/aboutus/slide6.png", description: "Over <strong>112</strong> days of operation, the factory processed <strong>995,000</strong> tons of sugar beet, producing <strong>137,000</strong> tons of sugar, <strong>54,000</strong> tons of animal feed, and <strong>54,000</strong> tons of molasses." },
+        { year: 2021, image: "/img/aboutus/slide7.png", description: "Starting on February 20, 2021, the factory reached its maximum operational capacity, processing <strong>1.923</strong> million tons of sugar beet and producing <strong>245,763</strong> tons of sugar, <strong>103,100</strong> tons of pellets, and <strong>100,001</strong> tons of molasses." },
     ];
 
     const [activeIndex, setActiveIndex] = useState(0);
@@ -86,9 +86,9 @@ export default function CompanyHistorySlider() {
                                 <SwiperSlide key={item.year}>
                                     <div className={styles.contentBox}>
                                         <img src={item.image} alt={`Year ${item.year}`} className="img-fluid rounded mb-3" />
-                                        <p className="text-muted">
-                                            <strong>{item.year}:</strong> {item.description}
-                                        </p>
+                                        <p
+                                         dangerouslySetInnerHTML={{ __html: item.description }}
+                                        ></p>
                                     </div>
                                 </SwiperSlide>
                             ))}
@@ -163,9 +163,9 @@ export default function CompanyHistorySlider() {
                         <SwiperSlide key={item.year}>
                             <div className={styles.contentBox}>
                                 <img src={item.image} alt={`Year ${item.year}`} className="img-fluid rounded mb-3" />
-                                <p className="text-muted">
-                                    <strong>{item.year}:</strong> {item.description}
-                                </p>
+                                 <p
+                                         dangerouslySetInnerHTML={{ __html: item.description }}
+                                        ></p>
                             </div>
                         </SwiperSlide>
                     ))}
