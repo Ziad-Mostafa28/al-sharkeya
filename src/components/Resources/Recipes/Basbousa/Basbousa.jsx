@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 export default function Basbousa() {
 
     const { data, loading } = useSelector((state) => state.recipe);
-    // console.log(data?.data.random_recipe);
 
     const lang = useSelector((state) => state.lang.lang);
     const isArabic = lang === 'ar';

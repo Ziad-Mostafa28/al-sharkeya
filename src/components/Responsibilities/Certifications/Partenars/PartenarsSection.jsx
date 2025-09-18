@@ -7,7 +7,6 @@ export default function PartenarsSection() {
 
      const { data, loading } = useSelector((state) => state.certifications);
     const news = data?.data.certifications || [];
-    console.log(news);
     
 
 

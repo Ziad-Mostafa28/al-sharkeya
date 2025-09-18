@@ -76,7 +76,6 @@ export default function BecomeSupplier() {
       formDataObj[key] = value;
     });
 
-    console.log("📤 Data sent to backend:", formDataObj);
 
     dispatch(submitSupplierForm({ formData, lang: "en" }));
   };

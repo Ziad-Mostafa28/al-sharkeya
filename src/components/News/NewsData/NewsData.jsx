@@ -21,7 +21,6 @@ export default function NewsData() {
         setCurrentPage(page);
     };
 
-    // console.log(news,'news')
     if (loading || !news.length) return null;
 
     return (

@@ -11,7 +11,6 @@ export const fetchNewsData = createAsyncThunk(
         },
         
       });
-              // console.log(response,"response")
 
       return response.data;
     } catch (error) {

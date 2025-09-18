@@ -24,7 +24,6 @@ export default function ContactUs() {
       ...data,
       type: activeTab === "sales" ? "sales" : "get_in_touch",
     };
-    console.log("📦 البيانات المرسلة:", payload);
 
     dispatch(submitContactForm({ formData: payload, lang: currentLang }));
   };
