@@ -132,7 +132,7 @@ export default function ManagementTeamSections() {
         { img: "/img/aboutus/pe7.png", name: " Eng. Malek Fawaz", role: "Digital Transformation Director", linkedin: "#" },
         { img: "/img/aboutus/pe8.png", name: "Eng. Maher Abou Youssef", role: "QHSE Director", linkedin: "#" },
         { img: "/img/aboutus/pe9.png", name: "Ahmed Saeid", role: "Internal Audit Director ", linkedin: "#" },
-        { img: "/img/aboutus/pe10.png", name: "Waleed Abdel aziz ", role: "Acting as Supply Chain Director", linkedin: "#" },
+        { img: "/img/aboutus/pe10.png", name: "Waleed Abdel Aziz ", role: "Acting as Supply Chain Director", linkedin: "#" },
         { img: "/img/aboutus/pe11.png", name: "Hesham Elgebaly", role: "Security Dept. Manager", linkedin: "#" },
         { img: "/img/aboutus/pe12.png", name: "Ahmed Reda", role: "Sustainability & Business Development Manager", linkedin: "#" },
         { img: "/img/aboutus/pe13.png", name: "Ahmed Fathy", role: "Commercial Manager", linkedin: "#" },
