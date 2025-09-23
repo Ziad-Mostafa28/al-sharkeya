@@ -11,6 +11,7 @@ import { fetchNewsData } from '../../store/slices/newsSlice';
 import LoadingOverlay from './LoadingOverlay/LoadingOverlay';
 import { fetchRecipesData } from '../../store/slices/recipeSlice';
 import { fetchCertificationsData } from '../../store/slices/certificationsSlice';
+import { fetchCustomersData } from '../../store/slices/customersSlice';
 
 export default function MainLayout() {
     const dispatch = useDispatch();
@@ -47,6 +48,10 @@ export default function MainLayout() {
 
     useEffect(() => {
     dispatch(fetchCertificationsData(lang));
+  }, [lang, dispatch]);
+
+      useEffect(() => {
+    dispatch(fetchCustomersData(lang));
   }, [lang, dispatch]);
 
   return (
