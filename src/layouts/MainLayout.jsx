@@ -12,21 +12,29 @@ import LoadingOverlay from './LoadingOverlay/LoadingOverlay';
 import { fetchRecipesData } from '../../store/slices/recipeSlice';
 import { fetchCertificationsData } from '../../store/slices/certificationsSlice';
 import { fetchCustomersData } from '../../store/slices/customersSlice';
+import { fetchWhoWeAre } from '../../store/slices/aboutWhoWeAreSlice';
+import { fetchAboutHistory } from '../../store/slices/aboutHistorySlice';
+import { fetchAboutShareholders } from '../../store/slices/aboutShareholdersSlice';
+import { fetchBoardMembers } from '../../store/slices/boardMembersSlice';
+import { fetchManagementTeam } from '../../store/slices/managementTeamSlice';
 
 export default function MainLayout() {
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const location = useLocation();
   const lang = useSelector((state) => state.lang.lang);
 
   useEffect(() => {
     const urlLang = location.pathname.split("/")[1];
     if (urlLang === "ar" || urlLang === "en") {
-      dispatch(setLanguage(urlLang));
+      if (urlLang !== lang) {
+        dispatch(setLanguage(urlLang));
+      }
     } else {
       const savedLang = localStorage.getItem("lang") || "en";
       window.location.replace(`/${savedLang}`);
     }
-  }, [location]);
+  }, [location, lang, dispatch]);
+
 
   useEffect(() => {
     const dir = lang === "ar" ? "rtl" : "ltr";
@@ -35,30 +43,25 @@ export default function MainLayout() {
   }, [lang]);
 
   useEffect(() => {
+    // ⬅️ كل الـ APIs مع بعض
     dispatch(fetchHomeData(lang));
-  }, [lang, dispatch]);
-
-    useEffect(() => {
     dispatch(fetchRecipesData(lang));
-    }, [lang, dispatch]);
-
-  useEffect(() => {
     dispatch(fetchNewsData(lang));
-  }, [lang, dispatch]);
-
-    useEffect(() => {
     dispatch(fetchCertificationsData(lang));
-  }, [lang, dispatch]);
-
-      useEffect(() => {
     dispatch(fetchCustomersData(lang));
+    dispatch(fetchWhoWeAre(lang));
+    dispatch(fetchAboutHistory(lang));
+    dispatch(fetchAboutShareholders(lang));
+    dispatch(fetchBoardMembers(lang));
+    dispatch(fetchManagementTeam(lang));
+
   }, [lang, dispatch]);
 
   return (
     <>
       <Header />
       <ScrollToTop />
-      <LoadingOverlay/>
+      <LoadingOverlay />
 
       <Outlet />
 

@@ -126,7 +126,7 @@ export default function Header() {
                     </li>
                     <li className={`${styles.limenu}`}>
                       <Link className="dropdown-item" to="about-us/management-team">
-                        Management Team
+                        Management team 
                       </Link>
                     </li>
                   </ul>

@@ -133,12 +133,12 @@ export default function ContactUsForm() {
               <strong>Ankara Street, Cairo Complex, Bureau 2, 6th Floor, Heliopolis, Cairo, Egypt.</strong><br />
               (+20) 2 26785790 &nbsp; (+20) 10 00073980 <br />
               info@sharkeyasugar.com <br />
-              Sales@sharkeyasugar.com
+              sales@sharkeyasugar.com
             </p>
 <div className={styles.divbutton}>
   <button className={styles.visitButton}>
     <a
-      href="https://www.google.com/maps/place/Ankara,+Sheraton+Al+Matar,+El+Nozha,+Cairo+Governorate/@30.109231,31.3809821,762m/data=!3m2!1e3!4b1!4m6!3m5!1s0x1458164321912b37:0x224ab57d0f84ae12!8m2!3d30.109231!4d31.3809821!16s%2Fg%2F1tly6487!5m1!1e1?entry=ttu&g_ep=EgoyMDI1MDkxNS4wIKXMDSoASAFQAw%3D%3D"
+      href="https://maps.app.goo.gl/xA5vS2VkRNyAqVKG8"
       target="_blank"
       rel="noopener noreferrer"
       style={{ color: "inherit", textDecoration: "none", display: "block" }}

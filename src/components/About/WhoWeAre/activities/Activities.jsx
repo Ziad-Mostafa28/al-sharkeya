@@ -1,33 +1,31 @@
 import React from 'react'
 import styles from "./Activities.module.css";
+import { useSelector } from 'react-redux';
 
 export default function Activities() {
-  return (
-    <section className={styles.activities}>
-        <h2>Our Activities</h2>
+    const { data, loading } = useSelector((state) => state.aboutWhoWeAre);
+    const lang = useSelector((state) => state.lang.lang);
 
-        <div className="container">
-            <div className="row">
-                <div className="col-12 col-sm-4">
-                    <div className='d-flex flex-column align-items-center gap-4 mt-4'>
-                        <img src="/img/aboutus/3.png" alt="" />
-                        <p>Production of white sugar from sugar beet</p>
-                    </div>
-                </div>
-                <div className="col-12 col-sm-4">
-                    <div className='d-flex flex-column align-items-center gap-4 mt-4'>
-                        <img src="/img/aboutus/4.png" alt="" />
-                        <p>Refining raw sugar into white sugar</p>
-                    </div>
-                </div>
-                <div className="col-12 col-sm-4">
-                    <div className='d-flex flex-column align-items-center gap-4 mt-4'>
-                        <img src="/img/aboutus/5.png" alt="" />
-                        <p>Production and export of By-products (molasses and pellets) to the global market</p>
-                    </div>
+    if (loading || !data) return null;
+
+    const activities = data?.data?.acitivities || [];
+
+    return (
+        <section className={styles.activities}>
+            <h2>Our Activities</h2>
+
+            <div className="container">
+                <div className="row">
+                    {activities.map((activity) => (
+                        <div className="col-12 col-sm-4" key={activity.id}>
+                            <div className="d-flex flex-column align-items-center gap-4 mt-4">
+                                <img src={activity.image} alt={activity.name} />
+                                <p>{activity.name}</p>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
-        </div>
-    </section>
-  )
+        </section>
+    );
 }

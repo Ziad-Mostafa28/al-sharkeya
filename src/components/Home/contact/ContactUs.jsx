@@ -131,7 +131,7 @@ export default function ContactUs() {
               <strong>Ankara Street, Cairo Complex, Bureau 2, 6th Floor, Heliopolis, Cairo, Egypt.</strong><br />
               (+20) 2 26785790 &nbsp; (+20) 10 00073980 <br />
               info@sharkeyasugar.com <br />
-              Sales@sharkeyasugar.com
+              sales@sharkeyasugar.com
             </p>
             <div className={styles.divbutton}>
               <button className={styles.visitButton}>Visit</button>

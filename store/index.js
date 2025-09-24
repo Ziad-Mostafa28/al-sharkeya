@@ -14,7 +14,11 @@ import suppliersReducer from "./slices/supplierForm";
 import newsReducer from "./slices/newsSlice";
 import certificationsReducer from "./slices/certificationsSlice";
 import customersReducer from "./slices/customersSlice";
-
+import aboutWhoWeAreReducer from "./slices/aboutWhoWeAreSlice";
+import aboutHistoryReducer from "./slices/aboutHistorySlice";
+import aboutShareholdersReducer from "./slices/aboutShareholdersSlice";
+import boardMembersReducer from "./slices/boardMembersSlice";
+import managementTeamReducer from "./slices/managementTeamSlice";
 
 const store = configureStore({
   reducer: {
@@ -27,8 +31,13 @@ const store = configureStore({
     contact: contactReducer,
     visit: visitReducer,
     suppliers: suppliersReducer,
-    certifications:certificationsReducer,
-    customers:customersReducer,
+    certifications: certificationsReducer,
+    customers: customersReducer,
+    aboutWhoWeAre: aboutWhoWeAreReducer,
+    aboutHistory: aboutHistoryReducer,
+    aboutShareholders: aboutShareholdersReducer,
+        aboutBoardMembers: boardMembersReducer,
+    managementTeam: managementTeamReducer,
 
   },
 });

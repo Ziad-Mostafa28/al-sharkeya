@@ -656,8 +656,8 @@ useEffect(() => {
     <section className={styles.visitSection}>
       <div className="container">
         <div className="text-center mb-4">
-          <h2 className={styles.sectionTitle}>Visit us</h2>
-          <p className={styles.sectionSubtitle}>School and college can visit our factory.</p>
+          <h2 className={styles.sectionTitle}>Request a factory visit</h2>
+          <p className={styles.sectionSubtitle}>School and college can visit our factory</p>
         </div>
 
         <div className="row mt-5">
