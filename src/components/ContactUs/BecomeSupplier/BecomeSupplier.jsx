@@ -92,8 +92,8 @@ export default function BecomeSupplier() {
   return (
     <section className={styles.supplierSection}>
       <div className={styles.container}>
-        <h2 className={styles.title}>Become a Supplier</h2>
-        <p className={styles.subtitle}>Join us and become a supplier.</p>
+        <h2 className={styles.title}>Request to become a beet supplier</h2>
+        <p className={styles.subtitle}>Join us and become a supplier</p>
 
         <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
           <input

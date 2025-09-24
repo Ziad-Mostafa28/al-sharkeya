@@ -117,59 +117,51 @@
 // }
 
 
-import React from 'react'
+import React from "react";
 import styles from "./ManagementTeamSections.module.css";
 import { FaLinkedin } from "react-icons/fa";
+import { useSelector } from "react-redux";
 
 export default function ManagementTeamSections() {
-    const team = [
-        { img: "/img/aboutus/pe1.png", name: "Dr. Shehab Marzban", role: "Chairman", linkedin: "#" },
-        { img: "/img/aboutus/pe2.png", name: "Eng. Wael Azmy", role: "Manufacturing Director", linkedin: "#" },
-        { img: "/img/aboutus/pe3.png", name: "Ahmed Fouad Hussein", role: "Chief Financial Officer", linkedin: "#" },
-        { img: "/img/aboutus/pe4.png", name: "Eng. Mamdouh Baioumy", role: "Agriculture Director", linkedin: "#" },
-        { img: "/img/aboutus/pe5.png", name: "Ms. Ghada Anwar", role: "Chief Human Capital Officer", linkedin: "#" },
-        { img: "/img/aboutus/pe6.png", name: "Ms. Doaa Taha", role: "Sales Director", linkedin: "#" },
-        { img: "/img/aboutus/pe7.png", name: " Eng. Malek Fawaz", role: "Digital Transformation Director", linkedin: "#" },
-        { img: "/img/aboutus/pe8.png", name: "Eng. Maher Abou Youssef", role: "QHSE Director", linkedin: "#" },
-        { img: "/img/aboutus/pe9.png", name: "Ahmed Saeid", role: "Internal Audit Director ", linkedin: "#" },
-        { img: "/img/aboutus/pe10.png", name: "Waleed Abdel Aziz ", role: "Acting as Supply Chain Director", linkedin: "#" },
-        { img: "/img/aboutus/pe11.png", name: "Hesham Elgebaly", role: "Security Dept. Manager", linkedin: "#" },
-        { img: "/img/aboutus/pe12.png", name: "Ahmed Reda", role: "Sustainability & Business Development Manager", linkedin: "#" },
-        { img: "/img/aboutus/pe13.png", name: "Ahmed Fathy", role: "Commercial Manager", linkedin: "#" },
-    ];
+    const { data, loading } = useSelector((state) => state.managementTeam);
 
+    if (loading || !data) return null;
+
+    const members = data?.data?.members || [];
+
+    // دالة لتنضيف الاسم قبل الترتيب
     const cleanName = (name = "") => {
         return name
-            .replace(/^\s*/,"") // remove leading spaces
-            .replace(/^(?:Dr\.?|Eng\.?)\s*/i, "") // remove Dr or Eng (with or without dot) if at start
-            .replace(/\s+/g, " ") // collapse multiple spaces to single
+            .replace(/^\s*/, "")
+            .replace(/^(?:Dr\.?|Eng\.?|Mr\.?|Ms\.?)\s*/i, "")
+            .replace(/\s+/g, " ")
             .trim();
     };
 
-    const collator = new Intl.Collator('en', { sensitivity: 'base', ignorePunctuation: true });
+    const collator = new Intl.Collator("en", {
+        sensitivity: "base",
+        ignorePunctuation: true,
+    });
 
-    const firstPerson = team[0];
-
-    const middlePeople = team.slice(1, -3).slice().sort((a, b) =>
+    const firstPerson = members[0];
+    const middlePeople = members.slice(1, -3).slice().sort((a, b) =>
         collator.compare(cleanName(a.name), cleanName(b.name))
     );
-
-    const lastThree = team.slice(-3).slice().sort((a, b) =>
+    const lastThree = members.slice(-3).slice().sort((a, b) =>
         collator.compare(cleanName(a.name), cleanName(b.name))
     );
 
     const finalTeam = [firstPerson, ...middlePeople, ...lastThree];
-
 
     return (
         <section className={`${styles.ManagementTeamSections} py-5`}>
             <div className="container">
                 <div className="row">
                     {finalTeam.map((person, index) => (
-                        <div className="col-12 col-md-4" key={index}>
+                        <div className="col-12 col-md-4" key={person.id || index}>
                             <div className={styles.peoplebox}>
                                 <div className={styles.image}>
-                                    <img src={person.img} alt={person.name} />
+                                    <img src={person.image} alt={person.name} />
                                     <a
                                         href={person.linkedin}
                                         target="_blank"
@@ -182,7 +174,7 @@ export default function ManagementTeamSections() {
                                 </div>
                                 <div className={styles.desc}>
                                     <h2 className={styles.title}>{person.name}</h2>
-                                    <span className={styles.subtitle}>{person.role}</span>
+                                    <span className={styles.subtitle}>{person.job_title}</span>
                                 </div>
                             </div>
                         </div>
