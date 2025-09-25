@@ -9,7 +9,7 @@ export default function SectionAbout() {
                 <div className={`${styles.about}`}>
                     <div className="container">
                         <div className="row">
-                            <h3 className={`${styles.title}`} >Free from Molasse with </h3>
+                            {/* <h3 className={`${styles.title}`} >Technical Specifications of Our Pellets</h3> */}
 
                             <div className="col-12 col-md-6 col-sm-12 col-lg-8">
 

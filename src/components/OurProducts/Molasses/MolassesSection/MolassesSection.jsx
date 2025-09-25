@@ -22,7 +22,7 @@ export default function MolassesSection() {
                 className={styles.image}
               />
               <h5 className={styles.title}>First Molasses</h5>
-              <p className={styles.desc}>Highest sugar content</p>
+              <p className={styles.desc}>the highest sugar content occurred when processed three crystallization steps or less</p>
             </div>
           </div>
 
@@ -35,7 +35,7 @@ export default function MolassesSection() {
                 className={styles.image}
               />
               <h5 className={styles.title}>Second Molasses</h5>
-              <p className={styles.desc}>Slightly bitter</p>
+              <p className={styles.desc}>intermediate sugar content occurred when processed five crystallization steps or less</p>
             </div>
           </div>
 
@@ -47,8 +47,8 @@ export default function MolassesSection() {
                 alt="Blackstrap Molasses"
                 className={styles.image}
               />
-              <h5 className={styles.title}>Blackstrap Molasses</h5>
-              <p className={styles.desc}>Darkest and most robust in flavor</p>
+              <h5 className={styles.title}>Third molasses ( blackstrap molasses ) </h5>
+              <p className={styles.desc}>the darkest, most robust in flavor and lowest sugar content occurred when crystallization steps more than 5 steps</p>
             </div>
           </div>
         </div>

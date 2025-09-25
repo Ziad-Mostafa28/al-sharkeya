@@ -9,13 +9,13 @@ export default function OurProducts() {
     "white-sugar": {
       title: "White Sugar",
       description:
-        "White sugar, also called table sugar, granulated sugar, or regular sugar, is a commonly used type of sugar, made either of beet sugar or cane sugar, which has undergone a refining process. It is nearly pure sucrose.",
+        "White sugar, also known as refined sugar or granulated sugar, is a common sweetener made by extracting and purifying sucrose from sugar beet plants or sugarcane",
       image: "/img/homepage/8.png",
       link: "our-products/white-sugar",
     },
     molasses: {
       title: "Molasses",
-      description: `The syrup separated off during the final crystallization step is known as molasses Molasses is a valuable ingredient for the baking yeast and animal feed industry as well as for the production of alcohol.`,
+      description: `Molasses is a naturally dense, flavorful syrup valued for its distinctive taste, mineral content, and versatility, widely used in foods, beverages, animal feed, and various industrial processes across cultures and generations`,
       image: "/img/homepage/9.png",
       link: "our-products/molasses",
     },
@@ -46,9 +46,8 @@ export default function OurProducts() {
         <img
           src={products[activeProduct].image}
           alt={products[activeProduct].title}
-          className={`${styles.backgroundImage} ${
-            isTransitioning ? styles.transitioning : ""
-          }`}
+          className={`${styles.backgroundImage} ${isTransitioning ? styles.transitioning : ""
+            }`}
         />
         <h1 className={styles.title}>Our Products</h1>
         {/* Content */}
@@ -59,9 +58,8 @@ export default function OurProducts() {
               {Object.entries(products).map(([key, product]) => (
                 <button
                   key={key}
-                  className={`${styles.navButton} ${
-                    activeProduct === key ? styles.active : ""
-                  }`}
+                  className={`${styles.navButton} ${activeProduct === key ? styles.active : ""
+                    }`}
                   onClick={() => handleProductChange(key)}
                 >
                   {product.title}
@@ -72,9 +70,8 @@ export default function OurProducts() {
 
           {/* Product Content */}
           <div
-            className={`${styles.productContent} ${
-              isTransitioning ? styles.transitioning : ""
-            }`}
+            className={`${styles.productContent} ${isTransitioning ? styles.transitioning : ""
+              }`}
           >
             {/* <h2 className={styles.productTitle}>{products[activeProduct].title}</h2> */}
             <p className={styles.productDescription}>

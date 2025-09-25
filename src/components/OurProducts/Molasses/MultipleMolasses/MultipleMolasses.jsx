@@ -5,48 +5,57 @@ export default function MultipleMolasses() {
 
 
     const missionData = {
-        title: "Multiple Uses of Molasses",
+        title: "Uses of Molasses",
         description: "",
         items: [
             {
                 icon: "/img/aboutus/icon.png",
-                title: "Animal Feed",
+                title: "Food & Beverage",
                 texts: [
-                    "<strong>Energy Source:</strong> Molasses provides readily available energy for both ruminant and non-ruminant animals.",
-                    "<strong>Palatability Enhancer:</strong> Its sweet taste makes feed more attractive.",
-                    "<strong>Binding Agent:</strong> Used in pelleted feeds to reduce dust and enhance pellet integrity.",
-                    "<strong>Pasture Additive:</strong> Sprayed on pastures or crop residues to improve nutritional value.",
-                    "<strong>Mineral and Vitamin Carrier:</strong> Helps deliver minerals and vitamins to animal diets."
+                    "Sweetener in baking (cookies, bread, cakes)",
+                    "Flavoring in sauces, marinades, and glazes",
+                    "Ingredient in traditional sweets and candies",
+                    "Production of rum and other fermented beverages",
                 ]
             },
             {
                 icon: "/img/aboutus/icon.png",
-                title: "Yeast Production",
-                subtitle: "Molasses is a perfect medium for the growth of yeast and bacteria due to its sugar and nutrient content. It is widely used in the production of:",
+                title: "Animal Nutrition",
+                // subtitle: "Molasses is a perfect medium for the growth of yeast and bacteria due to its sugar and nutrient content. It is widely used in the production of:",
 
                 texts: [
-                    "Baker's yeast",
-                    "Nutritional yeast",
-                    "Ethanol",
+                    "Energy-rich supplement in livestock feed",
+                    "Binder in pelletized feed",
+                    "Improves palatability of roughage-based diets",
                 ]
             },
             {
                 icon: "/img/aboutus/icon.png",
-                title: "Food Industries",
+                title: "Agricultural Uses",
+
+                texts: [
+                    "Soil conditioner and microbial growth enhancer",
+                    "Component in organic fertilizers and composting",
+                ]
+            },
+            {
+                icon: "/img/aboutus/icon.png",
+                title: "Industrial Applications",
                 subtitle: "Molasses serves as:",
 
                 texts: [
-                    "A natural sweetener and coloring agent in products like baked goods and sauces.",
-                    "An ingredient in alcoholic beverages such as rum.",
+                    "Substrate in ethanol and biofuel production",
+                    "Raw material for yeast and citric acid fermentation",
+                    "Used in chemical industries (e.g., calcium lignosulfonate)",
                 ]
             },
             {
                 icon: "/img/aboutus/icon.png",
-                title: "Agriculture",
+                title: "Other Traditional Uses",
 
                 texts: [
-                    "Used as an organic soil amendment, enhancing soil fertility and microbial activity.",
-                    "Sometimes included in liquid fertilizers to improve nutrient uptake by plants.",
+                    "Natural remedy in folk medicine (iron-rich tonic)",
+                    "Ingredient in brewing and distilling",
                 ]
             }
         ]
@@ -75,11 +84,11 @@ export default function MultipleMolasses() {
 
 
                                                 {item.texts?.map((line, i) => (
-                                             <p
-  key={i}
-  className={styles.textup}
-  dangerouslySetInnerHTML={{ __html: `<span>${line}</span>` }}
-></p>
+                                                    <p
+                                                        key={i}
+                                                        className={styles.textup}
+                                                        dangerouslySetInnerHTML={{ __html: `<span>${line}</span>` }}
+                                                    ></p>
 
 
                                                 ))}

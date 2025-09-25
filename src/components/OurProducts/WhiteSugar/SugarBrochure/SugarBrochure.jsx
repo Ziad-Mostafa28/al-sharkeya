@@ -15,7 +15,13 @@ export default function BrochureSugar() {
                     </div>
                     <div className={`col-md-6 ${styles.textBlock}`}>
                         <p>
-                          White sugar, also called table sugar, granulated sugar, or regular sugar, is a commonly used type of sugar, made either of beet sugar or cane sugar, which has undergone a refining process. It is nearly pure sucrose.
+                            White sugar, also known as refined sugar or granulated sugar, is a common sweetener
+                            made by extracting and purifying sucrose from sugar beet plants or sugarcane.
+                            It is typically white in color, fine in texture, and consists of nearly pure sucrose.
+                            White sugar is a versatile and essential ingredient found in kitchens and food
+                            production around the world.
+                            Known for its clean sweetness and ability to enhance
+                            flavor, texture, and color in recipes, white sugar is widely used in baking, beverages,desserts, and processed foods
                         </p>
                         <a href="#" download className={styles.downloadLink}>
                             <img

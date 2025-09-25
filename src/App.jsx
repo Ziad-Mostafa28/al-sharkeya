@@ -51,6 +51,10 @@ const router = createBrowserRouter([
     path: '/',
     element: <Navigate to={`/${localStorage.getItem('lang') || 'en'}`} replace />,
   },
+   {
+    path: '/verify',
+    element: <Navigate to={`/${localStorage.getItem('lang') || 'en'}/verify${window.location.search}`} replace />,
+  },
   {
     path: '/:lang',
     element: <Layout />,

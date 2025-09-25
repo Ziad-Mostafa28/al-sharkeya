@@ -1,0 +1,82 @@
+.SugerSection {
+  padding: 5rem 0 3.125rem 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+.SugerSection .container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.SugerSection .introText {
+  font-size: 1rem;
+  max-width: 100%;
+  font-weight: 400;
+  margin: 0 auto;
+  color: #606060;
+}
+
+.SugerSection .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 2rem;
+}
+
+.SugerSection .col {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+
+.SugerSection .image {
+  width: 100%;
+  height: 18.75rem;
+  border-radius: 10px;
+}
+
+.SugerSection .title {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #262626;
+
+}
+
+.SugerSection .desc {
+  color: #606060;
+  margin-top: 0.3rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+
+@media (min-width: 768px) {
+  .SugerSection .col {
+    flex: 0 0 32%;
+    max-width: 32%;
+  }
+
+  /* .SugerSection .introText {
+    font-size: 0.9rem;
+  } */
+
+
+
+}
+
+@media (max-width: 576px) {
+
+  .SugerSection {
+    padding: 3rem 0;
+
+  }
+
+  .SugerSection .introText {
+    font-size: 0.9rem;
+
+  }
+}

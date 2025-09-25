@@ -13,7 +13,7 @@ export default function VideoSection() {
       <div className='container'>
         <div className='text-center mb-4'>
           <h3 className={styles.titleVideo}>Molasses a sweet byproduct of sugar refining</h3>
-          <p className={styles.subtitleVideo}>Is  a viscous byproduct, principally obtained from the refining of sugarcane or sugar beet juice into sugar. Molasses varies in the amount of sugar, the method of extraction. Sugarcane molasses is usually used to sweeten and flavor foods. Molasses is a major constituent of fine commercial brown sugar.</p>
+          <p className={styles.subtitleVideo}>It Is a viscous byproduct, principally obtained from the refining of sugarcane or sugar beet juice into sugar. Molasses varies in the amount of sugar, the method of extraction. Sugarcane molasses is usually used to sweeten and flavor foods. Molasses is a major constituent of fine commercial brown sugar. Molasses is rich in vitamins and minerals, including vitamin B6, iron, calcium, magnesium, and potassium. There are different types of molasses depending on the amount of time refined</p>
         </div>
 
         <div className={styles.dev_video}>

@@ -5,49 +5,49 @@ import styles from "./PremiumWhite.module.css"
 export default function PremiumWhite() {
 
     const missionData = {
-        title: "Premium White Sugar",
+        title: "Qualities of Our Sugar Apart",
         description: "",
         items: [
             {
                 icon: "/img/aboutus/icon.png",
                 title: "Consistent Quality",
-                subtitle: "Reliable performance for home use and large-scale production.",
+                subtitle: "Delivers dependable results for everyday use and large-scale production",
 
             },
             {
                 icon: "/img/aboutus/icon.png",
                 title: "Food Safety",
-                subtitle: "Processed and packaged to meet the highest standards.",
+                subtitle: "Manufactured and packed under strict hygiene and safety standards",
             },
             {
                 icon: "/img/aboutus/icon.png",
                 title: "Versatility",
-                subtitle: "Suitable for homes, cafés, bakeries, restaurants, and food industries."
+                subtitle: "Ideal for households, cafés, bakeries, restaurants, and diverse food industries"
             },
             {
                 icon: "/img/aboutus/icon.png",
                 title: "Long Shelf Life",
-                subtitle: "Stores well and dissolves easily."
+                subtitle: "Remains fresh over time and dissolves with ease"
             },
             {
                 icon: "/img/aboutus/icon.png",
                 title: "Multiple Functions",
-                subtitle: "Sweetening, fermentation, preservation, and browning."
+                subtitle: "Perfect for sweetening, fermentation, preservation, and enhancing color"
             },
             {
                 icon: "/img/aboutus/icon.png",
                 title: "Trusted Sourcing",
-                subtitle: "Premium quality from carefully selected suppliers."
+                subtitle: "Carefully selected suppliers ensure premium-grade quality"
             },
             {
                 icon: "/img/aboutus/icon.png",
                 title: "Flexible Packaging",
-                subtitle: "Available in various sizes for personal or industrial needs."
+                subtitle: "Offered in a wide range of sizes to suit personal and industrial requirements"
             },
             {
                 icon: "/img/aboutus/icon.png",
                 title: "Perfect Sweetness",
-                subtitle: "Enhances everything from simple tea to gourmet desserts."
+                subtitle: "Balances flavor beautifully, from a cup of tea to gourmet creations"
             }
         ]
     };
