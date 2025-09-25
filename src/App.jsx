@@ -40,6 +40,7 @@ import DownloadBrochure from './pages/DownloadBrochure/DownloadBrochure';
 import OurCustomerPage from './pages/OurCustomerPage/OurCustomerPage';
 import SugarHistory from './pages/SugarHistory/SugarHistory';
 import { ToastContainer } from 'react-toastify';
+import Verify from './pages/Verify/Verify';
 
 
 
@@ -90,6 +91,7 @@ const router = createBrowserRouter([
       { path: 'our-customer', element: <OurCustomerPage /> },
 
       { path: 'sugar-history', element: <SugarHistory /> },
+      { path: 'verify', element: <Verify /> },
 
 
 
