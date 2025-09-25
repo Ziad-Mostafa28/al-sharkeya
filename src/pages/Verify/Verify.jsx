@@ -14,7 +14,7 @@ export default function Verify() {
                 <iframe
                     src="https://www.sharkeyasugar.com/verify/?certID=QMZIX6-161225-IP0JVR-230415"
                     width="100%"
-                    height="1872px"
+                    height="900"
                     style={{ border: "none" }}
                     title="Verification Page"
                 ></iframe>
