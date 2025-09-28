@@ -8,8 +8,8 @@ export default function WhoWeAre() {
     return (
         <>
             <SecBanner
-                title="Who we are"
-                subtitle="About us"
+                title="Who We Are"
+                subtitle="About Us"
                 image="/img/aboutus/HEader2.png"
             />
 

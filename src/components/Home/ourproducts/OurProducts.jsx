@@ -22,7 +22,7 @@ export default function OurProducts() {
     pellets: {
       title: "Pellets",
       description:
-        "It is the remaining cells of the sugar beet roots after extracting the sugar liquid from them. It has a high nutritional value and a palatable taste. It can replace half of the grain requirement in the daily feed of animals.",
+        "Pellets are made from the residual cells of sugar beet roots after sugar extraction. They are rich in nutritional value, highly palatable, and can replace up to 50% of the grain requirement in daily animal feed",
       image: "/img/homepage/10.png",
       link: "our-products/pellets",
     },

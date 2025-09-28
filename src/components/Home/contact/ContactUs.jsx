@@ -42,7 +42,7 @@ export default function ContactUs() {
 
   return (
     <section className={styles.contactSection}>
-      <h2 className={styles.title}>Contact us</h2>
+      <h2 className={styles.title}>Contact Us</h2>
 
       <div className={styles.container}>
         {/* Left Form Section */}
@@ -53,7 +53,7 @@ export default function ContactUs() {
               onClick={() => setActiveTab("touch")}
               type="button"
             >
-              Get in touch
+              Get in Touch
             </button>
 
             <button
@@ -68,7 +68,7 @@ export default function ContactUs() {
           <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
             <input
               type="text"
-              placeholder="Your name"
+              placeholder="name"
               className={styles.input}
               {...register("name", { required: "Name is required" })}
             />
@@ -76,7 +76,7 @@ export default function ContactUs() {
 
             <input
               type="text"
-              placeholder="Your company name"
+              placeholder="company name"
               className={styles.input}
               {...register("company", { required: "Company name is required" })}
             />
@@ -84,7 +84,7 @@ export default function ContactUs() {
 
             <input
               type="text"
-              placeholder="Your phone number"
+              placeholder="phone number"
               className={styles.input}
               {...register("phone", {
                 required: "Phone is required",
@@ -98,14 +98,14 @@ export default function ContactUs() {
 
             <input
               type="email"
-              placeholder="Your email"
+              placeholder="email"
               className={styles.input}
               {...register("email", { required: "Email is required" })}
             />
             {errors.email && <p className={styles.errorMsg}>{errors.email.message}</p>}
 
             <textarea
-              placeholder="Your message"
+              placeholder="message"
               className={styles.textarea}
               {...register("message", { required: "Message is required" })}
             />

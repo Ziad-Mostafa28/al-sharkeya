@@ -5,7 +5,7 @@ import styles from "./PremiumWhite.module.css"
 export default function PremiumWhite() {
 
     const missionData = {
-        title: "Qualities of Our Sugar Apart",
+        title: "Qualities of Our Sugar",
         description: "",
         items: [
             {

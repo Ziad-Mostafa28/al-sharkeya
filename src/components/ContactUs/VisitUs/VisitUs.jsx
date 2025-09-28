@@ -656,19 +656,19 @@ useEffect(() => {
     <section className={styles.visitSection}>
       <div className="container">
         <div className="text-center mb-4">
-          <h2 className={styles.sectionTitle}>Request a factory visit</h2>
+          <h2 className={styles.sectionTitle}>Request a Factory Visit</h2>
           <p className={styles.sectionSubtitle}>School and college can visit our factory</p>
         </div>
 
         <div className="row mt-5">
           <div className="col-md-6">
-            <h4 className={styles.formTitle}>Institution information</h4>
+            <h4 className={styles.formTitle}>Institution Information</h4>
 
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className={styles.inputGroup}>
                 <input
                   type="text"
-                  placeholder="Your name"
+                  placeholder="name"
                   className={styles.inputField}
                   {...register("name", { required: "Name is required" })}
                 />
@@ -678,7 +678,7 @@ useEffect(() => {
               <div className={styles.inputGroup}>
                 <input
                   type="text"
-                  placeholder="Your company"
+                  placeholder="company"
                   className={styles.inputField}
                   {...register("company", { required: "Company is required" })}
                 />
@@ -688,7 +688,7 @@ useEffect(() => {
               <div className={styles.inputGroup}>
                 <input
                   type="tel"
-                  placeholder="Your phone"
+                  placeholder="phone"
                   className={styles.inputField}
                   {...register("phone", { required: "Phone is required" })}
                 />
@@ -698,7 +698,7 @@ useEffect(() => {
               <div className={styles.inputGroup}>
                 <input
                   type="email"
-                  placeholder="Your email"
+                  placeholder="email"
                   className={styles.inputField}
                   {...register("email", { required: "Email is required" })}
                 />

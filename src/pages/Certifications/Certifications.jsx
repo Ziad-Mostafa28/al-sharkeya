@@ -8,7 +8,7 @@ export default function Certifications() {
         <>
             <SecBanner
                 title="Certifications"
-                subtitle="Our responsibilities"
+                subtitle="Our Responsibilities"
                 image="/img/responsibilities/banner1.png"
             />
 

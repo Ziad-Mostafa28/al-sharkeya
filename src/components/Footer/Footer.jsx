@@ -48,7 +48,7 @@ function Footer() {
               <Link to={`/${lang}`}>
                 <img className="m-auto" src="/img/homepage/biglogo.png" alt="" />
               </Link>
-              <p className={styles.desc}>Follow Us on</p>
+              <p className={styles.desc}>Follow Us </p>
               <div className={styles.social}>
                 <a href="https://www.linkedin.com/company/alsharkeya-sugar/" target="_blank"><FaLinkedinIn /></a>
                 <a href="https://www.facebook.com/www.sharkeyasugar.com.eg/?_rdc=1&_rdr#" target="_blank"><FaFacebookF /></a>
@@ -57,19 +57,19 @@ function Footer() {
             <div className={`col-sm-6 col-md-4 col-lg-4 col-xl-2 ${styles.colSpacing}`}>
               <h2 className={styles.bottomtitle}>About Us</h2>
               <ul>
-                <li><Link to='about-us/who-we-are'>Who we are</Link></li>
-                <li><Link to='about-us/our-strategy'>Our strategy</Link></li>
-                <li><Link to='about-us/company-history'>Company history</Link></li>
-                <li><Link to='about-us/our-shareholders'>Our shareholders</Link></li>
-                <li><Link to='about-us/board-members'>Board members</Link></li>
-                <li><Link to='about-us/management-team'>Management team</Link></li>
+                <li><Link to='about-us/who-we-are'>Who We Are</Link></li>
+                <li><Link to='about-us/our-strategy'>Our Strategy</Link></li>
+                <li><Link to='about-us/company-history'>Company History</Link></li>
+                <li><Link to='about-us/our-shareholders'>Our Shareholders</Link></li>
+                <li><Link to='about-us/board-members'>Board Members</Link></li>
+                <li><Link to='about-us/management-team'>Management Team</Link></li>
               </ul>
             </div>
             <div className={`col-sm-6 col-md-4 col-lg-4 col-xl-2 ${styles.colSpacing}`}>
-              <h2 className={styles.bottomtitle}>Our products</h2>
+              <h2 className={styles.bottomtitle}>Our Products</h2>
               <ul>
                 <li><Link to='our-products/overview'>Overview</Link></li>
-                <li><Link to='our-products/white-sugar'>White sugar</Link></li>
+                <li><Link to='our-products/white-sugar'>White Sugar</Link></li>
                 <li><Link to='our-products/molasses'>Molasses</Link></li>
                 <li><Link to='our-products/pellets'>Pellets</Link></li>
               </ul>
@@ -77,18 +77,18 @@ function Footer() {
             <div className={`col-sm-6 col-md-4 col-lg-4 col-xl-2 ${styles.colSpacing}`}>
               <h2 className={styles.bottomtitle}>Resources</h2>
               <ul>
-                <li><Link to={'sugar-history'}>Sugar history</Link></li>
+                <li><Link to={'sugar-history'}>Sugar History</Link></li>
                 <li><Link to='recipes'>Recipes</Link></li>
-                <li><Link to='facts-about-sugar'>Facts about sugar</Link></li>
+                <li><Link to='facts-about-sugar'>Facts About Sugar</Link></li>
               </ul>
             </div>
             <div className={`col-sm-6 col-md-4 col-lg-4 col-xl-2 ${styles.colSpacing}`}>
-              <h2 className={styles.bottomtitle}>Our responsibilities</h2>
+              <h2 className={styles.bottomtitle}>Our Responsibilities</h2>
               <ul>
                 <li><Link to='our-responsibilities/certifications'>Certifications</Link></li>
                 <li><Link to='our-responsibilities/sustainability'>Sustainability</Link></li>
                 {/* <li><Link to='our-responsibilities/csr'>CSR</Link></li> */}
-                <li><Link to='our-responsibilities/codeconduct'>Code of conduct</Link></li>
+                <li><Link to='our-responsibilities/codeconduct'>Code of Conduct</Link></li>
               </ul>
             </div>
             <div className={`col-sm-6 col-md-4 col-lg-4 col-xl-2 ${styles.colSpacing}`}>

@@ -6,8 +6,8 @@ export default function CompanyHistory() {
     return (
         <>
             <SecBanner
-                title="Company history"
-                subtitle="About us"
+                title="Company History"
+                subtitle="About Us"
                 image="/img/aboutus/HEader3.png"
             />
 

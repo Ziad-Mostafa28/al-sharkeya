@@ -7,7 +7,7 @@ export default function BoardMembers() {
         <>
             <SecBanner
                 title="Board Members"
-                subtitle="About us"
+                subtitle="About Us"
                 image="/img/aboutus/HEader25.png"
             />
 

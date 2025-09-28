@@ -68,7 +68,7 @@ export default function ContactUsForm() {
           <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
             <input
               type="text"
-              placeholder="Your name"
+              placeholder="name"
               className={styles.input}
               {...register("name", { required: "Name is required" })}
             />
@@ -76,7 +76,7 @@ export default function ContactUsForm() {
 
             <input
               type="text"
-              placeholder="Your company name"
+              placeholder="company name"
               className={styles.input}
               {...register("company", { required: "Company name is required" })}
             />
@@ -84,7 +84,7 @@ export default function ContactUsForm() {
 
             <input
               type="number"
-              placeholder="Your phone number"
+              placeholder="phone number"
               className={styles.input}
               {...register("phone", {
                 required: "Phone is required",
@@ -98,14 +98,14 @@ export default function ContactUsForm() {
 
             <input
               type="email"
-              placeholder="Your email"
+              placeholder="email"
               className={styles.input}
               {...register("email", { required: "Email is required" })}
             />
             {errors.email && <p className={styles.errorMsg}>{errors.email.message}</p>}
 
             <textarea
-              placeholder="Your message"
+              placeholder="message"
               className={styles.textarea}
               {...register("message", { required: "Message is required" })}
             />

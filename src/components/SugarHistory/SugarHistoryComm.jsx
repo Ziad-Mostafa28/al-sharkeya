@@ -154,7 +154,7 @@ export default function SugarHistoryComm() {
     <div className={styles.historyContainer}>
       <div className={styles.sidebar}>
         <div>
-          <h2 className={styles.sidebarTitle}>Sugar history</h2>
+          <h2 className={styles.sidebarTitle}>Sugar History</h2>
           <p className={styles.sidebarText}>
             While chewing sugar cane for its sweet taste was likely done in
             prehistory, the first indications of the domestication of sugar cane

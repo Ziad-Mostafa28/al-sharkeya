@@ -6,7 +6,7 @@ export default function FaqsPage() {
     return (
         <>
             <SecBanner
-                title="Frequently asked questions"
+                title="Frequently Asked Questions"
                 subtitle=""
                 image="/img/faqs/image.png"
             />

@@ -7,8 +7,8 @@ export default function CodeConductPage() {
     return (
         <>
             <SecBanner
-                title="Code of conduct"
-                subtitle="Our responsibilities"
+                title="Code of Conduct"
+                subtitle="Our Responsibilities"
                 image="/img/responsibilities/banner7.png"
             />
             <CodeSection />

@@ -5,7 +5,7 @@ export default function SugarProcessing() {
   return (
    <>
  <section className={styles.sugarProcess}>
-      <h2>Sugar manufacturing Processing</h2>
+      <h2>Sugar Manufacturing Processing</h2>
       <div className={styles.imageWrapper}>
         <img
           src="/img/our-products/alsharkeya.png"

@@ -8,7 +8,7 @@ export default function ContactUs() {
   return (
     <>
         <SecBanner
-          title="Contact us"
+          title="Contact Us"
           image="/img/aboutus/HEader3.png"
         />
         <ContactUsForm/>

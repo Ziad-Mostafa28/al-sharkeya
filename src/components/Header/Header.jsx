@@ -93,7 +93,7 @@ export default function Header() {
                 <li className="nav-item">
                   <a className={`nav-link dropdown-toggle ${styles.linkmenu}`} role="button"
                     data-bs-toggle="dropdown" href="#">
-                    About us
+                    About Us
                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
                       <path d="M7.25816 10.809C6.84848 10.809 6.43881 10.651 6.12863 10.3408L2.31284 6.52499C2.14312 6.35527 2.14312 6.07436 2.31284 5.90463C2.48256 5.73491 2.76348 5.73491 2.9332 5.90463L6.74899 9.72043C7.02991 10.0013 7.4864 10.0013 7.76732 9.72043L11.5831 5.90463C11.7528 5.73491 12.0338 5.73491 12.2035 5.90463C12.3732 6.07436 12.3732 6.35527 12.2035 6.52499L8.38768 10.3408C8.0775 10.651 7.66783 10.809 7.25816 10.809Z" fill="white" stroke="white" stroke-width="0.501638" />
                     </svg>            
@@ -101,32 +101,32 @@ export default function Header() {
                   <ul className={`dropdown-menu ${styles.linkmenudesktop}`} >
                     <li className={`${styles.limenu}`}>
                       <Link className="dropdown-item" to="about-us/who-we-are">
-                        Who we are
+                        Who We Are
                       </Link>
                     </li>
                     <li className={`${styles.limenu}`}>
                       <Link className="dropdown-item" to="about-us/our-strategy">
-                        Our strategy
+                        Our Strategy
                       </Link>
                     </li>
                     <li className={`${styles.limenu}`}>
                       <Link className="dropdown-item" to="about-us/company-history">
-                        Company history
+                        Company History
                       </Link>
                     </li>
                     <li className={`${styles.limenu}`}>
                       <Link className="dropdown-item" to="about-us/our-shareholders">
-                        Our shareholders
+                        Our Shareholders
                       </Link>
                     </li>
                     <li className={`${styles.limenu}`}>
                       <Link className="dropdown-item" to="about-us/board-members">
-                        Board members
+                        Board Members
                       </Link>
                     </li>
                     <li className={`${styles.limenu}`}>
                       <Link className="dropdown-item" to="about-us/management-team">
-                        Management team 
+                        Management Team 
                       </Link>
                     </li>
                   </ul>
@@ -138,7 +138,7 @@ export default function Header() {
                     role="button"
                     data-bs-toggle="dropdown"
                   >
-                    Our products
+                    Our Products
                     {/* <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="_chevronIcon_4vcs0_385 mx-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg> */}
                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
                       <path d="M7.25816 10.809C6.84848 10.809 6.43881 10.651 6.12863 10.3408L2.31284 6.52499C2.14312 6.35527 2.14312 6.07436 2.31284 5.90463C2.48256 5.73491 2.76348 5.73491 2.9332 5.90463L6.74899 9.72043C7.02991 10.0013 7.4864 10.0013 7.76732 9.72043L11.5831 5.90463C11.7528 5.73491 12.0338 5.73491 12.2035 5.90463C12.3732 6.07436 12.3732 6.35527 12.2035 6.52499L8.38768 10.3408C8.0775 10.651 7.66783 10.809 7.25816 10.809Z" fill="white" stroke="white" stroke-width="0.501638" />
@@ -175,7 +175,7 @@ export default function Header() {
                     role="button"
                     data-bs-toggle="dropdown"
                   >
-                    Our responsibilities
+                    Our Responsibilities
                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
                       <path d="M7.25816 10.809C6.84848 10.809 6.43881 10.651 6.12863 10.3408L2.31284 6.52499C2.14312 6.35527 2.14312 6.07436 2.31284 5.90463C2.48256 5.73491 2.76348 5.73491 2.9332 5.90463L6.74899 9.72043C7.02991 10.0013 7.4864 10.0013 7.76732 9.72043L11.5831 5.90463C11.7528 5.73491 12.0338 5.73491 12.2035 5.90463C12.3732 6.07436 12.3732 6.35527 12.2035 6.52499L8.38768 10.3408C8.0775 10.651 7.66783 10.809 7.25816 10.809Z" fill="white" stroke="white" stroke-width="0.501638" />
                     </svg>
@@ -199,7 +199,7 @@ export default function Header() {
                     </li> */}
                     <li className={`${styles.limenu}`}>
                       <Link className="dropdown-item" to="our-responsibilities/codeconduct">
-                        Code of conduct
+                        Code of Conduct
                       </Link>
                     </li>
                   </ul>
@@ -224,7 +224,7 @@ export default function Header() {
                   <ul className={`dropdown-menu ${styles.linkmenudesktop}`}>
                     <li className={`${styles.limenu}`} >
                       <Link className="dropdown-item" to={'sugar-history'}>
-                        Sugar history
+                        Sugar History
                       </Link>
                     </li>
                     <li className={`${styles.limenu}`}>
@@ -234,7 +234,7 @@ export default function Header() {
                     </li>
                     <li className={`${styles.limenu}`}>
                       <Link className="dropdown-item" to="facts-about-sugar">
-                        Facts about sugar
+                        Facts About Sugar
                       </Link>
                     </li>
                   </ul>
@@ -265,7 +265,7 @@ export default function Header() {
 
               className="btn rounded-pill px-3 bg-light text-success border-0"
             >
-              Contact us
+              Contact Us
             </Link>
           </div>
         </div>
@@ -321,13 +321,13 @@ export default function Header() {
             <ul className="navbar-nav text-center">
               <li className="nav-item">
                 {/* <a className={`nav-link ${styles.linkmenu}`} href="#">
-                  About us
+                  About Us
                 </a> */}
                 <button
                   className={`nav-link ${styles.linkmenu} w-100 d-flex justify-content-center align-items-center gap-2`}
                   onClick={() => toggleDropdown('aboutus')}
                 >
-                  About us
+                  About Us
                   <FaChevronDown
                     className={`${styles.chevronIcon} ${dropdownOpen.aboutus ? styles.rotated : ''}`}
                   />
@@ -337,17 +337,17 @@ export default function Header() {
                   <ul className="list-unstyled">
                     <li>
                       <Link className={`nav-link text-white ${styles.nav_link2}`} to="about-us/who-we-are" onClick={closeMenu}>
-                        Who we are
+                        Who We Are
                       </Link>
                     </li>
                     <li>
                       <Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="about-us/our-strategy">
-                        Our strategy
+                        Our Strategy
                       </Link>
                     </li>
                     <li>
                       <Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="about-us/company-history">
-                        Company history
+                        Company History
                       </Link>
                     </li>
                     <li>
@@ -357,12 +357,12 @@ export default function Header() {
                     </li>
                     <li>
                       <Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="about-us/board-members">
-                        Board members
+                        Board Members
                       </Link>
                     </li>
                     <li>
                       <Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="about-us/management-team">
-                        Management team
+                        Management Team
                       </Link>
                     </li>
                   </ul>
@@ -375,7 +375,7 @@ export default function Header() {
                   className={`nav-link ${styles.linkmenu} w-100 d-flex justify-content-center align-items-center gap-2`}
                   onClick={() => toggleDropdown('products')}
                 >
-                  Our products
+                  Our Products
                   <FaChevronDown
                     className={`${styles.chevronIcon} ${dropdownOpen.products ? styles.rotated : ''}`}
                   />
@@ -396,7 +396,7 @@ export default function Header() {
                   className={`nav-link ${styles.linkmenu} w-100 d-flex justify-content-center align-items-center gap-2`}
                   onClick={() => toggleDropdown('sustainability')}
                 >
-                  Our responsibilities
+                  Our Responsibilities
                   <FaChevronDown
                     className={`${styles.chevronIcon} ${dropdownOpen.sustainability ? styles.rotated : ''}`}
                   />
@@ -421,7 +421,7 @@ export default function Header() {
                     </li> */}
                     <li className={`${styles.limenu}`}>
                       <Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="our-responsibilities/codeconduct">
-                        Code of conduct
+                        Code of Conduct
                       </Link>
                     </li>
 
@@ -450,9 +450,9 @@ export default function Header() {
                 {dropdownOpen.resources && (
                   <ul className="list-unstyled">
 
-                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to={'sugar-history'}>Sugar history</Link></li>
+                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to={'sugar-history'}>Sugar History</Link></li>
                     <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="recipes">Recipes</Link></li>
-                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="facts-about-sugar">Facts about sugar</Link></li>
+                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="facts-about-sugar">Facts About Sugar</Link></li>
 
                   </ul>
                 )}
@@ -471,7 +471,7 @@ export default function Header() {
                 <Link to={"contact-us"} onClick={closeMenu}
                   className="btn rounded-pill px-3 bg-light text-success border-0"
                 >
-                  Contact us
+                  Contact Us
                 </Link>
               </li>
             </ul>

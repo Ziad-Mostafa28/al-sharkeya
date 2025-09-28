@@ -27,9 +27,9 @@ export default function QualitySection() {
                 text: "Halal certification for Sharia compliance"
             }
         ],
-        desc1: "As part of its pursuit of leadership in the sugar industry, Al Sharqia Sugar applies the latest international quality and safety standards. The company holds several key certifications:",
+        desc1: "As part of its pursuit of leadership in the sugar industry, Al Sharkeya Sugar applies the latest international quality and safety standards. The company holds several key certifications:",
         desc2: "The company is the first beet sugar factory on the Egyptian Food Safety Authority's whitelist, confirming the safety and quality of its products.",
-        desc3: "Additionally, Sharqia Laboratory is internationally accredited with ISO/IEC 17025:2017 for white sugar analysis, ensuring accurate and reliable testing",
+        desc3: "Additionally, Al Sharkeya Laboratory is internationally accredited with ISO/IEC 17025:2017 for white sugar analysis, ensuring accurate and reliable testing",
     };
     return (
         <section className={styles.QualitySection}>

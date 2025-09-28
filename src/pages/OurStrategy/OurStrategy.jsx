@@ -10,8 +10,8 @@ export default function OurStrategy() {
     return (
         <>
             <SecBanner
-                title="Our strategy"
-                subtitle="About us"
+                title="Our Strategy"
+                subtitle="About Us"
                 image="/img/aboutus/HEader.png"
             />
             <SecondCardBox />

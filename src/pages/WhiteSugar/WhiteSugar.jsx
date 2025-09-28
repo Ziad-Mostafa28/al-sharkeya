@@ -10,7 +10,7 @@ export default function WhiteSugar() {
   return (
     <>
       <SecBanner
-        title="White sugar"
+        title="White Sugar"
         subtitle="Products"
         image="/img/our-products/white-sugar/sugar.png"
       />

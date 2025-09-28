@@ -6,8 +6,8 @@ export default function OurShareholders() {
     return (
         <>
             <SecBanner
-                title="Our shareholders"
-                subtitle="About us"
+                title="Our Shareholders"
+                subtitle="About Us"
                 image="/img/aboutus/plant_3.png"
             />
 

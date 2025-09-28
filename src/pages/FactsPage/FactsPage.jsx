@@ -6,7 +6,7 @@ export default function FactsPage() {
     return (
         <>
             <SecBanner
-                title="Facts about sugar"
+                title="Facts About Sugar"
                 subtitle="Resources"
                 image="/img/recipes/image6.png"
             />

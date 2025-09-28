@@ -7,7 +7,7 @@ export default function SugarHistory() {
    <>
 
              <SecBanner
-                title="Sugar history"
+                title="Sugar History"
                 subtitle="Resources"
                 image="/img/sugarhistory/banner.png"
             />

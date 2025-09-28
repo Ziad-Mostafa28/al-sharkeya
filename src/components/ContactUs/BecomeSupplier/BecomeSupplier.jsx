@@ -92,13 +92,13 @@ export default function BecomeSupplier() {
   return (
     <section className={styles.supplierSection}>
       <div className={styles.container}>
-        <h2 className={styles.title}>Request to become a beet supplier</h2>
+        <h2 className={styles.title}>Request to Become a Beet Supplier</h2>
         <p className={styles.subtitle}>Join us and become a supplier</p>
 
         <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
           <input
             type="text"
-            placeholder="Your name*"
+            placeholder="name*"
             {...register("name", { required: "Name is required" })}
           />
           {errors.name && (
@@ -107,7 +107,7 @@ export default function BecomeSupplier() {
 
           <input
             type="text"
-            placeholder="Your company name*"
+            placeholder="company name*"
             {...register("company", { required: "Company name is required" })}
           />
           {errors.company && (
@@ -116,7 +116,7 @@ export default function BecomeSupplier() {
 
           <input
             type="number"
-            placeholder="Your phone number*"
+            placeholder="phone number*"
             {...register("phone", {
               required: "Phone is required",
               pattern: {
@@ -131,7 +131,7 @@ export default function BecomeSupplier() {
 
           <input
             type="email"
-            placeholder="Your email*"
+            placeholder="email*"
             {...register("email", { required: "Email is required" })}
           />
           {errors.email && (
@@ -147,7 +147,7 @@ export default function BecomeSupplier() {
               <Select
                 {...field}
                 options={governorateOptions}
-                placeholder="Your governorate*"
+                placeholder="governorate*"
                 isSearchable
                 menuPortalTarget={
                   typeof document !== "undefined" ? document.body : null
@@ -220,7 +220,7 @@ export default function BecomeSupplier() {
           )}
 
           <textarea
-            placeholder="Your message*"
+            placeholder="message*"
             {...register("message", { required: "Message is required" })}
           />
           {errors.message && (

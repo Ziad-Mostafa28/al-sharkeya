@@ -16,7 +16,7 @@ export default function CodePartenars() {
     {
       id: 2,
       image: "/img/responsibilities/2.png",
-      title: "Ethical Business Practices::",
+      title: "Ethical Business Practices:",
       items: [
         "We conduct our business with honesty, fairness, and transparency.",
         "Bribery, corruption, fraud, or any form of unethical conduct is strictly prohibited",

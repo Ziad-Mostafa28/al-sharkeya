@@ -8,7 +8,7 @@ export default function SustainabilityPage() {
         <>
             <SecBanner
                 title="Sustainability"
-                subtitle="Our responsibilities"
+                subtitle="Our Responsibilities"
                 image="/img/responsibilities/banner5.png"
             />
             <Sustainability />

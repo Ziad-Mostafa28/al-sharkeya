@@ -7,7 +7,7 @@ export default function FilterJobs() {
     const jobsData = [
         {
             id: 1,
-            title: "Jop Title ",
+            title: "Job Title ",
             date: "22/2/2005",
             area: "Lorem ipsum dolor sit amet",
             location: "Headquarters",
@@ -15,7 +15,7 @@ export default function FilterJobs() {
         },
         {
             id: 2,
-            title: "Jop Title ",
+            title: "Job Title ",
             date: "12/5/2008",
             area: "Lorem ipsum dolor sit amet",
             location: "Cairo Office",
@@ -23,7 +23,7 @@ export default function FilterJobs() {
         },
         {
             id: 3,
-            title: "Jop Title ",
+            title: "Job Title ",
             date: "15/9/2010",
             area: "Lorem ipsum dolor sit amet",
             location: "Alexandria Office",
@@ -31,7 +31,7 @@ export default function FilterJobs() {
         },
         {
             id: 4,
-            title: "Jop Title ",
+            title: "Job Title ",
             date: "7/1/2012",
             area: "Lorem ipsum dolor sit amet",
             location: "Headquarters",
@@ -39,7 +39,7 @@ export default function FilterJobs() {
         },
         {
             id: 5,
-            title: "Jop Title ",
+            title: "Job Title ",
             date: "18/3/2015",
             area: "Lorem ipsum dolor sit amet",
             location: "Cairo Office",
@@ -47,7 +47,7 @@ export default function FilterJobs() {
         },
         {
             id: 6,
-            title: "Jop Title ",
+            title: "Job Title ",
             date: "5/11/2018",
             area: "Lorem ipsum dolor sit amet",
             location: "Headquarters",

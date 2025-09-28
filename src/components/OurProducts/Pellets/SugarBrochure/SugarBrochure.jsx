@@ -15,8 +15,7 @@ export default function BrochureSugar() {
                     </div>
                     <div className={`col-md-6 ${styles.textBlock}`}>
                         <p>
-                            It is the remaining cells of the sugar beet roots after extracting the sugar liquid from them. It represents about 5% of the sugar beet crop. It has a high nutritional value and a palatable taste. It can replace half of the grain requirement in the daily feed of animals.
-                        </p>
+                            Pellets are made from the residual cells of sugar beet roots after sugar extraction. They are rich in nutritional value, highly palatable, and can replace up to 50% of the grain requirement in daily animal feed                        </p>
                         <a href="#" download className={styles.downloadLink}>
                             <img
                                 src="/img/our-products/white-sugar/download.svg"

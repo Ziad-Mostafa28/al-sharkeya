@@ -14,7 +14,7 @@ export default function JopDetailsInfo() {
       <div className={`container-fluid ${styles.customContainer}`}>
 
         {/* Job Header */}
-        <h3 className={styles.jobTitle}>Jop Title</h3>
+        <h3 className={styles.jobTitle}>Job Title</h3>
 
         <div className={styles.jobInfoBox}>
           <div className={styles.jobItem}>

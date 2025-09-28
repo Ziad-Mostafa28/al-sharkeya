@@ -1,0 +1,128 @@
+.WhiteSugar {
+    background-color: #F8F8F8;
+}
+
+.customContainer {
+    /* padding-left: 0 !important;
+  padding-right: 0 !important; */
+    padding: 2.5rem 0 !important;
+}
+
+.WhiteSugar .textBlock h2 {
+    font-weight: 500;
+    font-size: 1.875rem;
+    color: #262626;
+    margin-bottom: 1rem;
+    font-family: var(--font-alex);
+}
+
+.WhiteSugar .textBlock strong {
+    color: #606060;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 600;
+    margin-top: 2rem;
+    font-family: var(--font-alex);
+}
+
+.WhiteSugar .textBlockul {
+    color: #606060;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 400;
+    margin-top: 2rem;
+    font-family: var(--font-alex);
+}
+
+.WhiteSugar .imageBlock img {
+    border-radius: 10px;
+    width: 100%;
+    height: 18.75rem;
+    /* 300px */
+    display: block;
+    object-fit: cover;
+}
+
+.applyBtn {
+    background: #C78E50;
+    color: #F6E6D7;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: 0.3s ease;
+    margin-top: 1rem;
+}
+
+.applyBtn:hover {
+    background: #a6733e;
+}
+
+@media (max-width: 576px) {
+    .WhiteSugar {
+        margin-bottom: 3rem;
+    }
+
+    .customContainer {
+        padding: 2.5rem 1.25rem !important;
+    }
+
+    .WhiteSugar .textBlock h2 {
+        font-size: 1.5rem;
+        /* 24px */
+    }
+
+    .WhiteSugar .textBlock p {
+        font-size: 0.9rem;
+        /* 14px */
+    }
+
+    .WhiteSugar .readMoreBtn {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .WhiteSugar .imageBlock {
+        margin-top: 1.5rem;
+    }
+
+    .applyBtn {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+    .WhiteSugar {
+        margin-bottom: 3rem;
+    }
+
+    .customContainer {
+        padding: 2.5rem 1.25rem !important;
+    }
+
+    .WhiteSugar .textBlock h2 {
+        font-size: 1.5rem;
+    }
+
+    .WhiteSugar .textBlock p {
+        font-size: 0.9rem;
+    }
+
+}
+
+.textBlock ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.textBlock li {
+    margin-bottom: 8px;
+}
+
+
+[lang="ar"] .textBlock ul {
+    padding-left: auto !important;
+    padding-right: 20px !important;
+}

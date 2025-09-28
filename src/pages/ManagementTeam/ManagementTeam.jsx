@@ -11,8 +11,8 @@ export default function ManagementTeam() {
     return (
         <>
             <SecBanner
-                title="Management team"
-                subtitle="About us"
+                title="Management Team"
+                subtitle="About Us"
                 image={image}
             />
 
