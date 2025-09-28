@@ -19,7 +19,7 @@ export default function SectionAbout() {
                             <div className='h-100  d-flex  flex-column justify-content-center'>
                                 <h2 className={`${styles.title}`}>About Us</h2>
                                 <p className={`${styles.desc}`}>
-                                    Al Sharkeya Sugar Manufacturing (Al Nouran) S.A.E. specializes in sugar beet breeding and harvesting, producing premium-quality white sugar using the latest technologies and strict good manufacturing practices
+                                    Al Sharkeya Sugar Manufacturing (Al Nouran) S.A.E. specializes in sugar beet cultivating and harvesting, producing premium-quality white sugar using the latest technologies and strict good manufacturing practices
                                 </p>
                                 <div className={`${styles.numbox}`}>
                                     <div className={styles.smallbox}>
