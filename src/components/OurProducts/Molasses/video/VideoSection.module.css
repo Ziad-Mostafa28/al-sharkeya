@@ -108,6 +108,7 @@
   font-weight: 400;
   color: #606060;
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 /* Responsive SVG size */
 @media (max-width: 768px) {

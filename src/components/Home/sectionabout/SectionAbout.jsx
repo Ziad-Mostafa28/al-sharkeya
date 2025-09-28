@@ -18,7 +18,7 @@ export default function SectionAbout() {
                 <div className="col-12 col-md-6 col-lg-5 order-2 order-md-1">
                     <div className='h-100  d-flex  flex-column justify-content-center'>
                         <h2 className={`${styles.title}`}>About Us</h2>
-                        <p className={`${styles.desc}`}>Al Sharkeya Sugar Manufacturing (AL Nouran) S.A.E. has distinguished expertise in the field of breeding, harvesting of sugar beet and manufactures and produces a high-quality white sugar by latest technology methodology applying good manufacture practice.</p>
+                        <p className={`${styles.desc}`}>Al Sharkeya Sugar Manufacturing (AL Nouran) S.A.E. has distinguished expertise in the field of cultivating, harvesting of sugar beet and manufactures and produces a high-quality white sugar by latest technology methodology applying good manufacture practice.</p>
                         <div className={`${styles.numbox}`}>
                             <div className={styles.smallbox}>
                             <div className={styles.numberBox}>
