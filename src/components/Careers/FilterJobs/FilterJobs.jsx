@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './FilterJobs.module.css'
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 export default function FilterJobs() {
     const jobsData = [
@@ -53,6 +54,8 @@ export default function FilterJobs() {
             experience: "1-2 years",
         },
     ];
+      const lang = useSelector((state) => state.lang.lang);
+
     return (
         <section className={`${styles.jobsSection}`}>
             <div className="container">
@@ -96,7 +99,7 @@ export default function FilterJobs() {
                                 </div>
 
                                 <div className="mt-4">
-                                    <Link to="#">
+                                    <Link to={`/${lang}/careers/job-details`}>
                                         <button className={styles.viewBtn}>View more</button>
 
                                     </Link>
