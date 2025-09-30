@@ -3,6 +3,7 @@ import styles from "./FactsSection.module.css";
 
 export default function FactsSection() {
     const Facts = [
+        
         {
             q: "What is Sugar?",
             a: "Sugar is a simple carbohydrate that provides energy. It can be natural (from fruits, vegetables, and dairy) or added during food processing."
