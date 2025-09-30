@@ -20,7 +20,6 @@ export default function FactsSection() {
             a: [
                 "Chemically, sugar is made of carbon, hydrogen, and oxygen (C₆H₁₂O₆).",
                 "It contains no essential nutrients, only calories",
-                "Excessive consumption may lead to insulin resistance and fatty liver",
             ]
         },
         {
