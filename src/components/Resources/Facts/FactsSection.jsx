@@ -19,7 +19,7 @@ export default function FactsSection() {
             q: "Chemical and Nutritional Composition",
             a: [
                 "Chemically, sugar is made of carbon, hydrogen, and oxygen (C₆H₁₂O₆).",
-                "It contains no essential nutrients, only calories",
+                "It contains no essential nutrients, only calories", 
             ]
         },
         {
