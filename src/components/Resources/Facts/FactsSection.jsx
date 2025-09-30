@@ -3,7 +3,7 @@ import styles from "./FactsSection.module.css";
 
 export default function FactsSection() {
     const Facts = [
-        
+
         {
             q: "What is Sugar?",
             a: "Sugar is a simple carbohydrate that provides energy. It can be natural (from fruits, vegetables, and dairy) or added during food processing."
@@ -49,7 +49,6 @@ export default function FactsSection() {
             q: "Sugar and the Brain",
             a: [
                 "Sugar activates the brain’s reward center, releasing dopamine",
-                "Over time, this can create patterns similar to addiction",
             ]
         },
         {
