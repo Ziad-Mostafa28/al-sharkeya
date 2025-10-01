@@ -25,6 +25,14 @@ export default function QualitySection() {
             {
                 icon: "/img/aboutus/icon.png",
                 text: "Halal certification for Sharia compliance"
+            },
+            {
+                icon: "/img/aboutus/icon.png",
+                text: "NFSA for food safe and healthy"
+            },
+            {
+                icon: "/img/aboutus/icon.png",
+                text: "ISO 17025 for lab accreditation"
             }
         ],
         desc1: "As part of its pursuit of leadership in the sugar industry, Al Sharkeya Sugar applies the latest international quality and safety standards. The company holds several key certifications:",

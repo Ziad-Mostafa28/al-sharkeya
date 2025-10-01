@@ -16,7 +16,7 @@ export default function SecBanner({ title, subtitle, image }) {
         <img
           className={styles.slideImage}
           src={image}
-          alt={title || "banner"}
+          alt={"banner"}
         />
         <div className={styles.overlay}></div>
       </div>

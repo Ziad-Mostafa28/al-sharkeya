@@ -91,11 +91,11 @@
 }
 
 
-.textup::before {
+/* .textup::before {
   content: "•";
   color: #606060;
   font-size: 18px;
   line-height: 1;
-}
+} */
 
 

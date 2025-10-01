@@ -17,6 +17,7 @@ import { fetchAboutHistory } from '../../store/slices/aboutHistorySlice';
 import { fetchAboutShareholders } from '../../store/slices/aboutShareholdersSlice';
 import { fetchBoardMembers } from '../../store/slices/boardMembersSlice';
 import { fetchManagementTeam } from '../../store/slices/managementTeamSlice';
+import { fetchFaqsData } from '../../store/slices/faqsSlice';
 
 export default function MainLayout() {
   const dispatch = useDispatch();
@@ -43,7 +44,6 @@ export default function MainLayout() {
   }, [lang]);
 
   useEffect(() => {
-    // ⬅️ كل الـ APIs مع بعض
     dispatch(fetchHomeData(lang));
     dispatch(fetchRecipesData(lang));
     dispatch(fetchNewsData(lang));
@@ -54,6 +54,7 @@ export default function MainLayout() {
     dispatch(fetchAboutShareholders(lang));
     dispatch(fetchBoardMembers(lang));
     dispatch(fetchManagementTeam(lang));
+    dispatch(fetchFaqsData(lang));
 
   }, [lang, dispatch]);
 

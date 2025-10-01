@@ -18,7 +18,7 @@ export default function Molasses() {
 
         <BrochureSugar/>
         <VideoSection/>
-        <MolassesSection/>
+        {/* <MolassesSection/> */}
         <ChemicalComposition/>
         <MultipleMolasses/>
         <EconomicEnvironmental/>

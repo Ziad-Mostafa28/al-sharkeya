@@ -19,6 +19,8 @@ import aboutHistoryReducer from "./slices/aboutHistorySlice";
 import aboutShareholdersReducer from "./slices/aboutShareholdersSlice";
 import boardMembersReducer from "./slices/boardMembersSlice";
 import managementTeamReducer from "./slices/managementTeamSlice";
+import faqsReducer from "./slices/faqsSlice";
+
 
 const store = configureStore({
   reducer: {
@@ -36,8 +38,9 @@ const store = configureStore({
     aboutWhoWeAre: aboutWhoWeAreReducer,
     aboutHistory: aboutHistoryReducer,
     aboutShareholders: aboutShareholdersReducer,
-        aboutBoardMembers: boardMembersReducer,
+    aboutBoardMembers: boardMembersReducer,
     managementTeam: managementTeamReducer,
+    faqs:faqsReducer,
 
   },
 });
