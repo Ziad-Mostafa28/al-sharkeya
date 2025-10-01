@@ -52,7 +52,7 @@ function Footer() {
               <div className={styles.social}>
                 <a href="https://www.linkedin.com/company/alsharkeya-sugar/" target="_blank"><FaLinkedinIn /></a>
                 <a href="https://www.facebook.com/www.sharkeyasugar.com.eg/?_rdc=1&_rdr#" target="_blank"><FaFacebookF /></a>
-                <a href="https://www.youtube.com/watch?v=L6OEtVy-_5w" target="_blank"><FaYoutube /></a>
+                <a href="https://www.youtube.com/@sharkeyaSugar" target="_blank"><FaYoutube /></a>
 
               </div>
             </div>
