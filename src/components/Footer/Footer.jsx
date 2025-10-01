@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Footer.module.css";
-import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
+import { FaFacebookF, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 import { PiBuildingsDuotone } from "react-icons/pi";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -52,6 +52,8 @@ function Footer() {
               <div className={styles.social}>
                 <a href="https://www.linkedin.com/company/alsharkeya-sugar/" target="_blank"><FaLinkedinIn /></a>
                 <a href="https://www.facebook.com/www.sharkeyasugar.com.eg/?_rdc=1&_rdr#" target="_blank"><FaFacebookF /></a>
+                <a href="https://www.youtube.com/watch?v=L6OEtVy-_5w" target="_blank"><FaYoutube /></a>
+
               </div>
             </div>
             <div className={`col-sm-6 col-md-4 col-lg-4 col-xl-2 ${styles.colSpacing}`}>
