@@ -35,9 +35,10 @@ export default function QualitySection() {
                 text: "ISO 17025 for lab accreditation"
             }
         ],
-        desc1: "As part of its pursuit of leadership in the sugar industry, Al Sharkeya Sugar applies the latest international quality and safety standards. The company holds several key certifications:",
-        desc2: "The company is the first beet sugar factory on the Egyptian Food Safety Authority's whitelist, confirming the safety and quality of its products.",
-        desc3: "Additionally, Al Sharkeya Laboratory is internationally accredited with ISO/IEC 17025:2017 for white sugar analysis, ensuring accurate and reliable testing",
+        desc1: "As part of its pursuit of leadership in the sugar industry, Al Sharkeya Sugar applies the latest international quality and safety standards. ",
+        desc2: "The company holds several key certifications:",
+        desc3: "The company is the first beet sugar factory on the Egyptian Food Safety Authority's whitelist, confirming the safety and quality of its products.",
+        desc4: "Additionally, Al Sharkeya Laboratory is internationally accredited with ISO/IEC 17025:2017 for white sugar analysis, ensuring accurate and reliable testing",
     };
     return (
         <section className={styles.QualitySection}>
@@ -52,19 +53,22 @@ export default function QualitySection() {
                             <p className={styles.tob_desc}>
                                 {data.desc1}
                             </p>
+                               <p className={styles.tob_desc}>
+                                {data.desc2}
+                            </p>
                             <ul>
                                 {data.items?.map((item, index) => (
-                                    <li key={index} className="d-flex align-items-start gap-3">
+                                    <li key={index} className="d-flex align-items-start gap-3 mt-4">
                                         <img src={item.icon} alt={`icon-${index}`} />
                                         <p>{item.text}</p>
                                     </li>
                                 ))}
                             </ul>
                             <p className={styles.tob_desc}>
-                                {data.desc2}
+                                {data.desc3}
                             </p>
                             <p className={styles.tob_desc}>
-                                {data.desc3}
+                                {data.desc4}
                             </p>
                         </div>
                     </div>

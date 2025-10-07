@@ -1,16 +1,18 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axiosInstance from "../../utils/axiosInstance"; 
+import axiosInstance from "../../utils/axiosInstance";
 
 // thunk
-export const fetchBoardMembers = createAsyncThunk(
-  "aboutBoardMembers/fetchBoardMembers",
+export const fetchStrategy = createAsyncThunk(
+  "aboutStrategy/fetchStrategy",
   async (lang, thunkAPI) => {
     try {
-      const response = await axiosInstance.get("/about/board-members", {
+      const response = await axiosInstance.get("/about/strategy", {
+        
         headers: {
           "Accept-Language": lang,
         },
       });
+      
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(
@@ -20,8 +22,8 @@ export const fetchBoardMembers = createAsyncThunk(
   }
 );
 
-const boardMembersSlice = createSlice({
-  name: "aboutBoardMembers",
+const strategySlice = createSlice({
+  name: "aboutStrategy",
   initialState: {
     data: null,
     loading: false,
@@ -30,19 +32,19 @@ const boardMembersSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchBoardMembers.pending, (state) => {
+      .addCase(fetchStrategy.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
-      .addCase(fetchBoardMembers.fulfilled, (state, action) => {
+      .addCase(fetchStrategy.fulfilled, (state, action) => {
         state.loading = false;
-        state.data = action.payload; 
+        state.data = action.payload;
       })
-      .addCase(fetchBoardMembers.rejected, (state, action) => {
+      .addCase(fetchStrategy.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
       });
   },
 });
 
-export default boardMembersSlice.reducer;
+export default strategySlice.reducer;

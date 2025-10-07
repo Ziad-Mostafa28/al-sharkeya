@@ -103,7 +103,7 @@ function Footer() {
 
           </div>
           <div className={styles.bottomFooter}>
-            <p>© 2025 Al Sharkeya Sugar Manufacturing Company. All Right Reserved.</p>
+            <p>© 2025 Al Sharkeya Sugar Manufacturing. All Right Reserved.</p>
             <p className='d-flex gap-3'><Link to='https://icon-creations.com/' target='_blank' ><img src="/img/homepage/icon.png" alt="" /></Link></p>
             <div className='d-flex gap-3'>
               <p>

@@ -41,7 +41,6 @@ export default function MultipleMolasses() {
             {
                 icon: "/img/aboutus/icon.png",
                 title: "Industrial Applications",
-                subtitle: "Molasses serves as:",
 
                 texts: [
                     "Substrate in ethanol and biofuel production",

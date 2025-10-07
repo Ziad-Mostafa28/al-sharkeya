@@ -258,9 +258,11 @@ export default function Header() {
             {/* <button  onClick={toggleLang} className="text-white">
               {lang === 'en' ? 'AR' : 'EN'}
             </button> */}
-            <button className="btn btn-link p-0 text-white" onClick={() => setSearchOpen(true)}>
+
+            {/* search button */}
+            {/* <button className="btn btn-link p-0 text-white" onClick={() => setSearchOpen(true)}>
               <FaSearch />
-            </button>
+            </button> */}
             <Link to={"contact-us"}
 
               className="btn rounded-pill px-3 bg-light text-success border-0"
@@ -291,9 +293,12 @@ export default function Header() {
             {/* <button  onClick={toggleLang} className="text-white">
               {lang === 'en' ? 'AR' : 'EN'}
             </button> */}
-            <button className="btn btn-link p-0 text-white" onClick={() => setSearchOpen(true)}>
+
+
+            {/* search button in mobile */}
+            {/* <button className="btn btn-link p-0 text-white" onClick={() => setSearchOpen(true)}>
               <FaSearch />
-            </button>
+            </button> */}
 
           </div>
 

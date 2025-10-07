@@ -22,7 +22,7 @@ export default function SectionAbout() {
                                         </div>
                                         <div className={styles.descc}>
                                             <span className={styles.text}>Diameter</span>
-                                            <span className={styles.bigDash}>-</span>
+                                            <span className={styles.bigDash}>   </span>
                                         </div>
                                     </div>
 

@@ -19,7 +19,7 @@ export default function SectionAbout() {
                             <div className='h-100  d-flex  flex-column justify-content-center'>
                                 <h2 className={`${styles.title}`}>About Us</h2>
                                 <p className={`${styles.desc}`}>
-                                    Al Sharkeya Sugar Manufacturing (Al Nouran) S.A.E. specializes in sugar beet cultivating and harvesting, producing premium-quality white sugar using the latest technologies and strict good manufacturing practices
+                                    Al Sharkeya Sugar Manufacturing specializes in sugar beet cultivating and harvesting, producing premium-quality white sugar using the latest technologies and strict good manufacturing practices
                                 </p>
                                 <div className={`${styles.numbox}`}>
                                     <div className={styles.smallbox}>
@@ -34,17 +34,18 @@ export default function SectionAbout() {
                                         </div>
                                     </div>
 
-                                    {/* <div className={styles.smallbox}>
+                                    <div className={styles.smallbox}>
                             <div className={styles.numberBox}>
-                                <span className={styles.plus}>+</span>
-                                <CountUp end={15} duration={2} enableScrollSpy scrollSpyOnce/>
+                                <CountUp end={250} duration={2} enableScrollSpy scrollSpyOnce/>
+                                <span className={styles.plus}>K</span>
+
                             </div>
                             <div className={styles.descc}>
-                                Completed
+                                Tons Of White 
                                 <br />
-                                Production
+                                Sugar Annually
                             </div>
-                            </div> */}
+                            </div>
                                 </div>
                                 <div className={`w-100 d-flex justify-content-center justify-content-lg-end`}>
                                     <Link to={'about-us/who-we-are'}>

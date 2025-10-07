@@ -9,7 +9,7 @@ export default function CodeSection() {
                 <div className="row">
                     <div className="col-12 col-md-8">
                         <h2>Code of Conduct</h2>
-                        <p className={styles.topdesc}>Al Sharkeya Sugar Manufacturing (ALNouran)</p>
+                        <p className={styles.topdesc}>Al Sharkeya Sugar Manufacturing</p>
                         <p>At ASSM, we are committed to conducting our business with integrity, responsibility,
                             and respect — from field to final product. This Code of Conduct defines the
                             principles and standards that guide our operations, partnerships, and daily behavior.</p>

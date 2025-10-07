@@ -18,6 +18,7 @@ import { fetchAboutShareholders } from '../../store/slices/aboutShareholdersSlic
 import { fetchBoardMembers } from '../../store/slices/boardMembersSlice';
 import { fetchManagementTeam } from '../../store/slices/managementTeamSlice';
 import { fetchFaqsData } from '../../store/slices/faqsSlice';
+import { fetchStrategy } from '../../store/slices/ourStrategy';
 
 export default function MainLayout() {
   const dispatch = useDispatch();
@@ -55,6 +56,9 @@ export default function MainLayout() {
     dispatch(fetchBoardMembers(lang));
     dispatch(fetchManagementTeam(lang));
     dispatch(fetchFaqsData(lang));
+    dispatch(fetchStrategy(lang));
+
+    
 
   }, [lang, dispatch]);
 

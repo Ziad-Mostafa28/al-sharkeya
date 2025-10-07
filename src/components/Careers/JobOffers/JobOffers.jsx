@@ -11,7 +11,7 @@ export default function JobOffers() {
               <h2 className='mb-3'>Join Al Sharkeya Sugar Family</h2>
               <h3>Shape the Future of Sweetness</h3>
               <p>
-                At Al Sharkeya Sugar Manufacturing (Al Nouran) S.A.E, we are more than a sugar
+                At Al Sharkeya Sugar Manufacturing we are more than a sugar
                 producer; we are a key player in addressing the growing demand for high-quality sugar
                 in Egypt and across the region. Our mission is to leverage our unique strengths to
                 maintain our position as a leading supplier, operating sustainably for the benefit of our
