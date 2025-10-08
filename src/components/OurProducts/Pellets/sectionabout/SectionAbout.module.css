@@ -42,11 +42,19 @@ body{
     align-items: center;
 }
 
+/* .leftSide,
+.rightSide {
+    display: flex;
+} */
+
 .leftSide,
 .rightSide {
     display: flex;
-    /* gap: 2rem;     */
+    justify-content: space-evenly; 
+    align-items: center;
+    width: 100%;
 }
+
 
 .leftSide {
     flex-direction: row;

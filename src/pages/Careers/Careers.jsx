@@ -12,7 +12,7 @@ export default function Careers() {
         image="/img/careers/banner.png"
     />
    <JobOffers/>
-   <FilterJobs/>
+   {/* <FilterJobs/> */}
 
    <JobForm />
    
