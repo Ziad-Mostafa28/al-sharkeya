@@ -42,18 +42,18 @@ body{
     align-items: center;
 }
 
-/* .leftSide,
+.leftSide,
 .rightSide {
     display: flex;
-} */
+}
 
-.leftSide,
+/* .leftSide,
 .rightSide {
     display: flex;
     justify-content: space-evenly; 
     align-items: center;
     width: 100%;
-}
+} */
 
 
 .leftSide {
