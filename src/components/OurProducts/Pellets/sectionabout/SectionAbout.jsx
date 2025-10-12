@@ -11,7 +11,7 @@ export default function SectionAbout() {
                         <div className="row">
                             {/* <h3 className={`${styles.title}`} >Technical Specifications of Our Pellets</h3> */}
 
-                            <div className="col-12 col-md-6 col-sm-12 col-lg-8">
+                            {/* <div className="col-12 col-md-6 col-sm-12 col-lg-8">
 
                                 <div className={`${styles.leftSide}`}>
                                     <div className={styles.smallbox}>
@@ -36,10 +36,30 @@ export default function SectionAbout() {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
 
-                            <div className="col-12 col-md-6 col-sm-12 col-lg-4">
+                            <div className="col-12 col-md-12 col-sm-12 col-lg-12">
                                 <div className={`${styles.rightSide}`}>
+                                    <div className={styles.smallbox}>
+                                        <div className={styles.numberBox}>
+                                            8 <span className={styles.plus}>-</span>10
+
+                                            <span className={styles.unit}>mm</span>
+                                        </div>
+                                        <div className={styles.descc}>
+                                            <span className={styles.text}>Diameter</span>
+                                            <span className={styles.bigDash}>   </span>
+                                        </div>
+                                    </div>
+                                    <div className={styles.smallbox}>
+                                        <div className={styles.numberBox}>
+                                            10 <span className={styles.plus}>-</span>12
+                                            <span className={styles.unit}>%</span>
+                                        </div>
+                                        <div className={styles.descc}>
+                                            Humidity
+                                        </div>
+                                    </div>
                                     <div className={styles.smallbox}>
                                         <div className={styles.numberBox}>
                                             9
@@ -50,7 +70,6 @@ export default function SectionAbout() {
                                             Content
                                         </div>
                                     </div>
-
                                     <div className={styles.smallbox}>
                                         <div className={styles.numberBox}>
                                             7

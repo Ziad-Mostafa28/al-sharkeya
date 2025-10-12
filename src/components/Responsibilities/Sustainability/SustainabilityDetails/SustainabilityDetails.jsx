@@ -34,7 +34,7 @@ export default function SustainabilityDetails() {
     ];
 
     return (
-        <section className={`${styles.SustainabilityDetailsSection} py-5`}>
+        <section className={`${styles.SustainabilityDetailsSection} pt-5`}>
             <div className={`${styles.container}`}>
                 {SustainabilityDetails.map((item, index) => (
                     <div className="row mb-5" key={index}>
