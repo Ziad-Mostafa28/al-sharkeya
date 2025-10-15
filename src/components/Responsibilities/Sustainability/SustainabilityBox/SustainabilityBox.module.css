@@ -12,8 +12,7 @@
   text-align: center;
 }
 
-/* Card container */
-.card {
+/* .card {
   position: relative;
   width: 100%;
   aspect-ratio: 1/1;
@@ -22,14 +21,29 @@
   cursor: pointer;
 }
 
-/* Image inside the card */
 .card img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   transition: opacity 0.3s ease;
+} */
+.card {
+  position: relative;
+  width: 85%; /* ← كانت 100% صغّرناها شوية */
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
+/* Image inside the card */
+.card img {
+  width: 90%; /* ← كانت 100% */
+  height: 90%;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+  margin: 5%; /* لتوسيط الصورة */
+}
 /* Overlay when hover */
 .overlay {
   position: absolute;
