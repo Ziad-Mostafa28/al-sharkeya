@@ -21,6 +21,7 @@ import boardMembersReducer from "./slices/boardMembersSlice";
 import managementTeamReducer from "./slices/managementTeamSlice";
 import faqsReducer from "./slices/faqsSlice";
 import aboutStrategyReducer from "./slices/ourStrategy";
+import branchesReducer from "./slices/branchesSlice";
 
 
 const store = configureStore({
@@ -43,6 +44,7 @@ const store = configureStore({
     managementTeam: managementTeamReducer,
     faqs:faqsReducer,
    aboutStrategy: aboutStrategyReducer,
+   branches:branchesReducer,
 
   },
 });
