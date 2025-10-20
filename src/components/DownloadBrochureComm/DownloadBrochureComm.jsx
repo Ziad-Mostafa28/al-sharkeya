@@ -4,16 +4,16 @@ import { useSelector } from 'react-redux';
 
 
 
-const pdfFiles = [
-  { title: "Al Sharkeya Sugar Manufacturing PDF" },
-  { title: "Company History PDF" },
-  { title: "Sugar PDF" },
-  { title: "Molasses PDF" },
-  { title: "Pellets PDF" },
-  { title: "Sugar History PDF" },
-  { title: "Al Sharkeya Sugar Manufacturing PDF" },
-  { title: "Al Sharkeya Sugar Manufacturing PDF" },
-];
+// const pdfFiles = [
+//   { title: "Al Sharkeya Sugar Manufacturing PDF" },
+//   { title: "Company History PDF" },
+//   { title: "Sugar PDF" },
+//   { title: "Molasses PDF" },
+//   { title: "Pellets PDF" },
+//   { title: "Sugar History PDF" },
+//   { title: "Al Sharkeya Sugar Manufacturing PDF" },
+//   { title: "Al Sharkeya Sugar Manufacturing PDF" },
+// ];
 
 
 
@@ -25,10 +25,10 @@ export default function DownloadBrochureComm() {
     <>
      <section className={styles.pdfSection}>
       <div className={styles.grid}>
-        {pdfFiles.map((file, index) => (
+        {data?.data?.branches.map((file, index) => (
           <div key={index} className={styles.card}>
             <img src="/img/downloadbrochure/Rectangle1.png" alt="PDF" className={styles.icon} />
-            <p className={styles.title}>{file.title}</p>
+            <p className={styles.title}>{file.name}</p>
           </div>
         ))}
       </div>

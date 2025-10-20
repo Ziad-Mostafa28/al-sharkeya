@@ -5,6 +5,7 @@ import SugarImage from '../../components/OurProducts/WhiteSugar/SugarImage/Sugar
 import ProductsLogo from '../../components/OurProducts/WhiteSugar/ProductsLogo/ProductsLogo'
 import PremiumWhite from '../../components/OurProducts/WhiteSugar/PremiumWhite/PremiumWhite'
 import SugerSection from '../../components/OurProducts/WhiteSugar/SugerSection/SugerSection'
+import PharmaAndCommercial from '../../components/OurProducts/WhiteSugar/pharmaAndCommercial/pharmaAndCommercial'
 
 export default function WhiteSugar() {
   return (
@@ -15,6 +16,7 @@ export default function WhiteSugar() {
         image="/img/our-products/white-sugar/sugar.png"
       />
       <SugarBrochure />
+      <PharmaAndCommercial/>
       <SugarImage />
       <SugerSection />
       <PremiumWhite />

@@ -22,7 +22,7 @@ import managementTeamReducer from "./slices/managementTeamSlice";
 import faqsReducer from "./slices/faqsSlice";
 import aboutStrategyReducer from "./slices/ourStrategy";
 import branchesReducer from "./slices/branchesSlice";
-
+import sugarHistoryReducer from "./slices/sugarHistory";
 
 const store = configureStore({
   reducer: {
@@ -45,6 +45,8 @@ const store = configureStore({
     faqs:faqsReducer,
    aboutStrategy: aboutStrategyReducer,
    branches:branchesReducer,
+   sugarHistory:sugarHistoryReducer
+
 
   },
 });

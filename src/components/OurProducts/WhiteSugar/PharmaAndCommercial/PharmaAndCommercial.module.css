@@ -1,0 +1,122 @@
+.sugarSection {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  position: relative;
+  margin: 5rem 3.125rem;
+  gap: 2rem; 
+}
+
+.sugarSection::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 75%; 
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background-color: #F6E6D7;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  flex: 0 0 50%; 
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.image {
+  width: 15.625rem;
+  height: 15.625rem;
+  border-radius: 5px;
+  object-fit: cover;
+  flex-shrink: 0;
+  margin-right: 1rem;
+}
+
+.text {
+  flex: 1;
+}
+
+.text h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 0.5rem;
+}
+
+.text p {
+  color: #606060;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+  text-align: start;
+}
+
+@media (max-width: 1024px) {
+  .sugarSection {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    margin: 4rem 2rem;
+  }
+
+  .sugarSection::before {
+    display: none; /
+  }
+
+  .card {
+    flex-direction: row; 
+    width: 100%;
+    max-width: 100%;
+    text-align: start;
+    justify-content: center;
+  }
+
+  .card:nth-child(2) {
+    margin-top: 2rem; 
+  }
+
+  .image {
+    width: 15.625rem;
+    height: 15.625rem;
+    margin-right: 1rem;
+  }
+
+  .text {
+    flex: 1;
+  }
+}
+
+
+@media (max-width: 991px) {
+  .sugarSection {
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem 1.25rem;
+  }
+
+  .sugarSection::before {
+    display: none;
+  }
+
+  .card {
+    flex-direction: column;
+    width: 100%;
+    text-align: start;
+    padding: 0 0;
+  }
+
+  .image {
+    width: 100% !important;
+    margin-right: 0;
+  }
+
+  .text h3 {
+    margin-top: 1rem;
+  }
+}
+
+
