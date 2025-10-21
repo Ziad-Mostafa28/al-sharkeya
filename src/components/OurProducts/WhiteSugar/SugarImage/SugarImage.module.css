@@ -39,6 +39,7 @@ font-family: var(--font-alex);
 
     .textCard {
         left: 1.125rem;
+        right: 1.125rem;
     }
 
     .textCard p {
