@@ -5,12 +5,16 @@ import { useSelector } from 'react-redux';
 
 export default function FaqsPage() {
     const { data } = useSelector((state) => state.faqs);
-    console.log(data);
     const image =data?.data?.main?.faq_banner
+    const title =data?.data?.main?.faq_title
+
+
+
+    
     return (
         <>
             <SecBanner
-                title="Frequently Asked Questions"
+                title={title}
                 image={image}
             />
 

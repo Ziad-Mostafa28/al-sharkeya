@@ -7,7 +7,7 @@ export default function BrochureSugar() {
             <div className={`container-fluid ${styles.customContainer}`}>
                 <div className="row align-items-center">
 
-                    <div className={`col-md-6  ${styles.imageBlock}`}>
+                    <div className={`col-md-6 p-0  ${styles.imageBlock}`}>
                         <img
                             src="/img/our-products/white-sugar/image1.png"
                             alt="White sugar"

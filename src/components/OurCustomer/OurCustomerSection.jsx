@@ -5,8 +5,8 @@ import "swiper/css";
 import { useSelector } from 'react-redux';
 
 export default function OurCustomerSection() {
-    const { data, loading } = useSelector((state) => state.customers);
-    const categories = data?.data || [];
+    const { data} = useSelector((state) => state.customers);
+    const categories = data?.data.customers || [];
 
     const [activeFilter, setActiveFilter] = useState("");
 
