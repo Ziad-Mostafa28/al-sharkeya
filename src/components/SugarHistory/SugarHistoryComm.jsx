@@ -557,7 +557,6 @@ export default function SugarHistoryComm() {
             swiper.navigation.init();
             swiper.navigation.update();
 
-            // تعطيل زر السابق في البداية
             prevRef.current?.setAttribute("disabled", "true");
             prevRef.current?.classList.add(styles.disabled);
           }}

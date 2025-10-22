@@ -21,6 +21,7 @@ import { fetchFaqsData } from '../../store/slices/faqsSlice';
 import { fetchStrategy } from '../../store/slices/ourStrategy';
 import { fetchBranchesData } from '../../store/slices/branchesSlice';
 import { fetchSugarHistory } from '../../store/slices/sugarHistory';
+import { fetchSugarFacts } from '../../store/slices/factsSugarSlice';
 
 export default function MainLayout() {
   const dispatch = useDispatch();
@@ -61,6 +62,7 @@ export default function MainLayout() {
     dispatch(fetchStrategy(lang));
     dispatch(fetchBranchesData(lang));
     dispatch(fetchSugarHistory(lang));
+    dispatch(fetchSugarFacts(lang));
 
     
 
