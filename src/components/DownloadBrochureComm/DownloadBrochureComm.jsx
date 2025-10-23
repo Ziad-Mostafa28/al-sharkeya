@@ -18,16 +18,16 @@ import { useSelector } from 'react-redux';
 
 
 export default function DownloadBrochureComm() {
-   const { data, loading } = useSelector((state) => state.branches);
+   const { data, loading } = useSelector((state) => state.downloadBrochure);
    
-  if (loading || !data?.data?.branches) return null;
+  if (loading || !data?.data?.brochures) return null;
   return (
     <>
      <section className={styles.pdfSection}>
       <div className={styles.grid}>
-        {data?.data?.branches.map((file, index) => (
+        {data?.data?.brochures.map((file, index) => (
           <div key={index} className={styles.card}>
-            <img src="/img/downloadbrochure/Rectangle1.png" alt="PDF" className={styles.icon} />
+            <img src={file.pdf} alt="PDF" className={styles.icon} />
             <p className={styles.title}>{file.name}</p>
           </div>
         ))}

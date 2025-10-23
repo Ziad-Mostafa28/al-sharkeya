@@ -5,82 +5,9 @@ import { useSelector } from "react-redux";
 export default function PartenarsSection() {
     const [selected, setSelected] = useState(null);
 
-     const { data, loading } = useSelector((state) => state.certifications);
+     const { data } = useSelector((state) => state.certifications);
     const news = data?.data.certifications || [];
     
-
-
-    // const ahmed = [
-    //     {
-    //         id: 1,
-    //         name: "NFSA",
-    //         image: "/img/responsibilities/partenars1.png",
-    //         description: "is an international standard that specifies the requirements for a food safety management system (FSMS). It integrates the principles of Hazard Analysis and Critical Control Points (HACCP) and steps from the Codex Alimentarius Commission. The standard combines the best practices of multiple stan dards and regulations to ensure food safety throughout the entire food chain.",
-    //         secondtitle: "Certification body: Tank Oil",
-    //     },
-    //     {
-    //         id: 2,
-    //         name: "BRCGS",
-    //         image: "/img/responsibilities/partenars2.png",
-    //         description: "is an international standard that specifies the requirements for a food safety management system (FSMS). It integrates the principles of Hazard Analysis and Critical Control Points (HACCP) and steps from the Codex Alimentarius Commission. The standard combines the best practices of multiple stan dards and regulations to ensure food safety throughout the entire food chain.",
-    //         secondtitle: "Certification body: Tank Oil",
-
-    //     },
-    //     {
-    //         id: 3,
-    //         name: "FSSC 22000",
-    //         image: "/img/responsibilities/partenars3.png",
-    //         description: "is an international standard that specifies the requirements for a food safety management system (FSMS). It integrates the principles of Hazard Analysis and Critical Control Points (HACCP) and steps from the Codex Alimentarius Commission. The standard combines the best practices of multiple stan dards and regulations to ensure food safety throughout the entire food chain.",
-    //         secondtitle: "Certification body: Tank Oil",
-    //     },
-    //     {
-    //         id: 4,
-    //         name: "HALAL Certificate ",
-    //         image: "/img/responsibilities/partenars4.png",
-    //         description: "is an international standard that specifies the requirements for a food safety management system (FSMS). It integrates the principles of Hazard Analysis and Critical Control Points (HACCP) and steps from the Codex Alimentarius Commission. The standard combines the best practices of multiple stan dards and regulations to ensure food safety throughout the entire food chain.",
-    //         secondtitle: "Certification body: Tank Oil",
-    //     },
-    //     {
-    //         id: 5,
-    //         name: "ISO 9001",
-    //         image: "/img/responsibilities/partenars5.png",
-    //         description: "is an international standard that specifies the requirements for a food safety management system (FSMS). It integrates the principles of Hazard Analysis and Critical Control Points (HACCP) and steps from the Codex Alimentarius Commission. The standard combines the best practices of multiple stan dards and regulations to ensure food safety throughout the entire food chain.",
-    //         secondtitle: "Certification body: Tank Oil",
-    //     },
-    //     {
-    //         id: 6,
-    //         name: "ISO 22000:2018",
-    //         image: "/img/responsibilities/partenars6.png",
-    //         description: "is an international standard that specifies the requirements for a food safety management system (FSMS). It integrates the principles of Hazard Analysis and Critical Control Points (HACCP) and steps from the Codex Alimentarius Commission. The standard combines the best practices of multiple stan dards and regulations to ensure food safety throughout the entire food chain.",
-    //         secondtitle: "Certification body: Tank Oil",
-
-    //     },
-    //     {
-    //         id: 7,
-    //         name: "ISO 45001:2018",
-    //         image: "/img/responsibilities/partenars7.png",
-    //         description: "is an international standard that specifies the requirements for a food safety management system (FSMS). It integrates the principles of Hazard Analysis and Critical Control Points (HACCP) and steps from the Codex Alimentarius Commission. The standard combines the best practices of multiple stan dards and regulations to ensure food safety throughout the entire food chain.",
-    //         secondtitle: "Certification body: Tank Oil",
-
-    //     },
-    //     {
-    //         id: 8,
-    //         name: "ISO 14001:2015",
-    //         image: "/img/responsibilities/partenars8.png",
-    //         description: "is an international standard that specifies the requirements for a food safety management system (FSMS). It integrates the principles of Hazard Analysis and Critical Control Points (HACCP) and steps from the Codex Alimentarius Commission. The standard combines the best practices of multiple stan dards and regulations to ensure food safety throughout the entire food chain.",
-    //         secondtitle: "Certification body: Tank Oil",
-
-    //     },
-    //     {
-    //         id: 9,
-    //         name: "ISO/IEC 17025:2017",
-    //         image: "/img/responsibilities/partenars9.png",
-    //         description: "is an international standard that specifies the requirements for a food safety management system (FSMS). It integrates the principles of Hazard Analysis and Critical Control Points (HACCP) and steps from the Codex Alimentarius Commission. The standard combines the best practices of multiple stan dards and regulations to ensure food safety throughout the entire food chain.",
-    //         secondtitle: "Certification body: Tank Oil",
-
-    //     },
-
-    // ];
 
     return (
         <section className={styles.PartenarsSection}>
