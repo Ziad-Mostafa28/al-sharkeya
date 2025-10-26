@@ -16,7 +16,6 @@ import { useSelector } from 'react-redux';
 // ];
 
 
-
 export default function DownloadBrochureComm() {
    const { data, loading } = useSelector((state) => state.downloadBrochure);
    
@@ -24,14 +23,26 @@ export default function DownloadBrochureComm() {
   return (
     <>
      <section className={styles.pdfSection}>
-      <div className={styles.grid}>
-        {data?.data?.brochures.map((file, index) => (
-          <div key={index} className={styles.card}>
-            <img src={file.pdf} alt="PDF" className={styles.icon} />
-            <p className={styles.title}>{file.name}</p>
-          </div>
-        ))}
-      </div>
+<div className={styles.grid}>
+  {data?.data?.brochures.map((file, index) => (
+    <a
+      key={index}
+      href={file.pdf} 
+      download 
+      className={styles.card}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        src="/img/downloadbrochure/Rectangle1.png"
+        alt="PDF"
+        className={styles.icon}
+      />
+      <p className={styles.title}>{file.name}</p>
+    </a>
+  ))}
+</div>
+
     </section>
     </>
   )

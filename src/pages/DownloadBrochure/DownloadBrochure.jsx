@@ -6,7 +6,9 @@ import { useSelector } from 'react-redux';
 export default function DownloadBrochure() {
 
    const { data} = useSelector((state) => state.downloadBrochure); 
-    const { title,banner } = data.data.banner;
+    const  title  = data?.data.banner.title;
+        const  banner  = data?.data.banner.banner;
+
   return (
     <>
 
