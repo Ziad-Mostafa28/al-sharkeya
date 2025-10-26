@@ -9,13 +9,15 @@ export default function SustainabilityPage() {
 
     const { data, loading } = useSelector((state) => state.sustainability); 
     if (loading || !data?.data.main) return null;
-    const { title,banner } = data.data.main;
+    const  title = data.data.main.title;
+    const  banner = data.data.main.banner;
+
     return (
         <>
             <SecBanner
-                title="Sustainability"
+                title={title}
                 subtitle="Our Responsibilities"
-                image="/img/responsibilities/banner5.png"
+                image={banner}
             />
             <Sustainability />
             <SustainabilityDetails />
