@@ -41,6 +41,14 @@ export default function ContactUsForm() {
     }
   }, [successMessage, errorMessage, dispatch, reset]);
 
+
+
+
+
+
+   const { data } = useSelector((state) => state.branches); 
+      if (loading || !data?.data.branches) return null;
+
   return (
     <section className={styles.contactSection}>
       <h2 className={styles.title}>Contact us</h2>
@@ -126,53 +134,29 @@ export default function ContactUsForm() {
 
 
         {/* Right Info Section */}
-        <div className={styles.infoSection}>
-          <div className={styles.card}>
-            <h3 className={styles.cardTitle}>Headquarters</h3>
-            <p className={styles.cardText}>
-              <strong>Ankara Street, Cairo Complex, Bureau 2, 6th Floor, Heliopolis, Cairo, Egypt.</strong><br />
-              (+20) 2 26785790 &nbsp; (+20) 10 00073980 <br />
-              info@sharkeyasugar.com <br />
-              sales@sharkeyasugar.com
-            </p>
-<div className={styles.divbutton}>
-  <button className={styles.visitButton}>
-    <a
-      href="https://maps.app.goo.gl/xA5vS2VkRNyAqVKG8"
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{ color: "inherit", textDecoration: "none", display: "block" }}
-    >
-      Visit
-    </a>
-  </button>
-</div>
+                 <div className={styles.infoSection}>
+      {data.data.branches.map((branch) => (
+        <div key={branch.id} className={styles.card}>
+          <h3 className={styles.cardTitle}>{branch.name}</h3>
 
-          </div>
+          {/* الوصف بصيغة HTML من API */}
+          <div
+            className={styles.cardText}
+            dangerouslySetInnerHTML={{ __html: branch.desc }}
+          ></div>
 
-          <div className={styles.card}>
-            <h3 className={styles.cardTitle}>Plant</h3>
-            <p className={styles.cardText}>
-              <strong>Al Salhyia Al Gadida - Industrial Zone II - Al Sharkeya Governorate</strong><br />
-              (+20) 55 3201392 &nbsp; (+20) 55 3201492 <br />
-              (+20) 10 26666148 &nbsp; (+20) 55 3201592
-            </p>
-    <div className={styles.divbutton}>
-  <button
-    className={styles.visitButton}
-    onClick={() =>
-      window.open(
-        "https://www.google.com.eg/maps/place/%D8%A7%D9%84%D8%B4%D8%B1%D9%82%D9%8A%D8%A9+%D9%84%D8%B5%D9%86%D8%A7%D8%B9%D8%A9+%D8%A7%D9%84%D8%B3%D9%83%D8%B1+-+%D8%A7%D9%84%D8%A8%D9%88%D8%A7%D8%A8%D8%A9+%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9%E2%80%AD/@30.6467728,31.9266189,16z/data=!4m6!3m5!1s0x14f83fce2203131f:0x5eee3924db1d82b9!8m2!3d30.6447946!4d31.9305288!16s%2Fg%2F11k0vh9xd2?coh=164777&shorturl=1&entry=tts&g_ep=EgoyMDI1MDExNS4wIPu8ASoASAFQAw%3D%3D",
-        "_blank"
-      )
-    }
-  >
-    Visit
-  </button>
-</div>
-
+          {/* زر الفيزيت */}
+          <div className={styles.divbutton}>
+            <button
+              className={styles.visitButton}
+              onClick={() => window.open(branch.location_url, "_blank")}
+            >
+              Visit
+            </button>
           </div>
         </div>
+      ))}
+    </div>
       </div>
 
       {/* مكان ظهور التوستات */}
