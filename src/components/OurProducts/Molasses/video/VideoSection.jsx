@@ -12,8 +12,12 @@ export default function VideoSection() {
     <section >
       <div className='container'>
         <div className='text-center mb-4'>
-          <h3 className={styles.titleVideo}>Molasses Are a Sweet By Product of Sugar Refining</h3>
-          <p className={styles.subtitleVideo}>It Is a viscous byproduct, principally obtained from the refining of sugarcane or sugar beet juice into sugar. Molasses varies in the amount of sugar, the method of extraction. Sugarcane molasses is usually used to sweeten and flavor foods. Molasses is a major constituent of fine commercial brown sugar. Molasses is rich in vitamins and minerals, including vitamin B6, iron, calcium, magnesium, and potassium. There are different types of molasses depending on the amount of time refined</p>
+          <h3 className={styles.titleVideo}>Molasses: Nature’s Rich and Versatile By-Product</h3>
+          <p className={styles.subtitleVideo}>Molasses is a thick, viscous by-product derived from refining sugarcane or sugar beet juice into sugar. Its composition varies depending on the sugar content and extracti
+Sugar beet molasses is commonly utilized in fermentation industries, yeast production, and nutritious livestock feed. Sugarcane molasses, on the other hand, is widely u
+animal feed.
+Molasses also serves as a key ingredient in commercial brown sugar, enriching its color and flavor. It is naturally rich in vitamins and minerals, including vitamin B6, iron, c
+There are several types of molasses, which differ based on the number of times the syrup is boiled and refined, each offering distinct flavor and color characteristics.</p>
         </div>
 
         <div className={styles.dev_video}>
