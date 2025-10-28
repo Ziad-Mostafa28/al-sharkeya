@@ -40,6 +40,10 @@ export default function ContactUs() {
     }
   }, [successMessage, errorMessage, dispatch, reset]);
 
+
+  const { data } = useSelector((state) => state.branches); 
+        if (loading || !data?.data.branches) return null;
+
   return (
     <section className={styles.contactSection}>
       <h2 className={styles.title}>Contact Us</h2>
@@ -68,7 +72,7 @@ export default function ContactUs() {
           <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
             <input
               type="text"
-              placeholder="name"
+              placeholder="name*"
               className={styles.input}
               {...register("name", { required: "Name is required" })}
             />
@@ -76,7 +80,7 @@ export default function ContactUs() {
 
             <input
               type="text"
-              placeholder="company name"
+              placeholder="company name*"
               className={styles.input}
               {...register("company", { required: "Company name is required" })}
             />
@@ -84,7 +88,7 @@ export default function ContactUs() {
 
             <input
               type="text"
-              placeholder="phone number"
+              placeholder="phone number*"
               className={styles.input}
               {...register("phone", {
                 required: "Phone is required",
@@ -98,14 +102,14 @@ export default function ContactUs() {
 
             <input
               type="email"
-              placeholder="email"
+              placeholder="email*"
               className={styles.input}
               {...register("email", { required: "Email is required" })}
             />
             {errors.email && <p className={styles.errorMsg}>{errors.email.message}</p>}
 
             <textarea
-              placeholder="message"
+              placeholder="message*"
               className={styles.textarea}
               {...register("message", { required: "Message is required" })}
             />
@@ -124,32 +128,27 @@ export default function ContactUs() {
         </div>
 
         {/* Right Info Section */}
-        <div className={styles.infoSection}>
-          <div className={styles.card}>
-            <h3 className={styles.cardTitle}>Headquarters</h3>
-            <p className={styles.cardText}>
-              <strong>Ankara Street, Cairo Complex, Bureau 2, 6th Floor, Heliopolis, Cairo, Egypt.</strong><br />
-              (+20) 2 26785790 &nbsp; (+20) 10 00073980 <br />
-              info@sharkeyasugar.com <br />
-              sales@sharkeyasugar.com
-            </p>
-            <div className={styles.divbutton}>
-              <button className={styles.visitButton}>Visit</button>
-            </div>
-          </div>
-
-          <div className={styles.card}>
-            <h3 className={styles.cardTitle}>Plant</h3>
-            <p className={styles.cardText}>
-              <strong>Al Salhyia Al Gadida - Industrial Zone II - Al Sharkeya Governorate</strong><br />
-              (+20) 55 3201392 &nbsp; (+20) 55 3201492 <br />
-              (+20) 10 26666148 &nbsp; (+20) 55 3201592
-            </p>
-            <div className={styles.divbutton}>
-              <button className={styles.visitButton}>Visit</button>
-            </div>
-          </div>
-        </div>
+                  <div className={styles.infoSection}>
+       {data.data.branches.map((branch) => (
+         <div key={branch.id} className={styles.card}>
+           <h3 className={styles.cardTitle}>{branch.name}</h3>
+ 
+           <div
+             className={styles.cardText}
+             dangerouslySetInnerHTML={{ __html: branch.desc }}
+           ></div>
+ 
+           <div className={styles.divbutton}>
+             <button
+               className={styles.visitButton}
+               onClick={() => window.open(branch.location_url, "_blank")}
+             >
+               Visit
+             </button>
+           </div>
+         </div>
+       ))}
+     </div>
       </div>
 
       <ToastContainer position="top-right" />

@@ -20,10 +20,16 @@
     color: #606060;
 }
 
+
+.cardbox .test p{
+     background-color: red !important;
+    width: 100% !important;
+}
 .cardbox .topdesc {
     font-weight: 500;
     font-size: 1.25rem;
     color: #606060;
+    
 }
 
 .cardbox p {
@@ -31,6 +37,7 @@
     font-weight: 400;
     font-size: 1rem;
     color: #606060;
+   
 }
 .cardbox .bannerImage {
     height: 300px;
@@ -38,6 +45,9 @@
     object-fit: cover;
     border-radius: 10px;
 
+}
+.secondSectionDesc * {
+  width: 100% !important;
 }
 
 

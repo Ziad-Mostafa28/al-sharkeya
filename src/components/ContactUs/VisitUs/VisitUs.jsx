@@ -185,7 +185,7 @@ export default function VisitUs() {
   const [selectedDate, setSelectedDate] = useState(null);
   const [currentMonth, setCurrentMonth] = useState(new Date().getMonth());
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
-  const [availableDates, setAvailableDates] = useState([]); //  الأيام المتاحة 
+  const [availableDates, setAvailableDates] = useState([]); 
 
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
@@ -249,7 +249,6 @@ export default function VisitUs() {
     } else setCurrentMonth(m => m + 1);
   };
 
-  //  تحقق من اليوم هل هو متاح أم لا
   const isDayAvailable = (day) => {
     const dateStr = `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
     return availableDates.includes(dateStr);
@@ -272,7 +271,7 @@ export default function VisitUs() {
               <div className={styles.inputGroup}>
                 <input
                   type="text"
-                  placeholder="name"
+                  placeholder="name*"
                   className={styles.inputField}
                   {...register("name", { required: "Name is required" })}
                 />
@@ -282,7 +281,7 @@ export default function VisitUs() {
               <div className={styles.inputGroup}>
                 <input
                   type="text"
-                  placeholder="company"
+                  placeholder="company*"
                   className={styles.inputField}
                   {...register("company", { required: "Company is required" })}
                 />
@@ -292,7 +291,7 @@ export default function VisitUs() {
               <div className={styles.inputGroup}>
                 <input
                   type="tel"
-                  placeholder="phone"
+                  placeholder="phone*"
                   className={styles.inputField}
                   {...register("phone", { 
                     required: "Phone is required",
@@ -308,7 +307,7 @@ export default function VisitUs() {
               <div className={styles.inputGroup}>
                 <input
                   type="email"
-                  placeholder="email"
+                  placeholder="email*"
                   className={styles.inputField}
                   {...register("email", { required: "Email is required" })}
                 />

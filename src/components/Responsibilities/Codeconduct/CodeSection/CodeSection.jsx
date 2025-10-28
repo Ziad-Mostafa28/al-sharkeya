@@ -10,10 +10,11 @@ export default function CodeSection() {
         <section className={styles.cardbox}>
             <div className={styles.container}>
                 <div className="row">
-                    <div className="col-12 col-md-8">
+                    <div className="col-12 col-md-8"  >
                         <h2>{data?.data?.main?.second_section_title}</h2>
                         <p className={styles.topdesc}>{data?.data?.main?.second_section_sub_title}</p>
                         <div
+                        className={styles.secondSectionDesc} 
                         dangerouslySetInnerHTML={{ __html:data?.data?.main?.second_section_desc }}
                         ></div>
 

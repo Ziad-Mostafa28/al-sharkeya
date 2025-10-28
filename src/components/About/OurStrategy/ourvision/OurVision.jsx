@@ -15,7 +15,7 @@ export default function OurVision() {
                 <div className="row">
                     <div className="col-12 col-md-8">
                         <h2 className='mb-4'>Our Vision</h2>
-                        <div
+                        <div className={styles.secondSectionDesc2}
                         dangerouslySetInnerHTML={{__html:desc}}
                         ></div>
                     </div>

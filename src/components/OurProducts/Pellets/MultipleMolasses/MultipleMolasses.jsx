@@ -6,7 +6,7 @@ export default function MultipleMolasses() {
 
         const missionData = {
         title: "Beet Pulp Uses in Animal Nutrition",
-        description: "Beet pulp is used in the diets of many animals",
+        // description: "Beet pulp is used in the diets of many animals",
         items: [
             {
                 icon: "/img/aboutus/icon.png",

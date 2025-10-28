@@ -76,7 +76,7 @@ export default function ContactUsForm() {
           <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
             <input
               type="text"
-              placeholder="name"
+              placeholder="name*"
               className={styles.input}
               {...register("name", { required: "Name is required" })}
             />
@@ -84,7 +84,7 @@ export default function ContactUsForm() {
 
             <input
               type="text"
-              placeholder="company name"
+              placeholder="company name*"
               className={styles.input}
               {...register("company", { required: "Company name is required" })}
             />
@@ -92,7 +92,7 @@ export default function ContactUsForm() {
 
             <input
               type="number"
-              placeholder="phone number"
+              placeholder="phone number*"
               className={styles.input}
               {...register("phone", {
                 required: "Phone is required",
@@ -106,14 +106,14 @@ export default function ContactUsForm() {
 
             <input
               type="email"
-              placeholder="email"
+              placeholder="email*"
               className={styles.input}
               {...register("email", { required: "Email is required" })}
             />
             {errors.email && <p className={styles.errorMsg}>{errors.email.message}</p>}
 
             <textarea
-              placeholder="message"
+              placeholder="message*"
               className={styles.textarea}
               {...register("message", { required: "Message is required" })}
             />
@@ -139,13 +139,11 @@ export default function ContactUsForm() {
         <div key={branch.id} className={styles.card}>
           <h3 className={styles.cardTitle}>{branch.name}</h3>
 
-          {/* الوصف بصيغة HTML من API */}
           <div
             className={styles.cardText}
             dangerouslySetInnerHTML={{ __html: branch.desc }}
           ></div>
 
-          {/* زر الفيزيت */}
           <div className={styles.divbutton}>
             <button
               className={styles.visitButton}
@@ -159,7 +157,6 @@ export default function ContactUsForm() {
     </div>
       </div>
 
-      {/* مكان ظهور التوستات */}
       <ToastContainer position="top-right" />
     </section>
   );

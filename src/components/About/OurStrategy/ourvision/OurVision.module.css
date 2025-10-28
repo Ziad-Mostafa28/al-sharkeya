@@ -19,6 +19,13 @@
     color: #606060;
 }
 
+.secondSectionDesc2 *{
+     font-family: "Alexandria";
+    font-weight: 400;
+    font-size: 1rem;
+    color: #606060;
+}
+
 .cardbox2 img {
     height: 270px;
     width: 100%;

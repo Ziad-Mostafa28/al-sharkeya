@@ -23,7 +23,6 @@ export default function BecomeSupplier() {
     formState: { errors },
   } = useForm();
 
-  // 🟢 محافظات مصر
   const egyptGovernorates = [
     "Cairo",
     "Giza",
