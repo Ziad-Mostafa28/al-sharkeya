@@ -111,3 +111,69 @@ text-align: right;
     transform: rotate(360deg);
   }
 }
+
+
+/* ===== Radio Buttons Style (Add This Only) ===== */
+
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+    align-items: start !important;
+
+}
+
+.radioLabel {
+  font-size: 16px;
+  font-weight: 400;
+  color: #262626;
+  margin-bottom: 10px;
+
+}
+
+.radioOptions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px; 
+  margin: auto;
+}
+
+.radioItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-style: 400;
+  color: #606060;
+}
+
+.radioItem input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #c49a6c; 
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.radioItem input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: #c49a6c;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.radioItem span {
+  color: #444;
+  font-weight: 400;
+}

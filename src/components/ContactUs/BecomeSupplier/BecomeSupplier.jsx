@@ -59,6 +59,8 @@ export default function BecomeSupplier() {
   }));
 
   const [selectedGovernorate, setSelectedGovernorate] = useState(null);
+  const [supplierType, setSupplierType] = useState("Individual");
+
 
   const onSubmit = (data) => {
     const formData = new FormData();
@@ -94,6 +96,35 @@ export default function BecomeSupplier() {
         <h2 className={styles.title}>Request to Become a Beet Supplier</h2>
         <p className={styles.subtitle}>Join us and become a supplier</p>
 
+
+        {/* Supplier Type */}
+        <div className={styles.radioGroup}>
+          <label className={styles.radioLabel}>Supplier Type*</label>
+          <div className={styles.radioOptions}>
+            <label className={styles.radioItem}>
+              <input
+                type="radio"
+                name="supplierType"
+                value="Individual"
+                checked={supplierType === "Individual"}
+                onChange={(e) => setSupplierType(e.target.value)}
+              />
+              <span>Individual</span>
+            </label>
+            <label className={styles.radioItem}>
+              <input
+                type="radio"
+                name="supplierType"
+                value="Corporate"
+                checked={supplierType === "Corporate"}
+                onChange={(e) => setSupplierType(e.target.value)}
+              />
+              <span>Corporate</span>
+            </label>
+          </div>
+        </div>
+
+
         <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
           <input
             type="text"
@@ -104,14 +135,19 @@ export default function BecomeSupplier() {
             <span className={styles.error}>{errors.name.message}</span>
           )}
 
-          <input
-            type="text"
-            placeholder="company name*"
-            {...register("company", { required: "Company name is required" })}
-          />
-          {errors.company && (
-            <span className={styles.error}>{errors.company.message}</span>
+          {supplierType === "Corporate" && (
+            <>
+              <input
+                type="text"
+                placeholder="Company name*"
+                {...register("company")}
+              />
+              {errors.company && (
+                <span className={styles.error}>{errors.company.message}</span>
+              )}
+            </>
           )}
+
 
           <input
             type="number"
