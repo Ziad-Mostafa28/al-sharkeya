@@ -18,6 +18,7 @@ export default function ManagementTeamSections() {
                             <div className={styles.peoplebox}>
                                 <div className={styles.image}>
                                     <img src={person.image} alt={person.name} />
+                                    {person.linkedin !== null &&     
                                     <a
                                         href={person.linkedin}
                                         target="_blank"
@@ -25,7 +26,8 @@ export default function ManagementTeamSections() {
                                         className={styles.linkedinIcon}
                                     >
                                         <FaLinkedin />
-                                    </a>
+                                    </a> }
+                                
                                     <div className={styles.shadow}></div>
                                 </div>
                                 <div className={styles.desc}>

@@ -48,3 +48,14 @@
     }
 
 }
+
+.centeredRow {
+  display: flex;
+  justify-content: center !important;
+  text-align: center ;
+}
+
+.centeredRow p {
+  text-align: center !important ;
+}
+

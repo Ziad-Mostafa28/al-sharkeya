@@ -1,12 +1,17 @@
 .WhiteSugar {
     background-color: #F8F8F8;
+    padding: 5rem 3.125rem;
+
 }
 
 .customContainer {
-    /* padding-left: 0 !important;
-  padding-right: 0 !important; */
-    padding: 2.5rem 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
+
+
+
+
 
 .WhiteSugar .textBlock h2 {
     font-weight: 500;
@@ -61,14 +66,17 @@
 @media (max-width: 576px) {
     .WhiteSugar {
         margin-bottom: 3rem;
+        padding: 5rem 1.25rem;
+
     }
 
-    .customContainer {
+    /* .customContainer {
         padding: 2.5rem 1.25rem !important;
-    }
+    } */
 
     .WhiteSugar .textBlock h2 {
         font-size: 1.5rem;
+        margin-top: 0.625rem;
         /* 24px */
     }
 
@@ -95,11 +103,13 @@
 @media (min-width: 577px) and (max-width: 991px) {
     .WhiteSugar {
         margin-bottom: 3rem;
+                padding: 5rem 1.25rem;
+
     }
 
-    .customContainer {
+    /* .customContainer {
         padding: 2.5rem 1.25rem !important;
-    }
+    } */
 
     .WhiteSugar .textBlock h2 {
         font-size: 1.5rem;

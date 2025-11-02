@@ -11,8 +11,14 @@ export default function JobForm() {
     return (
         <>
             <section className={`${styles.WhiteSugar}`}>
-                <div className={`container ${styles.customContainer}`}>
+                <div className={`container-fluid ${styles.customContainer}`}>
                     <div className="row align-items-start">
+                         <div className={`col-md-4  ${styles.imageBlock}`}>
+                            <img
+                                src="/img/our-products/molasses/Rectangle 34624602.png"
+                                alt="White sugar"
+                            />
+                        </div>
                         <div className={`col-md-8 ${styles.textBlock}`}>
                             <h2>Submit your CV today and connect with our talent network.</h2>
                             <p>
@@ -21,12 +27,7 @@ export default function JobForm() {
                             <button className={styles.applyBtn} onClick={handleOpen}>Apply Now</button>
                             {showModal && <ApplyFormJob onClose={handleClose} />}
                         </div>
-                        <div className={`col-md-4  ${styles.imageBlock}`}>
-                            <img
-                                src="/img/our-products/molasses/Rectangle 34624602.png"
-                                alt="White sugar"
-                            />
-                        </div>
+                       
                     </div>
                 </div>
             </section>

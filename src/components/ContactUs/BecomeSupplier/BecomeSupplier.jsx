@@ -139,7 +139,7 @@ export default function BecomeSupplier() {
             <>
               <input
                 type="text"
-                placeholder="Company name*"
+                placeholder="Company name"
                 {...register("company")}
               />
               {errors.company && (
@@ -247,7 +247,7 @@ export default function BecomeSupplier() {
 
           <input
             type="text"
-            placeholder="Land area*"
+            placeholder="land area*"
             {...register("land_area", { required: "Land area is required" })}
           />
           {errors.land_area && (

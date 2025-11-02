@@ -34,6 +34,16 @@
 }
 
 
+
+.CodePartenarsDetailsSection .box p {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #606060;
+    margin-bottom: 0.5rem;
+    list-style: disc;
+}
+
+
 @media (max-width:1023px) {
     .CodePartenarsDetailsSection .container {
         margin: 0 1.25rem;
