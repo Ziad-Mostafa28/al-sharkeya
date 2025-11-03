@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import styles from "./OurProducts.module.css";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 export default function OurProducts() {
   const [activeProduct, setActiveProduct] = useState("white-sugar");
   const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const { data} = useSelector((state) => state.homeWithOrdering);
+  const productList = data?.data?.sections?.[0]?.products?.list || [];
 
   const products = {
     "white-sugar": {

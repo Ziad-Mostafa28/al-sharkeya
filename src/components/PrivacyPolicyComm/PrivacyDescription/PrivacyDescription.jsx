@@ -10,7 +10,7 @@ export default function PrivacyDescription() {
 
                     <h2 className={styles.sectionTitle}>Introduction</h2>
                     <p>
-                       Al Sharkeya Sugar Manufacturing (AL Nouran) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your data. 
+                       Al Sharkeya Sugar Manufacturing is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your data. 
                     </p>
 
                     <h3>Information We Collect </h3>
@@ -38,7 +38,7 @@ export default function PrivacyDescription() {
 
                     <h3>Data Sharing</h3>
                     <p>
-                        Al Sharkeya Sugar Manufacturing (AL Nouran) does not sell, rent, or share your personal information with third parties, except as required by law. 
+                        Al Sharkeya Sugar Manufacturing does not sell, rent, or share your personal information with third parties, except as required by law. 
                     </p>
 
                     <h3>International Access</h3>

@@ -27,6 +27,10 @@ import sugarFactsReducer from "./slices/factsSugarSlice";
 import sustainabilityReducer from "./slices/sustainabilitySlice";
 import downloadBrochureReducer from "./slices/downloadBrochureSlice";
 import codeOfConductReducer from "./slices/CodeOfConductSlice";
+import homeWithOrderingReducer from "./slices/homeWithOrderingSlice";
+import careersReducer from "./slices/careersSlice";
+
+
 
 const store = configureStore({
   reducer: {
@@ -54,6 +58,8 @@ const store = configureStore({
   sustainability: sustainabilityReducer,
   downloadBrochure: downloadBrochureReducer,
    codeOfConduct: codeOfConductReducer,
+   homeWithOrdering:homeWithOrderingReducer,
+   careers: careersReducer,
   },
 });
 

@@ -23,14 +23,14 @@ export default function BrochureSugar() {
                             Known for its clean sweetness and ability to enhance
                             flavor, texture, and color in recipes, white sugar is widely used in baking, beverages,desserts, and processed foods
                         </p>
-                        <a href="#" download className={styles.downloadLink}>
+                        {/* <a href="#" download className={styles.downloadLink}>
                             <img
                                 src="/img/our-products/white-sugar/download.svg"
                                 alt="Download Icon"
                                 className={styles.icon}
                             />
                             <span className={styles.downloadBrochure}>Download Brochure</span>
-                        </a>
+                        </a> */}
                     </div>
                 </div>
             </div>

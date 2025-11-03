@@ -151,7 +151,7 @@ export default function BecomeSupplier() {
 
           <input
             type="number"
-            placeholder="phone number*"
+            placeholder="mobile number*"
             {...register("phone", {
               required: "Phone is required",
               pattern: {
@@ -173,7 +173,6 @@ export default function BecomeSupplier() {
             <span className={styles.error}>{errors.email.message}</span>
           )}
 
-          {/* 🟢 Dropdown للمحافظات بدل الدول */}
           <Controller
             name="governorate"
             control={control}
@@ -246,7 +245,7 @@ export default function BecomeSupplier() {
           )}
 
           <input
-            type="text"
+            type="number"
             placeholder="land area*"
             {...register("land_area", { required: "Land area is required" })}
           />

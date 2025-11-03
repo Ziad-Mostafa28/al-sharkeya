@@ -16,14 +16,14 @@ export default function BrochureSugar() {
                     <div className={`col-md-6 ${styles.textBlock}`}>
                         <p>
                             Pellets are made from the residual cells of sugar beet roots after sugar extraction. They are rich in nutritional value, highly palatable, and can replace up to 50% of the grain requirement in daily animal feed                        </p>
-                        <a href="#" download className={styles.downloadLink}>
+                        {/* <a href="#" download className={styles.downloadLink}>
                             <img
                                 src="/img/our-products/white-sugar/download.svg"
                                 alt="Download Icon"
                                 className={styles.icon}
                             />
                             <span className={styles.downloadBrochure}>Download Brochure</span>
-                        </a>
+                        </a> */}
                     </div>
                 </div>
             </div>

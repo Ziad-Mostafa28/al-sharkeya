@@ -13,7 +13,7 @@ export default function TermsDescription() {
     
                         <h3>Company Information</h3>
                         <p>
-                            Al Sharkeya Sugar Manufacturing (AL Nouran) is a sugar manufacturing company based in Egypt, specializing in beet-based sugar production. This website provides information about our company, our products, and how to contact us. 
+                            Al Sharkeya Sugar Manufacturing is a sugar manufacturing company based in Egypt, specializing in beet-based sugar production. This website provides information about our company, our products, and how to contact us. 
                         </p>
     
                         <h3>Account Creation </h3>
@@ -28,7 +28,7 @@ export default function TermsDescription() {
     
                         <h3>Intellectual Property</h3>
                         <p>
-                            All content on this site, including logos, images, text, and designs, is the intellectual property of Al Sharkeya Sugar Manufacturing (AL Nouran) unless otherwise stated. Unauthorized use, copying, or distribution is strictly prohibited. 
+                            All content on this site, including logos, images, text, and designs, is the intellectual property of Al Sharkeya Sugar Manufacturing unless otherwise stated. Unauthorized use, copying, or distribution is strictly prohibited. 
                         </p>
     
                         <h3>Legal Jurisdiction</h3>

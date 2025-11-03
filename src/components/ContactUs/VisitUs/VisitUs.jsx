@@ -259,7 +259,7 @@ export default function VisitUs() {
       <div className="container">
         <div className="text-center mb-4">
           <h2 className={styles.sectionTitle}>Request a Factory Visit</h2>
-          <p className={styles.sectionSubtitle}>School and college can visit our factory</p>
+          <p className={styles.sectionSubtitle}>Schools and colleges can visit our factory based on availability.</p>
         </div>
 
         <div className="row mt-5">
@@ -281,7 +281,7 @@ export default function VisitUs() {
               <div className={styles.inputGroup}>
                 <input
                   type="text"
-                  placeholder="company*"
+                  placeholder="institution name*"
                   className={styles.inputField}
                   {...register("company", { required: "Company is required" })}
                 />
@@ -291,7 +291,7 @@ export default function VisitUs() {
               <div className={styles.inputGroup}>
                 <input
                   type="tel"
-                  placeholder="phone*"
+                  placeholder="mobile number*"
                   className={styles.inputField}
                   {...register("phone", { 
                     required: "Phone is required",

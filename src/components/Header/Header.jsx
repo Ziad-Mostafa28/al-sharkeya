@@ -109,11 +109,11 @@ export default function Header() {
                         Our Strategy
                       </Link>
                     </li>
-                    <li className={`${styles.limenu}`}>
+                    {/* <li className={`${styles.limenu}`}>
                       <Link className="dropdown-item" to="about-us/company-history">
                         Company History
                       </Link>
-                    </li>
+                    </li> */}
                     <li className={`${styles.limenu}`}>
                       <Link className="dropdown-item" to="about-us/our-shareholders">
                         Our Shareholders
@@ -227,11 +227,11 @@ export default function Header() {
                         Sugar History
                       </Link>
                     </li>
-                    <li className={`${styles.limenu}`}>
+                    {/* <li className={`${styles.limenu}`}>
                       <Link className="dropdown-item" to="recipes">
                         Recipes
                       </Link>
-                    </li>
+                    </li> */}
                     <li className={`${styles.limenu}`}>
                       <Link className="dropdown-item" to="facts-about-sugar">
                         Facts About Sugar
@@ -350,11 +350,11 @@ export default function Header() {
                         Our Strategy
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="about-us/company-history">
                         Company History
                       </Link>
-                    </li>
+                    </li> */}
                     <li>
                       <Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="about-us/our-shareholders">
                         Our Shareholders
@@ -456,7 +456,7 @@ export default function Header() {
                   <ul className="list-unstyled">
 
                     <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to={'sugar-history'}>Sugar History</Link></li>
-                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="recipes">Recipes</Link></li>
+                    {/* <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="recipes">Recipes</Link></li> */}
                     <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="facts-about-sugar">Facts About Sugar</Link></li>
 
                   </ul>

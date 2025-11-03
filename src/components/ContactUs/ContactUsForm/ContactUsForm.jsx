@@ -92,7 +92,7 @@ export default function ContactUsForm() {
 
             <input
               type="number"
-              placeholder="phone number*"
+              placeholder="mobile number*"
               className={styles.input}
               {...register("phone", {
                 required: "Phone is required",

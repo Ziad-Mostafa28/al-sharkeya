@@ -25,6 +25,8 @@ import { fetchSugarFacts } from '../../store/slices/factsSugarSlice';
 import { fetchSustainability } from '../../store/slices/sustainabilitySlice';
 import { fetchDownloadBrochure } from '../../store/slices/downloadBrochureSlice';
 import { fetchCodeOfConductData } from '../../store/slices/CodeOfConductSlice';
+import { fetchHomeWithOrderingData } from '../../store/slices/homeWithOrderingSlice';
+import { fetchCareersData } from '../../store/slices/careersSlice';
 
 export default function MainLayout() {
   const dispatch = useDispatch();
@@ -67,8 +69,11 @@ export default function MainLayout() {
     dispatch(fetchSugarHistory(lang));
     dispatch(fetchSugarFacts(lang));
     dispatch(fetchSustainability(lang));
-    dispatch( fetchDownloadBrochure(lang));
-    dispatch(    fetchCodeOfConductData (lang));
+    dispatch(fetchDownloadBrochure(lang));
+    dispatch(fetchCodeOfConductData (lang));
+    dispatch(fetchHomeWithOrderingData (lang));
+    dispatch(fetchCareersData (lang));
+
 
 
   }, [lang, dispatch]);

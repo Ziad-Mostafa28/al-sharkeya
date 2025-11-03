@@ -12,7 +12,7 @@ import { useSelector } from 'react-redux';
 export default function HomeBanner() {
 
 
-  const { data, loading } = useSelector((state) => state.home);
+  const { data} = useSelector((state) => state.homeWithOrdering);
   const news = data?.data?.banners || [];
   const main = news?.main || {};
   const slides = news?.slides || [];

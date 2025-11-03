@@ -26,12 +26,12 @@ function Footer() {
             <Link to={'https://maps.app.goo.gl/xA5vS2VkRNyAqVKG8'} target="_blank"> Headquarters Location</Link>
 
           </div>
-          <div className={styles.item}>
+          {/* <div className={styles.item}>
             <span>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z" /></svg>
             </span>
             <Link to={'download-brochure'}>Download Brochure</Link>
-          </div>
+          </div> */}
           <div className={styles.item}>
             <span>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.464 16.828C2 15.657 2 14.771 2 11s0-5.657 1.464-6.828C4.93 3 7.286 3 12 3s7.071 0 8.535 1.172S22 7.229 22 11s0 4.657-1.465 5.828C19.072 18 16.714 18 12 18c-2.51 0-3.8 1.738-6 3v-3.212c-1.094-.163-1.899-.45-2.536-.96" /></svg>
@@ -61,7 +61,7 @@ function Footer() {
               <ul>
                 <li><Link to='about-us/who-we-are'>Who We Are</Link></li>
                 <li><Link to='about-us/our-strategy'>Our Strategy</Link></li>
-                <li><Link to='about-us/company-history'>Company History</Link></li>
+                {/* <li><Link to='about-us/company-history'>Company History</Link></li> */}
                 <li><Link to='about-us/our-shareholders'>Our Shareholders</Link></li>
                 <li><Link to='about-us/board-members'>Board Members</Link></li>
                 <li><Link to='about-us/management-team'>Management Team</Link></li>
@@ -80,7 +80,7 @@ function Footer() {
               <h2 className={styles.bottomtitle}>Resources</h2>
               <ul>
                 <li><Link to={'sugar-history'}>Sugar History</Link></li>
-                <li><Link to='recipes'>Recipes</Link></li>
+                {/* <li><Link to='recipes'>Recipes</Link></li> */}
                 <li><Link to='facts-about-sugar'>Facts About Sugar</Link></li>
               </ul>
             </div>

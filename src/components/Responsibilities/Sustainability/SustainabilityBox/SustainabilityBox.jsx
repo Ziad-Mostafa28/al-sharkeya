@@ -25,7 +25,7 @@ export default function SustainabilityBox() {
     return (
       <section className={styles.SustainabilityBox}>
   <div className={styles.container}>
-    <h2>Global-Mission: Meeting the SDGs</h2>
+    <h2>Global-Mission: Meeting the Sustainable Development Goals</h2>
 
     <div className="row gy-4 mt-5 justify-content-center">
       { sustainability_mission_cards.map((box, index) => (

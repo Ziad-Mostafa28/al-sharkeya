@@ -170,6 +170,7 @@
 }
 
 .form input[type="text"],
+.form input[type="number"],
 .form input[type="email"],
 .form input[type="file"] {
   border: none;
@@ -302,5 +303,46 @@
     width: 100%;
     font-size: 0.9rem;
     padding: 10px;
+  }
+}
+
+
+
+/* Apply form job  */
+
+.inputGroup {
+  width: 100%;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.errorMsg {
+  background-color: #ffe5e5;
+  color: #d93025;
+  border: 1px solid #d93025;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.inputError {
+  border: 1px solid #d93025 !important;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #fff;
+  border-top: 2px solid #007bff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
