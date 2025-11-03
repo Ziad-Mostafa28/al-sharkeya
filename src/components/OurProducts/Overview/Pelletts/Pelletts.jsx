@@ -15,6 +15,7 @@ export default function Pelletts() {
               <h2>Pellets</h2>
               <p>
                 The cossettes from which the sugar juice is derived in the extraction tower are mechanically pressed and dried in a drying tunnel before being pelleted and sold as animal feed.
+                This process preserves valuable nutrients such as fiber and minerals, making the pellets a rich and sustainable feed source. . .
               </p>
               <Link to={`/${lang}/our-products/pellets`}>
                 <button className={styles.readMoreBtn}>Read more</button>

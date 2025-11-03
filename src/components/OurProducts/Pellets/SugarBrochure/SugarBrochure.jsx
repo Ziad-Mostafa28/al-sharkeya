@@ -15,7 +15,10 @@ export default function BrochureSugar() {
                     </div>
                     <div className={`col-md-6 ${styles.textBlock}`}>
                         <p>
-                            Pellets are made from the residual cells of sugar beet roots after sugar extraction. They are rich in nutritional value, highly palatable, and can replace up to 50% of the grain requirement in daily animal feed                        </p>
+                            The cossettes from which the sugar juice is derived in the extraction tower are mechanically pressed and dried in a drying tunnel before being pelleted and sold as animal feed.
+                            This process preserves valuable nutrients such as fiber and minerals, making the pellets a rich and sustainable feed source.
+                            By utilizing every part of the sugar beet, we minimize waste and contribute to a circular, environmentally responsible production cycle.
+                        </p>
                         {/* <a href="#" download className={styles.downloadLink}>
                             <img
                                 src="/img/our-products/white-sugar/download.svg"

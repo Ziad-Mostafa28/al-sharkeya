@@ -25,7 +25,7 @@ export default function Molasses() {
             </p>
             <p>
               Molasses is a valuable ingredient for the baking yeast and animal
-              feed industry as well as for the production of alcohol.
+              feed industry as well as for the production of alcohol...
             </p>
             <Link to={`/${lang}/our-products/molasses`}>
               <button className={styles.readMoreBtn}>Read more</button>

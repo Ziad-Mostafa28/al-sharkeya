@@ -13,7 +13,7 @@ export default function PharmaAndCommercial() {
           className={styles.image}
         />
         <div className={styles.text}>
-          <h3>Pharma & Specialized Industrial Sugar Grades</h3>
+          <h3>Pharma & Specialized Industrial Commercial Sugar Grade</h3>
           <p>
             Our sugar is precisely refined to meet exact pharmaceutical and
             customized industrial specifications.
