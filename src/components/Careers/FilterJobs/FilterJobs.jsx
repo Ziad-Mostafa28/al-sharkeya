@@ -54,7 +54,14 @@ export default function FilterJobs() {
             experience: "1-2 years",
         },
     ];
-      const lang = useSelector((state) => state.lang.lang);
+
+
+    const { data} = useSelector((state) => state.careers);
+          const lang = useSelector((state) => state.lang.lang);
+
+        const areas  = data?.data?.areas || [];
+        const locations  = data?.data?.locations || [];
+
 
     return (
         <section className={`${styles.jobsSection}`}>
@@ -62,17 +69,23 @@ export default function FilterJobs() {
 
                 {/* Filter Box */}
                 <div className={`${styles.filterBox} d-flex align-items-center justify-content-center gap-3 mb-5`}>
-                    <select className="form-select">
-                        <option>All Locations</option>
-                        <option>Cairo</option>
-                        <option>Alexandria</option>
+                    <select className="form-select" defaultValue="">
+                        <option value="" disabled>All Locations</option>
+                        {locations.map((loc) => (
+                            <option key={loc.id} value={loc.name}>
+                                {loc.name}
+                            </option>
+                        ))}
                     </select>
 
-                    <select className="form-select">
-                        <option>All Areas</option>
-                        <option>IT</option>
-                        <option>HR</option>
-                        <option>Marketing</option>
+                    {/* Areas Dropdown */}
+                    <select className="form-select" defaultValue="">
+                        <option value="" disabled>All Areas</option>
+                        {areas.map((area) => (
+                            <option key={area.id} value={area.name}>
+                                {area.name}
+                            </option>
+                        ))}
                     </select>
 
                     <button className={styles.searchBtn}>Search</button>

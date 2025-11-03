@@ -16,7 +16,7 @@ export default function ProductsLogo() {
         <section className={`${styles.ourCustomers}`}>
           <div className="">
             <div className="d-flex justify-content-between align-items-center mb-4">
-              <h3 className={`${styles.h3}`}>We produce high-quality sugar tailored to customer requirements, supplying leading high-sugar consumers such as Coca-Cola, Pepsi, edita word add Juhayna, and others. The exceptional quality of our sugar ensures it meets the strict standards demanded by these major brands</h3>
+              <h3 className={`${styles.h3}`}>We produce high-quality sugar tailored to customer requirements, supplying leading high-sugar consumers such as Coca-Cola, Pepsi, edita , Juhayna, and others. The exceptional quality of our sugar ensures it meets the strict standards demanded by these major brands</h3>
             </div>
     
             <div className={`d-flex flex-wrap ${styles.logosWrapper}`}>
