@@ -4,14 +4,20 @@ import axiosInstance from "../../utils/axiosInstance";
 // 🔹 Async thunk to fetch careers jobs data
 export const fetchCareersJobsData = createAsyncThunk(
   "careersJobs/fetchCareersJobsData",
-  async (lang, thunkAPI) => {
+  async ({ lang, area_id = "", location_id = "" }, thunkAPI) => {
     try {
-      const response = await axiosInstance.get("/careers/jobs", {
+      let url = `/careers/jobs?`;
+
+      if (area_id) url += `area_id=${area_id}&`;
+      if (location_id) url += `location_id=${location_id}`;
+
+      const response = await axiosInstance.get(url, {
         headers: {
           "Accept-Language": lang,
         },
       });
-      console.log(response.data);
+
+      console.log("Fetched Jobs Data:", response.data);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(

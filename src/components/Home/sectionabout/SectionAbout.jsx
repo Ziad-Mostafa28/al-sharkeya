@@ -36,8 +36,8 @@ export default function SectionAbout() {
 
                                     <div className={styles.smallbox}>
                             <div className={styles.numberBox}>
-                                <CountUp end={250} duration={2} enableScrollSpy scrollSpyOnce/>
-                                <span className={styles.plus}>K</span>
+                                <CountUp end={400} duration={2} enableScrollSpy scrollSpyOnce/>
+                                <span className={styles.plus}>+K</span>
 
                             </div>
                             <div className={styles.descc}>
