@@ -73,9 +73,6 @@ export default function MainLayout() {
     dispatch(fetchCodeOfConductData (lang));
     dispatch(fetchHomeWithOrderingData (lang));
     dispatch(fetchCareersData (lang));
-
-
-
   }, [lang, dispatch]);
 
   return (

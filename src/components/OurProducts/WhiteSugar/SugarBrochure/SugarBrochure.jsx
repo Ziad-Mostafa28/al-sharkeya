@@ -21,7 +21,7 @@ export default function BrochureSugar() {
                             White sugar is a versatile and essential ingredient found in kitchens and food
                             production around the world.
                             Known for its clean sweetness and ability to enhance
-                            flavor, texture, and color in recipes, white sugar is widely used in baking, beverages,desserts, and processed foods
+                            flavor, texture, and color in recipes, white sugar is widely used in baking, beverages,desserts, and processed foods, we produce Pharma & Specialized Industrial Sugar Grade, as well as Commercial Sugar Grade. 
                         </p>
                         {/* <a href="#" download className={styles.downloadLink}>
                             <img

@@ -34,7 +34,7 @@ export default function PharmaAndCommercial() {
           className={styles.image}
         />
         <div className={styles.text}>
-          <h3>Commercial Sugar</h3>
+          <h3>Commercial Sugar Grade</h3>
           <p>
             A versatile, all-purpose sugar ideal for sweetening hot beverages,
             sprinkling over cereals or fruits, and for everyday use in cooking

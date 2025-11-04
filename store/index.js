@@ -29,6 +29,7 @@ import downloadBrochureReducer from "./slices/downloadBrochureSlice";
 import codeOfConductReducer from "./slices/CodeOfConductSlice";
 import homeWithOrderingReducer from "./slices/homeWithOrderingSlice";
 import careersReducer from "./slices/careersSlice";
+import careersJobsReducer from "./slices/careersJobsSlice";
 
 
 
@@ -60,6 +61,7 @@ const store = configureStore({
    codeOfConduct: codeOfConductReducer,
    homeWithOrdering:homeWithOrderingReducer,
    careers: careersReducer,
+   careersJobs: careersJobsReducer, 
   },
 });
 

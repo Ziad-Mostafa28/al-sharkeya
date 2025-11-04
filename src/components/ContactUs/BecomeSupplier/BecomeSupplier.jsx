@@ -246,7 +246,7 @@ export default function BecomeSupplier() {
 
           <input
             type="number"
-            placeholder="land area*"
+            placeholder="land area in feddan *"
             {...register("land_area", { required: "Land area is required" })}
           />
           {errors.land_area && (

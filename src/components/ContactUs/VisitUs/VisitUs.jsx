@@ -259,7 +259,11 @@ export default function VisitUs() {
       <div className="container">
         <div className="text-center mb-4">
           <h2 className={styles.sectionTitle}>Request a Factory Visit</h2>
-          <p className={styles.sectionSubtitle}>Schools and colleges can visit our factory based on availability.</p>
+          <p className={styles.sectionSubtitle}>Schools and colleges can visit our factory based on availability</p>
+          <p className={styles.sectionSubtitle}>Confirmation will be sent via email</p>
+
+
+
         </div>
 
         <div className="row mt-5">
