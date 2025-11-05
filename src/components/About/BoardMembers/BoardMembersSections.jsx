@@ -5,7 +5,6 @@ import styles from "./BoardMembersSections.module.css";
 export default function BoardMembersSections() {
     const [expandedIndex, setExpandedIndex] = useState(null);
 
-    // ⬇️ نجيب الداتا من الـ Redux
     const { data, loading } = useSelector((state) => state.aboutBoardMembers);
 
     if (loading || !data) return null;

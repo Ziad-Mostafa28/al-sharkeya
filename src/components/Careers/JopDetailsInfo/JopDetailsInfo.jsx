@@ -52,7 +52,7 @@ export default function JopDetailsInfo() {
           </button>
         </div>
 
-        {showModal && <ApplyModal onClose={handleClose} />}
+        {showModal && <ApplyModal onClose={handleClose} jobId={job.id} />}
       </div>
     </section>
   )
