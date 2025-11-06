@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import styles from "./VideoSection.module.css";
 
-export default function VideoSection() {
+export default function VideoSection({ videoUrl}) {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -38,7 +38,10 @@ export default function VideoSection() {
             onPlay={handlePlay}
             onPause={handlePause}
           >
-            <source src="/img/homepage/video.mp4" type="video/mp4" />
+            <source
+              src={videoUrl}
+              type="video/mp4"
+            />
           </video>
         </div>
       </div>
