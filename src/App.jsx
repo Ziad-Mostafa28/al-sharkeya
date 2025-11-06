@@ -40,6 +40,7 @@ import OurCustomerPage from './pages/OurCustomerPage/OurCustomerPage';
 import SugarHistory from './pages/SugarHistory/SugarHistory';
 import { ToastContainer } from 'react-toastify';
 import Verify from './pages/Verify/Verify';
+import ProductDetails from './pages/ProductDetails/ProductDetails';
 
 
 
@@ -77,9 +78,12 @@ const router = createBrowserRouter([
       { path: 'facts-about-sugar', element: <FactsPage /> },
 
       { path: 'our-products/overview', element: <Overview /> },
-      { path: 'our-products/white-sugar', element: <WhiteSugar /> },
-      { path: 'our-products/molasses', element: <Molasses /> },
-      { path: 'our-products/pellets', element: <Pellets /> },
+      // { path: 'our-products/white-sugar', element: <WhiteSugar /> },
+      // { path: 'our-products/molasses', element: <Molasses /> },
+      // { path: 'our-products/pellets', element: <Pellets /> },
+
+      { path: 'our-products/:id', element: <ProductDetails /> },
+
       { path: 'careers', element: <Careers /> },
       { path: 'careers/job-details', element: <JopDetails /> },
       { path: 'contact-us', element: <ContactUs /> },

@@ -30,6 +30,8 @@ import codeOfConductReducer from "./slices/CodeOfConductSlice";
 import homeWithOrderingReducer from "./slices/homeWithOrderingSlice";
 import careersReducer from "./slices/careersSlice";
 import careersJobsReducer from "./slices/careersJobsSlice";
+import productsOverviewReducer from "./slices/productsOverview";
+import productsReducer from "./slices/productsHeaderList";
 
 
 
@@ -62,6 +64,10 @@ const store = configureStore({
    homeWithOrdering:homeWithOrderingReducer,
    careers: careersReducer,
    careersJobs: careersJobsReducer, 
+  productsOverview: productsOverviewReducer,
+    products: productsReducer,
+
+
   },
 });
 
