@@ -40,6 +40,7 @@ export default function ProductDetails() {
   const sections = Object.entries(data.sections || {})
     .filter(([key, section]) => !section.hide)
     .sort((a, b) => (a[1].ordering || 0) - (b[1].ordering || 0));
+    
 
   return (
     <>
