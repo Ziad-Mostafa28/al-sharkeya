@@ -28,7 +28,6 @@ import { fetchCodeOfConductData } from '../../store/slices/CodeOfConductSlice';
 import { fetchHomeWithOrderingData } from '../../store/slices/homeWithOrderingSlice';
 import { fetchCareersData } from '../../store/slices/careersSlice';
 import { fetchProductsOverviewData } from '../../store/slices/productsOverview';
-import { fetchProductsData } from '../../store/slices/productsHeaderList';
 
 export default function MainLayout() {
   const dispatch = useDispatch();
@@ -76,7 +75,6 @@ export default function MainLayout() {
     dispatch(fetchHomeWithOrderingData (lang));
     dispatch(fetchCareersData (lang));
     dispatch(fetchProductsOverviewData (lang));
-    dispatch(fetchProductsData (lang));
 
 
 

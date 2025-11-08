@@ -1,20 +1,17 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axiosInstance from "../../utils/axiosInstance";
 
-// ✅ Fetch Products Data
+// Fetch product by ID
 export const fetchProductsData = createAsyncThunk(
   "products/fetchProductsData",
-  async (lang, thunkAPI) => {
+  async (id, thunkAPI) => {
     try {
-      const response = await axiosInstance.get("/products/", {
-        headers: {
-          "Accept-Language": lang,
-        },
-      });
-      return response.data;
+      const response = await axiosInstance.get(`/products/${id}`);
+      // ⚠️ هنا ناخد فقط response.data.data وليس كامل response
+      return response.data.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(
-        error.response?.data || "Failed to fetch products"
+        error.response?.data || { message: "Failed to fetch products" }
       );
     }
   }
@@ -36,11 +33,12 @@ const productsSlice = createSlice({
       })
       .addCase(fetchProductsData.fulfilled, (state, action) => {
         state.loading = false;
-        state.data = action.payload;
+        state.data = action.payload; // الآن هذا فقط object الـ data من الـ API
       })
       .addCase(fetchProductsData.rejected, (state, action) => {
         state.loading = false;
-        state.error = action.payload;
+        // نتأكد أن error نص وليس object
+        state.error = action.payload?.message || action.payload || "Failed to fetch products";
       });
   },
 });
