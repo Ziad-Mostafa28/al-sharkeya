@@ -11,7 +11,6 @@ export const fetchCareersData = createAsyncThunk(
           "Accept-Language": lang,
         },
       });
-      console.log(response.data);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(

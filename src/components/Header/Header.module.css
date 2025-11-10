@@ -255,6 +255,8 @@
   border: 0 !important;
   width: 200px;
   padding: 0 !important;
+  
+  
 }
 
 .linkmenudesktop .limenu {
@@ -284,6 +286,9 @@
   color: white !important;
   padding: 0 !important;
   font-size: 0.8rem;
+   white-space: normal !important; /* هذا يسمح بتكسر الأسطر */
+  word-break: break-word;         /* هذا يكسر الكلمات الطويلة بدون مسافات */
+  overflow-wrap: break-word; 
 }
 
 .linkmenudesktop .limenu a:hover {
@@ -300,3 +305,8 @@
   font-size: 0.8rem !important;
   color: rgb(255 255 255 / 70%) !important;
 }
+
+
+
+
+

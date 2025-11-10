@@ -5,6 +5,8 @@ import { useSelector } from "react-redux";
 
 export default function OurProducts() {
   const { data } = useSelector((state) => state.homeWithOrdering);
+    const lang = useSelector((state) => state.lang.lang);
+  
 
   const productsList =
     data?.data?.sections?.find((section) => section.products)?.products?.list || [];
@@ -12,11 +14,7 @@ export default function OurProducts() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
-  const staticLinks = [
-    "our-products/white-sugar",
-    "our-products/molasses",
-    "our-products/pellets",
-  ];
+
 
   useEffect(() => {
     if (productsList.length > 0 && activeIndex >= productsList.length) {
@@ -79,12 +77,19 @@ export default function OurProducts() {
               dangerouslySetInnerHTML={{ __html: activeProduct.description }}
             ></div>
 
-            <Link
+            {/* <Link
               to={staticLinks[activeIndex] || "#"}
               className={styles.readMore}
             >
               Read more
+            </Link> */}
+            <Link
+              to={`/${lang}/our-products/${activeProduct.id}`}   
+              className={styles.readMore}
+            >
+              Read more
             </Link>
+
           </div>
         </div>
       </div>

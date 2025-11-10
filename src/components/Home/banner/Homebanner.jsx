@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
-// import 'swiper/css/pagination';
 
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -12,11 +11,17 @@ import { useSelector } from 'react-redux';
 export default function HomeBanner() {
 
 
-  const { data} = useSelector((state) => state.homeWithOrdering);
+  const { data,loading} = useSelector((state) => state.homeWithOrdering);
+  const lang = useSelector((state) => state.lang.lang);
+  if (loading || !data?.data) return null;
+
+
   const news = data?.data?.banners || [];
   const main = news?.main || {};
   const slides = news?.slides || [];
   const logos = news?.logos || [];
+
+  
 
   return (
     <>
@@ -48,16 +53,14 @@ export default function HomeBanner() {
         )}
 
         <Swiper
-          dir={document.dir === "rtl" ? "rtl" : "ltr"}
-          effect="fade"
-          fadeEffect={{ crossFade: true }}
-          modules={[EffectFade, Autoplay]}
-          autoplay={{
-            delay: 4000,
-            disableOnInteraction: false,
-          }}
-          loop={true}
-          className="mySwiper h-100"
+        key={lang} 
+        dir={lang === "ar" ? "rtl" : "ltr"}
+        effect="fade"
+        fadeEffect={{ crossFade: true }}
+        modules={[EffectFade, Autoplay]}
+        autoplay={{ delay: 4000, disableOnInteraction: false }}
+        loop={true}
+        className="mySwiper h-100"
         >
           {slides.map((item, index) => (
             <SwiperSlide key={index} className={styles.slideWrapper}>

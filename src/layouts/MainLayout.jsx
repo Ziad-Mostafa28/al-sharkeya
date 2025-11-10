@@ -34,24 +34,44 @@ export default function MainLayout() {
   const location = useLocation();
   const lang = useSelector((state) => state.lang.lang);
 
-  useEffect(() => {
+  // useEffect(() => {
+  //   const urlLang = location.pathname.split("/")[1];
+  //   if (urlLang === "ar" || urlLang === "en") {
+  //     if (urlLang !== lang) {
+  //       dispatch(setLanguage(urlLang));
+  //     }
+  //   } else {
+  //     const savedLang = localStorage.getItem("lang") || "en";
+  //     window.location.replace(`/${savedLang}`);
+  //   }
+  // }, [location, lang, dispatch]);
+
+
+  // useEffect(() => {
+  //   const dir = lang === "ar" ? "rtl" : "ltr";
+  //   document.documentElement.setAttribute("dir", dir);
+  //   document.documentElement.setAttribute("lang", lang);
+  // }, [lang]);
+
+
+    useEffect(() => {
     const urlLang = location.pathname.split("/")[1];
     if (urlLang === "ar" || urlLang === "en") {
-      if (urlLang !== lang) {
-        dispatch(setLanguage(urlLang));
-      }
+      dispatch(setLanguage(urlLang));
     } else {
       const savedLang = localStorage.getItem("lang") || "en";
       window.location.replace(`/${savedLang}`);
     }
-  }, [location, lang, dispatch]);
-
+  }, [location]);
 
   useEffect(() => {
     const dir = lang === "ar" ? "rtl" : "ltr";
     document.documentElement.setAttribute("dir", dir);
     document.documentElement.setAttribute("lang", lang);
   }, [lang]);
+
+
+  
 
   useEffect(() => {
     dispatch(fetchHomeData(lang));
@@ -75,7 +95,6 @@ export default function MainLayout() {
     dispatch(fetchHomeWithOrderingData (lang));
     dispatch(fetchCareersData (lang));
     dispatch(fetchProductsOverviewData (lang));
-
 
 
 

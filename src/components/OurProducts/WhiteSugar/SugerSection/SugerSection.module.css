@@ -1,5 +1,7 @@
 .SugerSection {
-  padding: 5rem 0 3.125rem 0;
+  padding: 0rem 0 3.125rem 0;
+  margin: 5rem 0rem 0 0rem;
+
   background-color: #fff;
   text-align: center;
 }

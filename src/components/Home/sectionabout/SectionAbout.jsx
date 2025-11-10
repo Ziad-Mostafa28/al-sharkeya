@@ -78,7 +78,7 @@
 
 
 
-import React from 'react'
+import React, { Suspense } from 'react'
 import styles from "./SectionAbout.module.css";
 import CountUp from 'react-countup';
 import { Link } from 'react-router-dom';
@@ -89,6 +89,8 @@ export default function SectionAbout() {
    const { data } = useSelector((state) => state.homeWithOrdering);
   const aboutList =
     data?.data?.sections?.find((section) => section.about)?.about?.list;
+    const VideoSection = React.lazy(() => import("../video/VideoSection"));
+
 
   return (
     <>
@@ -180,11 +182,13 @@ export default function SectionAbout() {
                   className={styles.first_image}
                   src={aboutList?.home_first_image}
                   alt="about-1"
+                  loading="lazy"
                 />
                 <img
                   className={styles.second_image}
                   src={aboutList?.home_second_image}
                   alt="about-2"
+                   loading="lazy"
                 />
               </div>
             </div>
@@ -193,7 +197,9 @@ export default function SectionAbout() {
       </section>
 
       {/* Video Section */}
-      <VideoSection videoUrl={aboutList?.home_video} />
+      <Suspense fallback={<div>Loading video...</div>}>
+        <VideoSection videoUrl={aboutList?.home_video} />
+      </Suspense>
     </>
   );
 }

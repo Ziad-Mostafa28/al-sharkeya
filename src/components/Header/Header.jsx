@@ -1,9 +1,10 @@
 import { FaSearch, FaBars, FaChevronDown } from "react-icons/fa";
 import styles from "./Header.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setLanguage } from "../../../store/slices/langSlice";
+import axiosInstance from "../../../utils/axiosInstance";
 
 
 export default function Header() {
@@ -12,28 +13,48 @@ export default function Header() {
   const lang = useSelector((state) => state.lang.lang);
   const navigate = useNavigate();
   const location = useLocation();
+  const [products, setProducts] = useState([]);
 
-  // const toggleLang = (e) => {
-  //     // لو استدعيت من عنصر a/button ما نحتاج preventDefault لأن نحن نستخدم button
-  //     const newLang = lang === "en" ? "ar" : "en";
-  //     localStorage.setItem("lang", newLang);
-
-  //     // suffix = كل الباقي بعد /en أو /ar أو كامل الباث لو مفيهوش prefix
-  //     const suffix = location.pathname.replace(/^\/(en|ar)/, "");
-  //     const newPath = `/${newLang}${suffix}${location.search || ""}${location.hash || ""}`;
-
-  //     console.log("[toggleLang] from:", location.pathname, "to:", newPath);
-
-  //     dispatch(setLanguage(newLang));
-  //     navigate(newPath, { replace: true });
-  //   };
-
-  const toggleLang = () => {
-    const newLang = lang === "en" ? "ar" : "en";
-    const newPath = location.pathname.replace(/^\/(ar|en)/, `/${newLang}`);
-    dispatch(setLanguage(newLang));
-    navigate(newPath);
+  
+useEffect(() => {
+  const fetchProducts = async () => {
+    try {
+      const response = await axiosInstance.get("/products");
+      const productsArray = response.data?.data?.products || [];
+      setProducts(productsArray);
+    } catch (err) {
+      console.error("Failed to fetch products:", err);
+      setProducts([]);
+    }
   };
+  fetchProducts();
+}, []);
+
+
+
+
+
+  const toggleLang = (e) => {
+      const newLang = lang === "en" ? "ar" : "en";
+      localStorage.setItem("lang", newLang);
+      const suffix = location.pathname.replace(/^\/(en|ar)/, "");
+      const newPath = `/${newLang}${suffix}${location.search || ""}${location.hash || ""}`;
+
+      console.log("[toggleLang] from:", location.pathname, "to:", newPath);
+
+      dispatch(setLanguage(newLang));
+      navigate(newPath, { replace: true });
+    };
+
+  // const toggleLang = () => {
+  //   const newLang = lang === "en" ? "ar" : "en";
+  //   const newPath = location.pathname.replace(/^\/(ar|en)/, `/${newLang}`);
+  //   dispatch(setLanguage(newLang));
+  //   navigate(newPath);
+  // };
+
+
+
 
 
   const [dropdownOpen, setDropdownOpen] = useState({
@@ -145,7 +166,7 @@ export default function Header() {
                     </svg>
 
                   </a>
-                  <ul className={`dropdown-menu ${styles.linkmenudesktop}`} >
+                  {/* <ul className={`dropdown-menu ${styles.linkmenudesktop}`} >
                     <li className={`${styles.limenu}`}>
                       <Link className="dropdown-item" to="our-products/overview">
                         Overview
@@ -166,7 +187,30 @@ export default function Header() {
                         Pellets
                       </Link>
                     </li>
+
+                  </ul> */}
+
+                  <ul className={`dropdown-menu ${styles.linkmenudesktop}`}>
+                     <li className={`${styles.limenu}`}>
+                      <Link className="dropdown-item" to="our-products/overview">
+                        Overview
+                      </Link>
+                    </li>
+                    {products.length > 0 ? (
+                      products.map((product) => (
+                        <li key={product.id} className={styles.limenu}>
+                          <Link className="dropdown-item" to={`our-products/${product.id}`}>
+                            {product.name}
+                          </Link>
+                        </li>
+                      ))
+                    ) : (
+                      <li className={styles.limenu}>
+                        <span className="dropdown-item">No products found</span>
+                      </li>
+                    )}
                   </ul>
+
                 </li>
                 <li className="nav-item dropdown">
                   <a
@@ -255,9 +299,9 @@ export default function Header() {
 
           {/* Desktop Right Controls */}
           <div className="d-flex align-items-center gap-3">
-            {/* <button  onClick={toggleLang} className="text-white">
+            <button  onClick={toggleLang} className="text-white">
               {lang === 'en' ? 'AR' : 'EN'}
-            </button> */}
+            </button>
 
             {/* search button */}
             {/* <button className="btn btn-link p-0 text-white" onClick={() => setSearchOpen(true)}>
@@ -290,9 +334,9 @@ export default function Header() {
           <div
             className={`d-flex align-items-center gap-3 ${styles.mobileCenter}`}
           >
-            {/* <button  onClick={toggleLang} className="text-white">
+            <button  onClick={toggleLang} className="text-white">
               {lang === 'en' ? 'AR' : 'EN'}
-            </button> */}
+            </button>
 
 
             {/* search button in mobile */}
