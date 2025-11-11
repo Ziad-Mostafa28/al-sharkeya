@@ -143,6 +143,9 @@ export default function SectionAbout() {
                   {/* Tons per Year */}
                   <div className={styles.smallbox}>
                     <div className={styles.numberBox}>
+                       <span className={styles.plus}>
+                        {aboutList?.anually_tons?.includes("+") ? "+" : ""}
+                      </span>
                       <CountUp
                         end={
                           parseInt(
@@ -153,9 +156,7 @@ export default function SectionAbout() {
                         enableScrollSpy
                         scrollSpyOnce
                       />
-                      <span className={styles.plus}>
-                        {aboutList?.anually_tons?.includes("+") ? "+" : ""}
-                      </span>
+                     
                       <span className={styles.k}>K</span>
                     </div>
                     <div className={styles.descc}>

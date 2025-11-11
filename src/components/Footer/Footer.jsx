@@ -42,7 +42,9 @@ function Footer() {
         </div>
 
         <div className={styles.mainFooter}>
-          <img className={styles.bottomlogo} src="/img/homepage/bottom.png" alt="" />
+          <div className={styles.bottomlogoo}>
+            <img className={styles.bottomlogo} src="/img/homepage/bottom.png" alt="imglogo" />
+          </div>
           <div className="row">
             <div className={`col-sm-6 col-md-4 col-lg-4 col-xl-2 ${styles.colSpacing}`}>
               <Link to={`/${lang}`}>
@@ -104,7 +106,7 @@ function Footer() {
           </div>
           <div className={styles.bottomFooter}>
             <p>© 2025 Al Sharkeya Sugar Manufacturing. All Right Reserved.</p>
-            <p className='d-flex gap-3'><Link to='https://icon-creations.com/' target='_blank' ><img src="/img/homepage/icon.png" alt="" /></Link></p>
+            <p className='d-flex gap-3'><Link to='https://icon-creations.com/' target='_blank' ><img src="/img/homepage/icon.png" className="w-100 h-auto" alt="" /></Link></p>
             <div className='d-flex gap-3'>
               <p>
                 <Link to='terms-of-service'>Terms of Service</Link>

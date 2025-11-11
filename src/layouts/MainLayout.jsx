@@ -100,6 +100,41 @@ export default function MainLayout() {
 
   }, [lang, dispatch]);
 
+//   useEffect(() => {
+//   const actions = [
+//         fetchHomeWithOrderingData,
+
+//     fetchRecipesData,
+//     fetchNewsData,
+//     fetchCertificationsData,
+//     fetchCustomersData,
+//     fetchWhoWeAre,
+//     fetchAboutHistory,
+//     fetchAboutShareholders,
+//     fetchBoardMembers,
+//     fetchManagementTeam,
+//     fetchFaqsData,
+//     fetchStrategy,
+//     fetchBranchesData,
+//     fetchSugarHistory,
+//     fetchSugarFacts,
+//     fetchSustainability,
+//     fetchDownloadBrochure,
+//     fetchCodeOfConductData,
+//     fetchCareersData,
+//     fetchProductsOverviewData,
+//   ];
+
+//   let delay = 0;
+//   actions.forEach((action) => {
+//     setTimeout(() => {
+//       dispatch(action(lang));
+//     }, delay);
+//     delay += 300; // كل 300ms request جديد
+//   });
+// }, [lang, dispatch]);
+
+
   return (
     <>
       <Header />

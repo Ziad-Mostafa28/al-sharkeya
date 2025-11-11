@@ -68,7 +68,16 @@
     position: relative;
 }
 
+
 .bottomlogo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.bottomlogoo {
+ 
+
+
     position: absolute;
     right: 0;
     bottom: 0;
@@ -128,6 +137,13 @@
 
 .colSpacing {
     z-index: 20;
+}
+
+.colSpacing img {
+    z-index: 20;
+    width: 11.813rem;
+    height:8.938rem;
+    object-fit: contain;
 }
 
 @media (max-width: 1200px) {

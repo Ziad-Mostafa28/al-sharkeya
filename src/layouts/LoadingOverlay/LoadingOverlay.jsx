@@ -4,7 +4,7 @@ import { ClipLoader } from 'react-spinners';
 import styles from './LoadingOverlay.module.css';
 
 export default function LoadingOverlay() {
-   const loading = useSelector((state) => state.home.loading);
+   const loading = useSelector((state) => state.homeWithOrdering.loading);
   if (!loading) return null;
 
   return (
