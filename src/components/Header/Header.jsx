@@ -15,6 +15,8 @@ export default function Header() {
   const location = useLocation();
   const [products, setProducts] = useState([]);
 
+  const isArabic= lang === 'ar';
+
   
 useEffect(() => {
   const fetchProducts = async () => {
@@ -114,7 +116,9 @@ useEffect(() => {
                 <li className="nav-item">
                   <a className={`nav-link dropdown-toggle ${styles.linkmenu}`} role="button"
                     data-bs-toggle="dropdown" href="#">
-                    About Us
+                    {isArabic? ' معلومات عنا' : 'About Us'}
+
+                    
                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
                       <path d="M7.25816 10.809C6.84848 10.809 6.43881 10.651 6.12863 10.3408L2.31284 6.52499C2.14312 6.35527 2.14312 6.07436 2.31284 5.90463C2.48256 5.73491 2.76348 5.73491 2.9332 5.90463L6.74899 9.72043C7.02991 10.0013 7.4864 10.0013 7.76732 9.72043L11.5831 5.90463C11.7528 5.73491 12.0338 5.73491 12.2035 5.90463C12.3732 6.07436 12.3732 6.35527 12.2035 6.52499L8.38768 10.3408C8.0775 10.651 7.66783 10.809 7.25816 10.809Z" fill="white" stroke="white" stroke-width="0.501638" />
                     </svg>            
@@ -122,12 +126,12 @@ useEffect(() => {
                   <ul className={`dropdown-menu ${styles.linkmenudesktop}`} >
                     <li className={`${styles.limenu}`}>
                       <Link className="dropdown-item" to="about-us/who-we-are">
-                        Who We Are
+                        {isArabic ? 'من نحن' : 'Who We Are'}
                       </Link>
                     </li>
                     <li className={`${styles.limenu}`}>
                       <Link className="dropdown-item" to="about-us/our-strategy">
-                        Our Strategy
+                         {isArabic ? 'استراتيجيتنا' : 'Our Strategy'}
                       </Link>
                     </li>
                     {/* <li className={`${styles.limenu}`}>
@@ -137,17 +141,17 @@ useEffect(() => {
                     </li> */}
                     <li className={`${styles.limenu}`}>
                       <Link className="dropdown-item" to="about-us/our-shareholders">
-                        Our Shareholders
+                        {isArabic ? 'المساهمون' : 'Our Shareholders'}
                       </Link>
                     </li>
                     <li className={`${styles.limenu}`}>
                       <Link className="dropdown-item" to="about-us/board-members">
-                        Board Members
+                        {isArabic ? 'مجلس الإدارة' : 'Board Members'}
                       </Link>
                     </li>
                     <li className={`${styles.limenu}`}>
                       <Link className="dropdown-item" to="about-us/management-team">
-                        Management Team 
+                       {isArabic ? 'فريق الإدارة' : 'Management Team'}
                       </Link>
                     </li>
                   </ul>
@@ -159,7 +163,7 @@ useEffect(() => {
                     role="button"
                     data-bs-toggle="dropdown"
                   >
-                    Our Products
+                  {isArabic ? 'منتجاتنا' : 'Our Products'}
                     {/* <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="_chevronIcon_4vcs0_385 mx-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg> */}
                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
                       <path d="M7.25816 10.809C6.84848 10.809 6.43881 10.651 6.12863 10.3408L2.31284 6.52499C2.14312 6.35527 2.14312 6.07436 2.31284 5.90463C2.48256 5.73491 2.76348 5.73491 2.9332 5.90463L6.74899 9.72043C7.02991 10.0013 7.4864 10.0013 7.76732 9.72043L11.5831 5.90463C11.7528 5.73491 12.0338 5.73491 12.2035 5.90463C12.3732 6.07436 12.3732 6.35527 12.2035 6.52499L8.38768 10.3408C8.0775 10.651 7.66783 10.809 7.25816 10.809Z" fill="white" stroke="white" stroke-width="0.501638" />
@@ -169,7 +173,8 @@ useEffect(() => {
                   {/* <ul className={`dropdown-menu ${styles.linkmenudesktop}`} >
                     <li className={`${styles.limenu}`}>
                       <Link className="dropdown-item" to="our-products/overview">
-                        Overview
+                               {isArabic ? 'نظرة عامة' : 'Overview'}
+
                       </Link>
                     </li>
                     <li className={`${styles.limenu}`}>
@@ -193,7 +198,7 @@ useEffect(() => {
                   <ul className={`dropdown-menu ${styles.linkmenudesktop}`}>
                      <li className={`${styles.limenu}`}>
                       <Link className="dropdown-item" to="our-products/overview">
-                        Overview
+                          {isArabic ? 'نظرة عامة' : 'Overview'}
                       </Link>
                     </li>
                     {products.length > 0 ? (
@@ -219,7 +224,7 @@ useEffect(() => {
                     role="button"
                     data-bs-toggle="dropdown"
                   >
-                    Our Responsibilities
+                    {isArabic ? 'مسؤولياتنا' : 'Our Responsibilities'}
                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
                       <path d="M7.25816 10.809C6.84848 10.809 6.43881 10.651 6.12863 10.3408L2.31284 6.52499C2.14312 6.35527 2.14312 6.07436 2.31284 5.90463C2.48256 5.73491 2.76348 5.73491 2.9332 5.90463L6.74899 9.72043C7.02991 10.0013 7.4864 10.0013 7.76732 9.72043L11.5831 5.90463C11.7528 5.73491 12.0338 5.73491 12.2035 5.90463C12.3732 6.07436 12.3732 6.35527 12.2035 6.52499L8.38768 10.3408C8.0775 10.651 7.66783 10.809 7.25816 10.809Z" fill="white" stroke="white" stroke-width="0.501638" />
                     </svg>
@@ -228,22 +233,22 @@ useEffect(() => {
                   <ul className={`dropdown-menu ${styles.linkmenudesktop}`}>
                     <li className={`${styles.limenu}`}>
                       <Link className="dropdown-item" to="our-responsibilities/certifications">
-                        Certifications
+                       {isArabic ? 'الشهادات' : 'Certifications'}
                       </Link>
                     </li>
                     <li className={`${styles.limenu}`}>
                       <Link className="dropdown-item" to="our-responsibilities/sustainability">
-                        Sustainability
+                       {isArabic ? 'الاستدامة' : 'Sustainability'}
                       </Link>
                     </li>
                     {/* <li className={`${styles.limenu}`}>
                       <Link className="dropdown-item" to="our-responsibilities/csr">
-                        CSR
+                        {isArabic ? 'المسؤولية المجتمعية' : 'CSR'}
                       </Link>
                     </li> */}
                     <li className={`${styles.limenu}`}>
                       <Link className="dropdown-item" to="our-responsibilities/codeconduct">
-                        Code of Conduct
+                         {isArabic ? 'ميثاق السلوك' : 'Code of Conduct'}
                       </Link>
                     </li>
                   </ul>
@@ -251,7 +256,7 @@ useEffect(() => {
 
                 <li className="nav-item">
                   <Link className={`nav-link ${styles.linkmenu}`} to={"careers"}>
-                    Careers
+                    {isArabic ? 'الوظائف' : 'Careers'}
                   </Link>
                 </li>
                 <li className="nav-item dropdown">
@@ -261,36 +266,36 @@ useEffect(() => {
                     role="button"
                     data-bs-toggle="dropdown"
                   >
-                    Resources
+                    {isArabic ? 'الموارد' : 'Resources'}
                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
                       <path d="M7.25816 10.809C6.84848 10.809 6.43881 10.651 6.12863 10.3408L2.31284 6.52499C2.14312 6.35527 2.14312 6.07436 2.31284 5.90463C2.48256 5.73491 2.76348 5.73491 2.9332 5.90463L6.74899 9.72043C7.02991 10.0013 7.4864 10.0013 7.76732 9.72043L11.5831 5.90463C11.7528 5.73491 12.0338 5.73491 12.2035 5.90463C12.3732 6.07436 12.3732 6.35527 12.2035 6.52499L8.38768 10.3408C8.0775 10.651 7.66783 10.809 7.25816 10.809Z" fill="white" stroke="white" stroke-width="0.501638" />
                     </svg>                  </a>
                   <ul className={`dropdown-menu ${styles.linkmenudesktop}`}>
                     <li className={`${styles.limenu}`} >
                       <Link className="dropdown-item" to={'sugar-history'}>
-                        Sugar History
+                        {isArabic ? 'تاريخ السكر' : 'Sugar History'}
                       </Link>
                     </li>
                     {/* <li className={`${styles.limenu}`}>
                       <Link className="dropdown-item" to="recipes">
-                        Recipes
+                         {isArabic ? 'الوصفات' : 'Recipes'}
                       </Link>
                     </li> */}
                     <li className={`${styles.limenu}`}>
                       <Link className="dropdown-item" to="facts-about-sugar">
-                        Facts About Sugar
+                        {isArabic ? 'حقائق عن السكر' : 'Facts About Sugar'}
                       </Link>
                     </li>
                   </ul>
                 </li>
                 <li className="nav-item">
                   <Link className={`nav-link ${styles.linkmenu}`} to={"news"}>
-                    News
+                    {isArabic ? 'الأخبار' : 'News'}
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className={`nav-link ${styles.linkmenu}`} to={"faqs"}>
-                    FAQs
+                    {isArabic ? 'الأسئلة الشائعة' : 'FAQs'}
                   </Link>
                 </li>
               </ul>
@@ -311,7 +316,8 @@ useEffect(() => {
 
               className="btn rounded-pill px-3 bg-light text-success border-0"
             >
-              Contact Us
+              {isArabic ? 'تواصل معنا ' : 'Contact Us'}
+
             </Link>
           </div>
         </div>
@@ -322,12 +328,12 @@ useEffect(() => {
         <div className="container-fluid d-flex align-items-center justify-content-between position-relative">
           {/* Logo */}
           <div className="d-flex align-items-center">
-            <a href="/">
+            <Link href="/">
               <img
                 src="/img/homepage/logo.png"
                 alt="Al Sharkeya Sugar"
                 style={{ height: "5rem" }}
-              /></a>
+              /></Link>
           </div>
 
           {/* Mobile Center Controls - AR and Search (hidden when menu is open) */}
@@ -376,7 +382,7 @@ useEffect(() => {
                   className={`nav-link ${styles.linkmenu} w-100 d-flex justify-content-center align-items-center gap-2`}
                   onClick={() => toggleDropdown('aboutus')}
                 >
-                  About Us
+                   {isArabic ? 'معلومات عنا' : 'About Us'}
                   <FaChevronDown
                     className={`${styles.chevronIcon} ${dropdownOpen.aboutus ? styles.rotated : ''}`}
                   />
@@ -386,12 +392,12 @@ useEffect(() => {
                   <ul className="list-unstyled">
                     <li>
                       <Link className={`nav-link text-white ${styles.nav_link2}`} to="about-us/who-we-are" onClick={closeMenu}>
-                        Who We Are
+                        {isArabic ? 'من نحن' : 'Who We Are'}
                       </Link>
                     </li>
                     <li>
                       <Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="about-us/our-strategy">
-                        Our Strategy
+                         {isArabic ? 'استراتيجيتنا' : 'Our Strategy'}
                       </Link>
                     </li>
                     {/* <li>
@@ -401,17 +407,17 @@ useEffect(() => {
                     </li> */}
                     <li>
                       <Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="about-us/our-shareholders">
-                        Our Shareholders
+                        {isArabic ? 'المساهمون لدينا' : 'Our Shareholders'}
                       </Link>
                     </li>
                     <li>
                       <Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="about-us/board-members">
-                        Board Members
+                       {isArabic ? 'أعضاء المجلس' : 'Board Members'}
                       </Link>
                     </li>
                     <li>
                       <Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="about-us/management-team">
-                        Management Team
+                        {isArabic ? 'فريق الإدارة' : 'Management Team'}
                       </Link>
                     </li>
                   </ul>
@@ -424,20 +430,55 @@ useEffect(() => {
                   className={`nav-link ${styles.linkmenu} w-100 d-flex justify-content-center align-items-center gap-2`}
                   onClick={() => toggleDropdown('products')}
                 >
-                  Our Products
+                  {isArabic ? 'منتجاتنا' : 'Our Products'}
                   <FaChevronDown
                     className={`${styles.chevronIcon} ${dropdownOpen.products ? styles.rotated : ''}`}
                   />
                 </button>
 
+                {/* {dropdownOpen.products && (
+                  <ul className="list-unstyled">
+                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="our-products/overview">{isArabic ? 'نظرة عامة' : 'Overview'}</Link></li>
+                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="our-products/white-sugar">{isArabic ? 'السكر الأبيض' : 'White Sugar'}</Link></li>
+                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="our-products/molasses">{isArabic ? 'الدبس' : 'Molasses'}</Link></li>
+                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to={'our-products/pellets'}>{isArabic ? 'الحبيبات' : 'Pellets'}</Link></li>
+                  </ul>
+                )} */}
                 {dropdownOpen.products && (
                   <ul className="list-unstyled">
-                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="our-products/overview">Overview</Link></li>
-                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="our-products/white-sugar">White Sugar</Link></li>
-                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="our-products/molasses">Molasses</Link></li>
-                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to={'our-products/pellets'}>Pellets</Link></li>
+                    <li>
+                      <Link
+                        className={`nav-link text-white ${styles.nav_link2}`}
+                        onClick={closeMenu}
+                        to="our-products/overview"
+                      >
+                        {isArabic ? "نظرة عامة" : "Overview"}
+                      </Link>
+                    </li>
+
+                    {products.length > 0 ? (
+                      products.map((product) => (
+                        <li key={product.id}>
+                          <Link
+                            className={`nav-link text-white ${styles.nav_link2}`}
+                            onClick={closeMenu}
+                            to={`our-products/${product.id}`}
+                          >
+                            {product.name}
+                          </Link>
+                        </li>
+                      ))
+                    ) : (
+                      <li>
+                        <span className={`nav-link text-white ${styles.nav_link2}`}>
+                          {isArabic ? "لا توجد منتجات" : "No products found"}
+                        </span>
+                      </li>
+                    )}
                   </ul>
                 )}
+
+                
               </li>
 
               <li className="nav-item">
@@ -445,7 +486,7 @@ useEffect(() => {
                   className={`nav-link ${styles.linkmenu} w-100 d-flex justify-content-center align-items-center gap-2`}
                   onClick={() => toggleDropdown('sustainability')}
                 >
-                  Our Responsibilities
+                  {isArabic ? 'مسؤولياتنا' : 'Our Responsibilities'}
                   <FaChevronDown
                     className={`${styles.chevronIcon} ${dropdownOpen.sustainability ? styles.rotated : ''}`}
                   />
@@ -455,12 +496,12 @@ useEffect(() => {
                   <ul className="list-unstyled">
                     <li className={`${styles.limenu}`}>
                       <Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="our-responsibilities/certifications">
-                        Certifications
+                        {isArabic ? 'الشهادات' : 'Certifications'}
                       </Link>
                     </li>
                     <li className={`${styles.limenu}`}>
                       <Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="our-responsibilities/sustainability">
-                        Sustainability
+                         {isArabic ? 'الاستدامة' : 'Sustainability'}
                       </Link>
                     </li>
                     {/* <li className={`${styles.limenu}`}>
@@ -470,7 +511,7 @@ useEffect(() => {
                     </li> */}
                     <li className={`${styles.limenu}`}>
                       <Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="our-responsibilities/codeconduct">
-                        Code of Conduct
+                         {isArabic ? 'مدونة السلوك' : 'Code of Conduct'}
                       </Link>
                     </li>
 
@@ -481,7 +522,7 @@ useEffect(() => {
 
               <li className="nav-item">
                 <Link className={`nav-link ${styles.linkmenu}`} onClick={closeMenu} to={"careers"}>
-                  Careers
+                  {isArabic ? 'الوظائف' : 'Careers'}
                 </Link>
               </li>
 
@@ -491,7 +532,7 @@ useEffect(() => {
                   className={`nav-link ${styles.linkmenu} w-100 d-flex justify-content-center align-items-center gap-2`}
                   onClick={() => toggleDropdown('resources')}
                 >
-                  Resources
+                  {isArabic ? 'الموارد' : 'Resources'}
                   <FaChevronDown
                     className={`${styles.chevronIcon} ${dropdownOpen.resources ? styles.rotated : ''}`}
                   />
@@ -499,28 +540,28 @@ useEffect(() => {
                 {dropdownOpen.resources && (
                   <ul className="list-unstyled">
 
-                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to={'sugar-history'}>Sugar History</Link></li>
+                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to={'sugar-history'}> {isArabic ? 'تاريخ السكر' : 'Sugar History'}</Link></li>
                     {/* <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="recipes">Recipes</Link></li> */}
-                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="facts-about-sugar">Facts About Sugar</Link></li>
+                    <li><Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="facts-about-sugar">{isArabic ? 'حقائق عن السكر' : 'Facts About Sugar'}</Link></li>
 
                   </ul>
                 )}
               </li>
               <li className="nav-item">
                 <Link className={`nav-link ${styles.linkmenu}`} onClick={closeMenu} to={"news"}>
-                  News
+                  {isArabic ? 'الأخبار' : 'News'}
                 </Link>
               </li>
               <li className="nav-item">
                 <Link className={`nav-link ${styles.linkmenu}`} onClick={closeMenu} to={"faqs"}>
-                  FAQs
+                  {isArabic ? 'الأسئلة الشائعة' : 'FAQs'}
                 </Link>
               </li>
               <li className="nav-item mt-3">
                 <Link to={"contact-us"} onClick={closeMenu}
                   className="btn rounded-pill px-3 bg-light text-success border-0"
                 >
-                  Contact Us
+                  {isArabic ? 'تواصل معنا' : 'Contact Us'}
                 </Link>
               </li>
             </ul>

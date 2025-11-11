@@ -87,9 +87,11 @@ import { useSelector } from 'react-redux';
 
 export default function SectionAbout() {
    const { data } = useSelector((state) => state.homeWithOrdering);
+   const lang = useSelector((state) => state.lang.lang);
   const aboutList =
     data?.data?.sections?.find((section) => section.about)?.about?.list;
     const VideoSection = React.lazy(() => import("../video/VideoSection"));
+       const isArabic= lang === 'ar';
 
 
   return (
@@ -170,7 +172,7 @@ export default function SectionAbout() {
                 {/* Button */}
                 <div className="w-100 d-flex justify-content-center justify-content-lg-end">
                   <Link to={"about-us/who-we-are"}>
-                    <button>Read More</button>
+                    <button>              {isArabic? ' اقرأ المزيد' : ' Read more'}</button>
                   </Link>
                 </div>
               </div>

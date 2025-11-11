@@ -5,8 +5,8 @@ import { useSelector } from "react-redux";
 
 export default function OurProducts() {
   const { data } = useSelector((state) => state.homeWithOrdering);
-    const lang = useSelector((state) => state.lang.lang);
-  
+const lang = useSelector((state) => state.lang.lang);
+    const isArabic= lang === 'ar';  
 
   const productsList =
     data?.data?.sections?.find((section) => section.products)?.products?.list || [];
@@ -48,8 +48,8 @@ export default function OurProducts() {
           }`}
         />
 
-        <h1 className={styles.title}>Our Products</h1>
-
+        <h1 className={styles.title}>{isArabic? ' منتجاتنا' : 'Our Products'}</h1>
+         
         <div className={styles.content}>
           <div className={styles.header}>
             <div className={styles.navButtons}>
@@ -87,7 +87,8 @@ export default function OurProducts() {
               to={`/${lang}/our-products/${activeProduct.id}`}   
               className={styles.readMore}
             >
-              Read more
+             
+              {isArabic? ' اقرأ المزيد' : ' Read more'}
             </Link>
 
           </div>

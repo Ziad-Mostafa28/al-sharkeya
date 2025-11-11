@@ -39,6 +39,8 @@ import { useSelector } from 'react-redux';
 
 export default function OurCustomers() {
   const { data } = useSelector((state) => state.homeWithOrdering);
+  const lang = useSelector((state) => state.lang.lang);
+      const isArabic= lang === 'ar';  
 
   const ourCustomersSection = data?.data?.sections?.find(
     (section) => section.our_customers
@@ -50,9 +52,10 @@ export default function OurCustomers() {
     <section className={styles.ourCustomers}>
       <div>
         <div className="d-flex justify-content-between align-items-center mb-4">
-          <h3 className="fw-bold m-0">Our Customers</h3>
+          <h3 className="fw-bold m-0">{isArabic?"عملائنا" : 'Our Customers'}</h3>
           <Link to={'our-customer'} className={styles.viewAll}>
-            View all
+          {isArabic?"عرض الكل" : ' View all'}
+           
           </Link>
         </div>
 

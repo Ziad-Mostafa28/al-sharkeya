@@ -10,7 +10,11 @@ export default function ContactUs() {
   const [activeTab, setActiveTab] = useState("touch");
   const dispatch = useDispatch();
   const { loading, successMessage, errorMessage } = useSelector((state) => state.contact);
+  const lang = useSelector((state) => state.lang.lang);
   const currentLang = useSelector((state) => state.lang.lang);
+
+    const isArabic= lang === 'ar';  
+
 
   const {
     register,
@@ -46,7 +50,7 @@ export default function ContactUs() {
 
   return (
     <section className={styles.contactSection}>
-      <h2 className={styles.title}>Contact Us</h2>
+      <h2 className={styles.title}>{isArabic? "اتصل بنا" : "Contact Us"} </h2>
 
       <div className={styles.container}>
         {/* Left Form Section */}
