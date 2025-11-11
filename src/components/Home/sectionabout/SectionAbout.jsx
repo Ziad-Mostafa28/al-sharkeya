@@ -169,7 +169,7 @@ export default function SectionAbout() {
 
                 {/* Button */}
                 <div className="w-100 d-flex justify-content-center justify-content-lg-end">
-                  <Link to={"/about-us/who-we-are"}>
+                  <Link to={"about-us/who-we-are"}>
                     <button>Read More</button>
                   </Link>
                 </div>
