@@ -38,6 +38,8 @@ import { useSelector } from "react-redux";
 import SecBanner from "../../components/SharedComponents/SecBanner/SecBanner";
 import ProductStyle1 from "../../components/OurProducts/ProductStyle1/ProductStyle1";
 import ProductStyle2 from "../../components/OurProducts/ProductStyle2/ProductStyle2";
+import SugarProcessing from '../../components/OurProducts/Overview/SugarProcessing/SugarProcessing'
+
 
 export default function OurProducts() {
   const { data } = useSelector((state) => state.productsOverview);
@@ -60,6 +62,8 @@ export default function OurProducts() {
           <ProductStyle2 key={product.id} data={product} />
         );
       })}
+
+       <SugarProcessing/>
     </>
   );
 }
