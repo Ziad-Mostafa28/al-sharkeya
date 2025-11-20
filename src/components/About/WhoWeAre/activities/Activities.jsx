@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 export default function Activities() {
     const { data, loading } = useSelector((state) => state.aboutWhoWeAre);
     const lang = useSelector((state) => state.lang.lang);
+    const isArabic= lang === 'ar';  
 
     if (loading || !data) return null;
 
@@ -12,7 +13,7 @@ export default function Activities() {
 
     return (
         <section className={styles.activities}>
-            <h2>Our Activities</h2>
+            <h2> {isArabic?'أنشطتنا' : 'Our Activities'}  </h2>
 
             <div className="container">
                 <div className="row">

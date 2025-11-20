@@ -177,3 +177,8 @@ text-align: right;
   color: #444;
   font-weight: 400;
 }
+
+
+html[dir="rtl"] .input,.error{
+text-align: justify;
+}

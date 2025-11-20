@@ -16,7 +16,7 @@ export default function Verify() {
 
       <div className="flex justify-center my-12 mt-5">
         <iframe
-          src={`https://www.sharkeyasugar.com/verify-v2/?certID=${certID}`}
+          src={`https://demo.sharkeyasugar.com/verify-v2/?certID=${certID}`}
           width="100%"
           height="580"
           style={{ border: "none" }}

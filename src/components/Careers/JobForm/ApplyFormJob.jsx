@@ -37,8 +37,11 @@ import styles from "../JopDetailsInfo/JopDetailsInfo.module.css";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axiosInstance from "../../../../utils/axiosInstance";
+import { useSelector } from "react-redux";
 
 export default function ApplyFormJob({ onClose }) {
+      const lang = useSelector((state) => state.lang.lang);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -49,13 +52,11 @@ export default function ApplyFormJob({ onClose }) {
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
 
-  // ✅ Handle input change
   const handleChange = (e) => {
     const { name, value, files } = e.target;
     if (name === "cv") {
       setFormData({ ...formData, cv: files[0] });
     } else if (name === "phone") {
-      // 👇 السماح بالأرقام فقط
       const numericValue = value.replace(/\D/g, "");
       setFormData({ ...formData, [name]: numericValue });
     } else {
@@ -119,6 +120,7 @@ export default function ApplyFormJob({ onClose }) {
       setLoading(false);
     }
   };
+    const isArabic= lang === 'ar';  
 
   return (
     <div className={styles.overlay} onClick={onClose}>
@@ -127,7 +129,7 @@ export default function ApplyFormJob({ onClose }) {
           ×
         </button>
 
-        <h2 className={styles.title}>Apply your CV</h2>
+        <h2 className={styles.title}>{isArabic?'قم بتطبيق سيرتك الذاتية':'Apply your CV'}</h2>
 
         <form className={styles.form} onSubmit={handleSubmit}>
           {/* Name */}
@@ -135,7 +137,7 @@ export default function ApplyFormJob({ onClose }) {
             <input
               type="text"
               name="name"
-              placeholder="Your name"
+              placeholder={isArabic?'اسمك   ':'Your name'}
               value={formData.name}
               onChange={handleChange}
               className={errors.name ? styles.inputError : ""}
@@ -148,7 +150,7 @@ export default function ApplyFormJob({ onClose }) {
             <input
               type="email"
               name="email"
-              placeholder="Your email"
+              placeholder={isArabic?'البريد الإلكتروني الخاص بك   ':'Your email'}
               value={formData.email}
               onChange={handleChange}
               className={errors.email ? styles.inputError : ""}
@@ -161,7 +163,7 @@ export default function ApplyFormJob({ onClose }) {
             <input
               type="text"
               name="phone"
-              placeholder="Your mobile number"
+              placeholder={isArabic?'رقم هاتفك المحمول':'Your mobile number'}
               value={formData.phone}
               onChange={handleChange}
               onKeyDown={(e) => {
@@ -182,7 +184,10 @@ export default function ApplyFormJob({ onClose }) {
                 errors.cv ? styles.inputError : ""
               }`}
             >
-              Upload your CV
+              
+
+            {isArabic?'قم بتحميل سيرتك الذاتية (الحد الأقصى: 2 ميجابايت)':'Upload your CV (Max: 2MB)'}
+
               <input
                 type="file"
                 name="cv"
@@ -204,14 +209,15 @@ export default function ApplyFormJob({ onClose }) {
           {/* Buttons */}
           <div className={styles.btns}>
             <button type="submit" className={styles.sendBtn} disabled={loading}>
-              {loading ? <div className={styles.spinner}></div> : "Send"}
+              {loading ? <div className={styles.spinner}></div> :     isArabic?'ارسال':'Send'}
             </button>
             <button
               type="button"
               className={styles.cancelBtn}
               onClick={onClose}
             >
-              Cancel
+              
+              {isArabic?'الغاء' :' Cancel'}
             </button>
           </div>
         </form>

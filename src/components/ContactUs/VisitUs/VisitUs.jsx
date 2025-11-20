@@ -182,6 +182,9 @@ export default function VisitUs() {
   const { loading, successMessage, errorMessage, submitted } = useSelector((state) => state.visit);
   const currentLang = useSelector((state) => state.lang.lang);
 
+  
+   const isArabic= currentLang === 'ar';  
+
   const [selectedDate, setSelectedDate] = useState(null);
   const [currentMonth, setCurrentMonth] = useState(new Date().getMonth());
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
@@ -212,7 +215,13 @@ export default function VisitUs() {
 
   useEffect(() => {
     if (successMessage) {
-      toast.success(successMessage);
+      toast.success(successMessage,{
+            autoClose: 3000,    
+      closeOnClick: true,      
+      pauseOnHover: true,     
+      draggable: true,
+    });
+     
       reset();
       setSelectedDate(null);
       dispatch(resetVisitState());
@@ -258,9 +267,20 @@ export default function VisitUs() {
     <section className={styles.visitSection}>
       <div className="container">
         <div className="text-center mb-4">
-          <h2 className={styles.sectionTitle}>Request a Factory Visit</h2>
-          <p className={styles.sectionSubtitle}>Schools and colleges can visit our factory based on availability</p>
-          <p className={styles.sectionSubtitle}>Confirmation will be sent via email</p>
+          <h2 className={styles.sectionTitle}>
+                    {isArabic ? "طلب زيارة المصنع" : "Request a Factory Visit"}
+
+          </h2>
+          <p className={styles.sectionSubtitle}>
+             {isArabic
+          ? "يمكن للمدارس والجامعات زيارة المصنع حسب المواعيد المتاحة"
+          : "Schools and colleges can visit our factory based on availability"}
+          </p>
+          <p className={styles.sectionSubtitle}>
+             {isArabic
+          ? "سيتم إرسال التأكيد عبر البريد الإلكتروني"
+          : "Confirmation will be sent via email"}
+          </p>
 
 
 
@@ -269,15 +289,18 @@ export default function VisitUs() {
         <div className="row mt-5">
           {/* ✅ FORM */}
           <div className="col-md-6">
-            <h4 className={styles.formTitle}>Institution Information</h4>
+            <h4 className={styles.formTitle}>
+              {isArabic ? "معلومات المؤسسة" : "Institution Information"}
+
+            </h4>
 
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className={styles.inputGroup}>
                 <input
                   type="text"
-                  placeholder="name*"
+              placeholder={isArabic ? "الاسم*" : "name*"}
                   className={styles.inputField}
-                  {...register("name", { required: "Name is required" })}
+                  {...register("name", { required: isArabic ? "الاسم مطلوب" : "Name is required", })}
                 />
                 {errors.name && <p className={styles.errorMsg}>{errors.name.message}</p>}
               </div>
@@ -285,20 +308,23 @@ export default function VisitUs() {
               <div className={styles.inputGroup}>
                 <input
                   type="text"
-                  placeholder="institution name*"
+              placeholder={isArabic ? "اسم المؤسسة*" : "institution name*"}
                   className={styles.inputField}
-                  {...register("company", { required: "Company is required" })}
+                  {...register("company", {  required: isArabic
+                  ? "اسم المؤسسة مطلوب"
+                  : "Company is required", })}
                 />
                 {errors.company && <p className={styles.errorMsg}>{errors.company.message}</p>}
               </div>
 
-              <div className={styles.inputGroup}>
+              <div className={  styles.inputGroup}>
                 <input
                   type="tel"
-                  placeholder="mobile number*"
-                  className={styles.inputField}
+              placeholder={isArabic ? "رقم الهاتف المحمول*" : "mobile number*"}
+                  className={`${styles.inputField} ${styles.anotherClass}`}
+
                   {...register("phone", { 
-                    required: "Phone is required",
+                required: isArabic ? "رقم الهاتف مطلوب" : "Phone is required",
                     pattern: {
                       value: /^\+?\d{10,15}$/,
                       message: "Please enter a valid phone number",
@@ -311,15 +337,17 @@ export default function VisitUs() {
               <div className={styles.inputGroup}>
                 <input
                   type="email"
-                  placeholder="email*"
+              placeholder={isArabic ? "البريد الإلكتروني*" : "email*"}
                   className={styles.inputField}
-                  {...register("email", { required: "Email is required" })}
+                  {...register("email", {required: isArabic
+                  ? "البريد الإلكتروني مطلوب"
+                  : "Email is required",})}
                 />
                 {errors.email && <p className={styles.errorMsg}>{errors.email.message}</p>}
               </div>
 
               <button type="submit" className={styles.sendBtn} disabled={loading || submitted}>
-                {loading ? <div className={styles.spinner}></div> : "Send"}
+                {loading ? <div className={styles.spinner}></div> :  isArabic ? "إرسال" : "Send"}
               </button>
             </form>
           </div>

@@ -11,12 +11,14 @@
 //     const { data} = useSelector((state) => state.productsOverview);
 //     const productsOverview  = data?.data?.main || [];
 //     const {title,banner} = productsOverview ;
+//     const lang = useSelector((state) => state.lang.lang);
+//         const isArabic= lang === 'ar';  
 
 //   return (
 //     <>
 //       <SecBanner
 //         title={title}
-//         subtitle="Products"
+//         subtitle={isArabic?'منتجات':'Products'}
 //         image={banner}
 //       />    
       

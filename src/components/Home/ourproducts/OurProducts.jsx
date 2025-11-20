@@ -14,7 +14,11 @@ const lang = useSelector((state) => state.lang.lang);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
-
+ const staticLinks = [
+    "our-products/white-sugar",
+    "our-products/molasses",
+    "our-products/pellets",
+  ];
 
   useEffect(() => {
     if (productsList.length > 0 && activeIndex >= productsList.length) {
@@ -81,7 +85,8 @@ const lang = useSelector((state) => state.lang.lang);
               to={staticLinks[activeIndex] || "#"}
               className={styles.readMore}
             >
-              Read more
+              {isArabic? ' اقرأ المزيد' :  ' Read more'}
+             
             </Link> */}
             <Link
               to={`/${lang}/our-products/${activeProduct.id}`}   

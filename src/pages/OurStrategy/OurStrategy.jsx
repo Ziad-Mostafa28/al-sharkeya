@@ -8,12 +8,14 @@ import { useSelector } from 'react-redux';
 export default function OurStrategy() {
 
 const { data} = useSelector((state) => state.aboutStrategy);
+const lang = useSelector((state) => state.lang.lang);
+    const isArabic= lang === 'ar';  
   const image = data?.data?.strategy_section.strategy_banner || [];
     return (
         <>
             <SecBanner
-                title="Our Strategy"
-                subtitle="About Us"
+                title={isArabic? 'استراتيجيتنا' : 'Our Strategy'}  
+                subtitle={isArabic? 'معلومات عنا' : 'About Us'} 
                 image={image}
             />
             <SecondCardBox />

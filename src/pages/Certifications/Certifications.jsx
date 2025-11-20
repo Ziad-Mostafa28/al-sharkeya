@@ -7,14 +7,17 @@ import { useSelector } from 'react-redux';
 export default function Certifications() {
 
       const { data} = useSelector((state) => state.certifications);
+      const lang = useSelector((state) => state.lang.lang);
     const certifications = data?.data?.main || [];
 
     const { title,banner } = certifications;
+    const isArabic= lang === 'ar';  
+
     return (
         <>
             <SecBanner
                 title={title}
-                subtitle="Our Responsibilities"
+                subtitle={isArabic? 'مسؤولياتنا' : 'Our Responsibilities'}
                 image={banner}
             />
 

@@ -261,3 +261,8 @@
 .invisibleCell {
   visibility: hidden;
 }
+
+
+html[dir="rtl"] .anotherClass{
+text-align: end !important;
+}

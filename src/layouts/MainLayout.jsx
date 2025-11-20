@@ -100,6 +100,16 @@ export default function MainLayout() {
 
   }, [lang, dispatch]);
 
+
+    useEffect(() => {
+    if (lang === "ar") {
+      document.title = "الشرقية للسكر";
+    } else {
+      document.title = "Al Sharkeya Sugar";
+    }
+  }, [lang]);
+
+
 //   useEffect(() => {
 //   const actions = [
 //         fetchHomeWithOrderingData,
@@ -133,6 +143,11 @@ export default function MainLayout() {
 //     delay += 300; // كل 300ms request جديد
 //   });
 // }, [lang, dispatch]);
+
+
+
+
+
 
 
   return (

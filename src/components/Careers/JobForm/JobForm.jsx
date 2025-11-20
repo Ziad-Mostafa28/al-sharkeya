@@ -10,8 +10,12 @@ export default function JobForm() {
     const handleClose = () => setShowModal(false)
 
      const { data} = useSelector((state) => state.careers);
+    const lang = useSelector((state) => state.lang.lang);
+     
     const submitCareers  = data?.data?.main || [];
     const { submit_title,submit_desc,submit_image } = submitCareers;
+        const isArabic= lang === 'ar';  
+
 
     return (
         <>
@@ -29,7 +33,7 @@ export default function JobForm() {
                             <div
                                 dangerouslySetInnerHTML={{ __html:submit_desc}}
                             ></div>
-                            <button className={styles.applyBtn} onClick={handleOpen}>Apply Now</button>
+                            <button className={styles.applyBtn} onClick={handleOpen}>{isArabic?'تقدم بطلبك الآن':'Apply Now'}</button>
                             {showModal && <ApplyFormJob onClose={handleClose} />}
                         </div>
                        

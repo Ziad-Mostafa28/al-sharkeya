@@ -6,13 +6,17 @@ import { useSelector } from 'react-redux';
 export default function OurShareholders() {
 
      const { data} = useSelector((state) => state.aboutShareholders);
+    const lang = useSelector((state) => state.lang.lang);
+     
   const shareholdersImg = data?.data?.main?.shareholders_banner;
+   const isArabic= lang === 'ar';  
+
 
     return (
         <>
             <SecBanner
-                title="Our Shareholders"
-                subtitle="About Us"
+                title={isArabic?'المساهمين لدينا':'Our Shareholders'} 
+                subtitle={isArabic?' معلومات عنا':'About Us'} 
                 image={shareholdersImg}
             />
 

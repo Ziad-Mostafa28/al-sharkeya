@@ -63,12 +63,18 @@ function Footer() {
 
         <div className={styles.mainFooter}>
           <div className={styles.bottomlogoo}>
-            <img className={styles.bottomlogo} src="/img/homepage/bottom.png" alt="imglogo" />
-          </div>
+          <img
+              className={styles.bottomlogo}
+              src="/img/homepage/bottom.png"
+              alt="imglogo"
+              width="240"
+              height="90"
+            />          
+            </div>
           <div className="row">
             <div className={`col-sm-6 col-md-4 col-lg-4 col-xl-2 ${styles.colSpacing}`}>
               <Link to={`/${lang}`}>
-                <img className="m-auto" src="/img/homepage/biglogo.png" alt="" />
+                <img className="m-auto" src="/img/homepage/biglogo.png" alt="" width={189.008} height={143.008} />
               </Link>
               <p className={styles.desc}>{isArabic ? "تابعنا" : "Follow Us"}</p>
               <div className={styles.social}>
@@ -91,13 +97,13 @@ function Footer() {
             </div>
             <div className={`col-sm-6 col-md-4 col-lg-4 col-xl-2 ${styles.colSpacing}`}>
               <h2 className={styles.bottomtitle}>{isArabic ? "منتجاتنا" : "Our Products"}</h2>
-              {/* <ul>
+              <ul>
                 <li><Link to='our-products/overview'>{isArabic ? "نظرة عامة" : "Overview"}</Link></li>
                 <li><Link to='our-products/white-sugar'>{isArabic ? "السكر الأبيض" : "White Sugar"}</Link></li>
                 <li><Link to='our-products/molasses'>{isArabic ? "المولاس" : "Molasses"}</Link></li>
-                <li><Link to='our-products/pellets'>{isArabic ? "الحبيبات" : "Pellets"}</Link></li>
-              </ul> */}
-              <ul>
+                <li><Link to='our-products/pellets'>{isArabic ? "العلف  " : "Pellets"}</Link></li>
+              </ul>
+              {/* <ul>
                 <li>
                   <Link to="our-products/overview">
                     {isArabic ? "نظرة عامة" : "Overview"}
@@ -117,7 +123,7 @@ function Footer() {
                     <span>No products found</span>
                   </li>
                 )}
-              </ul>
+              </ul> */}
 
             </div>
             <div className={`col-sm-6 col-md-4 col-lg-4 col-xl-2 ${styles.colSpacing}`}>
@@ -153,7 +159,7 @@ function Footer() {
             ? "شركة الشرقية لصناعة السكر. جميع الحقوق محفوظة."
             : "Al Sharkeya Sugar Manufacturing. All Right Reserved."}
         </p>
-            <p className='d-flex gap-3'><Link to='https://icon-creations.com/' target='_blank' ><img src="/img/homepage/icon.png" className="w-100 h-auto" alt="" /></Link></p>
+            <p className='d-flex gap-3'><Link to='https://icon-creations.com/' target='_blank' ><img src="/img/homepage/icon.png" className="object-fit-contain"  width={50}  alt="" /></Link></p>
             <div className='d-flex gap-3'>
               <p>
                 <Link to='terms-of-service'>{isArabic ? "شروط الخدمة" : "Terms of Service"}</Link>

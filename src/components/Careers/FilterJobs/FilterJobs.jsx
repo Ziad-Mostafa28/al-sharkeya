@@ -248,6 +248,8 @@ export default function FilterJobs() {
   const areas = careersData?.data?.areas || [];
   const locations = careersData?.data?.locations || [];
   const jobs = jobsData?.data?.jobs || [];
+  const isArabic= lang === 'ar';  
+
 
   // 🔹 States for selected filters
   const [selectedArea, setSelectedArea] = useState('');
@@ -279,7 +281,7 @@ export default function FilterJobs() {
             value={selectedLocation}
             onChange={(e) => setSelectedLocation(e.target.value)}
           >
-            <option value="">All Locations</option>
+            <option value="">{isArabic?'جميع المواقع':'All Locations'} </option>
             {locations.map((loc) => (
               <option key={loc.id} value={loc.id}>
                 {loc.name}
@@ -293,7 +295,7 @@ export default function FilterJobs() {
             value={selectedArea}
             onChange={(e) => setSelectedArea(e.target.value)}
           >
-            <option value="">All Areas</option>
+            <option value="">{isArabic?'جميع المناطق':'All Areas'}</option>
             {areas.map((area) => (
               <option key={area.id} value={area.id}>
                 {area.name}
@@ -301,7 +303,7 @@ export default function FilterJobs() {
             ))}
           </select>
 
-          <button className={styles.searchBtn} onClick={handleSearch}>Search</button>
+          <button className={styles.searchBtn} onClick={handleSearch}>{isArabic?'بحث':'Search'}</button>
         </div>
 
         {/* Jobs Grid */}
@@ -342,7 +344,7 @@ export default function FilterJobs() {
               </div>
             ))
           ) : (
-            <p className="text-center py-5">No jobs available</p>
+            <p className="text-center py-5">{isArabic?'لا توجد وظائف متاحة':'No Jobs Available'}</p>
           )}
         </div>
 

@@ -26,7 +26,7 @@ export default function NewsData() {
     return (
         <section className={`${styles.NewsDataSections} py-5`}>
             <div className={styles.container}>
-                <h3 className={`${styles.title} mt-5 mb-3`}>Latest news</h3>
+                <h3 className={`${styles.title} mt-5 mb-3`}>{isArabic?'آخر الأخبار':'Latest news'}</h3>
 
                 {currentItems.map((item) => (
                     <div className={styles.bigcard} key={item.id}>

@@ -5,9 +5,12 @@ import { useSelector } from 'react-redux';
 export default function OurMission() {
 
      const { data, loading} = useSelector((state) => state.aboutStrategy);
+       const lang = useSelector((state) => state.lang.lang);
+
     if (loading || !data) return null;
 
   const mission = data?.data?.mission_section|| [];
+ const isArabic= lang === 'ar';  
 
 
     // const data = {
@@ -40,7 +43,7 @@ export default function OurMission() {
             <div className={styles.container}>
                 <div className="row">
                     <div className="col-12 col-md-3">
-                        <h2>Our Mission</h2>
+                        <h2>{isArabic?'مهمتنا' : 'Our Mission'}  </h2>
                         {mission?.main?.mission_desc && <p className={styles.desc}
                         dangerouslySetInnerHTML={{__html:mission.main.mission_desc}}
                         

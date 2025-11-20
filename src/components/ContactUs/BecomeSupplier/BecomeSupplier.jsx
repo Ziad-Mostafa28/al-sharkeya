@@ -10,6 +10,10 @@ import { toast } from "react-toastify";
 import Select from "react-select";
 
 export default function BecomeSupplier() {
+  const lang = useSelector((state) => state.lang.lang);
+        const isArabic= lang === 'ar';  
+
+  
   const dispatch = useDispatch();
   const { loading, successMessage, errorMessage } = useSelector(
     (state) => state.suppliers
@@ -93,13 +97,22 @@ export default function BecomeSupplier() {
   return (
     <section className={styles.supplierSection}>
       <div className={styles.container}>
-        <h2 className={styles.title}>Request to Become a Beet Supplier</h2>
-        <p className={styles.subtitle}>Join us and become a supplier</p>
+        <h2 className={styles.title}>
+                {isArabic ? "طلب أن تصبح مورّد بنجر" : "Request to Become a Beet Supplier"}
+
+        </h2>
+        <p className={styles.subtitle}>
+                {isArabic ? "انضم إلينا وكن مورّدًا" : "Join us and become a supplier"}
+
+        </p>
 
 
         {/* Supplier Type */}
         <div className={styles.radioGroup}>
-          <label className={styles.radioLabel}>Supplier Type*</label>
+          <label className={styles.radioLabel}>
+            {isArabic ? "نوع المورد*" : "Supplier Type*"}
+
+          </label>
           <div className={styles.radioOptions}>
             <label className={styles.radioItem}>
               <input
@@ -109,7 +122,7 @@ export default function BecomeSupplier() {
                 checked={supplierType === "Individual"}
                 onChange={(e) => setSupplierType(e.target.value)}
               />
-              <span>Individual</span>
+              <span>{isArabic ? "فرد" : "Individual"}</span>
             </label>
             <label className={styles.radioItem}>
               <input
@@ -119,7 +132,7 @@ export default function BecomeSupplier() {
                 checked={supplierType === "Corporate"}
                 onChange={(e) => setSupplierType(e.target.value)}
               />
-              <span>Corporate</span>
+              <span>{isArabic ? "شركة" : "Corporate"}</span>
             </label>
           </div>
         </div>
@@ -128,8 +141,8 @@ export default function BecomeSupplier() {
         <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
           <input
             type="text"
-            placeholder="name*"
-            {...register("name", { required: "Name is required" })}
+        placeholder={isArabic ? "الاسم*" : "name*"}
+        {...register("name", { required: isArabic ? "الاسم مطلوب" : "Name is required" })}
           />
           {errors.name && (
             <span className={styles.error}>{errors.name.message}</span>
@@ -139,7 +152,7 @@ export default function BecomeSupplier() {
             <>
               <input
                 type="text"
-                placeholder="Company name"
+            placeholder={isArabic ? "اسم الشركة" : "Company name"}
                 {...register("company")}
               />
               {errors.company && (
@@ -151,9 +164,9 @@ export default function BecomeSupplier() {
 
           <input
             type="number"
-            placeholder="mobile number*"
+        placeholder={isArabic ? "رقم الموبايل*" : "mobile number*"}
             {...register("phone", {
-              required: "Phone is required",
+          required: isArabic ? "رقم الموبايل مطلوب" : "Phone is required",
               pattern: {
                 value: /^\+?\d{10,15}$/,
                 message: "Please enter a valid phone number",
@@ -166,8 +179,8 @@ export default function BecomeSupplier() {
 
           <input
             type="email"
-            placeholder="email*"
-            {...register("email", { required: "Email is required" })}
+        placeholder={isArabic ? "البريد الإلكتروني*" : "email*"}
+            {...register("email", {          required: isArabic ? "البريد الإلكتروني مطلوب" : "Email is required", })}
           />
           {errors.email && (
             <span className={styles.error}>{errors.email.message}</span>
@@ -176,12 +189,12 @@ export default function BecomeSupplier() {
           <Controller
             name="governorate"
             control={control}
-            rules={{ required: "Governorate is required" }}
+        rules={{ required: isArabic ? "اختيار المحافظة مطلوب" : "Governorate is required" }}
             render={({ field }) => (
               <Select
                 {...field}
                 options={governorateOptions}
-                placeholder="governorate*"
+                placeholder={isArabic ? "المحافظة*" : "governorate*"}
                 isSearchable
                 menuPortalTarget={
                   typeof document !== "undefined" ? document.body : null
@@ -246,16 +259,16 @@ export default function BecomeSupplier() {
 
           <input
             type="number"
-            placeholder="land area in feddan *"
-            {...register("land_area", { required: "Land area is required" })}
+        placeholder={isArabic ? "مساحة الأرض بالفدان*" : "land area in feddan*"}
+            {...register("land_area", {           required: isArabic ? "مساحة الأرض مطلوبة" : "Land area is required", })}
           />
           {errors.land_area && (
             <span className={styles.error}>{errors.land_area.message}</span>
           )}
 
           <textarea
-            placeholder="message*"
-            {...register("message", { required: "Message is required" })}
+        placeholder={isArabic ? "الرسالة*" : "message*"}
+        {...register("message", { required: isArabic ? "الرسالة مطلوبة" : "Message is required" })}
           />
           {errors.message && (
             <span className={styles.error}>{errors.message.message}</span>
@@ -264,7 +277,7 @@ export default function BecomeSupplier() {
           {errorMessage && <p className={styles.error}>{errorMessage}</p>}
 
           <button type="submit" className={styles.sendBtn} disabled={loading}>
-            {loading ? <div className={styles.spinner}></div> : "Send"}
+            {loading ? <div className={styles.spinner}></div> :           isArabic ? "إرسال" : "Send"}
           </button>
         </form>
       </div>

@@ -115,6 +115,7 @@
     gap: 2rem;
     align-items: center;
     justify-content: center;
+    
 
 }
 
@@ -122,7 +123,7 @@
     background: #B98B5A;
     padding: 0.5rem;
     color: white;
-}
+  }
 
 .social a:hover {
     background: #B98B5A;
