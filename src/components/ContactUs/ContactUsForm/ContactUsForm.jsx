@@ -157,7 +157,7 @@ export default function ContactUsForm() {
               className={styles.visitButton}
               onClick={() => window.open(branch.location_url, "_blank")}
             >
-               {isArabic?'زور ' : 'Visit'}
+               {isArabic?'زيارة ' : 'Visit'}
             </button>
           </div>
         </div>

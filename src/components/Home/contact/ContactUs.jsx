@@ -150,7 +150,7 @@ export default function ContactUs() {
                onClick={() => window.open(branch.location_url, "_blank")}
              >
                
-               {isArabic?'زور ' : 'Visit'}
+               {isArabic?'زيارة ' : 'Visit'}
              </button>
            </div>
          </div>
