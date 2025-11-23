@@ -61,7 +61,8 @@ export default function ContactUs() {
               onClick={() => setActiveTab("touch")}
               type="button"
             >
-              Get in Touch
+                  {isArabic ? "تواصل معنا" : "Get in Touch"}
+
             </button>
 
             <button
@@ -69,36 +70,37 @@ export default function ContactUs() {
               onClick={() => setActiveTab("sales")}
               type="button"
             >
-              Contact Sales
+                  {isArabic ? "التواصل مع المبيعات" : "Contact Sales"}
+
             </button>
           </div>
 
           <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
             <input
               type="text"
-              placeholder="name*"
+              placeholder={isArabic ? "الاسم *" : "name*"}
               className={styles.input}
-              {...register("name", { required: "Name is required" })}
+              {...register("name", { required: isArabic ? "الاسم مطلوب" : "Name is required" })}
             />
             {errors.name && <p className={styles.errorMsg}>{errors.name.message}</p>}
 
             <input
               type="text"
-              placeholder="company name*"
+              placeholder={isArabic ? "اسم الشركة *" : "company name*"}
               className={styles.input}
-              {...register("company", { required: "Company name is required" })}
+              {...register("company", { required: isArabic ? "اسم الشركة مطلوب" : "Company name is required" })}
             />
             {errors.company && <p className={styles.errorMsg}>{errors.company.message}</p>}
 
             <input
               type="text"
-              placeholder="phone number*"
+              placeholder={isArabic ? "رقم الهاتف *" : "phone number*"}
               className={styles.input}
               {...register("phone", {
-                required: "Phone is required",
+              required: isArabic ? "رقم الهاتف مطلوب" : "Phone is required",
                 pattern: {
                   value: /^\+?\d{10,15}$/,
-                  message: "Please enter a valid phone number",
+                message: isArabic ? "من فضلك أدخل رقم هاتف صحيح" : "Please enter a valid phone number",
                 },
               })}
             />
@@ -106,16 +108,16 @@ export default function ContactUs() {
 
             <input
               type="email"
-              placeholder="email*"
+              placeholder={isArabic ? "البريد الإلكتروني *" : "email*"}
               className={styles.input}
-              {...register("email", { required: "Email is required" })}
+              {...register("email", { required: isArabic ? "البريد الإلكتروني مطلوب" : "Email is required" })}
             />
             {errors.email && <p className={styles.errorMsg}>{errors.email.message}</p>}
 
             <textarea
-              placeholder="message*"
+              placeholder={isArabic ? "الرسالة *" : "message*"}
               className={styles.textarea}
-              {...register("message", { required: "Message is required" })}
+              {...register("message", { required: isArabic ? "الرسالة مطلوبة" : "Message is required" })}
             />
             {errors.message && <p className={styles.errorMsg}>{errors.message.message}</p>}
 
@@ -124,7 +126,7 @@ export default function ContactUs() {
                 {loading ? (
                   <div className={styles.spinner}></div>
                 ) : (
-                  `Send ${activeTab === "sales" ? "to Sales" : ""}`
+                  `${isArabic ? "إرسال" : "Send"} ${activeTab === "sales" ? "to Sales" : ""}`
                 )}
               </button>
             </div>
@@ -147,7 +149,8 @@ export default function ContactUs() {
                className={styles.visitButton}
                onClick={() => window.open(branch.location_url, "_blank")}
              >
-               Visit
+               
+               {isArabic?'زور ' : 'Visit'}
              </button>
            </div>
          </div>

@@ -1,37 +1,3 @@
-// import React from 'react'
-// import styles from '../JopDetailsInfo/JopDetailsInfo.module.css'
-
-// export default function ApplyFormJob({ onClose }) {
-//     return (
-//         <div className={styles.overlay} onClick={onClose}>
-//             <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-//                 {/* Close Button */}
-//                 <button className={styles.closeBtn} onClick={onClose}>×</button>
-//                 <h2 className={styles.title}>Apply your CV</h2>
-//                 <form className={styles.form}>
-//                     <input type="text" placeholder="Your name" />
-//                     <input type="email" placeholder="Your email" />
-//                     <input type="text" placeholder="Your phone number" />
-//                     {/* Upload CV */}
-//                     <label className={styles.uploadBox}>
-//                         Upload your CV
-//                         <input type="file" accept=".pdf,.doc,.docx" hidden />
-//                         <span className={styles.icon}>
-//                             <img src="/img/careers/attachment-line.svg" alt="Upload Icon" />
-//                         </span>
-//                     </label>
-//                     <div className={styles.btns}>
-//                         <button type="submit" className={styles.sendBtn}>Send</button>
-//                         <button type="button" className={styles.cancelBtn} onClick={onClose}>
-//                             Cancel
-//                         </button>
-//                     </div>
-//                 </form>
-//             </div>
-//         </div>
-//     )
-// }
-
 import React, { useState } from "react";
 import styles from "../JopDetailsInfo/JopDetailsInfo.module.css";
 import { toast, ToastContainer } from "react-toastify";
@@ -41,6 +7,8 @@ import { useSelector } from "react-redux";
 
 export default function ApplyFormJob({ onClose }) {
       const lang = useSelector((state) => state.lang.lang);
+              const isArabic= lang === 'ar';  
+
 
   const [formData, setFormData] = useState({
     name: "",
@@ -68,13 +36,13 @@ export default function ApplyFormJob({ onClose }) {
   const validateForm = () => {
     const newErrors = {};
 
-    if (!formData.name.trim()) newErrors.name = "Name is required";
-    if (!formData.email.trim()) newErrors.email = "Email is required";
+    if (!formData.name.trim()) newErrors.name =  isArabic ? "الاسم مطلوب" : "Name is required";
+    if (!formData.email.trim()) newErrors.email = isArabic ? "البريد الإلكتروني مطلوب" : "Email is required";
     else if (!/\S+@\S+\.\S+/.test(formData.email))
-      newErrors.email = "Invalid email format";
+      newErrors.email = isArabic ? "صيغة البريد الإلكتروني غير صحيحة" : "Invalid email format";
 
-    if (!formData.phone.trim()) newErrors.phone = "Phone number is required";
-    if (!formData.cv) newErrors.cv = "Please upload your CV";
+    if (!formData.phone.trim()) newErrors.phone = isArabic ? "رقم الهاتف مطلوب" : "Phone number is required";
+    if (!formData.cv) newErrors.cv = isArabic ? "يرجى رفع السيرة الذاتية" : "Please upload your CV";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -120,7 +88,6 @@ export default function ApplyFormJob({ onClose }) {
       setLoading(false);
     }
   };
-    const isArabic= lang === 'ar';  
 
   return (
     <div className={styles.overlay} onClick={onClose}>

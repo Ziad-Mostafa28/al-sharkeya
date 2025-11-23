@@ -136,9 +136,12 @@ export default function SectionAbout() {
                       />
                     </div>
                     <div className={styles.descc}>
-                      Years of
+                      
+                      {isArabic?'سنة من':'Years of'}
                       <br />
-                      Experience
+                      {isArabic?'الخبرة':'Experience'}
+
+                      
                     </div>
                   </div>
 
@@ -162,9 +165,11 @@ export default function SectionAbout() {
                       <span className={styles.k}>K</span>
                     </div>
                     <div className={styles.descc}>
-                      Tons Of White
+                      {isArabic?' طن من السكر':'Tons Of White'}
+
                       <br />
-                      Sugar Annually
+                      {isArabic?'الأبييض سنويا':'Sugar Annually'}
+
                     </div>
                   </div>
                 </div>

@@ -318,18 +318,16 @@
 }
 
 .errorMsg {
-  background-color: #ffe5e5;
-  color: #d93025;
-  border: 1px solid #d93025;
-  padding: 6px 10px;
-  border-radius: 6px;
-  font-size: 13px;
-  margin-top: 6px;
+  color: red;
+  font-size: 14px;
+  margin: 0;
 }
 
-.inputError {
-  border: 1px solid #d93025 !important;
-}
+
+
+/* .inputError {
+  border-bottom: 1px solid #d93025 !important;
+} */
 
 .spinner {
   width: 18px;

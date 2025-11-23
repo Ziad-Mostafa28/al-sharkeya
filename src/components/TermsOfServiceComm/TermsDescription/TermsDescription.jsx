@@ -59,17 +59,27 @@
 // }
 
 
-import React from 'react'
+
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import styles from './TermsDescription.module.css'
-import { useSelector } from 'react-redux';
+import { fetchPrivacyPolicy } from '../../../../store/slices/privacyPolicySlice';
+import LoadingOverlay from '../../../layouts/LoadingOverlay/LoadingOverlay';
 
 export default function TermsDescription() {
-  const lang = useSelector((state) => state.lang.lang);
-  const isArabic = lang === 'ar';
+   const dispatch = useDispatch();
+    const lang = useSelector((state) => state.lang.lang);
+    const { data, loading} = useSelector((state) => state.privacyPolicy);
+
+    useEffect(() => {
+        dispatch(fetchPrivacyPolicy(lang));
+    }, [dispatch, lang]);
+
+    if (loading) return <LoadingOverlay/>;
 
   return (
     <>
-      <section className={`${styles.privacySection}`}>
+      {/* <section className={`${styles.privacySection}`}>
         <div className={`container-fluid ${styles.customContainer}`}>
 
           <h2 className={styles.sectionTitle}>
@@ -135,7 +145,15 @@ export default function TermsDescription() {
           </p>
 
         </div>
-      </section>
+      </section> */}
+
+
+         <section className={`${styles.privacySection}`}>
+            <div className={`container-fluid ${styles.customContainer}`}>
+                <div dangerouslySetInnerHTML={{ __html: data?.data?.terms }} />
+            </div>
+        </section>
+
     </>
   )
 }

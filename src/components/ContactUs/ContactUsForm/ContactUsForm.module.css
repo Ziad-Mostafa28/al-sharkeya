@@ -180,3 +180,9 @@
     min-width: auto;
   }
 }
+
+
+.input:focus,
+.textarea:focus {
+  outline: none; 
+}

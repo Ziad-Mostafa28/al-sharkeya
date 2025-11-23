@@ -32,6 +32,7 @@ import careersReducer from "./slices/careersSlice";
 import careersJobsReducer from "./slices/careersJobsSlice";
 import productsOverviewReducer from "./slices/productsOverview";
 import productsReducer from "./slices/productsHeaderList";
+import privacyPolicyReducer from "./slices/privacyPolicySlice";
 
 
 
@@ -66,6 +67,7 @@ const store = configureStore({
    careersJobs: careersJobsReducer, 
   productsOverview: productsOverviewReducer,
     products: productsReducer,
+    privacyPolicy:privacyPolicyReducer
 
 
   },
