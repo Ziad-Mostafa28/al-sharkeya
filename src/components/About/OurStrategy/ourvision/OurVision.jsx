@@ -18,15 +18,16 @@ export default function OurVision() {
         <section className={styles.cardbox2}>
             <div className={styles.container}>
                 <div className="row">
+                    <div className="col-12 col-md-4">
+                        <img src={ image} alt="cardbox" />
+                    </div>
                     <div className="col-12 col-md-8">
                         <h2 className='mb-4'>{isArabic?'رؤيتنا': 'Our Vision'}</h2>
                         <div className={styles.secondSectionDesc2}
                         dangerouslySetInnerHTML={{__html:desc}}
                         ></div>
                     </div>
-                    <div className="col-12 col-md-4">
-                        <img src={ image} alt="cardbox" />
-                    </div>
+
                 </div>
             </div>
         </section>

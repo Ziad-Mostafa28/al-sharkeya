@@ -19,10 +19,11 @@ const lang = useSelector((state) => state.lang.lang);
                 image={image}
             />
             <SecondCardBox />
+            <OurVision />
 
             <OurMission />
 
-            <OurVision />
+            
 
         </>
     )
