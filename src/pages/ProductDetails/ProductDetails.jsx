@@ -113,15 +113,15 @@ import styles from './ProductDetails.module.css';
 // Map sections to components
 const componentMap = {
  brochure_section: SugarBrochure,
-  two_cols_section: PharmaAndCommercial,
-  one_col_section: VideoSection,
-  one_col_section_right_image: ChemicalComposition,
+ two_cols_section: PharmaAndCommercial,
+ one_col_section: VideoSection,
+ one_col_section_right_image: ChemicalComposition,
   one_col_section_left_image: ChemicalCompositionLeft,
   full_width_section: SugarImage,
   section_description_with_list_cards:SugerSection ,
   quality_section : PremiumWhite,
   section_customers:  ProductsLogo ,
- numbers_section: SectionAbout, 
+  numbers_section: SectionAbout, 
 };
 
 export default function ProductDetails() {
@@ -133,12 +133,11 @@ export default function ProductDetails() {
 
   useEffect(() => {
     if (id) {
-      setIsLoading(true); // شغل الـ spinner
+      setIsLoading(true);    
       dispatch(fetchProductsData(id));
     }
   }, [id, dispatch]);
 
-  // إيقاف الـ spinner بعد وصول البيانات
   useEffect(() => {
     if (data && Object.keys(data).length > 0) {
       setIsLoading(false);

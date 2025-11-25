@@ -286,8 +286,8 @@
   color: white !important;
   padding: 0 !important;
   font-size: 0.8rem;
-   white-space: normal !important; /* هذا يسمح بتكسر الأسطر */
-  word-break: break-word;         /* هذا يكسر الكلمات الطويلة بدون مسافات */
+   white-space: normal !important; 
+  word-break: break-word;       
   overflow-wrap: break-word; 
 }
 
