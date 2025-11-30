@@ -127,6 +127,10 @@ const componentMap = {
 export default function ProductDetails() {
   const { id } = useParams();
   const dispatch = useDispatch();
+    const lang = useSelector((state) => state.lang.lang);
+          const isArabic= lang === 'ar';  
+
+  
   const { data, error } = useSelector(state => state.products);
 
   const [isLoading, setIsLoading] = useState(true);
@@ -168,7 +172,7 @@ export default function ProductDetails() {
     <>
       <SecBanner
         title={data.general?.name || ''}
-        subtitle="Products"
+        subtitle= {isArabic?'منتجاتنا':'Products'}
         image={data.general?.banner || ''}
       />
 
