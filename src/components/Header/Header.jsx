@@ -18,10 +18,28 @@ export default function Header() {
   const isArabic= lang === 'ar';
 
   
+// useEffect(() => {
+//   const fetchProducts = async () => {
+//     try {
+//       const response = await axiosInstance.get("/products");
+//       const productsArray = response.data?.data?.products || [];
+//       setProducts(productsArray);
+//     } catch (err) {
+//       console.error("Failed to fetch products:", err);
+//       setProducts([]);
+//     }
+//   };
+//   fetchProducts();
+// }, []);
+
+
+
 useEffect(() => {
   const fetchProducts = async () => {
     try {
-      const response = await axiosInstance.get("/products");
+      const response = await axiosInstance.get("/products", {
+        params: { lang },         
+      });
       const productsArray = response.data?.data?.products || [];
       setProducts(productsArray);
     } catch (err) {
@@ -30,8 +48,7 @@ useEffect(() => {
     }
   };
   fetchProducts();
-}, []);
-
+}, [lang]);   
 
 
 
