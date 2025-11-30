@@ -205,9 +205,10 @@ export default function SectionAbout() {
       </section>
 
       {/* Video Section */}
-      <Suspense fallback={<div>Loading video...</div>}>
-        <VideoSection videoUrl={aboutList?.home_video} />
-      </Suspense>
+     <Suspense fallback={<div>Loading video...</div>}>
+  <VideoSection youtubeUrl={aboutList?.home_youtube} />
+</Suspense>
+
     </>
   );
 }

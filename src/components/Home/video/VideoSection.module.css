@@ -1,4 +1,4 @@
-.dev_video {
+/* .dev_video {
   position: relative;
   width: 100%;
   max-width: 100%;
@@ -12,7 +12,6 @@
   border-radius: 16px;
 }
 
-/* Overlay */
 .overlay {
   position: absolute;
   inset: 0;
@@ -28,7 +27,6 @@
   visibility: hidden;
 }
 
-/* Text Container */
 .textbox {
   position: absolute;
   top: 50%;
@@ -39,7 +37,6 @@
   transition: all 0.6s ease;
 }
 
-/* SVG circle */
 .textbox svg {
   width: 12rem;
   height: 12rem;
@@ -53,7 +50,6 @@
   font-family: 'Alexandria';
   font-weight: 300;
 }
-/* Animation Class */
 .textbox.animateText svg {
   animation: rotateZoom 2s forwards;
   opacity: 0;
@@ -83,7 +79,6 @@
   transition: all 0.6s ease;
 }
 
-/* Animation keyframes */
 @keyframes rotateZoom {
   0% {
     transform: scale(1) rotate(0deg);
@@ -95,7 +90,87 @@
   }
 }
 
-/* Responsive SVG size */
+@media (max-width: 768px) {
+  .textbox svg {
+    width: 8rem;
+    height: 8rem;
+    top: -4rem;
+    left: -4rem;
+  }
+
+  .textbox .playButton {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+  }
+} */
+
+
+.dev_video {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #000; /* خلفية سوداء لو في أي لحظة تحميل */
+}
+
+/* Text Container */
+.textbox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  text-align: center;
+  pointer-events: none; /* لا تؤثر على الفيديو */
+}
+
+/* SVG الدائري */
+.textbox svg {
+  width: 12rem;
+  height: 12rem;
+  position: absolute;
+  top: -6rem;
+  left: -6rem;
+  transform-origin: center;
+}
+
+/* Play Button */
+.textbox .playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Video wrapper */
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* نسبة 16:9 */
+  height: 0;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+}
+
+/* Responsive SVG and Play button */
 @media (max-width: 768px) {
   .textbox svg {
     width: 8rem;

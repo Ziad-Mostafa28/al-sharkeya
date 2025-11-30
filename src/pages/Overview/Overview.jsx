@@ -45,14 +45,17 @@ import SugarProcessing from '../../components/OurProducts/Overview/SugarProcessi
 
 export default function OurProducts() {
   const { data } = useSelector((state) => state.productsOverview);
+  const lang = useSelector((state) => state.lang.lang);
   const main = data?.data?.main;
   const products = data?.data?.products || [];
+
+      const isArabic= lang === 'ar';  
 
   return (
     <>
       <SecBanner
         title={main?.title}
-        subtitle="Products"
+        subtitle= {isArabic?'منتجاتنا':'Products'}
         image={main?.banner}
       />
 
