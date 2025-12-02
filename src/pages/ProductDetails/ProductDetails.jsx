@@ -38,7 +38,7 @@
 //     const lang = useSelector((state) => state.lang.lang);
 //           const isArabic= lang === 'ar';  
 
-  
+
 //   const { data, error } = useSelector(state => state.products);
 
 //   const [isLoading, setIsLoading] = useState(true);
@@ -108,10 +108,11 @@ import ChemicalComposition from '../../components/OurProducts/Molasses/ChemicalC
 import SugarImage from '../../components/OurProducts/WhiteSugar/SugarImage/SugarImage';
 import SectionAbout from '../../components/OurProducts/Pellets/sectionabout/SectionAbout';
 import ChemicalCompositionLeft from '../../components/OurProducts/Molasses/ChemicalCompositionLeft/ChemicalCompositionLeft';
+import EconomicEnvironmental from '../../components/OurProducts/Molasses/EconomicEnvironmental/EconomicEnvironmental';
 
 import { fetchProductsData } from '../../../store/slices/productsHeaderList';
 import { ClipLoader } from 'react-spinners';
-import styles from './ProductDetails.module.css'; 
+import styles from './ProductDetails.module.css';
 
 // Map sections to components
 const componentMap = {
@@ -119,7 +120,9 @@ const componentMap = {
   two_cols_section: PharmaAndCommercial,
   one_col_section: VideoSection,
   one_col_section_right_image: ChemicalComposition,
-  one_col_section_left_image: ChemicalCompositionLeft,
+  // one_col_section_left_image: ChemicalCompositionLeft,
+  one_col_section_left_image: EconomicEnvironmental,
+
   full_width_section: SugarImage,
   section_description_with_list_cards: SugerSection,
   quality_section: PremiumWhite,
@@ -140,10 +143,10 @@ export default function ProductDetails() {
 
   useEffect(() => {
     if (id) {
-      setIsLoading(true);      
+      setIsLoading(true);
       dispatch(fetchProductsData(id));
     }
-  }, [id, dispatch, lang]);    
+  }, [id, dispatch, lang]);
 
   useEffect(() => {
     if (data && Object.keys(data).length > 0) {

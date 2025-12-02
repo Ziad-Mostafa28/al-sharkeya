@@ -7,14 +7,14 @@
 //           <div className={`container-fluid ${styles.customContainer}`}>
 //             <div className="row align-items-start">
 
-                    
+
 //               <div className={`col-md-4  ${styles.imageBlock}`}>
 //                 <img
 //                   src="/img/our-products/molasses/wood-pellets-shutterstock.png"
 //                   alt="White sugar"
 //                 />
 //               </div>
-              
+
 //               <div className={`col-md-8 ${styles.textBlock}`}>
 //                 <h2>Chemical Composition and Nutritional Value</h2>
 //                 <p>
@@ -49,7 +49,7 @@ export default function ChemicalCompositionLeft({ data }) {
           <div className={`col-md-8 ${styles.textBlock}`}>
             {title && <h2>{title}</h2>}
             {description && (
-              <div 
+              <div
                 dangerouslySetInnerHTML={{ __html: description }} >
               </div>
             )}
