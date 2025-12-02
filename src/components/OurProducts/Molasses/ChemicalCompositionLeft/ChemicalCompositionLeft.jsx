@@ -50,7 +50,7 @@ export default function ChemicalCompositionLeft({ data }) {
             {title && <h2>{title}</h2>}
             {description && (
               <div 
-              dangerouslySetInnerHTML={{ __html: description }} >
+                dangerouslySetInnerHTML={{ __html: description }} >
               </div>
             )}
           </div>
