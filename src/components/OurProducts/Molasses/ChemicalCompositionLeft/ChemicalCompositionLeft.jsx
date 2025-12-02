@@ -49,7 +49,9 @@ export default function ChemicalCompositionLeft({ data }) {
           <div className={`col-md-8 ${styles.textBlock}`}>
             {title && <h2>{title}</h2>}
             {description && (
-              <div dangerouslySetInnerHTML={{ __html: description }} ></div>
+              <div 
+              dangerouslySetInnerHTML={{ __html: description }} >
+              </div>
             )}
           </div>
 
