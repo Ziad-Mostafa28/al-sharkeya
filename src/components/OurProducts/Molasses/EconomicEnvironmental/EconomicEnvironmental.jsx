@@ -51,10 +51,8 @@ export default function EconomicEnvironmental({ data }) {
           <div className="row align-items-start">
 
             <div className={`col-md-4  ${styles.imageBlock}`}>
-              <img
-                src="/img/our-products/molasses/wood-pellets.png"
-                alt="White sugar"
-              />
+              {image && <img src={image} alt={title || 'Product Image'} />}
+
             </div>
 
             <div className={`col-md-8 ${styles.textBlock}`}>
