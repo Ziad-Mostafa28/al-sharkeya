@@ -24,15 +24,16 @@
   font-weight: 600;
   margin-top: 2rem;
   font-family: var(--font-alex);
+
 }
 
-.WhiteSugar  .textBlockul{
+.WhiteSugar  ul{
   color: #606060;
-  font-size: 1rem;
-  line-height: 1.6;
-  font-weight: 400;
-  margin-top: 2rem;
-  font-family: var(--font-alex);
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+  font-weight: 400 !important;
+  margin-top: 2rem !important;
+  font-family: var(--font-alex) !important;
 }
 
 .WhiteSugar .imageBlock img {

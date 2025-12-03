@@ -19,8 +19,8 @@ export default function BrochureSugar({ data }) {
                         <div
                             dangerouslySetInnerHTML={{ __html: data.description }}
                         ></div>
-                        {data.file && (
-                            <a
+                        {data.file? (
+                               <a
                                 href={data.file}
                                 download
                                 className={styles.downloadLink}
@@ -32,7 +32,8 @@ export default function BrochureSugar({ data }) {
                                 />
                                 <span className={styles.downloadBrochure}>Download Brochure</span>
                             </a>
-                        )}
+                         
+                        ):''}
                     </div>
                 </div>
             </div>

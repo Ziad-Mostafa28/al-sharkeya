@@ -13,7 +13,7 @@
 //              alt="Molasses"
 //              className={styles.bgImage}
 //            />
-   
+
 //            <div className={styles.textCard}>
 //              <p>
 //               The pure, crystal-clear sugar appears white when subjected to white light. White sugar contains at least 99.7% sucrose. The remainder is in effect moisture.
@@ -22,8 +22,8 @@
 //            </div>
 //          </div>
 //        </section>
-   
-   
+
+
 //    </>
 //   )
 // }
@@ -35,7 +35,7 @@ import styles from './SugarImage.module.css';
 export default function SugarImage({ data }) {
   if (!data) return null;
 
-  const { description, background_image } = data;
+  const { description, background_image, title } = data;
 
   return (
     <section className={styles.molassesSection}>
@@ -48,9 +48,14 @@ export default function SugarImage({ data }) {
           />
         )}
 
-        {description && (
-          <div className={styles.textCard} dangerouslySetInnerHTML={{ __html: description }} />
-        )}
+
+        <div className={styles.textCard}>
+          <h2 dangerouslySetInnerHTML={{ __html: title }}></h2>
+          <div dangerouslySetInnerHTML={{ __html: description }} />
+        </div>
+
+
+
       </div>
     </section>
   );

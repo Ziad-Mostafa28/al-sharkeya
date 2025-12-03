@@ -101,23 +101,34 @@ export default function SectionAbout({ data }) {
   if (!data || !data.list) return null;
 
   return (
-    <section>
+ <section>
       <div className={styles.about}>
         <div className="container">
           <div className="row">
-            {data.list.map((item) => (
-              <div key={item.id} className="col-12 col-md-3 col-sm-6">
-                <div className={styles.smallbox}>
-                  <div className={styles.numberBox}>
-                    {item.value}
-                    {item.measurement_unit && <span className={styles.unit}>{item.measurement_unit}</span>}
+
+            <div className="col-12 col-md-12 col-sm-12 col-lg-12">
+              <div className={styles.rightSide}>
+
+                {data.list.map((item) => (
+                  <div key={item.id} className={styles.smallbox}>
+                    <div className={styles.numberBox}>
+                      {item.value}
+                      <span className={styles.unit}>{item.measurement_unit}</span>
+                    </div>
+
+                    <div className={styles.descc}>
+                      {item.description.split(" ").map((word, index) => (
+                        <span key={index}>
+                          {word} <br />
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                  <div className={styles.descc}>
-                    {item.description}
-                  </div>
-                </div>
+                ))}
+
               </div>
-            ))}
+            </div>
+
           </div>
         </div>
       </div>

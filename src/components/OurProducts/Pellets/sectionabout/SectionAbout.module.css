@@ -112,10 +112,19 @@ body{
 
 }
 
-.descc {
+/* .descc {
     position: relative;
     display: flex;
     align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+} */
+
+.descc {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     font-size: 1rem;
     font-weight: 600;
 }
@@ -220,3 +229,16 @@ body{
         margin-bottom: 1.5rem;
     }
 }
+
+[lang="ar"] .descc::after {
+    position: absolute;
+    content: '';
+    right: -20px;
+    width: 2px;
+    height: 45px;
+    background-color: #C78E50;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+

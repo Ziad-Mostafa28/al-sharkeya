@@ -92,6 +92,10 @@ import { useSelector } from 'react-redux';
 
 export default function OurCustomerSection() {
     const { data } = useSelector((state) => state.customers);
+      const lang = useSelector((state) => state.lang.lang);
+        const isArabic= lang === 'ar';  
+
+    
     const categories = data?.data.customers || [];
 
     const [activeFilter, setActiveFilter] = useState(""); 
@@ -109,7 +113,7 @@ export default function OurCustomerSection() {
         <section className={`${styles.OurCustomerSection} pt-5`}>
             <div className="container">
                 <div className={`${styles.box}`}>
-                    <h2>Filter by</h2>
+                    <h2> {isArabic ? " بحث حسب" : "Filter by"}</h2>
                     <div className={`${styles.slider}`}>
                         <Swiper
                             className="mySwiper"
@@ -144,7 +148,7 @@ export default function OurCustomerSection() {
             </div>
 
             <div className={`${styles.customer_box} my-5`}>
-                <h2 className={`${styles.title}`}>Customers</h2>
+                <h2 className={`${styles.title}`}>{isArabic ? "عملائنا" : "Customers"}</h2>
 
                 <div className="container">
                     <div className="row">

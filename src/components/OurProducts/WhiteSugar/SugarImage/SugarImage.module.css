@@ -25,6 +25,15 @@
   max-width: 37.063rem;
   z-index: 2;
 }
+
+.textCard h2 {
+  font-size: 1.875rem;
+  color: #FFFFFF;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+font-family: var(--font-alex);
+
+}
 .textCard p {
   font-size: 1rem;
   color: #FFFFFF;
@@ -62,4 +71,11 @@ font-family: var(--font-alex);
     .textCard p {
         font-size: 0.9rem;
     }
+}
+
+
+
+
+[lang="ar"] .textCard {
+  right: 3.125rem;
 }

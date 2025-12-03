@@ -126,7 +126,9 @@ export default function ContactUs() {
                 {loading ? (
                   <div className={styles.spinner}></div>
                 ) : (
-                  `${isArabic ? "إرسال" : "Send"} ${activeTab === "sales" ? "to Sales" : ""}`
+                  // `${isArabic ? "إرسال" : "Send"} ${activeTab === "sales" ? "to Sales" : ""}`
+                  `${isArabic ? "إرسال" : "Send"}`
+
                 )}
               </button>
             </div>

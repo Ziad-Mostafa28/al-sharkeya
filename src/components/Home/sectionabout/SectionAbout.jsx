@@ -162,7 +162,7 @@ export default function SectionAbout() {
                         scrollSpyOnce
                       />
                      
-                      <span className={styles.k}>K</span>
+                      <span className={styles.k}>{isArabic?'الف':'K'}</span>
                     </div>
                     <div className={styles.descc}>
                       {isArabic?' طن من السكر':'Tons Of White'}
