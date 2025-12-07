@@ -27,40 +27,84 @@ export default function BecomeSupplier() {
     formState: { errors },
   } = useForm();
 
-  const egyptGovernorates = [
-    "Cairo",
-    "Giza",
-    "Alexandria",
-    "Dakahlia",
-    "Red Sea",
-    "Beheira",
-    "Fayoum",
-    "Gharbia",
-    "Ismailia",
-    "Monufia",
-    "Minya",
-    "Qaliubiya",
-    "New Valley",
-    "Suez",
-    "Aswan",
-    "Assiut",
-    "Beni Suef",
-    "Port Said",
-    "Damietta",
-    "Sharkia",
-    "South Sinai",
-    "Kafr El Sheikh",
-    "Matruh",
-    "Luxor",
-    "Qena",
-    "North Sinai",
-    "Sohag",
-  ];
+const governoratesEN = [
+  "Cairo",
+  "Giza",
+  "Alexandria",
+  "Dakahlia",
+  "Red Sea",
+  "Beheira",
+  "Fayoum",
+  "Gharbia",
+  "Ismailia",
+  "Monufia",
+  "Minya",
+  "Qaliubiya",
+  "New Valley",
+  "Suez",
+  "Aswan",
+  "Assiut",
+  "Beni Suef",
+  "Port Said",
+  "Damietta",
+  "Sharkia",
+  "South Sinai",
+  "Kafr El Sheikh",
+  "Matruh",
+  "Luxor",
+  "Qena",
+  "North Sinai",
+  "Sohag",
+];
 
-  const governorateOptions = egyptGovernorates.map((gov) => ({
+const governoratesAR = [
+  "القاهرة",
+  "الجيزة",
+  "الإسكندرية",
+  "الدقهلية",
+  "البحر الأحمر",
+  "البحيرة",
+  "الفيوم",
+  "الغربية",
+  "الإسماعيلية",
+  "المنوفية",
+  "المنيا",
+  "القليوبية",
+  "الوادي الجديد",
+  "السويس",
+  "أسوان",
+  "أسيوط",
+  "بني سويف",
+  "بورسعيد",
+  "دمياط",
+  "الشرقية",
+  "جنوب سيناء",
+  "كفر الشيخ",
+  "مطروح",
+  "الأقصر",
+  "قنا",
+  "شمال سيناء",
+  "سوهاج",
+];
+
+const governoratesList = isArabic ? governoratesAR : governoratesEN;
+
+
+
+  // const governorateOptions = egyptGovernorates.map((gov) => ({
+  //   label: gov,
+  //   value: gov,
+  // }));
+
+const governorateOptions = [...governoratesList]
+  .sort((a, b) => a.localeCompare(b, isArabic ? "ar" : "en"))
+  .map((gov) => ({
     label: gov,
     value: gov,
   }));
+
+
+
 
   const [selectedGovernorate, setSelectedGovernorate] = useState(null);
   const [supplierType, setSupplierType] = useState("Individual");

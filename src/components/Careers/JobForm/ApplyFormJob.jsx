@@ -6,8 +6,8 @@ import axiosInstance from "../../../../utils/axiosInstance";
 import { useSelector } from "react-redux";
 
 export default function ApplyFormJob({ onClose }) {
-      const lang = useSelector((state) => state.lang.lang);
-              const isArabic= lang === 'ar';  
+  const lang = useSelector((state) => state.lang.lang);
+  const isArabic = lang === 'ar';
 
 
   const [formData, setFormData] = useState({
@@ -22,8 +22,28 @@ export default function ApplyFormJob({ onClose }) {
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
+    // if (name === "cv") {
+    //   setFormData({ ...formData, cv: files[0] });
     if (name === "cv") {
-      setFormData({ ...formData, cv: files[0] });
+      const file = files[0];
+
+      if (!file) return;
+
+      if (file.type !== "application/pdf") {
+        setErrors({
+          ...errors,
+          cv: isArabic
+            ? "يُسمح برفع ملفات PDF فقط"
+            : "Only PDF files are allowed",
+        });
+        setFormData({ ...formData, cv: null });
+        return;
+      }
+
+      setErrors({ ...errors, cv: "" });
+      setFormData({ ...formData, cv: file });
+      return;
+
     } else if (name === "phone") {
       const numericValue = value.replace(/\D/g, "");
       setFormData({ ...formData, [name]: numericValue });
@@ -32,11 +52,10 @@ export default function ApplyFormJob({ onClose }) {
     }
   };
 
-  // ✅ Validation
   const validateForm = () => {
     const newErrors = {};
 
-    if (!formData.name.trim()) newErrors.name =  isArabic ? "الاسم مطلوب" : "Name is required";
+    if (!formData.name.trim()) newErrors.name = isArabic ? "الاسم مطلوب" : "Name is required";
     if (!formData.email.trim()) newErrors.email = isArabic ? "البريد الإلكتروني مطلوب" : "Email is required";
     else if (!/\S+@\S+\.\S+/.test(formData.email))
       newErrors.email = isArabic ? "صيغة البريد الإلكتروني غير صحيحة" : "Invalid email format";
@@ -48,7 +67,6 @@ export default function ApplyFormJob({ onClose }) {
     return Object.keys(newErrors).length === 0;
   };
 
-  // ✅ Submit handler
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
@@ -66,15 +84,15 @@ export default function ApplyFormJob({ onClose }) {
         formDataToSend,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
-   if (response.data?.success || response.status === 200 || response.status === 201) {
-  toast.success(response.data?.message || "Your CV has been sent successfully!");
-  setFormData({ name: "", email: "", phone: "", cv: null });
-  setErrors({});
-  setTimeout(() => {
-    onClose();
-  }, 1500);
-}
- else {
+      if (response.data?.success || response.status === 200 || response.status === 201) {
+        toast.success(response.data?.message || "Your CV has been sent successfully!");
+        setFormData({ name: "", email: "", phone: "", cv: null });
+        setErrors({});
+        setTimeout(() => {
+          onClose();
+        }, 1500);
+      }
+      else {
         toast.error(response.data?.message || "Something went wrong. Please try again.");
       }
     } catch (error) {
@@ -96,7 +114,7 @@ export default function ApplyFormJob({ onClose }) {
           ×
         </button>
 
-        <h2 className={styles.title}>{isArabic?'قم بتطبيق سيرتك الذاتية':'Apply your CV'}</h2>
+        <h2 className={styles.title}>{isArabic ? 'قم بتطبيق سيرتك الذاتية' : 'Apply your CV'}</h2>
 
         <form className={styles.form} onSubmit={handleSubmit}>
           {/* Name */}
@@ -104,7 +122,7 @@ export default function ApplyFormJob({ onClose }) {
             <input
               type="text"
               name="name"
-              placeholder={isArabic?'اسمك   ':'Your name'}
+              placeholder={isArabic ? 'اسمك   ' : 'Your name'}
               value={formData.name}
               onChange={handleChange}
               className={errors.name ? styles.inputError : ""}
@@ -117,7 +135,7 @@ export default function ApplyFormJob({ onClose }) {
             <input
               type="email"
               name="email"
-              placeholder={isArabic?'البريد الإلكتروني الخاص بك   ':'Your email'}
+              placeholder={isArabic ? 'البريد الإلكتروني الخاص بك   ' : 'Your email'}
               value={formData.email}
               onChange={handleChange}
               className={errors.email ? styles.inputError : ""}
@@ -130,7 +148,7 @@ export default function ApplyFormJob({ onClose }) {
             <input
               type="text"
               name="phone"
-              placeholder={isArabic?'رقم هاتفك المحمول':'Your mobile number'}
+              placeholder={isArabic ? 'رقم هاتفك المحمول' : 'Your mobile number'}
               value={formData.phone}
               onChange={handleChange}
               onKeyDown={(e) => {
@@ -147,18 +165,17 @@ export default function ApplyFormJob({ onClose }) {
           {/* Upload CV */}
           <div className={styles.inputGroup}>
             <label
-              className={`${styles.uploadBox} ${
-                errors.cv ? styles.inputError : ""
-              }`}
+              className={`${styles.uploadBox} ${errors.cv ? styles.inputError : ""
+                }`}
             >
-              
 
-            {isArabic?'قم بتحميل سيرتك الذاتية (الحد الأقصى: 2 ميجابايت)':'Upload your CV (Max: 2MB)'}
+
+              {isArabic ? 'قم بتحميل سيرتك الذاتية (الحد الأقصى: 2 ميجابايت)' : 'Upload your CV (Max: 2MB)'}
 
               <input
                 type="file"
                 name="cv"
-                accept=".pdf,.doc,.docx"
+                accept=".pdf"
                 hidden
                 onChange={handleChange}
               />
@@ -176,15 +193,15 @@ export default function ApplyFormJob({ onClose }) {
           {/* Buttons */}
           <div className={styles.btns}>
             <button type="submit" className={styles.sendBtn} disabled={loading}>
-              {loading ? <div className={styles.spinner}></div> :     isArabic?'ارسال':'Send'}
+              {loading ? <div className={styles.spinner}></div> : isArabic ? 'ارسال' : 'Send'}
             </button>
             <button
               type="button"
               className={styles.cancelBtn}
               onClick={onClose}
             >
-              
-              {isArabic?'الغاء' :' Cancel'}
+
+              {isArabic ? 'الغاء' : ' Cancel'}
             </button>
           </div>
         </form>

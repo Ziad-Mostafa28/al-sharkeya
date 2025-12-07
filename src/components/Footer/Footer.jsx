@@ -1,31 +1,41 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Footer.module.css";
-import { FaFacebookF, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
+import { FaFacebookF, FaLinkedinIn, FaYoutube, FaTwitter, FaInstagram } from 'react-icons/fa';
 import { PiBuildingsDuotone } from "react-icons/pi";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from 'react-redux';
 import axiosInstance from "../../../utils/axiosInstance";
+import { fetchPrivacyPolicy } from "../../../store/slices/privacyPolicySlice";
 
 function Footer() {
+  const dispatch = useDispatch();
+
+  const { data, loading } = useSelector((state) => state.privacyPolicy);
+
   const lang = useSelector((state) => state.lang.lang);
-   const [products, setProducts] = useState([]);
-   
-     const isArabic= lang === 'ar';
-   
-     
-   useEffect(() => {
-     const fetchProducts = async () => {
-       try {
-         const response = await axiosInstance.get("/products");
-         const productsArray = response.data?.data?.products || [];
-         setProducts(productsArray);
-       } catch (err) {
-         console.error("Failed to fetch products:", err);
-         setProducts([]);
-       }
-     };
-     fetchProducts();
-   }, []);
+  const [products, setProducts] = useState([]);
+
+  const isArabic = lang === 'ar';
+
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await axiosInstance.get("/products");
+        const productsArray = response.data?.data?.products || [];
+        setProducts(productsArray);
+      } catch (err) {
+        console.error("Failed to fetch products:", err);
+        setProducts([]);
+      }
+    };
+    fetchProducts();
+  }, []);
+
+  useEffect(() => {
+    dispatch(fetchPrivacyPolicy(lang));
+  }, [dispatch, lang]);
+
 
   return (
     <footer className={styles.topfooter}>
@@ -63,26 +73,50 @@ function Footer() {
 
         <div className={styles.mainFooter}>
           <div className={styles.bottomlogoo}>
-          <img
+            <img
               className={styles.bottomlogo}
               src="/img/homepage/bottom.png"
               alt="imglogo"
               width="240"
               height="90"
-            />          
-            </div>
+            />
+          </div>
           <div className="row">
             <div className={`col-sm-6 col-md-4 col-lg-4 col-xl-2 ${styles.colSpacing}`}>
               <Link to={`/${lang}`}>
                 <img className="m-auto" src="/img/homepage/biglogo.png" alt="" width={189.008} height={143.008} />
               </Link>
               <p className={styles.desc}>{isArabic ? "تابعنا" : "Follow Us"}</p>
-              <div className={styles.social}>
+              {/* <div className={styles.social}>
                 <a href="https://www.linkedin.com/company/alsharkeya-sugar/" target="_blank"><FaLinkedinIn /></a>
                 <a href="https://www.facebook.com/www.sharkeyasugar.com.eg/?_rdc=1&_rdr#" target="_blank"><FaFacebookF /></a>
                 <a href="https://www.youtube.com/@sharkeyaSugar" target="_blank"><FaYoutube /></a>
 
+              </div> */}
+              <div className={styles.social}>
+                {data?.data?.socials?.length > 0 ? (
+                  data.data.socials.map((social) => (
+                    <a
+                      key={social.id}
+                      href={social.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title={social.name.trim()}
+                    >
+                      <img
+                        src={social.image}
+                        alt={social.name.trim()}
+                        style={{ width: 20, height: 20 }}
+                      />
+                    </a>
+                  ))
+                ) : (
+                  <p>Loading socials...</p>
+                )}
               </div>
+
+
+
             </div>
             <div className={`col-sm-6 col-md-4 col-lg-4 col-xl-2 ${styles.colSpacing}`}>
               <h2 className={styles.bottomtitle}>{isArabic ? "من نحن" : "About Us"}</h2>
@@ -154,12 +188,12 @@ function Footer() {
           </div>
           <div className={styles.bottomFooter}>
             <p>
-          © 2025{" "}
-          {isArabic
-            ? "شركة الشرقية لصناعة السكر. جميع الحقوق محفوظة."
-            : "Al Sharkeya Sugar Manufacturing. All Right Reserved."}
-        </p>
-            <p className='d-flex gap-3'><Link to='https://icon-creations.com/' target='_blank' ><img src="/img/homepage/icon.png" className="object-fit-contain"  width={50}  alt="" /></Link></p>
+              © 2025{" "}
+              {isArabic
+                ? "شركة الشرقية لصناعة السكر. جميع الحقوق محفوظة."
+                : "Al Sharkeya Sugar Manufacturing. All Right Reserved."}
+            </p>
+            <p className='d-flex gap-3'><Link to='https://icon-creations.com/' target='_blank' ><img src="/img/homepage/icon.png" className="object-fit-contain" width={50} alt="" /></Link></p>
             <div className='d-flex gap-3'>
               <p>
                 <Link to='terms-of-service'>{isArabic ? "شروط الخدمة" : "Terms of Service"}</Link>
