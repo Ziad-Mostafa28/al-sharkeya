@@ -399,7 +399,7 @@ useEffect(() => {
                   className={`nav-link ${styles.linkmenu} w-100 d-flex justify-content-center align-items-center gap-2`}
                   onClick={() => toggleDropdown('aboutus')}
                 >
-                   {isArabic ? 'معلومات عنا' : 'About Us'}
+                   {isArabic ? 'عن الشركة' : 'About Us'}
                   <FaChevronDown
                     className={`${styles.chevronIcon} ${dropdownOpen.aboutus ? styles.rotated : ''}`}
                   />
