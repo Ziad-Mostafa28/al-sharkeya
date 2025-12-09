@@ -119,7 +119,7 @@ function Footer() {
 
             </div>
             <div className={`col-sm-6 col-md-4 col-lg-4 col-xl-2 ${styles.colSpacing}`}>
-              <h2 className={styles.bottomtitle}>{isArabic ? "من نحن" : "About Us"}</h2>
+              <h2 className={styles.bottomtitle}>{isArabic ? "عن الشركة " : "About Us"}</h2>
               <ul>
                 <li><Link to='about-us/who-we-are'>{isArabic ? "من نحن" : "Who We Are"}</Link></li>
                 <li><Link to='about-us/our-strategy'>{isArabic ? "استراتيجيتنا" : "Our Strategy"}</Link></li>
