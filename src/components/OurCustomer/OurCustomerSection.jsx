@@ -113,7 +113,7 @@ export default function OurCustomerSection() {
         <section className={`${styles.OurCustomerSection} pt-5`}>
             <div className="container">
                 <div className={`${styles.box}`}>
-                    <h2> {isArabic ? " بحث حسب" : "Filter by"}</h2>
+                    <h2> {isArabic ? "  تصفية حسب المنتج" : "Filter by product"}</h2>
                     <div className={`${styles.slider}`}>
                         <Swiper
                             className="mySwiper"
@@ -148,7 +148,7 @@ export default function OurCustomerSection() {
             </div>
 
             <div className={`${styles.customer_box} my-5`}>
-                <h2 className={`${styles.title}`}>{isArabic ? "عملائنا" : "Customers"}</h2>
+                <h2 className={`${styles.title}`}>{isArabic ? "عملائنا" : "Our Customers"}</h2>
 
                 <div className="container">
                     <div className="row">
