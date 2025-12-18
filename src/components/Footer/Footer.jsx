@@ -174,7 +174,7 @@ function Footer() {
                 <li><Link to='our-responsibilities/certifications'> {isArabic ? "الشهادات" : "Certifications"}</Link></li>
                 <li><Link to='our-responsibilities/sustainability'>{isArabic ? "الاستدامة" : "Sustainability"}</Link></li>
                 {/* <li><Link to='our-responsibilities/csr'>CSR</Link></li> */}
-                <li><Link to='our-responsibilities/codeconduct'>{isArabic ? "مدونة السلوك" : "Code of Conduct"}</Link></li>
+                <li><Link to='our-responsibilities/codeconduct'>{isArabic ? "ميثاق السلوك" : "Code of Conduct"}</Link></li>
               </ul>
             </div>
             <div className={`col-sm-6 col-md-4 col-lg-4 col-xl-2 ${styles.colSpacing}`}>

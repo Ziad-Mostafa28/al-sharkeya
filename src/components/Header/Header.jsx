@@ -528,7 +528,7 @@ useEffect(() => {
                     </li> */}
                     <li className={`${styles.limenu}`}>
                       <Link className={`nav-link text-white ${styles.nav_link2}`} onClick={closeMenu} to="our-responsibilities/codeconduct">
-                         {isArabic ? 'مدونة السلوك' : 'Code of Conduct'}
+                         {isArabic ? 'ميثاق السلوك' : 'Code of Conduct'}
                       </Link>
                     </li>
 

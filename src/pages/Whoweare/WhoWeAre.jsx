@@ -16,7 +16,7 @@ export default function WhoWeAre() {
         <>
             <SecBanner
                 title= {isArabic? 'من نحن' : 'Who We Are'}    
-                subtitle= {isArabic? ' معلومات عنا' : 'About Us'}
+                subtitle= {isArabic? '  عن الشركة' : 'About Us'}
                 image={whoWeAreImg}
             />
             <CardBox />

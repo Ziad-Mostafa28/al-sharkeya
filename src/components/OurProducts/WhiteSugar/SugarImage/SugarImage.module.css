@@ -79,3 +79,6 @@ font-family: var(--font-alex);
 [lang="ar"] .textCard {
   right: 3.125rem;
 }
+[lang="ar"] .bgImage {
+  transform: scaleX(-1);
+}

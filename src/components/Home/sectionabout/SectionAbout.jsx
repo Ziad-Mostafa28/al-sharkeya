@@ -168,7 +168,7 @@ export default function SectionAbout() {
                       {isArabic?' طن من السكر':'Tons Of White'}
 
                       <br />
-                      {isArabic?'الأبييض سنويا':'Sugar Annually'}
+                      {isArabic?'الأبيض سنويا':'Sugar Annually'}
 
                     </div>
                   </div>
