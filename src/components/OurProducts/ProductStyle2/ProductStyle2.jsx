@@ -7,6 +7,7 @@ export default function ProductStyle2({ data }) {
   const lang = useSelector((state) => state.lang.lang);
 
   if (!data) return null;
+   const isArabic= lang === 'ar';  
 
   return (
     <section className={styles.molassesSection}>
@@ -18,7 +19,7 @@ export default function ProductStyle2({ data }) {
           <p>{data.description.replace(/<[^>]+>/g, '')}</p>
 
           <Link to={`/${lang}/our-products/${data.id}`}>
-            <button className={styles.readMoreBtn}>Read more</button>
+            <button className={styles.readMoreBtn}>{isArabic?'اقرأ المزيد' : 'Read more'}</button>
           </Link>
         </div>
       </div>

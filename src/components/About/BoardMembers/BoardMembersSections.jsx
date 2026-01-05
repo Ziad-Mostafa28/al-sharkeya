@@ -6,6 +6,9 @@ export default function BoardMembersSections() {
     const [expandedIndex, setExpandedIndex] = useState(null);
 
     const { data, loading } = useSelector((state) => state.aboutBoardMembers);
+        const lang = useSelector((state) => state.lang.lang);
+
+    const isArabic = lang === 'ar';
 
     if (loading || !data) return null;
 
@@ -14,6 +17,8 @@ export default function BoardMembersSections() {
     const toggleExpand = (index) => {
         setExpandedIndex(expandedIndex === index ? null : index);
     };
+
+
 
     return (
         <section className={`${styles.BoardMembersSections} py-5`}>
@@ -37,13 +42,14 @@ export default function BoardMembersSections() {
                                     dangerouslySetInnerHTML={{ __html: fullText }}
                                 />
 
-                                {/* زرار read more يظهر بس لو النص طويل */}
                                 {fullText.length > 300 && (
                                     <button
                                         className={styles.readmore}
                                         onClick={() => toggleExpand(index)}
                                     >
-                                        {expandedIndex === index ? "Read less" : "Read more"}
+                                        {expandedIndex === index ? isArabic?' اقرأ اقل' : 'Read less' : isArabic?'اقرأ المزيد' : 'Read more'}
+
+
                                     </button>
                                 )}
                             </div>

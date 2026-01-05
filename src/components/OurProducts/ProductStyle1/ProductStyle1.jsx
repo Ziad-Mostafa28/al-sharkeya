@@ -8,6 +8,11 @@ export default function ProductStyle1({ data }) {
 
   if (!data) return null;
 
+
+  
+  
+   const isArabic= lang === 'ar';  
+
   return (
     <section className={styles.WhiteSugar}>
       <div className={`container-fluid ${styles.customContainer}`}>
@@ -17,7 +22,7 @@ export default function ProductStyle1({ data }) {
             <p>{data.description.replace(/<[^>]+>/g, '')}</p>
 
             <Link to={`/${lang}/our-products/${data.id}`}>
-              <button className={styles.readMoreBtn}>Read more</button>
+              <button className={styles.readMoreBtn}>{isArabic?'اقرأ المزيد' : 'Read more'} </button>
             </Link>
           </div>
 
