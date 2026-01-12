@@ -7,7 +7,7 @@
   background-color: #000; 
 }
 
-.textbox {
+/* .textbox {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -26,7 +26,6 @@
   transform-origin: center;
 }
 
-/* Play Button */
 .textbox .playButton {
   position: absolute;
   top: 50%;
@@ -42,6 +41,36 @@
   align-items: center;
   justify-content: center;
   font-weight: bold;
+} */
+
+
+.textbox {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.textbox svg {
+  position: absolute;
+  width: 12rem;
+  height: 12rem;
+}
+
+.textbox .playButton  {
+  background: white;
+  color: black;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  z-index: 4;
 }
 
 /* Video wrapper */
