@@ -95,7 +95,6 @@ export default function VideoSection({ youtubeUrl }) {
       <div className="container">
         <div className={styles.dev_video}>
 
-          {/* الفيديو دايمًا موجود */}
           <div className={styles.videoWrapper}>
             <iframe
               src={play ? getEmbedUrl(youtubeUrl) : ""}
@@ -106,7 +105,6 @@ export default function VideoSection({ youtubeUrl }) {
             />
           </div>
 
-          {/* أيقونة التشغيل */}
           {!play && (
             <div
               className={styles.textbox}
