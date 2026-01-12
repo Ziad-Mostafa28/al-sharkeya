@@ -5,9 +5,9 @@ import { useSelector } from "react-redux";
 export default function PartenarsSection() {
     const [selected, setSelected] = useState(null);
 
-     const { data } = useSelector((state) => state.certifications);
+    const { data } = useSelector((state) => state.certifications);
     const news = data?.data.certifications || [];
-    
+
 
     return (
         <section className={styles.PartenarsSection}>
@@ -46,12 +46,12 @@ export default function PartenarsSection() {
                         <h3 className={styles.modalSubtitle}>
                             {selected.sub_title}
                         </h3>
-{selected?.desc && (
-  <div
-    className={styles.modalDesc}
-    dangerouslySetInnerHTML={{ __html: selected.desc }}
-  />
-)}
+                        {selected?.desc && (
+                            <div
+                                className={styles.modalDesc}
+                                dangerouslySetInnerHTML={{ __html: selected.desc }}
+                            />
+                        )}
 
                         <button
                             className={styles.backBtn}
