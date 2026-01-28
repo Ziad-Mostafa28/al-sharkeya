@@ -295,7 +295,9 @@ export default function FilterJobs() {
             value={selectedArea}
             onChange={(e) => setSelectedArea(e.target.value)}
           >
-            <option value="">{isArabic?'جميع المناطق':'All Areas'}</option>
+            <option value="">
+              {isArabic ? 'جميع القطاعات والإدارات' : 'All Sectors & Departments'}
+            </option>
             {areas.map((area) => (
               <option key={area.id} value={area.id}>
                 {area.name}
