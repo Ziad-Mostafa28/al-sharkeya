@@ -21,7 +21,9 @@ function Footer() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axiosInstance.get("/products");
+        const response = await axiosInstance.get("/products", {
+          params: { lang },
+        });
         const productsArray = response.data?.data?.products || [];
         setProducts(productsArray);
       } catch (err) {
@@ -30,7 +32,7 @@ function Footer() {
       }
     };
     fetchProducts();
-  }, []);
+  }, [lang]);
 
   useEffect(() => {
     dispatch(fetchPrivacyPolicy(lang));
@@ -132,12 +134,6 @@ function Footer() {
             <div className={`col-sm-6 col-md-4 col-lg-4 col-xl-2 ${styles.colSpacing}`}>
               <h2 className={styles.bottomtitle}>{isArabic ? "منتجاتنا" : "Our Products"}</h2>
               <ul>
-                <li><Link to='our-products/overview'>{isArabic ? "نظرة عامة" : "Overview"}</Link></li>
-                <li><Link to='our-products/white-sugar'>{isArabic ? "السكر الأبيض" : "White Sugar"}</Link></li>
-                <li><Link to='our-products/molasses'>{isArabic ? "المولاس" : "Molasses"}</Link></li>
-                <li><Link to='our-products/pellets'>{isArabic ? "العلف  " : "Pellets"}</Link></li>
-              </ul>
-              {/* <ul>
                 <li>
                   <Link to="our-products/overview">
                     {isArabic ? "نظرة عامة" : "Overview"}
@@ -157,7 +153,7 @@ function Footer() {
                     <span>No products found</span>
                   </li>
                 )}
-              </ul> */}
+              </ul>
 
             </div>
             <div className={`col-sm-6 col-md-4 col-lg-4 col-xl-2 ${styles.colSpacing}`}>
